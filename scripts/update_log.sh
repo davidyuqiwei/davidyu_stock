@@ -69,5 +69,5 @@ make the data dir for deep learning test and test keras
 update the fasttext classification 
 
 # /home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/news_report
-=======
->>>>>>> 1f748b377819d67350ada8ca8130fda7752e2a91
+2019/05/22
+need to check gits, and forbid to update large data files
