@@ -1,0 +1,65 @@
+Spark context Web UI available at http://172.16.0.11:4042
+Spark context available as 'sc' (master = local[*], app id = local-1550508661974).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
+      /_/
+         
+Using Scala version 2.11.12 (OpenJDK 64-Bit Server VM, Java 1.8.0_191)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> System.out.println(System.getProperty("user.dir"))
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/financial_report
+
+scala> val work_dir=System.getProperty("user.dir")
+work_dir: String = /home/davidyu/stock/scripts/davidyu_stock/scripts/download/financial_report
+
+scala> val data_file="file://"+work_dir+"/all.csv"
+data_file: String = file:///home/davidyu/stock/scripts/davidyu_stock/scripts/download/financial_report/all.csv
+
+scala> //val data_file="file:///home/davidyu/stock/data/financial_rep ort/603979_2017.csv"
+
+scala> val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc) 
+warning: there was one deprecation warning; re-run with -deprecation for details
+sqlContext: org.apache.spark.sql.hive.HiveContext = org.apache.spark.sql.hive.HiveContext@6f09cb98
+
+scala> 
+
+scala> val csv_data = spark.read.csv(data_file)
+csv_data: org.apache.spark.sql.DataFrame = [_c0: string, _c1: string ... 3 more fields]
+
+scala> csv_data.show()
++--------------------------------+----------+----------+----------+----------+
+|                             _c0|       _c1|       _c2|       _c3|       _c4|
++--------------------------------+----------+----------+----------+----------+
+|                        报告日期|2017-12-31|2017-09-30|2017-06-30|2017-03-31|
+|                摊薄每股收益(元)|    1.3505|    1.1155|    0.7311|    0.3619|
+|                加权每股收益(元)|       1.3|      1.06|      0.68|      0.31|
+|             每股收益_调整后(元)|       1.3|      1.06|      0.68|      0.31|
+|扣除非经常性损益后的每股收益(元)|       1.3|      1.06|      0.68|      0.31|
+|           每股净资产_调整前(元)|   12.9324|   12.7027|    12.315|   12.0987|
+|           每股净资产_调整后(元)|     11.77|     11.54|     11.15|     10.94|
+|            每股经营性现金流(元)|   -6.9177|   -9.2011|   -7.4652|    -6.698|
+|              每股资本公积金(元)|    3.2885|    3.2885|    3.2885|    3.2885|
+|              每股未分配利润(元)|    4.6394|    4.6422|    4.2579|    4.0467|
+|          调整后的每股净资产(元)|        --|        --|        --|        --|
+|                        盈利能力|      null|      null|      null|      null|
+|                 总资产利润率(%)|    0.7138|    0.6105|     0.406|    0.2067|
+|               主营业务利润率(%)|        --|        --|        --|        --|
+|               总资产净利润率(%)|    0.7478|    0.6289|    0.4153|    0.2085|
+|               成本费用利润率(%)|   92.3984|  113.2921|  118.3095|  116.7376|
+|                   营业利润率(%)|        --|        --|        --|        --|
+|               主营业务成本率(%)|        --|        --|        --|        --|
+|                   销售净利率(%)|        --|        --|        --|        --|
+|                   股本报酬率(%)|  168.6797|  111.5465|  105.0179|   36.1902|
++--------------------------------+----------+----------+----------+----------+
+only showing top 20 rows
+
+
+scala> csv_data.createOrReplaceTempView("data_to_save")
+
+scala> sqlContext.sql("insert into table stock_dev.fin_report select  * from data_to_save")

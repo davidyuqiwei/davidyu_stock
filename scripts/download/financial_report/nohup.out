@@ -1,0 +1,26 @@
+  File "download_fin_report.py", line 67
+    os.system("echo fail_"+str(stock_index)+"__"+str(year)" >> python.log")
+                                                                         ^
+SyntaxError: invalid syntax
+./run.sh: 行 9: 27597 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 25070 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 26022 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 26185 已终止               python download_fin_report.py > $curr_dir/python.log
+Traceback (most recent call last):
+  File "download_fin_report.py", line 82, in <module>
+    main()
+  File "download_fin_report.py", line 61, in main
+    os.system("echo "+if_exists+str(stock_index)+"__"+str(year)+" >> python.log")
+TypeError: can only concatenate str (not "bool") to str
+./run.sh: 行 9: 27672 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 27813 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 28062 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 16362 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 28495 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 20171 已终止               python download_fin_report.py > $curr_dir/python.log
+./run.sh: 行 9: 22259 已终止               python download_fin_report.py > $curr_dir/python.log
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/financial_report/functions.py:74: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 74 of the file /home/davidyu/stock/scripts/davidyu_stock/scripts/download/financial_report/functions.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+  soup_u1 = BS(response)

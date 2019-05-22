@@ -1,0 +1,15 @@
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+000587
+Traceback (most recent call last):
+  File "download_liutong_owner.py", line 88, in <module>
+    main()
+  File "download_liutong_owner.py", line 79, in main
+    time.sleep(5)
+KeyboardInterrupt
+19/01/28 19:07:36 WARN Utils: Your hostname, VM_0_11_centos resolves to a loopback address: 127.0.0.1; using 172.16.0.11 instead (on interface eth0)
+19/01/28 19:07:36 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+19/01/28 19:07:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "ERROR".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).

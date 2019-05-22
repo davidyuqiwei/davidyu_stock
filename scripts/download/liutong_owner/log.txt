@@ -1,0 +1,8602 @@
+nohup: 忽略输入
+sh: clean_dir.sh: 没有那个文件或目录
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+download_data  000587
+1
+sleep
+download_data  002498
+2
+sleep
+download_data  000533
+3
+sleep
+download_data  600614
+4
+sleep
+download_data  600165
+5
+sleep
+download_data  600369
+6
+sleep
+download_data  000797
+7
+sleep
+download_data  002288
+8
+sleep
+download_data  000750
+9
+sleep
+download_data  601375
+10
+sleep
+download_data  000890
+11
+sleep
+download_data  600621
+12
+sleep
+download_data  002797
+13
+sleep
+download_data  600268
+14
+sleep
+download_data  600825
+15
+sleep
+download_data  603738
+16
+sleep
+download_data  603017
+17
+sleep
+download_data  000901
+18
+sleep
+download_data  601099
+19
+sleep
+download_data  002383
+20
+sleep
+download_data  600677
+21
+sleep
+download_data  600973
+22
+sleep
+download_data  600310
+23
+sleep
+download_data  000735
+24
+sleep
+601162  not download
+sleep
+download_data  600242
+25
+sleep
+download_data  000070
+26
+sleep
+download_data  601811
+27
+sleep
+603185  not download
+sleep
+download_data  601990
+28
+sleep
+download_data  601878
+29
+sleep
+download_data  601555
+30
+sleep
+download_data  600909
+31
+sleep
+download_data  600571
+32
+sleep
+002941  not download
+sleep
+download_data  000728
+33
+sleep
+download_data  603016
+34
+sleep
+download_data  600271
+35
+sleep
+download_data  601066
+36
+sleep
+download_data  600053
+37
+sleep
+download_data  000426
+38
+sleep
+download_data  600855
+39
+sleep
+002939  not download
+sleep
+download_data  601108
+40
+sleep
+download_data  601700
+41
+sleep
+download_data  600061
+42
+sleep
+601860  not download
+sleep
+download_data  002300
+43
+sleep
+download_data  601901
+44
+sleep
+download_data  600105
+45
+sleep
+download_data  002504
+46
+sleep
+download_data  600864
+47
+sleep
+download_data  000509
+48
+sleep
+download_data  600517
+49
+sleep
+download_data  000592
+50
+sleep
+download_data  600280
+51
+sleep
+download_data  603039
+52
+sleep
+download_data  601881
+53
+sleep
+download_data  002414
+54
+sleep
+download_data  000963
+55
+sleep
+download_data  000400
+56
+sleep
+download_data  601377
+57
+sleep
+download_data  002252
+58
+sleep
+download_data  600155
+59
+sleep
+download_data  002463
+60
+sleep
+download_data  002346
+61
+sleep
+download_data  000712
+62
+sleep
+download_data  600107
+63
+sleep
+download_data  601788
+64
+sleep
+download_data  002670
+65
+sleep
+download_data  002926
+66
+sleep
+download_data  000966
+67
+sleep
+download_data  002124
+68
+sleep
+download_data  000639
+69
+sleep
+download_data  603218
+70
+sleep
+download_data  600446
+71
+sleep
+download_data  603305
+72
+sleep
+download_data  603337
+73
+sleep
+download_data  601198
+74
+sleep
+download_data  000686
+75
+sleep
+download_data  000416
+76
+sleep
+download_data  002692
+77
+sleep
+download_data  002500
+78
+sleep
+download_data  601126
+79
+sleep
+download_data  002569
+80
+sleep
+download_data  600257
+81
+sleep
+download_data  002621
+82
+sleep
+download_data  000783
+83
+sleep
+download_data  600109
+84
+sleep
+download_data  002451
+85
+sleep
+download_data  002736
+86
+sleep
+download_data  600791
+87
+sleep
+download_data  000801
+88
+sleep
+download_data  002839
+89
+sleep
+download_data  002367
+90
+sleep
+download_data  603486
+91
+sleep
+download_data  002812
+92
+sleep
+download_data  000936
+93
+sleep
+download_data  002305
+94
+sleep
+download_data  002673
+95
+sleep
+download_data  000547
+96
+sleep
+download_data  600055
+97
+sleep
+download_data  002616
+98
+sleep
+download_data  600856
+99
+sleep
+download_data  000851
+100
+sleep
+download_data  000776
+101
+sleep
+download_data  600250
+102
+sleep
+download_data  600536
+103
+sleep
+download_data  002425
+104
+sleep
+download_data  600958
+105
+sleep
+download_data  600745
+106
+sleep
+download_data  603429
+107
+sleep
+download_data  600363
+108
+sleep
+download_data  600837
+109
+sleep
+download_data  002376
+110
+sleep
+download_data  000166
+111
+sleep
+download_data  002879
+112
+sleep
+download_data  601688
+113
+sleep
+download_data  002214
+114
+sleep
+download_data  002289
+115
+sleep
+download_data  603912
+116
+sleep
+download_data  000611
+117
+sleep
+download_data  000563
+118
+sleep
+download_data  002230
+119
+sleep
+download_data  601616
+120
+sleep
+download_data  600999
+121
+sleep
+download_data  000971
+122
+sleep
+download_data  603360
+123
+sleep
+download_data  600816
+124
+sleep
+download_data  600203
+125
+sleep
+download_data  000550
+126
+sleep
+download_data  603339
+127
+sleep
+download_data  000795
+128
+sleep
+download_data  600276
+129
+sleep
+download_data  002791
+130
+sleep
+download_data  000513
+131
+sleep
+download_data  002546
+132
+sleep
+download_data  600191
+133
+sleep
+download_data  000551
+134
+sleep
+download_data  002596
+135
+sleep
+download_data  000531
+136
+sleep
+download_data  002651
+137
+sleep
+download_data  603366
+138
+sleep
+download_data  600986
+139
+sleep
+download_data  600550
+140
+sleep
+download_data  002576
+141
+sleep
+download_data  002615
+142
+sleep
+download_data  002821
+143
+sleep
+download_data  000498
+144
+sleep
+download_data  601211
+145
+sleep
+download_data  600830
+146
+sleep
+download_data  002226
+147
+sleep
+download_data  002106
+148
+sleep
+download_data  002595
+149
+sleep
+download_data  600312
+150
+sleep
+download_data  600566
+151
+sleep
+download_data  600783
+152
+sleep
+download_data  002478
+153
+sleep
+download_data  000860
+154
+sleep
+download_data  002232
+155
+sleep
+download_data  601208
+156
+sleep
+download_data  600525
+157
+sleep
+download_data  002217
+158
+sleep
+download_data  000561
+159
+sleep
+download_data  002545
+160
+sleep
+download_data  600521
+161
+sleep
+download_data  002137
+162
+sleep
+download_data  600318
+163
+sleep
+download_data  002130
+164
+sleep
+download_data  002471
+165
+sleep
+download_data  002555
+166
+sleep
+download_data  000996
+167
+sleep
+download_data  002366
+168
+sleep
+download_data  600287
+169
+sleep
+download_data  603656
+170
+sleep
+download_data  600695
+171
+sleep
+download_data  002271
+172
+sleep
+download_data  002649
+173
+sleep
+download_data  600192
+174
+sleep
+download_data  603383
+175
+sleep
+download_data  600390
+176
+sleep
+download_data  002104
+177
+sleep
+download_data  600506
+178
+sleep
+download_data  600156
+179
+sleep
+download_data  600590
+180
+sleep
+download_data  600291
+181
+sleep
+download_data  000595
+182
+sleep
+download_data  000046
+183
+sleep
+download_data  603335
+184
+sleep
+download_data  603081
+185
+sleep
+download_data  002594
+186
+sleep
+download_data  601519
+187
+sleep
+download_data  600072
+188
+sleep
+download_data  002543
+189
+sleep
+download_data  002112
+190
+sleep
+download_data  601900
+191
+sleep
+download_data  603118
+192
+sleep
+download_data  600610
+193
+sleep
+download_data  002727
+194
+sleep
+download_data  600466
+195
+sleep
+download_data  002642
+196
+sleep
+download_data  002591
+197
+sleep
+download_data  603323
+198
+sleep
+download_data  002149
+199
+sleep
+download_data  002114
+200
+sleep
+download_data  600226
+201
+sleep
+download_data  600089
+202
+sleep
+download_data  002102
+203
+sleep
+download_data  002901
+204
+sleep
+download_data  002622
+205
+sleep
+download_data  000018
+206
+sleep
+download_data  600172
+207
+sleep
+download_data  000526
+208
+sleep
+download_data  002777
+209
+sleep
+download_data  600875
+210
+sleep
+download_data  002208
+211
+sleep
+download_data  600705
+212
+sleep
+download_data  002028
+213
+sleep
+download_data  603100
+214
+sleep
+download_data  600152
+215
+sleep
+download_data  002259
+216
+sleep
+download_data  600392
+217
+sleep
+download_data  600301
+218
+sleep
+download_data  000001
+219
+sleep
+download_data  600647
+220
+sleep
+download_data  603999
+221
+sleep
+download_data  600588
+222
+sleep
+download_data  000948
+223
+sleep
+download_data  603606
+224
+sleep
+download_data  600077
+225
+sleep
+download_data  002260
+226
+sleep
+download_data  600238
+227
+sleep
+download_data  002235
+228
+sleep
+download_data  600182
+229
+sleep
+download_data  600728
+230
+sleep
+download_data  002276
+231
+sleep
+download_data  002865
+232
+sleep
+download_data  000607
+233
+sleep
+download_data  000755
+234
+sleep
+download_data  002202
+235
+sleep
+download_data  600896
+236
+sleep
+download_data  002628
+237
+sleep
+download_data  600353
+238
+sleep
+download_data  600640
+239
+sleep
+download_data  600673
+240
+sleep
+download_data  600239
+241
+sleep
+download_data  600020
+242
+sleep
+download_data  600330
+243
+sleep
+download_data  002040
+244
+sleep
+download_data  603106
+245
+sleep
+download_data  600739
+246
+sleep
+601319  not download
+sleep
+download_data  002263
+247
+sleep
+download_data  600456
+248
+sleep
+download_data  002667
+249
+sleep
+download_data  000831
+250
+sleep
+download_data  000503
+251
+sleep
+download_data  603859
+252
+sleep
+download_data  600027
+253
+sleep
+download_data  002212
+254
+sleep
+download_data  000760Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+255
+sleep
+download_data  000564
+256
+sleep
+download_data  000989
+257
+sleep
+download_data  002379
+258
+sleep
+download_data  000652
+259
+sleep
+download_data  601179
+260
+sleep
+download_data  603728
+261
+sleep
+download_data  603900
+262
+sleep
+download_data  601128
+263
+sleep
+download_data  000816
+264
+sleep
+download_data  002169
+265
+sleep
+download_data  002549
+266
+sleep
+download_data  600149
+267
+sleep
+download_data  002738
+268
+sleep
+download_data  000716
+269
+sleep
+download_data  000403
+270
+sleep
+download_data  002127
+271
+sleep
+download_data  603816
+272
+sleep
+download_data  600643
+273
+sleep
+download_data  603589
+274
+sleep
+download_data  603189
+275
+sleep
+download_data  603566
+276
+sleep
+download_data  002689
+277
+sleep
+download_data  000617
+278
+sleep
+download_data  002170
+279
+sleep
+download_data  002634
+280
+sleep
+download_data  002428
+281
+sleep
+download_data  603517
+282
+sleep
+download_data  603829
+283
+sleep
+download_data  600375
+284
+sleep
+download_data  002807
+285
+sleep
+download_data  600735
+286
+sleep
+download_data  002240
+287
+sleep
+download_data  600255
+288
+sleep
+download_data  600992
+289
+sleep
+download_data  000623
+290
+sleep
+download_data  603179
+291
+sleep
+download_data  600206
+292
+sleep
+download_data  002713
+293
+sleep
+download_data  002192
+294
+sleep
+download_data  600622
+295
+sleep
+download_data  002177
+296
+sleep
+download_data  600570
+297
+sleep
+download_data  002072
+298
+sleep
+download_data  002174
+299
+sleep
+download_data  002359
+300
+sleep
+download_data  000695
+301
+sleep
+download_data  000793
+302
+sleep
+download_data  601218
+303
+sleep
+download_data  002037
+304
+sleep
+download_data  000666
+305
+sleep
+download_data  002396
+306
+sleep
+download_data  600763
+307
+sleep
+download_data  600568
+308
+sleep
+download_data  603063
+309
+sleep
+download_data  600171
+310
+sleep
+download_data  000650
+311
+sleep
+download_data  002236
+312
+sleep
+download_data  600120
+313
+sleep
+download_data  600293
+314
+sleep
+download_data  600329
+315
+sleep
+download_data  601336
+316
+sleep
+download_data  000976
+317
+sleep
+download_data  002279
+318
+sleep
+download_data  002533
+319
+sleep
+download_data  601068
+320
+sleep
+download_data  600241
+321
+sleep
+download_data  002079
+322
+sleep
+download_data  002714
+323
+sleep
+download_data  002472
+324
+sleep
+download_data  000722
+325
+sleep
+download_data  002344
+326
+sleep
+download_data  000616
+327
+sleep
+download_data  600119
+328
+sleep
+download_data  002571
+329
+sleep
+download_data  002032
+330
+sleep
+download_data  600702
+331
+sleep
+download_data  000685
+332
+sleep
+download_data  000610
+333
+sleep
+download_data  002690
+334
+sleep
+download_data  600595
+335
+sleep
+download_data  603387
+336
+sleep
+download_data  603011
+337
+sleep
+download_data  000961
+338
+sleep
+download_data  002315
+339
+sleep
+download_data  600345
+340
+sleep
+download_data  002005
+341
+sleep
+download_data  600439
+342
+sleep
+download_data  002553
+343
+sleep
+download_data  603538
+344
+sleep
+download_data  002551
+345
+sleep
+download_data  601588
+346
+sleep
+download_data  002335
+347
+sleep
+download_data  600111
+348
+sleep
+download_data  000608
+349
+sleep
+download_data  600683
+350
+sleep
+download_data  000030
+351
+sleep
+download_data  000828
+352
+sleep
+download_data  600671
+353
+sleep
+download_data  000850
+354
+sleep
+download_data  600559
+355
+sleep
+download_data  000977
+356
+sleep
+download_data  002656
+357
+sleep
+download_data  603157
+358
+sleep
+download_data  600665
+359
+sleep
+download_data  600212
+360
+sleep
+download_data  603477
+361
+sleep
+download_data  600850
+362
+sleep
+download_data  002253
+363
+sleep
+download_data  600635
+364
+sleep
+download_data  603136
+365
+sleep
+download_data  002350
+366
+sleep
+download_data  002013
+367
+sleep
+download_data  002640
+368
+sleep
+download_data  603882
+369
+sleep
+download_data  002191
+370
+sleep
+download_data  600187
+371
+sleep
+download_data  002181
+372
+sleep
+download_data  002036
+373
+sleep
+download_data  603618
+374
+sleep
+download_data  002093
+375
+sleep
+download_data  600371
+376
+sleep
+download_data  600908
+377
+sleep
+download_data  600901
+378
+sleep
+download_data  600410
+379
+sleep
+download_data  002657
+380
+sleep
+download_data  601137
+381
+sleep
+download_data  600704
+382
+sleep
+download_data  600538
+383
+sleep
+download_data  002038
+384
+sleep
+download_data  601100
+385
+sleep
+download_data  000567
+386
+sleep
+download_data  000415
+387
+sleep
+download_data  600881
+388
+sleep
+download_data  002405
+389
+sleep
+download_data  600235
+390
+sleep
+download_data  603678
+391
+sleep
+download_data  000960
+392
+sleep
+download_data  000517
+393
+sleep
+download_data  603579
+394
+sleep
+download_data  603166
+395
+sleep
+download_data  002178
+396
+sleep
+download_data  002157
+397
+sleep
+download_data  000970
+398
+sleep
+download_data  002224
+399
+sleep
+download_data  600386
+400
+sleep
+download_data  002113
+401
+sleep
+download_data  600615
+402
+sleep
+download_data  600520
+403
+sleep
+download_data  002509
+404
+sleep
+download_data  002220
+405
+sleep
+download_data  600136
+406
+sleep
+download_data  600790
+407
+sleep
+download_data  600599
+408
+sleep
+download_data  002007
+409
+sleep
+download_data  000402
+410
+sleep
+download_data  000881
+411
+sleep
+download_data  603809
+412
+sleep
+download_data  000809
+413
+sleep
+download_data  603716
+414
+sleep
+download_data  603959
+415
+sleep
+download_data  603060
+416
+sleep
+download_data  600340
+417
+sleep
+download_data  002362
+418
+sleep
+download_data  603181
+419
+sleep
+download_data  603881
+420
+sleep
+download_data  600112
+421
+sleep
+download_data  002725
+422
+sleep
+download_data  002501
+423
+sleep
+download_data  000068
+424
+sleep
+download_data  000601
+425
+sleep
+download_data  002645
+426
+sleep
+download_data  600558
+427
+sleep
+download_data  600335
+428
+sleep
+download_data  603690
+429
+sleep
+download_data  000821
+430
+sleep
+download_data  600977
+431
+sleep
+download_data  601611
+432
+sleep
+download_data  601858
+433
+sleep
+download_data  002056
+434
+sleep
+download_data  002518
+435
+sleep
+download_data  600231
+436
+sleep
+download_data  601002
+437
+sleep
+download_data  000682
+438
+sleep
+download_data  601577
+439
+sleep
+download_data  000613
+440
+sleep
+download_data  002325
+441
+sleep
+download_data  000739
+442
+sleep
+download_data  600529
+443
+sleep
+download_data  601601
+444
+sleep
+download_data  600095
+445
+sleep
+download_data  603660
+446
+sleep
+download_data  600751
+447
+sleep
+download_data  603000
+448
+sleep
+download_data  000532
+449
+sleep
+download_data  600716
+450
+sleep
+download_data  600981
+451
+sleep
+download_data  002567
+452
+sleep
+download_data  000806
+453
+sleep
+download_data  002339
+454
+sleep
+download_data  002229
+455
+sleep
+download_data  600480
+456
+sleep
+download_data  600196
+457
+sleep
+download_data  600302
+458
+sleep
+download_data  603367
+459
+sleep
+download_data  603028
+460
+sleep
+download_data  600358
+461
+sleep
+download_data  002523
+462
+sleep
+download_data  600469
+463
+sleep
+download_data  000777
+464
+sleep
+download_data  600215
+465
+sleep
+download_data  002920
+466
+sleep
+download_data  601989
+467
+sleep
+download_data  600792
+468
+sleep
+download_data  603389
+469
+sleep
+download_data  002590
+470
+sleep
+download_data  600845
+471
+sleep
+download_data  002474
+472
+sleep
+download_data  002034
+473
+sleep
+download_data  000899
+474
+sleep
+download_data  002095
+475
+sleep
+download_data  002153
+476
+sleep
+download_data  002021
+477
+sleep
+download_data  600266
+478
+sleep
+download_data  000917
+479
+sleep
+download_data  600259
+480
+sleep
+download_data  603757
+481
+sleep
+download_data  600135
+482
+sleep
+download_data  600388
+483
+sleep
+download_data  002491
+484
+sleep
+download_data  002935
+485
+sleep
+download_data  002605
+486
+sleep
+download_data  002888
+487
+sleep
+download_data  600755
+488
+sleep
+download_data  002328
+489
+sleep
+download_data  002773
+490
+sleep
+download_data  600831
+491
+sleep
+download_data  002703
+492
+sleep
+download_data  600468
+493
+sleep
+download_data  002293
+494
+sleep
+download_data  600383
+495
+sleep
+download_data  002378
+496
+sleep
+download_data  002168
+497
+sleep
+download_data  000002
+498
+sleep
+download_data  603803
+499
+sleep
+download_data  000997
+500
+sleep
+download_data  002054
+501
+sleep
+download_data  002492
+502
+sleep
+download_data  002936
+503
+sleep
+download_data  002094
+504
+sleep
+download_data  600503
+505
+sleep
+download_data  601233
+506
+sleep
+download_data  600869
+507
+sleep
+download_data  000066
+508
+sleep
+download_data  002119
+509
+sleep
+download_data  601999
+510
+sleep
+download_data  603801
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+511
+sleep
+download_data  002400
+512
+sleep
+download_data  002314
+513
+sleep
+download_data  002161
+514
+sleep
+download_data  600249
+515
+sleep
+download_data  002330
+516
+sleep
+download_data  603887
+517
+sleep
+download_data  002196
+518
+sleep
+download_data  002337
+519
+sleep
+download_data  603619
+520
+sleep
+download_data  600555
+521
+sleep
+download_data  002307
+522
+sleep
+download_data  002544
+523
+sleep
+download_data  601222
+524
+sleep
+download_data  601606
+525
+sleep
+download_data  002422
+526
+sleep
+download_data  002562
+527
+sleep
+download_data  000830
+528
+sleep
+download_data  002082
+529
+sleep
+download_data  600649
+530
+sleep
+download_data  000032
+531
+sleep
+download_data  600696
+532
+sleep
+download_data  600623
+533
+sleep
+download_data  600356
+534
+sleep
+download_data  000886
+535
+sleep
+download_data  002531
+536
+sleep
+download_data  002368
+537
+sleep
+download_data  002354
+538
+sleep
+download_data  600290
+539
+sleep
+download_data  002685
+540
+sleep
+download_data  601677
+541
+sleep
+download_data  600380
+542
+sleep
+download_data  603555
+543
+sleep
+download_data  002607
+544
+sleep
+download_data  600797
+545
+sleep
+download_data  002786
+546
+sleep
+download_data  600805
+547
+sleep
+download_data  600128
+548
+sleep
+download_data  002466
+549
+sleep
+download_data  603960
+550
+sleep
+download_data  000727
+551
+sleep
+download_data  002625
+552
+sleep
+download_data  601155
+553
+sleep
+download_data  603023
+554
+sleep
+download_data  002751
+555
+sleep
+download_data  002435
+556
+sleep
+download_data  002329
+557
+sleep
+download_data  600063
+558
+sleep
+download_data  002884
+559
+sleep
+download_data  000521
+560
+sleep
+download_data  603860
+561
+sleep
+download_data  002091
+562
+sleep
+download_data  002842
+563
+sleep
+download_data  002855
+564
+sleep
+download_data  603117
+565
+sleep
+download_data  002696
+566
+sleep
+download_data  002805
+567
+sleep
+download_data  002476
+568
+sleep
+download_data  000862
+569
+sleep
+download_data  600770
+570
+sleep
+download_data  000835
+571
+sleep
+download_data  000912
+572
+sleep
+download_data  600260
+573
+sleep
+download_data  600638
+574
+sleep
+download_data  603232
+575
+sleep
+download_data  002597
+576
+sleep
+download_data  600884
+577
+sleep
+download_data  600372
+578
+sleep
+download_data  600129
+579
+sleep
+download_data  002308
+580
+sleep
+download_data  002207
+581
+sleep
+download_data  600820
+582
+sleep
+download_data  603607
+583
+sleep
+download_data  002464
+584
+sleep
+download_data  002245
+585
+sleep
+download_data  002141
+586
+sleep
+download_data  000887
+587
+sleep
+download_data  600279
+588
+sleep
+download_data  002297
+589
+sleep
+download_data  002280
+590
+sleep
+download_data  000679
+591
+sleep
+download_data  600093
+592
+sleep
+download_data  000573
+593
+sleep
+download_data  002296
+594
+sleep
+download_data  600879
+595
+sleep
+download_data  002410
+596
+sleep
+download_data  002003
+597
+sleep
+download_data  603679
+598
+sleep
+download_data  002284
+599
+sleep
+download_data  002216
+600
+sleep
+download_data  002063
+601
+sleep
+download_data  603612
+602
+sleep
+download_data  600495
+603
+sleep
+download_data  603985
+604
+sleep
+download_data  002619
+605
+sleep
+download_data  002065
+606
+sleep
+download_data  600721
+607
+sleep
+download_data  603488
+608
+sleep
+download_data  002334
+609
+sleep
+download_data  600549
+610
+sleep
+download_data  600202
+611
+sleep
+download_data  002487
+612
+sleep
+download_data  600393
+613
+sleep
+download_data  002674
+614
+sleep
+download_data  600309
+615
+sleep
+download_data  002600
+616
+sleep
+download_data  000669
+617
+sleep
+download_data  000811
+618
+sleep
+download_data  601838
+619
+sleep
+download_data  600980
+620
+sleep
+download_data  002517
+621
+sleep
+download_data  000536
+622
+sleep
+download_data  600082
+623
+sleep
+download_data  600789
+624
+sleep
+download_data  002057
+625
+sleep
+download_data  002332
+626
+sleep
+download_data  002173
+627
+sleep
+download_data  600985
+628
+sleep
+download_data  002016
+629
+sleep
+download_data  002409
+630
+sleep
+download_data  601789
+631
+sleep
+download_data  000895
+632
+sleep
+download_data  603008
+633
+sleep
+download_data  600847
+634
+sleep
+download_data  600866
+635
+sleep
+download_data  000711
+636
+sleep
+download_data  603369
+637
+sleep
+download_data  002262
+638
+sleep
+download_data  002882
+639
+sleep
+download_data  002643
+640
+sleep
+download_data  603019
+641
+sleep
+download_data  000962
+642
+sleep
+download_data  002001
+643
+sleep
+download_data  000637
+644
+sleep
+download_data  000839
+645
+sleep
+download_data  002856
+646
+sleep
+download_data  002495
+647
+sleep
+download_data  603330
+648
+sleep
+download_data  000158
+649
+sleep
+download_data  000859
+650
+sleep
+download_data  600288
+651
+sleep
+download_data  600331
+652
+sleep
+download_data  002662
+653
+sleep
+download_data  603015
+654
+sleep
+download_data  002527
+655
+sleep
+download_data  603005
+656
+sleep
+download_data  601996
+657
+sleep
+download_data  002836
+658
+sleep
+download_data  601020
+659
+sleep
+download_data  000528
+660
+sleep
+download_data  601118
+661
+sleep
+download_data  603466
+662
+sleep
+download_data  600711
+663
+sleep
+download_data  600227
+664
+sleep
+download_data  000555
+665
+sleep
+download_data  600405
+666
+sleep
+download_data  002111
+667
+sleep
+download_data  001696
+668
+sleep
+download_data  002019
+669
+sleep
+download_data  000788
+670
+sleep
+download_data  600501
+671
+sleep
+download_data  000973
+672
+sleep
+download_data  600959
+673
+sleep
+download_data  600718
+674
+sleep
+download_data  600526
+675
+sleep
+download_data  600243
+676
+sleep
+download_data  002782
+677
+sleep
+download_data  600860
+678
+sleep
+download_data  002009
+679
+sleep
+download_data  603587
+680
+sleep
+download_data  600809
+681
+sleep
+download_data  603380
+682
+sleep
+download_data  000156
+683
+sleep
+download_data  600874
+684
+sleep
+download_data  000016
+685
+sleep
+download_data  000524
+686
+sleep
+download_data  600502
+687
+sleep
+download_data  603359
+688
+sleep
+download_data  000933
+689
+sleep
+download_data  600747
+690
+sleep
+download_data  002129
+691
+sleep
+download_data  002069
+692
+sleep
+download_data  600292
+693
+sleep
+download_data  002100
+694
+sleep
+download_data  600195
+695
+sleep
+download_data  002273
+696
+sleep
+download_data  600757
+697
+sleep
+download_data  002277
+698
+sleep
+download_data  000429
+699
+sleep
+download_data  600978
+700
+sleep
+download_data  000009
+701
+sleep
+download_data  600826
+702
+sleep
+download_data  600738
+703
+sleep
+download_data  002002
+704
+sleep
+download_data  002737
+705
+sleep
+download_data  603998
+706
+sleep
+download_data  600328
+707
+sleep
+download_data  000758
+708
+sleep
+download_data  002694
+709
+sleep
+download_data  002676
+710
+sleep
+download_data  000520
+711
+sleep
+download_data  603226
+712
+sleep
+download_data  002419
+713
+sleep
+download_data  603227
+714
+sleep
+download_data  002563
+715
+sleep
+download_data  000969
+716
+sleep
+download_data  603583
+717
+sleep
+download_data  002583
+718
+sleep
+download_data  002441
+719
+sleep
+download_data  002184
+720
+sleep
+download_data  603501
+721
+sleep
+download_data  600626
+722
+sleep
+download_data  600088
+723
+sleep
+download_data  000955
+724
+sleep
+download_data  002448
+725
+sleep
+download_data  600939
+726
+sleep
+download_data  600685
+727
+sleep
+download_data  002631
+728
+sleep
+download_data  600560
+729
+sleep
+download_data  002234
+730
+sleep
+download_data  002101
+731
+sleep
+download_data  002919
+732
+sleep
+download_data  600756
+733
+sleep
+download_data  600354
+734
+sleep
+download_data  002294
+735
+sleep
+download_data  600759
+736
+sleep
+download_data  002796
+737
+sleep
+download_data  601908
+738
+sleep
+download_data  002047
+739
+sleep
+download_data  000892
+740
+sleep
+download_data  000885
+741
+sleep
+download_data  002373
+742
+sleep
+download_data  002418
+743
+sleep
+download_data  603936
+744
+sleep
+download_data  600784
+745
+sleep
+download_data  000034
+746
+sleep
+download_data  601186
+747
+sleep
+download_data  002863
+748
+sleep
+download_data  600470
+749
+sleep
+002940  not download
+sleep
+download_data  603989
+750
+sleep
+download_data  603889
+751
+sleep
+download_data  603639
+752
+sleep
+download_data  603398
+753
+sleep
+download_data  600361
+754
+sleep
+download_data  002322
+755
+sleep
+download_data  603987
+756
+sleep
+download_data  600222
+757
+sleep
+download_data  600767
+758
+sleep
+download_data  002027
+759
+sleep
+download_data  002020
+760
+sleep
+download_data  002123
+761
+sleep
+download_data  600381
+762
+sleep
+download_data  600594
+763
+sleep
+download_data  600619
+764
+sleep
+download_data  603991
+765
+sleep
+download_data  600872
+766
+sleepSome characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+download_data  002164
+767
+sleep
+download_data  002922
+768
+sleep
+download_data  002837
+769
+sleep
+download_data  600727
+770
+sleep
+download_data  600420
+771
+sleep
+download_data  000545
+772
+sleep
+download_data  002588
+773
+sleep
+download_data  000909
+774
+sleep
+download_data  002341
+775
+sleep
+download_data  600561
+776
+sleep
+download_data  002729
+777
+sleep
+download_data  002298
+778
+sleep
+download_data  000671
+779
+sleep
+download_data  002310
+780
+sleep
+download_data  002076
+781
+sleep
+download_data  002365
+782
+sleep
+download_data  002077
+783
+sleep
+download_data  603180
+784
+sleep
+download_data  002905
+785
+sleep
+download_data  002851
+786
+sleep
+download_data  600768
+787
+sleep
+download_data  600686
+788
+sleep
+download_data  600562
+789
+sleep
+download_data  002131
+790
+sleep
+download_data  002089
+791
+sleep
+download_data  600133
+792
+sleep
+download_data  000020
+793
+sleep
+download_data  002740
+794
+sleep
+download_data  002320
+795
+sleep
+download_data  603396
+796
+sleep
+download_data  600743
+797
+sleep
+download_data  600862
+798
+sleep
+download_data  002883
+799
+sleep
+download_data  002460
+800
+sleep
+download_data  002488
+801
+sleep
+download_data  601567
+802
+sleep
+download_data  600715
+803
+sleep
+download_data  002340
+804
+sleep
+download_data  002143
+805
+sleep
+download_data  603416
+806
+sleep
+download_data  603721
+807
+sleep
+download_data  002577
+808
+sleep
+download_data  002351
+809
+sleep
+download_data  000410
+810
+sleep
+download_data  002766
+811
+sleep
+download_data  000572
+812
+sleep
+download_data  603300
+813
+sleep
+download_data  600838
+814
+sleep
+download_data  000625
+815
+sleep
+download_data  603688
+816
+sleep
+download_data  002654
+817
+sleep
+download_data  002896
+818
+sleep
+download_data  600575
+819
+sleep
+download_data  002386
+820
+sleep
+download_data  000723
+821
+sleep
+download_data  600679
+822
+sleep
+download_data  600366
+823
+sleep
+download_data  002508
+824
+sleep
+download_data  600070
+825
+sleep
+download_data  000657
+826
+sleep
+download_data  603799
+827
+sleep
+download_data  002108
+828
+sleep
+download_data  002375
+829
+sleep
+download_data  000799
+830
+sleep
+download_data  601311
+831
+sleep
+download_data  000928
+832
+sleep
+download_data  002913
+833
+sleep
+download_data  002118
+834
+sleep
+download_data  603599
+835
+sleep
+download_data  000566
+836
+sleep
+download_data  002004
+837
+sleep
+download_data  002663
+838
+sleep
+download_data  002698
+839
+sleep
+download_data  601717
+840
+sleep
+download_data  600698
+841
+sleep
+download_data  002447
+842
+sleep
+download_data  600557
+843
+sleep
+download_data  600758
+844
+sleep
+download_data  600122
+845
+sleep
+download_data  000155
+846
+sleep
+download_data  002382
+847
+sleep
+download_data  000789
+848
+sleep
+download_data  000673
+849
+sleep
+download_data  002162
+850
+sleep
+download_data  603876
+851
+sleep
+download_data  002541
+852
+sleep
+download_data  600477
+853
+sleep
+download_data  600765
+854
+sleep
+download_data  000510
+855
+sleep
+download_data  000626
+856
+sleep
+download_data  603626
+857
+sleep
+download_data  000043
+858
+sleep
+download_data  603800
+859
+sleep
+download_data  601028
+860
+sleep
+download_data  600552
+861
+sleep
+download_data  002268
+862
+sleep
+download_data  002050
+863
+sleep
+download_data  600048
+864
+sleep
+download_data  600090
+865
+sleep
+download_data  000638
+866
+sleep
+download_data  002682
+867
+sleep
+download_data  603066
+868
+sleep
+download_data  000530
+869
+sleep
+download_data  000606
+870
+sleep
+download_data  600522
+871
+sleep
+download_data  600479
+872
+sleep
+download_data  600321
+873
+sleep
+download_data  600651
+874
+sleep
+download_data  000548
+875
+sleep
+download_data  600798
+876
+sleep
+download_data  600397
+877
+sleep
+download_data  002175
+878
+sleep
+download_data  002371
+879
+sleep
+download_data  000559
+880
+sleep
+download_data  600308
+881
+sleep
+download_data  600736
+882
+sleep
+download_data  603069
+883
+sleep
+download_data  002559
+884
+sleep
+download_data  000677
+885
+sleep
+download_data  002586
+886
+sleep
+download_data  600365
+887
+sleep
+download_data  002519
+888
+sleep
+download_data  000826
+889
+sleep
+download_data  000786
+890
+sleep
+download_data  601168
+891
+sleep
+download_data  002869
+892
+sleep
+download_data  000661
+893
+sleep
+download_data  002921
+894
+sleep
+download_data  002249
+895
+sleep
+download_data  002074
+896
+sleep
+download_data  600936
+897
+sleep
+download_data  600189
+898
+sleep
+download_data  002828
+899
+sleep
+download_data  603131
+900
+sleep
+download_data  000908
+901
+sleep
+download_data  002361
+902
+sleep
+download_data  002148
+903
+sleep
+download_data  002499
+904
+sleep
+download_data  002638
+905
+sleep
+download_data  002489
+906
+sleep
+download_data  000700
+907
+sleep
+download_data  601595
+908
+sleep
+download_data  002195
+909
+sleep
+download_data  600278
+910
+sleep
+download_data  002467
+911
+sleep
+download_data  600229
+912
+sleep
+download_data  600237
+913
+sleep
+download_data  000882
+914
+sleep
+download_data  000692
+915
+sleep
+download_data  600332
+916
+sleep
+download_data  000762
+917
+sleep
+download_data  603308
+918
+sleep
+download_data  600528
+919
+sleep
+download_data  000596
+920
+sleep
+download_data  000505
+921
+sleep
+download_data  600733
+922
+sleep
+download_data  600360
+923
+sleep
+download_data  600240
+924
+sleep
+download_data  002360
+925
+sleep
+download_data  600843
+926
+sleep
+download_data  603500
+927
+sleep
+download_data  600653
+928
+sleep
+download_data  002347
+929
+sleep
+download_data  000798
+930
+sleep
+download_data  600481
+931
+sleep
+download_data  600580
+932
+sleep
+download_data  002608
+933
+sleep
+download_data  000078
+934
+sleep
+download_data  600613
+935
+sleep
+download_data  002156
+936
+sleep
+download_data  603003
+937
+sleep
+download_data  000031
+938
+sleep
+download_data  002497
+939
+sleep
+download_data  002291
+940
+sleep
+download_data  603996
+941
+sleep
+download_data  601226
+942
+sleep
+download_data  600091
+943
+sleep
+download_data  600267
+944
+sleep
+download_data  000582
+945
+sleep
+download_data  600706
+946
+sleep
+download_data  600193
+947
+sleep
+download_data  002524
+948
+sleep
+download_data  600186
+949
+sleep
+download_data  002097
+950
+sleep
+download_data  603669
+951
+sleep
+download_data  600056
+952
+sleep
+download_data  600359
+953
+sleep
+download_data  002454
+954
+sleep
+download_data  603085
+955
+sleep
+download_data  000430
+956
+sleep
+download_data  002401
+957
+sleep
+download_data  002800
+958
+sleep
+download_data  601599
+959
+sleep
+download_data  000717
+960
+sleep
+download_data  002403
+961
+sleep
+download_data  600216
+962
+sleep
+download_data  600630
+963
+sleep
+download_data  600682
+964
+sleep
+download_data  603729
+965
+sleep
+download_data  600666
+966
+sleep
+download_data  601997
+967
+sleep
+download_data  600650
+968
+sleep
+download_data  002140
+969
+sleep
+download_data  601012
+970
+sleep
+download_data  600708
+971
+sleep
+download_data  002292
+972
+sleep
+download_data  002265
+973
+sleep
+download_data  000036
+974
+sleep
+download_data  600305
+975
+sleep
+download_data  002529
+976
+sleep
+download_data  002055
+977
+sleep
+download_data  601777
+978
+sleep
+download_data  002757
+979
+sleep
+download_data  601718
+980
+sleep
+download_data  002380
+981
+sleep
+download_data  000759
+982
+sleep
+download_data  002534
+983
+sleep
+download_data  603685
+984
+sleep
+download_data  002669
+985
+sleep
+download_data  603533
+986
+sleep
+download_data  600421
+987
+sleep
+download_data  002197
+988
+sleep
+download_data  002482
+989
+sleep
+download_data  000005
+990
+sleep
+download_data  002058
+991
+sleep
+download_data  600058
+992
+sleep
+download_data  002126
+993
+sleep
+download_data  002900
+994
+sleep
+download_data  002353
+995
+sleep
+download_data  603906
+996
+sleep
+download_data  600113
+997
+sleep
+download_data  603698
+998
+sleep
+download_data  600210
+999
+sleep
+download_data  001979
+1000
+sleep
+download_data  002666
+1001
+sleep
+download_data  603586
+1002
+sleep
+download_data  002889
+1003
+sleep
+download_data  603711
+1004
+sleep
+download_data  002652
+1005
+sleep
+download_data  002445
+1006
+sleep
+download_data  603338
+1007
+sleep
+download_data  603138
+1008
+sleep
+download_data  002035
+1009
+sleep
+download_data  603986
+1010
+sleep
+download_data  600460
+1011
+sleep
+download_data  600516
+1012
+sleep
+download_data  600132
+1013
+sleep
+download_data  600857
+1014
+sleep
+download_data  002180
+1015
+sleep
+download_data  000993
+1016
+sleep
+download_data  603966
+1017
+sleep
+download_data  002022
+1018
+sleep
+download_data  600355
+1019
+sleep
+download_data  600731
+1020
+sleep
+download_data  002086
+1021
+sleep
+download_data  603890Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+1022
+sleep
+download_data  002892
+1023
+sleep
+download_data  600684
+1024
+sleep
+download_data  600581
+1025
+sleep
+download_data  002255
+1026
+sleep
+download_data  002185
+1027
+sleep
+download_data  002139
+1028
+sleep
+download_data  000819
+1029
+sleep
+download_data  603776
+1030
+sleep
+download_data  601086
+1031
+sleep
+download_data  002623
+1032
+sleep
+download_data  002479
+1033
+sleep
+download_data  000812
+1034
+sleep
+download_data  002803
+1035
+sleep
+download_data  002609
+1036
+sleep
+download_data  002391
+1037
+sleep
+download_data  000852
+1038
+sleep
+download_data  600740
+1039
+sleep
+download_data  600714
+1040
+sleep
+download_data  002620
+1041
+sleep
+download_data  603002
+1042
+sleep
+download_data  002610
+1043
+sleep
+download_data  600848
+1044
+sleep
+download_data  002847
+1045
+sleep
+download_data  603733
+1046
+sleep
+download_data  002437
+1047
+sleep
+download_data  601019
+1048
+sleep
+download_data  002755
+1049
+sleep
+download_data  603040
+1050
+sleep
+download_data  600993
+1051
+sleep
+download_data  600444
+1052
+sleep
+download_data  002715
+1053
+sleep
+download_data  002481
+1054
+sleep
+download_data  603858
+1055
+sleep
+download_data  603506
+1056
+sleep
+download_data  603843
+1057
+sleep
+download_data  603929
+1058
+sleep
+download_data  600036
+1059
+sleep
+download_data  002295
+1060
+sleep
+download_data  603767
+1061
+sleep
+download_data  002711
+1062
+sleep
+download_data  002084
+1063
+sleep
+download_data  000060
+1064
+sleep
+download_data  603630
+1065
+sleep
+download_data  600074
+1066
+sleep
+download_data  002357
+1067
+sleep
+download_data  002423
+1068
+sleep
+download_data  002205
+1069
+sleep
+download_data  002239
+1070
+sleep
+download_data  000957
+1071
+sleep
+download_data  600678
+1072
+sleep
+download_data  000069
+1073
+sleep
+download_data  600844
+1074
+sleep
+download_data  600078
+1075
+sleep
+download_data  000958
+1076
+sleep
+download_data  600403
+1077
+sleep
+download_data  603883
+1078
+sleep
+download_data  002750
+1079
+sleep
+download_data  603628
+1080
+sleep
+download_data  603077
+1081
+sleep
+download_data  002510
+1082
+sleep
+download_data  002218
+1083
+sleep
+download_data  000680
+1084
+sleep
+download_data  601116
+1085
+sleep
+download_data  000055
+1086
+sleep
+download_data  002857
+1087
+sleep
+download_data  000153
+1088
+sleep
+download_data  601801
+1089
+sleep
+download_data  002702
+1090
+sleep
+download_data  002776
+1091
+sleep
+download_data  002528
+1092
+sleep
+download_data  000905
+1093
+sleep
+download_data  603357
+1094
+sleep
+download_data  600026
+1095
+sleep
+download_data  002573
+1096
+sleep
+download_data  002024
+1097
+sleep
+download_data  002309
+1098
+sleep
+download_data  000021
+1099
+sleep
+download_data  603345
+1100
+sleep
+download_data  002772
+1101
+sleep
+download_data  600159
+1102
+sleep
+download_data  002138
+1103
+sleep
+download_data  600406
+1104
+sleep
+download_data  000790
+1105
+sleep
+download_data  000585
+1106
+sleep
+download_data  600180
+1107
+sleep
+download_data  601369
+1108
+sleep
+download_data  603585
+1109
+sleep
+download_data  002641
+1110
+sleep
+download_data  002080
+1111
+sleep
+download_data  603817
+1112
+sleep
+download_data  600883
+1113
+sleep
+download_data  601918
+1114
+sleep
+download_data  600188
+1115
+sleep
+download_data  002163
+1116
+sleep
+download_data  600217
+1117
+sleep
+download_data  002535
+1118
+sleep
+download_data  002200
+1119
+sleep
+download_data  603188
+1120
+sleep
+download_data  600725
+1121
+sleep
+download_data  600691
+1122
+sleep
+download_data  600707
+1123
+sleep
+download_data  002887
+1124
+sleep
+download_data  600126
+1125
+sleep
+download_data  600211
+1126
+sleep
+download_data  600064
+1127
+sleep
+download_data  601929
+1128
+sleep
+download_data  000413
+1129
+sleep
+download_data  000875
+1130
+sleep
+download_data  002146
+1131
+sleep
+download_data  002299
+1132
+sleep
+download_data  002431
+1133
+sleep
+download_data  600327
+1134
+sleep
+download_data  600787
+1135
+sleep
+download_data  000710
+1136
+sleep
+download_data  603955
+1137
+sleep
+download_data  600584
+1138
+sleep
+download_data  600475
+1139
+sleep
+download_data  000938
+1140
+sleep
+download_data  603037
+1141
+sleep
+download_data  600497
+1142
+sleep
+download_data  600428
+1143
+sleep
+download_data  600121
+1144
+sleep
+download_data  603309
+1145
+sleep
+download_data  002030
+1146
+sleep
+download_data  603686
+1147
+sleep
+download_data  002029
+1148
+sleep
+download_data  000099
+1149
+sleep
+download_data  600487
+1150
+sleep
+download_data  603105
+1151
+sleep
+download_data  600173
+1152
+sleep
+download_data  603856
+1153
+sleep
+download_data  603277
+1154
+sleep
+download_data  002756
+1155
+sleep
+download_data  002420
+1156
+sleep
+download_data  002283
+1157
+sleep
+download_data  002160
+1158
+sleep
+download_data  000609
+1159
+sleep
+download_data  002584
+1160
+sleep
+download_data  603556
+1161
+sleep
+download_data  002381
+1162
+sleep
+download_data  600551
+1163
+sleep
+download_data  000088
+1164
+sleep
+download_data  000838
+1165
+sleep
+download_data  603101
+1166
+sleep
+download_data  002748
+1167
+sleep
+download_data  603009
+1168
+sleep
+download_data  002457
+1169
+sleep
+download_data  000428
+1170
+sleep
+download_data  001965
+1171
+sleep
+download_data  603993
+1172
+sleep
+download_data  600069
+1173
+sleep
+download_data  000833
+1174
+sleep
+download_data  002745
+1175
+sleep
+download_data  600197
+1176
+sleep
+download_data  601818
+1177
+sleep
+download_data  002206
+1178
+sleep
+download_data  000982
+1179
+sleep
+download_data  002286
+1180
+sleep
+download_data  600888
+1181
+sleep
+download_data  600846
+1182
+sleep
+download_data  002128
+1183
+sleep
+download_data  603007
+1184
+sleep
+download_data  601001
+1185
+sleep
+download_data  600662
+1186
+sleep
+download_data  600151
+1187
+sleep
+download_data  002470
+1188
+sleep
+download_data  000815
+1189
+sleep
+download_data  000715
+1190
+sleep
+download_data  603787
+1191
+sleep
+download_data  600836
+1192
+sleep
+download_data  002824
+1193
+sleep
+download_data  002601
+1194
+sleep
+download_data  000800
+1195
+sleep
+download_data  600824
+1196
+sleep
+download_data  600608
+1197
+sleep
+download_data  002377
+1198
+sleep
+download_data  000570
+1199
+sleep
+download_data  600592
+1200
+sleep
+download_data  600601
+1201
+sleep
+download_data  600408
+1202
+sleep
+download_data  002833
+1203
+sleep
+download_data  002258
+1204
+sleep
+download_data  600491
+1205
+sleep
+download_data  603316
+1206
+sleep
+download_data  000061
+1207
+sleep
+download_data  600577
+1208
+sleep
+download_data  000631
+1209
+sleep
+download_data  002078
+1210
+sleep
+download_data  600602
+1211
+sleep
+download_data  002433
+1212
+sleep
+download_data  002246
+1213
+sleep
+download_data  603388
+1214
+sleep
+download_data  000980
+1215
+sleep
+download_data  000565
+1216
+sleep
+download_data  600667
+1217
+sleep
+download_data  601166
+1218
+sleep
+download_data  000591
+1219
+sleep
+download_data  603269
+1220
+sleep
+download_data  600071
+1221
+sleep
+download_data  600416
+1222
+sleep
+download_data  002026
+1223
+sleep
+download_data  000636
+1224
+sleep
+download_data  002581
+1225
+sleep
+download_data  600804
+1226
+sleep
+download_data  002103
+1227
+sleep
+download_data  002282
+1228
+sleep
+download_data  002222
+1229
+sleep
+download_data  603833
+1230
+sleep
+download_data  002012
+1231
+sleep
+download_data  002444
+1232
+sleep
+download_data  600637
+1233
+sleep
+download_data  002432
+1234
+sleep
+download_data  002646
+1235
+sleep
+download_data  000627
+1236
+sleep
+download_data  000488
+1237
+sleep
+download_data  603165
+1238
+sleep
+download_data  000985
+1239
+sleep
+download_data  601518
+1240
+sleep
+download_data  600573
+1241
+sleep
+download_data  002165
+1242
+sleep
+download_data  000612
+1243
+sleep
+download_data  603879
+1244
+sleep
+download_data  002415
+1245
+sleep
+download_data  603615
+1246
+sleep
+download_data  000151
+1247
+sleep
+download_data  600676
+1248
+sleep
+download_data  600175
+1249
+sleep
+download_data  600157
+1250
+sleep
+download_data  600103
+1251
+sleep
+download_data  000807
+1252
+sleep
+download_data  002793
+1253
+sleep
+download_data  601668
+1254
+sleep
+download_data  603496
+1255
+sleep
+download_data  002171
+1256
+sleep
+download_data  600859
+1257
+sleep
+download_data  002228
+1258
+sleep
+download_data  002632
+1259
+sleep
+download_data  600422
+1260
+sleep
+download_data  002152
+1261
+sleep
+download_data  600744
+1262
+sleep
+download_data  002580
+1263
+sleep
+download_data  600515
+1264
+sleep
+download_data  600618
+1265
+sleep
+603629  not download
+sleep
+download_data  002144
+1266
+sleep
+download_data  600433
+1267
+sleep
+download_data  002133
+1268
+sleep
+download_data  002627
+1269
+sleep
+download_data  000926Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+1270
+sleep
+download_data  603978
+1271
+sleep
+download_data  600687
+1272
+sleep
+download_data  002841
+1273
+sleep
+download_data  002302
+1274
+sleep
+download_data  603133
+1275
+sleep
+download_data  600459
+1276
+sleep
+download_data  601360
+1277
+sleep
+download_data  000935
+1278
+sleep
+download_data  600512
+1279
+sleep
+download_data  600162
+1280
+sleep
+download_data  603301
+1281
+sleep
+download_data  600325
+1282
+sleep
+download_data  600106
+1283
+sleep
+download_data  002374
+1284
+sleep
+download_data  001896
+1285
+sleep
+download_data  000620
+1286
+sleep
+download_data  600037
+1287
+sleep
+download_data  601216
+1288
+sleep
+download_data  600639
+1289
+sleep
+download_data  600565
+1290
+sleep
+download_data  002087
+1291
+sleep
+download_data  002067
+1292
+sleep
+download_data  000949
+1293
+sleep
+download_data  000921
+1294
+sleep
+download_data  000417
+1295
+sleep
+download_data  002614
+1296
+sleep
+download_data  600833
+1297
+sleep
+download_data  603090
+1298
+sleep
+download_data  002456
+1299
+sleep
+download_data  600841
+1300
+sleep
+download_data  002278
+1301
+sleep
+download_data  600854
+1302
+sleep
+download_data  002326
+1303
+sleep
+download_data  000701
+1304
+sleep
+download_data  601699
+1305
+sleep
+download_data  000404
+1306
+sleep
+download_data  002593
+1307
+sleep
+download_data  600764
+1308
+sleep
+download_data  603790
+1309
+sleep
+download_data  601666
+1310
+sleep
+download_data  600452
+1311
+sleep
+download_data  601608
+1312
+sleep
+download_data  600987
+1313
+sleep
+download_data  603260
+1314
+sleep
+download_data  600281
+1315
+sleep
+download_data  002691
+1316
+sleep
+download_data  002109
+1317
+sleep
+download_data  000900
+1318
+sleep
+download_data  603128
+1319
+sleep
+download_data  603089
+1320
+sleep
+download_data  002918
+1321
+sleep
+download_data  601882
+1322
+sleep
+download_data  600861
+1323
+sleep
+download_data  002348
+1324
+sleep
+download_data  000546
+1325
+sleep
+download_data  603499
+1326
+sleep
+download_data  603458
+1327
+sleep
+download_data  603035
+1328
+sleep
+download_data  002158
+1329
+sleep
+download_data  601007
+1330
+sleep
+download_data  000983
+1331
+sleep
+download_data  600963
+1332
+sleep
+download_data  002763
+1333
+sleep
+download_data  002858
+1334
+sleep
+download_data  000877
+1335
+sleep
+download_data  600139
+1336
+sleep
+download_data  002227
+1337
+sleep
+download_data  000401
+1338
+sleep
+download_data  603303
+1339
+sleep
+download_data  600769
+1340
+sleep
+download_data  002398
+1341
+sleep
+download_data  600596
+1342
+sleep
+download_data  000062
+1343
+sleep
+download_data  603043
+1344
+sleep
+download_data  600540
+1345
+sleep
+download_data  000065
+1346
+sleep
+download_data  600821
+1347
+sleep
+download_data  000012
+1348
+sleep
+download_data  600966
+1349
+sleep
+download_data  002722
+1350
+sleep
+download_data  002787
+1351
+sleep
+download_data  002048
+1352
+sleep
+download_data  603026
+1353
+sleep
+download_data  603168
+1354
+sleep
+download_data  000829
+1355
+sleep
+download_data  000421
+1356
+sleep
+download_data  002943
+1357
+sleep
+download_data  000063
+1358
+sleep
+download_data  603385
+1359
+sleep
+download_data  002872
+1360
+sleep
+download_data  600509
+1361
+sleep
+download_data  603897
+1362
+sleep
+download_data  603661
+1363
+sleep
+download_data  600532
+1364
+sleep
+download_data  000159
+1365
+sleep
+download_data  002880
+1366
+sleep
+download_data  000584
+1367
+sleep
+download_data  000042
+1368
+sleep
+download_data  600722
+1369
+sleep
+download_data  603727
+1370
+sleep
+download_data  002439
+1371
+sleep
+download_data  000951
+1372
+sleep
+download_data  000501
+1373
+sleep
+download_data  600996
+1374
+sleep
+download_data  600933
+1375
+sleep
+download_data  600169
+1376
+sleep
+download_data  600138
+1377
+sleep
+download_data  600067
+1378
+sleep
+download_data  002554
+1379
+sleep
+download_data  002105
+1380
+sleep
+download_data  002835
+1381
+sleep
+download_data  600969
+1382
+sleep
+download_data  603665
+1383
+sleep
+download_data  000419
+1384
+sleep
+download_data  002681
+1385
+sleep
+download_data  002485
+1386
+sleep
+download_data  603855
+1387
+sleep
+download_data  601058
+1388
+sleep
+download_data  002771
+1389
+sleep
+download_data  600232
+1390
+sleep
+download_data  600894
+1391
+sleep
+download_data  600620
+1392
+sleep
+download_data  000568
+1393
+sleep
+download_data  601866
+1394
+sleep
+download_data  002392
+1395
+sleep
+download_data  000753
+1396
+sleep
+download_data  000950
+1397
+sleep
+download_data  600130
+1398
+sleep
+download_data  002770
+1399
+sleep
+download_data  601958
+1400
+sleep
+download_data  000791
+1401
+sleep
+download_data  601011
+1402
+sleep
+download_data  600051
+1403
+sleep
+download_data  002269
+1404
+sleep
+download_data  002121
+1405
+sleep
+download_data  002933
+1406
+sleep
+download_data  601872
+1407
+sleep
+download_data  600348
+1408
+sleep
+download_data  603099
+1409
+sleep
+download_data  603758
+1410
+sleep
+download_data  600624
+1411
+sleep
+download_data  600199
+1412
+sleep
+download_data  601333
+1413
+sleep
+download_data  002413
+1414
+sleep
+download_data  000698
+1415
+sleep
+download_data  000599
+1416
+sleep
+download_data  601009
+1417
+sleep
+download_data  002612
+1418
+sleep
+download_data  002071
+1419
+sleep
+download_data  000713
+1420
+sleep
+download_data  000333
+1421
+sleep
+download_data  603527
+1422
+sleep
+download_data  603505
+1423
+sleep
+download_data  600818
+1424
+sleep
+download_data  600455
+1425
+sleep
+download_data  002251
+1426
+sleep
+download_data  002671
+1427
+sleep
+download_data  002539
+1428
+sleep
+download_data  600505
+1429
+sleep
+download_data  600876
+1430
+sleep
+download_data  600123
+1431
+sleep
+download_data  603920
+1432
+sleep
+download_data  603798
+1433
+sleep
+download_data  002306
+1434
+sleep
+download_data  002142
+1435
+sleep
+download_data  000026
+1436
+sleep
+download_data  000007
+1437
+sleep
+download_data  002356
+1438
+sleep
+download_data  002176
+1439
+sleep
+download_data  601800
+1440
+sleep
+download_data  603126
+1441
+sleep
+download_data  002449
+1442
+sleep
+download_data  600962
+1443
+sleep
+download_data  600256
+1444
+sleep
+download_data  603348
+1445
+sleep
+download_data  600158
+1446
+sleep
+download_data  603444
+1447
+sleep
+download_data  600780
+1448
+sleep
+download_data  600476
+1449
+sleep
+download_data  002480
+1450
+sleep
+download_data  600926
+1451
+sleep
+download_data  002728
+1452
+sleep
+download_data  603108
+1453
+sleep
+download_data  601366
+1454
+sleep
+download_data  600543
+1455
+sleep
+download_data  603198
+1456
+sleep
+download_data  600839
+1457
+sleep
+download_data  600668
+1458
+sleep
+download_data  000897
+1459
+sleep
+download_data  000004
+1460
+sleep
+download_data  600213
+1461
+sleep
+download_data  002010
+1462
+sleep
+download_data  600490
+1463
+sleep
+download_data  600059
+1464
+sleep
+download_data  000972
+1465
+sleep
+download_data  000810
+1466
+sleep
+download_data  600796
+1467
+sleep
+download_data  601088
+1468
+sleep
+download_data  603777
+1469
+sleep
+download_data  002684
+1470
+sleep
+download_data  601890
+1471
+sleep
+download_data  002565
+1472
+sleep
+download_data  000541
+1473
+sleep
+download_data  601919
+1474
+sleep
+download_data  601258
+1475
+sleep
+download_data  002490
+1476
+sleep
+download_data  603605
+1477
+sleep
+download_data  000600
+1478
+sleep
+download_data  000554
+1479
+sleep
+download_data  603869
+1480
+sleep
+download_data  600823
+1481
+sleep
+download_data  002526
+1482
+sleep
+download_data  002726
+1483
+sleep
+download_data  000006
+1484
+sleep
+download_data  000878
+1485
+sleep
+download_data  000751
+1486
+sleep
+download_data  600773
+1487
+sleep
+download_data  002661
+1488
+sleep
+download_data  601992
+1489
+sleep
+download_data  600379
+1490
+sleep
+download_data  002342
+1491
+sleep
+download_data  600655
+1492
+sleep
+download_data  603319
+1493
+sleep
+download_data  600971
+1494
+sleep
+download_data  600880
+1495
+sleep
+download_data  002397
+1496
+sleep
+download_data  002031
+1497
+sleep
+download_data  600983
+1498
+sleep
+download_data  002011
+1499
+sleep
+download_data  600326
+1500
+sleep
+download_data  002166
+1501
+sleep
+download_data  600537
+1502
+sleep
+download_data  600409
+1503
+sleep
+download_data  600272
+1504
+sleep
+download_data  002845
+1505
+sleep
+download_data  600039
+1506
+sleep
+download_data  603901
+1507
+sleep
+download_data  000913
+1508
+sleep
+download_data  600418
+1509
+sleep
+download_data  000683
+1510
+sleep
+download_data  000014
+1511
+sleep
+download_data  603515
+1512
+sleep
+download_data  002630
+1513
+sleep
+download_data  002429
+1514
+sleep
+download_data  002006
+1515
+sleep
+download_data  002568
+1516
+sleep
+download_data  002107
+1517
+sleep
+download_data  000922
+1518
+sleepSome characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+download_data  603918
+1519
+sleep
+download_data  603029
+1520
+sleep
+download_data  600586
+1521
+sleep
+download_data  600367
+1522
+sleep
+download_data  600137
+1523
+sleep
+download_data  601388
+1524
+sleep
+download_data  600396
+1525
+sleep
+download_data  600178
+1526
+sleep
+download_data  600508
+1527
+sleep
+download_data  603038
+1528
+sleep
+download_data  600208
+1529
+sleep
+download_data  600029
+1530
+sleep
+download_data  002188
+1531
+sleep
+download_data  600829
+1532
+sleep
+download_data  600436
+1533
+sleep
+download_data  000687
+1534
+sleep
+download_data  000665
+1535
+sleep
+download_data  600307
+1536
+sleep
+download_data  600261
+1537
+sleep
+download_data  000822
+1538
+sleep
+download_data  000553
+1539
+sleep
+download_data  002818
+1540
+sleep
+download_data  600081
+1541
+sleep
+download_data  603200
+1542
+sleep
+download_data  600127
+1543
+sleep
+download_data  002406
+1544
+sleep
+download_data  002167
+1545
+sleep
+download_data  600697
+1546
+sleep
+download_data  000655
+1547
+sleep
+download_data  002706
+1548
+sleep
+download_data  002502
+1549
+sleep
+download_data  000782
+1550
+sleep
+download_data  600835
+1551
+sleep
+download_data  002390
+1552
+sleep
+download_data  000965
+1553
+sleep
+download_data  002336
+1554
+sleep
+download_data  002150
+1555
+sleep
+download_data  603636
+1556
+sleep
+download_data  000557
+1557
+sleep
+download_data  002049
+1558
+sleep
+download_data  603616
+1559
+sleep
+download_data  600269
+1560
+sleep
+download_data  002469
+1561
+sleep
+download_data  002820
+1562
+sleep
+download_data  600530
+1563
+sleep
+download_data  600336
+1564
+sleep
+download_data  002267
+1565
+sleep
+download_data  603737
+1566
+sleep
+download_data  000719
+1567
+sleep
+download_data  600990
+1568
+sleep
+download_data  603980
+1569
+sleep
+download_data  600425
+1570
+sleep
+download_data  600720
+1571
+sleep
+download_data  600251
+1572
+sleep
+download_data  600247
+1573
+sleep
+download_data  603027
+1574
+sleep
+download_data  002693
+1575
+sleep
+download_data  000059
+1576
+sleep
+download_data  600761
+1577
+sleep
+download_data  000423
+1578
+sleep
+download_data  000707
+1579
+sleep
+download_data  600054
+1580
+sleep
+download_data  603557
+1581
+sleep
+download_data  603958
+1582
+sleep
+download_data  603778
+1583
+sleep
+download_data  600298
+1584
+sleep
+download_data  601669
+1585
+sleep
+download_data  600052
+1586
+sleep
+download_data  600035
+1587
+sleep
+download_data  002589
+1588
+sleep
+download_data  002219
+1589
+sleep
+download_data  000630
+1590
+sleep
+download_data  002648
+1591
+sleep
+download_data  002073
+1592
+sleep
+download_data  000590
+1593
+sleep
+download_data  600801
+1594
+sleep
+download_data  600519
+1595
+sleep
+download_data  600510
+1596
+sleep
+download_data  600449
+1597
+sleep
+download_data  000651
+1598
+sleep
+download_data  002929
+1599
+sleep
+download_data  002923
+1600
+sleep
+download_data  002453
+1601
+sleep
+download_data  002626
+1602
+sleep
+download_data  600096
+1603
+sleep
+download_data  603933
+1604
+sleep
+download_data  603650
+1605
+sleep
+download_data  600084
+1606
+sleep
+download_data  603088
+1607
+sleep
+download_data  603598
+1608
+sleep
+download_data  603683
+1609
+sleep
+download_data  600661
+1610
+sleep
+download_data  600075
+1611
+sleep
+download_data  002687
+1612
+sleep
+download_data  603926
+1613
+sleep
+download_data  002303
+1614
+sleep
+download_data  600116
+1615
+sleep
+download_data  600185
+1616
+sleep
+download_data  000632
+1617
+sleep
+download_data  603022
+1618
+sleep
+download_data  603045
+1619
+sleep
+download_data  600010
+1620
+sleep
+download_data  601952
+1621
+sleep
+download_data  600960
+1622
+sleep
+download_data  600919
+1623
+sleep
+download_data  600527
+1624
+sleep
+download_data  002564
+1625
+sleep
+download_data  002932
+1626
+sleep
+download_data  002853
+1627
+sleep
+download_data  600815
+1628
+sleep
+download_data  600802
+1629
+sleep
+download_data  600611
+1630
+sleep
+download_data  603693
+1631
+sleep
+download_data  601727
+1632
+sleep
+download_data  600306
+1633
+sleep
+download_data  002345
+1634
+sleep
+download_data  002052
+1635
+sleep
+download_data  000932
+1636
+sleep
+download_data  000721
+1637
+sleep
+download_data  600295
+1638
+sleep
+download_data  002655
+1639
+sleep
+download_data  603648
+1640
+sleep
+download_data  603937
+1641
+sleep
+download_data  000552
+1642
+sleep
+download_data  002316
+1643
+sleep
+download_data  002092
+1644
+sleep
+download_data  600351
+1645
+sleep
+download_data  600606
+1646
+sleep
+download_data  600533
+1647
+sleep
+download_data  000981
+1648
+sleep
+download_data  000756
+1649
+sleep
+download_data  000039
+1650
+sleep
+download_data  000507
+1651
+sleep
+download_data  002637
+1652
+sleep
+download_data  600587
+1653
+sleep
+download_data  603036
+1654
+sleep
+download_data  600814
+1655
+sleep
+download_data  002043
+1656
+sleep
+download_data  000597
+1657
+sleep
+download_data  600097
+1658
+sleep
+download_data  000837
+1659
+sleep
+download_data  000662
+1660
+sleep
+download_data  600500
+1661
+sleep
+download_data  601199
+1662
+sleep
+download_data  601163
+1663
+sleep
+download_data  600995
+1664
+sleep
+download_data  600218
+1665
+sleep
+download_data  002877
+1666
+sleep
+download_data  600569
+1667
+sleep
+download_data  002866
+1668
+sleep
+download_data  600873
+1669
+sleep
+download_data  600603
+1670
+sleep
+download_data  002477
+1671
+sleep
+download_data  000733
+1672
+sleep
+download_data  600177
+1673
+sleep
+download_data  603766
+1674
+sleep
+download_data  600060
+1675
+sleep
+download_data  603818
+1676
+sleep
+download_data  603878
+1677
+sleep
+download_data  000883
+1678
+sleep
+download_data  002906
+1679
+sleep
+download_data  600889
+1680
+sleep
+download_data  600819
+1681
+sleep
+download_data  600198
+1682
+sleep
+download_data  000929
+1683
+sleep
+download_data  600163
+1684
+sleep
+download_data  002561
+1685
+sleep
+download_data  600016
+1686
+sleep
+download_data  002909
+1687
+sleep
+download_data  000725
+1688
+sleep
+download_data  603076
+1689
+sleep
+download_data  600101
+1690
+sleep
+download_data  002046
+1691
+sleep
+download_data  603725
+1692
+sleep
+download_data  600233
+1693
+sleep
+download_data  600387
+1694
+sleep
+download_data  002585
+1695
+sleep
+download_data  600108
+1696
+sleep
+download_data  002264
+1697
+sleep
+download_data  603197
+1698
+sleep
+download_data  000703
+1699
+sleep
+download_data  002849
+1700
+sleep
+download_data  603113
+1701
+sleep
+download_data  000418
+1702
+sleep
+download_data  000825
+1703
+sleep
+download_data  600811
+1704
+sleep
+download_data  000736
+1705
+sleep
+download_data  603239
+1706
+sleep
+download_data  600068
+1707
+sleep
+download_data  603326
+1708
+sleep
+download_data  600703
+1709
+sleep
+download_data  600496
+1710
+sleep
+download_data  002762
+1711
+sleep
+download_data  603298
+1712
+sleep
+download_data  601368
+1713
+sleep
+download_data  000868
+1714
+sleep
+download_data  002116
+1715
+sleep
+download_data  600022
+1716
+sleep
+download_data  002201
+1717
+sleep
+download_data  601225
+1718
+sleep
+download_data  002743
+1719
+sleep
+download_data  600201
+1720
+sleep
+download_data  600062
+1721
+sleep
+download_data  603617
+1722
+sleep
+download_data  603203
+1723
+sleep
+download_data  002285
+1724
+sleep
+download_data  600576
+1725
+sleep
+download_data  600015
+1726
+sleep
+download_data  603979
+1727
+sleep
+download_data  600114
+1728
+sleep
+download_data  000968
+1729
+sleep
+download_data  002066
+1730
+sleep
+download_data  002860
+1731
+sleep
+download_data  600322
+1732
+sleep
+download_data  600115
+1733
+sleep
+download_data  002831
+1734
+sleep
+download_data  600219
+1735
+sleep
+download_data  603569
+1736
+sleep
+download_data  000802
+1737
+sleep
+download_data  002556
+1738
+sleep
+download_data  002507
+1739
+sleep
+download_data  600057
+1740
+sleep
+download_data  600315
+1741
+sleep
+download_data  000856
+1742
+sleep
+download_data  603225
+1743
+sleep
+download_data  600712
+1744
+sleep
+download_data  000150
+1745
+sleep
+download_data  002402
+1746
+sleep
+download_data  002937
+1747
+sleep
+download_data  603127
+1748
+sleep
+download_data  002931
+1749
+sleep
+download_data  000937
+1750
+sleep
+download_data  002875
+1751
+sleep
+download_data  600982
+1752
+sleep
+download_data  600462
+1753
+sleep
+download_data  000670
+1754
+sleep
+download_data  601678
+1755
+sleep
+download_data  601998
+1756
+sleep
+download_data  600021
+1757
+sleep
+download_data  002244
+1758
+sleep
+download_data  600800
+1759
+sleep
+download_data  002660
+1760
+sleep
+download_data  002468
+1761
+sleep
+download_data  002675
+1762
+sleep
+download_data  603528
+1763
+sleep
+download_data  000518
+1764
+sleep
+download_data  002550
+1765
+sleep
+download_data  603192
+1766
+sleep
+download_data  600143Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+1767
+sleep
+download_data  601106
+1768
+sleep
+download_data  002613
+1769
+sleep
+download_data  000576
+1770
+sleep
+download_data  603116
+1771
+sleep
+download_data  603535
+1772
+sleep
+download_data  603580
+1773
+sleep
+download_data  002587
+1774
+sleep
+download_data  600692
+1775
+sleep
+download_data  601113
+1776
+sleep
+download_data  600458
+1777
+sleep
+download_data  600313
+1778
+sleep
+download_data  600190
+1779
+sleep
+download_data  600100
+1780
+sleep
+download_data  002843
+1781
+sleep
+download_data  002145
+1782
+sleep
+download_data  002899
+1783
+sleep
+download_data  600810
+1784
+sleep
+download_data  600461
+1785
+sleep
+download_data  601636
+1786
+sleep
+download_data  000785
+1787
+sleep
+download_data  603713
+1788
+sleep
+download_data  002186
+1789
+sleep
+download_data  002041
+1790
+sleep
+download_data  002440
+1791
+sleep
+download_data  600976
+1792
+sleep
+download_data  600160
+1793
+sleep
+download_data  002321
+1794
+sleep
+download_data  603286
+1795
+sleep
+download_data  601101
+1796
+sleep
+download_data  002134
+1797
+sleep
+download_data  002099
+1798
+sleep
+download_data  603968
+1799
+sleep
+download_data  002060
+1800
+sleep
+download_data  000690
+1801
+sleep
+download_data  600513
+1802
+sleep
+download_data  002930
+1803
+sleep
+download_data  600970
+1804
+sleep
+download_data  600636
+1805
+sleep
+download_data  600017
+1806
+sleep
+download_data  000663
+1807
+sleep
+download_data  601330
+1808
+sleep
+download_data  002338
+1809
+sleep
+download_data  000008
+1810
+sleep
+download_data  600161
+1811
+sleep
+download_data  002122
+1812
+sleep
+download_data  000705
+1813
+sleep
+download_data  002324
+1814
+sleep
+download_data  002798
+1815
+sleep
+download_data  002574
+1816
+sleep
+download_data  002688
+1817
+sleep
+download_data  600230
+1818
+sleep
+download_data  002783
+1819
+sleep
+download_data  000761
+1820
+sleep
+download_data  603590
+1821
+sleep
+download_data  601828
+1822
+sleep
+download_data  603299
+1823
+sleep
+download_data  002604
+1824
+sleep
+download_data  000915
+1825
+sleep
+download_data  002025
+1826
+sleep
+download_data  603701
+1827
+sleep
+download_data  002233
+1828
+sleep
+download_data  002053
+1829
+sleep
+download_data  002287
+1830
+sleep
+download_data  002712
+1831
+sleep
+download_data  603578
+1832
+sleep
+download_data  601018
+1833
+sleep
+download_data  002916
+1834
+sleep
+download_data  002455
+1835
+sleep
+download_data  000988
+1836
+sleep
+download_data  000731
+1837
+sleep
+download_data  000589
+1838
+sleep
+download_data  600248
+1839
+sleep
+download_data  002421
+1840
+sleep
+download_data  600377
+1841
+sleep
+download_data  000906
+1842
+sleep
+download_data  000919
+1843
+sleep
+download_data  002758
+1844
+sleep
+download_data  600282
+1845
+sleep
+download_data  002209
+1846
+sleep
+download_data  002678
+1847
+sleep
+download_data  600008
+1848
+sleep
+download_data  000519
+1849
+sleep
+download_data  002033
+1850
+sleep
+download_data  603111
+1851
+sleep
+download_data  000888
+1852
+sleep
+download_data  600007
+1853
+sleep
+download_data  002810
+1854
+sleep
+download_data  002730
+1855
+sleep
+download_data  600426
+1856
+sleep
+download_data  600038
+1857
+sleep
+download_data  603315
+1858
+sleep
+download_data  002241
+1859
+sleep
+download_data  002885
+1860
+sleep
+download_data  601558
+1861
+sleep
+download_data  002825
+1862
+sleep
+download_data  603139
+1863
+sleep
+download_data  000678
+1864
+sleep
+download_data  603289
+1865
+sleep
+download_data  601228
+1866
+sleep
+download_data  002908
+1867
+sleep
+download_data  002760
+1868
+sleep
+download_data  600031
+1869
+sleep
+download_data  600438
+1870
+sleep
+download_data  600975
+1871
+sleep
+download_data  000967
+1872
+sleep
+download_data  603667
+1873
+sleep
+download_data  002761
+1874
+sleep
+download_data  600812
+1875
+sleep
+download_data  600644
+1876
+sleep
+download_data  600300
+1877
+sleep
+download_data  002516
+1878
+sleep
+download_data  000752
+1879
+sleep
+download_data  000411
+1880
+sleep
+download_data  600868
+1881
+sleep
+download_data  601016
+1882
+sleep
+download_data  600317
+1883
+sleep
+download_data  000017
+1884
+sleep
+download_data  600535
+1885
+sleep
+download_data  000836
+1886
+sleep
+download_data  603177
+1887
+sleep
+download_data  002426
+1888
+sleep
+download_data  000939
+1889
+sleep
+download_data  600589
+1890
+sleep
+download_data  000598
+1891
+sleep
+download_data  600578
+1892
+sleep
+download_data  603129
+1893
+sleep
+download_data  002852
+1894
+sleep
+download_data  600648
+1895
+sleep
+download_data  000920
+1896
+sleep
+download_data  002708
+1897
+sleep
+download_data  603321
+1898
+sleep
+download_data  600853
+1899
+sleep
+download_data  600979
+1900
+sleep
+download_data  002617
+1901
+sleep
+download_data  601689
+1902
+sleep
+download_data  002809
+1903
+sleep
+download_data  600099
+1904
+sleep
+download_data  002247
+1905
+sleep
+download_data  603032
+1906
+sleep
+download_data  000537
+1907
+sleep
+download_data  600863
+1908
+sleep
+download_data  000040
+1909
+sleep
+download_data  600076
+1910
+sleep
+download_data  603848
+1911
+sleep
+download_data  600781
+1912
+sleep
+download_data  600148
+1913
+sleep
+download_data  002942
+1914
+sleep
+download_data  603898
+1915
+sleep
+download_data  600597
+1916
+sleep
+download_data  603018
+1917
+sleep
+download_data  603031
+1918
+sleep
+download_data  603329
+1919
+sleep
+download_data  000011
+1920
+sleep
+download_data  600742
+1921
+sleep
+download_data  601107
+1922
+sleep
+download_data  600153
+1923
+sleep
+download_data  601000
+1924
+sleep
+download_data  002015
+1925
+sleep
+download_data  000558
+1926
+sleep
+download_data  000050
+1927
+sleep
+download_data  603086
+1928
+sleep
+download_data  603358
+1929
+sleep
+download_data  002045
+1930
+sleep
+download_data  002318
+1931
+sleep
+download_data  002407
+1932
+sleep
+download_data  600415
+1933
+sleep
+download_data  002042
+1934
+sleep
+download_data  002718
+1935
+sleep
+download_data  002372
+1936
+sleep
+download_data  603916
+1937
+sleep
+download_data  002018
+1938
+sleep
+download_data  002753
+1939
+sleep
+download_data  603559
+1940
+sleep
+download_data  000796
+1941
+sleep
+download_data  601117
+1942
+sleep
+download_data  002781
+1943
+sleep
+download_data  002636
+1944
+sleep
+download_data  603696
+1945
+sleep
+download_data  002369
+1946
+sleep
+download_data  002823
+1947
+sleep
+download_data  002443
+1948
+sleep
+download_data  002915
+1949
+sleep
+download_data  002746
+1950
+sleep
+download_data  002147
+1951
+sleep
+download_data  603726
+1952
+sleep
+download_data  002799
+1953
+sleep
+download_data  000903
+1954
+sleep
+download_data  601766
+1955
+sleep
+download_data  000910
+1956
+sleep
+download_data  601188
+1957
+sleep
+download_data  601869
+1958
+sleep
+download_data  000729
+1959
+sleep
+download_data  603067
+1960
+sleep
+download_data  002304
+1961
+sleep
+download_data  603917
+1962
+sleep
+download_data  603311
+1963
+sleep
+download_data  600641
+1964
+sleep
+download_data  603183
+1965
+sleep
+download_data  600583
+1966
+sleep
+download_data  002538
+1967
+sleep
+download_data  600419
+1968
+sleep
+download_data  600997
+1969
+sleep
+download_data  601880
+1970
+sleep
+download_data  000023
+1971
+sleep
+download_data  601628
+1972
+sleep
+download_data  601318
+1973
+sleep
+download_data  600368
+1974
+sleep
+download_data  002749
+1975
+sleep
+download_data  601515
+1976
+sleep
+download_data  002893
+1977
+sleep
+download_data  002633
+1978
+sleep
+download_data  000925
+1979
+sleep
+download_data  002890
+1980
+sleep
+download_data  600822
+1981
+sleep
+download_data  601008
+1982
+sleep
+download_data  600865
+1983
+sleep
+download_data  600629
+1984
+sleep
+download_data  002895
+1985
+sleep
+download_data  601969
+1986
+sleep
+download_data  600803
+1987
+sleep
+download_data  600362
+1988
+sleep
+download_data  600609
+1989
+sleep
+download_data  603021
+1990
+sleep
+download_data  603222
+1991
+sleep
+download_data  600710
+1992
+sleep
+download_data  600567
+1993
+sleep
+download_data  002051
+1994
+sleep
+download_data  000927
+1995
+sleep
+download_data  002417
+1996
+sleep
+download_data  002237
+1997
+sleep
+download_data  603666
+1998
+sleep
+download_data  603689
+1999
+sleep
+download_data  000629
+2000
+sleep
+download_data  601169
+2001
+sleep
+download_data  603657
+2002
+sleep
+download_data  600207
+2003
+sleep
+download_data  000420
+2004
+sleep
+download_data  603355
+2005
+sleep
+download_data  000338
+2006
+sleep
+download_data  000893
+2007
+sleep
+download_data  600579
+2008
+sleep
+download_data  002838
+2009
+sleep
+download_data  000767
+2010
+sleep
+download_data  002747
+2011
+sleep
+download_data  601991
+2012
+sleep
+download_data  601939
+2013
+sleep
+download_data  601326
+2014
+sleep
+download_data  600025
+2015
+sleepSome characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+download_data  002532
+2016
+sleep
+download_data  603508
+2017
+sleep
+download_data  603896
+2018
+sleep
+download_data  600221
+2019
+sleep
+download_data  002483
+2020
+sleep
+download_data  002790
+2021
+sleep
+download_data  601579
+2022
+sleep
+download_data  600507
+2023
+sleep
+download_data  603977
+2024
+sleep
+download_data  002393
+2025
+sleep
+download_data  603103
+2026
+sleep
+download_data  603266
+2027
+sleep
+download_data  601005
+2028
+sleep
+download_data  600066
+2029
+sleep
+download_data  601928
+2030
+sleep
+download_data  603229
+2031
+sleep
+download_data  002705
+2032
+sleep
+download_data  002788
+2033
+sleep
+download_data  000100
+2034
+sleep
+download_data  600125
+2035
+sleep
+download_data  002658
+2036
+sleep
+download_data  600141
+2037
+sleep
+download_data  000089
+2038
+sleep
+download_data  002686
+2039
+sleep
+download_data  000407
+2040
+sleep
+download_data  603159
+2041
+sleep
+download_data  603123
+2042
+sleep
+download_data  600352
+2043
+sleep
+download_data  002242
+2044
+sleep
+download_data  600080
+2045
+sleep
+download_data  002075
+2046
+sleep
+download_data  600338
+2047
+sleep
+download_data  002062
+2048
+sleep
+download_data  000425
+2049
+sleep
+download_data  600382
+2050
+sleep
+download_data  002172
+2051
+sleep
+download_data  002897
+2052
+sleep
+download_data  603659
+2053
+sleep
+download_data  002629
+2054
+sleep
+download_data  000672
+2055
+sleep
+download_data  603919
+2056
+sleep
+download_data  002644
+2057
+sleep
+download_data  002566
+2058
+sleep
+download_data  600179
+2059
+sleep
+download_data  002096
+2060
+sleep
+603187  not download
+sleep
+download_data  002387
+2061
+sleep
+download_data  603823
+2062
+sleep
+download_data  600478
+2063
+sleep
+download_data  000603
+2064
+sleep
+download_data  002312
+2065
+sleep
+download_data  600168
+2066
+sleep
+download_data  002822
+2067
+sleep
+download_data  002635
+2068
+sleep
+download_data  002327
+2069
+sleep
+download_data  002910
+2070
+sleep
+download_data  002281
+2071
+sleep
+download_data  000523
+2072
+sleep
+download_data  600225
+2073
+sleep
+download_data  002846
+2074
+sleep
+download_data  002780
+2075
+sleep
+download_data  600000
+2076
+sleep
+download_data  000090
+2077
+sleep
+download_data  600376
+2078
+sleep
+download_data  002458
+2079
+sleep
+download_data  002850
+2080
+sleep
+download_data  600657
+2081
+sleep
+download_data  002110
+2082
+sleep
+download_data  600749
+2083
+sleep
+download_data  600546
+2084
+sleep
+download_data  603922
+2085
+sleep
+download_data  000605
+2086
+sleep
+download_data  000732
+2087
+sleep
+download_data  603797
+2088
+sleep
+download_data  603595
+2089
+sleep
+download_data  002193
+2090
+sleep
+download_data  000529
+2091
+sleep
+download_data  000880
+2092
+sleep
+download_data  002677
+2093
+sleep
+download_data  601898
+2094
+sleep
+download_data  002664
+2095
+sleep
+download_data  603519
+2096
+sleep
+download_data  002572
+2097
+sleep
+download_data  000931
+2098
+sleep
+download_data  600110
+2099
+sleep
+download_data  603110
+2100
+sleep
+download_data  002238
+2101
+sleep
+download_data  600200
+2102
+sleep
+download_data  603278
+2103
+sleep
+download_data  600729
+2104
+sleep
+download_data  600689
+2105
+sleep
+download_data  600617
+2106
+sleep
+download_data  603363
+2107
+sleep
+download_data  600176
+2108
+sleep
+download_data  000037
+2109
+sleep
+download_data  002806
+2110
+sleep
+download_data  002774
+2111
+sleep
+download_data  603677
+2112
+sleep
+download_data  600694
+2113
+sleep
+download_data  600012
+2114
+sleep
+download_data  600131
+2115
+sleep
+download_data  600794
+2116
+sleep
+download_data  600654
+2117
+sleep
+download_data  002741
+2118
+sleep
+download_data  603058
+2119
+sleep
+download_data  600616
+2120
+sleep
+download_data  603169
+2121
+sleep
+download_data  000697
+2122
+sleep
+download_data  600297
+2123
+sleep
+download_data  603888
+2124
+sleep
+download_data  002211
+2125
+sleep
+download_data  600760
+2126
+sleep
+download_data  002515
+2127
+sleep
+download_data  603788
+2128
+sleep
+download_data  603078
+2129
+sleep
+download_data  002430
+2130
+sleep
+download_data  601158
+2131
+sleep
+download_data  002881
+2132
+sleep
+download_data  002582
+2133
+sleep
+download_data  002665
+2134
+sleep
+download_data  000635
+2135
+sleep
+download_data  600220
+2136
+sleep
+download_data  603456
+2137
+sleep
+download_data  002182
+2138
+sleep
+download_data  002557
+2139
+sleep
+download_data  603813
+2140
+sleep
+download_data  600713
+2141
+sleep
+download_data  600011
+2142
+sleep
+download_data  002650
+2143
+sleep
+download_data  002261
+2144
+sleep
+download_data  000720
+2145
+sleep
+download_data  603600
+2146
+sleep
+download_data  603988
+2147
+sleep
+download_data  000778
+2148
+sleep
+download_data  600277
+2149
+sleep
+download_data  601600
+2150
+sleep
+download_data  002363
+2151
+sleep
+download_data  603536
+2152
+sleep
+download_data  603079
+2153
+sleep
+download_data  600275
+2154
+sleep
+download_data  002695
+2155
+sleep
+download_data  601288
+2156
+sleep
+download_data  600284
+2157
+sleep
+download_data  000898
+2158
+sleep
+download_data  002135
+2159
+sleep
+download_data  603838
+2160
+sleep
+download_data  603588
+2161
+sleep
+download_data  603333
+2162
+sleep
+download_data  600782
+2163
+sleep
+download_data  002570
+2164
+sleep
+download_data  000019
+2165
+sleep
+download_data  002709
+2166
+sleep
+download_data  002898
+2167
+sleep
+download_data  000709
+2168
+sleep
+download_data  600350
+2169
+sleep
+download_data  000676
+2170
+sleep
+download_data  002081
+2171
+sleep
+download_data  601010
+2172
+sleep
+download_data  603336
+2173
+sleep
+download_data  000869
+2174
+sleep
+download_data  000737
+2175
+sleep
+download_data  002250
+2176
+sleep
+download_data  603577
+2177
+sleep
+download_data  000768
+2178
+sleep
+download_data  002917
+2179
+sleep
+download_data  601328
+2180
+sleep
+download_data  603020
+2181
+sleep
+download_data  600184
+2182
+sleep
+download_data  000619
+2183
+sleep
+download_data  600370
+2184
+sleep
+download_data  002159
+2185
+sleep
+download_data  000544
+2186
+sleep
+download_data  000930
+2187
+sleep
+download_data  002424
+2188
+sleep
+download_data  601949
+2189
+sleep
+download_data  000538
+2190
+sleep
+download_data  600531
+2191
+sleep
+download_data  002274
+2192
+sleep
+download_data  600572
+2193
+sleep
+download_data  603707
+2194
+sleep
+download_data  603808
+2195
+sleep
+download_data  001872
+2196
+sleep
+download_data  002225
+2197
+sleep
+download_data  603059
+2198
+sleep
+download_data  600753
+2199
+sleep
+download_data  603223
+2200
+sleep
+download_data  000027
+2201
+sleep
+download_data  002683
+2202
+sleep
+download_data  600493
+2203
+sleep
+download_data  002068
+2204
+sleep
+download_data  600299
+2205
+sleep
+download_data  002317
+2206
+sleep
+download_data  603259
+2207
+sleep
+download_data  603703
+2208
+sleep
+download_data  600400
+2209
+sleep
+download_data  000876
+2210
+sleep
+download_data  002827
+2211
+sleep
+download_data  603826
+2212
+sleep
+download_data  002465
+2213
+sleep
+download_data  601398
+2214
+sleep
+download_data  601015
+2215
+sleep
+download_data  002452
+2216
+sleep
+download_data  601966
+2217
+sleep
+download_data  002204
+2218
+sleep
+download_data  000738
+2219
+sleep
+download_data  600488
+2220
+sleep
+download_data  002125
+2221
+sleep
+download_data  000792
+2222
+sleep
+download_data  600548
+2223
+sleep
+download_data  002210
+2224
+sleep
+download_data  600778
+2225
+sleep
+download_data  603871
+2226
+sleep
+download_data  603970
+2227
+sleep
+download_data  002789
+2228
+sleep
+download_data  600004
+2229
+sleep
+download_data  002223
+2230
+sleep
+download_data  000766
+2231
+sleep
+download_data  000780
+2232
+sleep
+download_data  002486
+2233
+sleep
+download_data  600429
+2234
+sleep
+download_data  002928
+2235
+sleep
+600663  not download
+sleep
+download_data  000952
+2236
+sleep
+download_data  603178
+2237
+sleep
+download_data  002775
+2238
+sleep
+download_data  600223
+2239
+sleep
+download_data  002724
+2240
+sleep
+download_data  002707
+2241
+sleep
+download_data  002090
+2242
+sleep
+download_data  000045
+2243
+sleep
+download_data  000818
+2244
+sleep
+download_data  002513
+2245
+sleep
+download_data  002639
+2246
+sleep
+download_data  603331
+2247
+sleep
+download_data  601212
+2248
+sleep
+download_data  002792
+2249
+sleep
+download_data  000978
+2250
+sleep
+download_data  601200
+2251
+sleep
+download_data  002830
+2252
+sleep
+download_data  002778
+2253
+sleep
+download_data  002203
+2254
+sleep
+download_data  601139
+2255
+sleep
+download_data  601390
+2256
+sleep
+download_data  600170
+2257
+sleep
+download_data  002699
+2258
+sleep
+download_data  603708
+2259
+sleep
+download_data  002450
+2260
+sleep
+download_data  600283
+2261
+sleep
+download_data  002540Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+2262
+sleep
+download_data  603393
+2263
+sleep
+download_data  600658
+2264
+sleep
+download_data  002370
+2265
+sleep
+download_data  002462
+2266
+sleep
+download_data  000911
+2267
+sleep
+download_data  603208
+2268
+sleep
+download_data  603939
+2269
+sleep
+download_data  603895
+2270
+sleep
+download_data  600726
+2271
+sleep
+download_data  002493
+2272
+sleep
+download_data  002606
+2273
+sleep
+download_data  002848
+2274
+sleep
+download_data  600645
+2275
+sleep
+download_data  000668
+2276
+sleep
+download_data  002859
+2277
+sleep
+download_data  002716
+2278
+sleep
+download_data  002813
+2279
+sleep
+download_data  603025
+2280
+sleep
+download_data  002785
+2281
+sleep
+download_data  600539
+2282
+sleep
+download_data  600917
+2283
+sleep
+download_data  000726
+2284
+sleep
+download_data  600498
+2285
+sleep
+download_data  002861
+2286
+sleep
+download_data  603010
+2287
+sleep
+download_data  600435
+2288
+sleep
+download_data  002505
+2289
+sleep
+603220  not download
+sleep
+download_data  601633
+2290
+sleep
+download_data  600717
+2291
+sleep
+download_data  600391
+2292
+sleep
+download_data  603378
+2293
+sleep
+download_data  000628
+2294
+sleep
+download_data  600730
+2295
+sleep
+download_data  600019
+2296
+sleep
+download_data  603680
+2297
+sleep
+download_data  603668
+2298
+sleep
+download_data  600467
+2299
+sleep
+download_data  600929
+2300
+sleep
+download_data  002183
+2301
+sleep
+download_data  600320
+2302
+sleep
+download_data  002388
+2303
+sleep
+download_data  603822
+2304
+sleep
+download_data  600499
+2305
+sleep
+download_data  002083
+2306
+sleep
+download_data  000516
+2307
+sleep
+download_data  600890
+2308
+sleep
+download_data  000010
+2309
+sleep
+download_data  603098
+2310
+sleep
+download_data  002653
+2311
+sleep
+download_data  600746
+2312
+sleep
+download_data  603903
+2313
+sleep
+download_data  002578
+2314
+sleep
+download_data  603886
+2315
+sleep
+download_data  600598
+2316
+sleep
+download_data  000581
+2317
+sleep
+download_data  600395
+2318
+sleep
+download_data  000757
+2319
+sleep
+download_data  603880
+2320
+sleep
+download_data  603706
+2321
+sleep
+download_data  600808
+2322
+sleep
+download_data  002394
+2323
+sleep
+download_data  002416
+2324
+sleep
+download_data  603386
+2325
+sleep
+download_data  600343
+2326
+sleep
+download_data  601111
+2327
+sleep
+download_data  603041
+2328
+sleep
+download_data  002700
+2329
+sleep
+download_data  000889
+2330
+sleep
+download_data  600858
+2331
+sleep
+download_data  600252
+2332
+sleep
+download_data  600028
+2333
+sleep
+download_data  000858
+2334
+sleep
+download_data  600734
+2335
+sleep
+download_data  600117
+2336
+sleep
+download_data  603001
+2337
+sleep
+download_data  002840
+2338
+sleep
+download_data  000408
+2339
+sleep
+download_data  600827
+2340
+sleep
+download_data  002870
+2341
+sleep
+download_data  000504
+2342
+sleep
+download_data  002059
+2343
+sleep
+download_data  002311
+2344
+sleep
+download_data  603866
+2345
+sleep
+download_data  603810
+2346
+sleep
+download_data  600018
+2347
+sleep
+download_data  002735
+2348
+sleep
+download_data  600754
+2349
+sleep
+download_data  600389
+2350
+sleep
+download_data  000779
+2351
+sleep
+download_data  002514
+2352
+sleep
+download_data  000157
+2353
+sleep
+download_data  603199
+2354
+sleep
+download_data  002117
+2355
+sleep
+download_data  603789
+2356
+sleep
+download_data  600150
+2357
+sleep
+download_data  002199
+2358
+sleep
+download_data  601138
+2359
+sleep
+download_data  002672
+2360
+sleep
+download_data  603306
+2361
+sleep
+download_data  603283
+2362
+sleep
+download_data  600166
+2363
+sleep
+download_data  600339
+2364
+sleep
+download_data  600723
+2365
+sleep
+download_data  000691
+2366
+sleep
+download_data  002395
+2367
+sleep
+download_data  600346
+2368
+sleep
+download_data  601857
+2369
+sleep
+download_data  601038
+2370
+sleep
+download_data  600228
+2371
+sleep
+download_data  603558
+2372
+sleep
+download_data  600094
+2373
+sleep
+download_data  603717
+2374
+sleep
+download_data  603768
+2375
+sleep
+download_data  000409
+2376
+sleep
+download_data  603013
+2377
+sleep
+download_data  002826
+2378
+sleep
+download_data  002132
+2379
+sleep
+download_data  601808
+2380
+sleep
+download_data  002008
+2381
+sleep
+download_data  601607
+2382
+sleep
+download_data  600285
+2383
+sleep
+download_data  000918
+2384
+sleep
+download_data  002459
+2385
+sleep
+download_data  600333
+2386
+sleep
+download_data  601500
+2387
+sleep
+download_data  603655
+2388
+sleep
+download_data  603722
+2389
+sleep
+download_data  601229
+2390
+sleep
+download_data  000025
+2391
+sleep
+download_data  002603
+2392
+sleep
+download_data  000593
+2393
+sleep
+download_data  002739
+2394
+sleep
+download_data  600523
+2395
+sleep
+download_data  600664
+2396
+sleep
+download_data  600209
+2397
+sleep
+download_data  600079
+2398
+sleep
+download_data  000502
+2399
+sleep
+download_data  600777
+2400
+sleep
+download_data  002333
+2401
+sleep
+download_data  600834
+2402
+sleep
+download_data  000959
+2403
+sleep
+download_data  002599
+2404
+sleep
+download_data  603167
+2405
+sleep
+download_data  600483
+2406
+sleep
+download_data  002438
+2407
+sleep
+download_data  002732
+2408
+sleep
+download_data  600690
+2409
+sleep
+download_data  002411
+2410
+sleep
+download_data  600785
+2411
+sleep
+download_data  603055
+2412
+sleep
+download_data  603033
+2413
+sleep
+download_data  002618
+2414
+sleep
+download_data  603811
+2415
+sleep
+download_data  000422
+2416
+sleep
+download_data  600085
+2417
+sleep
+download_data  600642
+2418
+sleep
+download_data  002611
+2419
+sleep
+download_data  600337
+2420
+sleep
+download_data  002484
+2421
+sleep
+download_data  603779
+2422
+sleep
+download_data  600323
+2423
+sleep
+download_data  603633
+2424
+sleep
+download_data  600033
+2425
+sleep
+download_data  000096
+2426
+sleep
+download_data  000058
+2427
+sleep
+download_data  600779
+2428
+sleep
+download_data  002734
+2429
+sleep
+download_data  002520
+2430
+sleep
+download_data  002624
+2431
+sleep
+download_data  600887
+2432
+sleep
+download_data  601899
+2433
+sleep
+download_data  002136
+2434
+sleep
+download_data  600741
+2435
+sleep
+download_data  601968
+2436
+sleep
+download_data  002868
+2437
+sleep
+download_data  002301
+2438
+sleep
+download_data  002266
+2439
+sleep
+download_data  601618
+2440
+sleep
+download_data  601238
+2441
+sleep
+download_data  600050
+2442
+sleep
+download_data  002579
+2443
+sleep
+download_data  002864
+2444
+sleep
+download_data  002154
+2445
+sleep
+download_data  000615
+2446
+sleep
+download_data  002911
+2447
+sleep
+download_data  603006
+2448
+sleep
+download_data  601985
+2449
+sleep
+download_data  600748
+2450
+sleep
+download_data  002496
+2451
+sleep
+download_data  000048
+2452
+sleep
+download_data  002801
+2453
+sleep
+download_data  603567
+2454
+sleep
+download_data  002272
+2455
+sleep
+download_data  002064
+2456
+sleep
+download_data  600316
+2457
+sleep
+download_data  603356
+2458
+sleep
+download_data  600628
+2459
+sleep
+download_data  000902
+2460
+sleep
+download_data  000702
+2461
+sleep
+download_data  002873
+2462
+sleep
+download_data  601003
+2463
+sleep
+download_data  603638
+2464
+sleep
+download_data  603676
+2465
+sleep
+download_data  603368
+2466
+sleep
+download_data  002767
+2467
+sleep
+download_data  000923
+2468
+sleep
+download_data  002503
+2469
+sleep
+download_data  002215
+2470
+sleep
+download_data  002151
+2471
+sleep
+download_data  600246
+2472
+sleep
+download_data  603611
+2473
+sleep
+download_data  600771
+2474
+sleep
+download_data  603233
+2475
+sleep
+download_data  002598
+2476
+sleep
+download_data  600083
+2477
+sleep
+download_data  002461
+2478
+sleep
+download_data  002537
+2479
+sleep
+download_data  002731
+2480
+sleep
+download_data  603976
+2481
+sleep
+download_data  002816
+2482
+sleep
+download_data  000038
+2483
+sleep
+download_data  600582
+2484
+sleep
+download_data  002878
+2485
+sleep
+download_data  002190
+2486
+sleep
+download_data  603518
+2487
+sleep
+download_data  603963
+2488
+sleep
+download_data  600817
+2489
+sleep
+download_data  601988
+2490
+sleep
+download_data  603156
+2491
+sleep
+download_data  603637
+2492
+sleep
+download_data  600998
+2493
+sleep
+download_data  600006
+2494
+sleep
+download_data  002733
+2495
+sleep
+download_data  002198
+2496
+sleep
+download_data  601965
+2497
+sleep
+download_data  002817
+2498
+sleep
+download_data  000667
+2499
+sleep
+download_data  002506
+2500
+sleep
+download_data  600793
+2501
+sleep
+download_data  600701
+2502
+sleep
+download_data  002723
+2503
+sleep
+download_data  002530
+2504
+sleep
+download_data  600961
+2505
+sleep
+download_data  000861
+2506
+sleep
+download_data  002522
+2507
+sleep
+download_data  600688
+2508
+sleep
+download_data  600795
+2509
+sleep
+download_data  603868Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+2510
+sleep
+download_data  002902
+2511
+sleep
+download_data  603839
+2512
+sleep
+download_data  000953
+2513
+sleep
+download_data  603297
+2514
+sleep
+download_data  002903
+2515
+sleep
+download_data  002558
+2516
+sleep
+download_data  600719
+2517
+sleep
+download_data  600378
+2518
+sleep
+download_data  002769
+2519
+sleep
+download_data  600693
+2520
+sleep
+download_data  600652
+2521
+sleep
+download_data  000990
+2522
+sleep
+download_data  600146
+2523
+sleep
+download_data  002014
+2524
+sleep
+download_data  603258
+2525
+sleep
+download_data  000301
+2526
+sleep
+download_data  601127
+2527
+sleep
+download_data  002742
+2528
+sleep
+download_data  603288
+2529
+sleep
+download_data  603602
+2530
+sleep
+download_data  600988
+2531
+sleep
+download_data  002358
+2532
+sleep
+download_data  002521
+2533
+sleep
+download_data  600675
+2534
+sleep
+download_data  600098
+2535
+sleep
+download_data  002802
+2536
+sleep
+download_data  002647
+2537
+sleep
+download_data  000506
+2538
+sleep
+download_data  002275
+2539
+sleep
+download_data  600965
+2540
+sleep
+download_data  603712
+2541
+sleep
+download_data  601619
+2542
+sleep
+download_data  002039
+2543
+sleep
+download_data  600511
+2544
+sleep
+download_data  600877
+2545
+sleep
+download_data  002352
+2546
+sleep
+download_data  000975
+2547
+sleep
+download_data  601021
+2548
+sleep
+download_data  002819
+2549
+sleep
+download_data  603773
+2550
+sleep
+download_data  603080
+2551
+sleep
+download_data  002331
+2552
+sleep
+download_data  603877
+2553
+sleep
+download_data  000560
+2554
+sleep
+download_data  603828
+2555
+sleep
+download_data  000525
+2556
+sleep
+download_data  600867
+2557
+sleep
+download_data  002313
+2558
+sleep
+download_data  600886
+2559
+sleep
+download_data  600967
+2560
+sleep
+download_data  000718
+2561
+sleep
+download_data  002808
+2562
+sleep
+download_data  000049
+2563
+sleep
+download_data  600398
+2564
+sleep
+download_data  002891
+2565
+sleep
+download_data  603699
+2566
+sleep
+download_data  600750
+2567
+sleep
+download_data  600585
+2568
+sleep
+download_data  002548
+2569
+sleep
+download_data  600984
+2570
+sleep
+download_data  000571
+2571
+sleep
+download_data  603938
+2572
+sleep
+download_data  600482
+2573
+sleep
+download_data  002697
+2574
+sleep
+download_data  603238
+2575
+sleep
+download_data  002399
+2576
+sleep
+download_data  002088
+2577
+sleep
+download_data  603663
+2578
+sleep
+download_data  603365
+2579
+sleep
+download_data  002536
+2580
+sleep
+download_data  601886
+2581
+sleep
+download_data  002404
+2582
+sleep
+download_data  002602
+2583
+sleep
+download_data  600871
+2584
+sleep
+download_data  600893
+2585
+sleep
+download_data  603161
+2586
+sleep
+download_data  000514
+2587
+sleep
+download_data  000688
+2588
+sleep
+download_data  600234
+2589
+sleep
+download_data  000659
+2590
+sleep
+download_data  603012
+2591
+sleep
+download_data  002179
+2592
+sleep
+download_data  601006
+2593
+sleep
+download_data  600118
+2594
+sleep
+download_data  603730
+2595
+sleep
+download_data  002829
+2596
+sleep
+download_data  600633
+2597
+sleep
+download_data  002194
+2598
+sleep
+download_data  002248
+2599
+sleep
+download_data  603608
+2600
+sleep
+download_data  002319
+2601
+sleep
+download_data  000622
+2602
+sleep
+download_data  600851
+2603
+sleep
+download_data  600023
+2604
+sleep
+download_data  002668
+2605
+sleep
+download_data  002061
+2606
+sleep
+download_data  002442
+2607
+sleep
+download_data  600660
+2608
+sleep
+download_data  600737
+2609
+sleep
+download_data  600448
+2610
+sleep
+download_data  601798
+2611
+sleep
+download_data  603214
+2612
+sleep
+download_data  002512
+2613
+sleep
+download_data  601566
+2614
+sleep
+download_data  002189
+2615
+sleep
+download_data  600634
+2616
+sleep
+download_data  002871
+2617
+sleep
+download_data  002221
+2618
+sleep
+download_data  002779
+2619
+sleep
+download_data  600895
+2620
+sleep
+download_data  002098
+2621
+sleep
+download_data  600892
+2622
+sleep
+download_data  600273
+2623
+sleep
+download_data  603806
+2624
+sleep
+download_data  603928
+2625
+sleep
+download_data  002768
+2626
+sleep
+download_data  002867
+2627
+sleep
+download_data  000803
+2628
+sleep
+download_data  002765
+2629
+sleep
+download_data  002389
+2630
+sleep
+download_data  603399
+2631
+sleep
+download_data  002385
+2632
+sleep
+download_data  603520
+2633
+sleep
+download_data  603990
+2634
+sleep
+download_data  600600
+2635
+sleep
+download_data  603596
+2636
+sleep
+download_data  002408
+2637
+sleep
+download_data  002254
+2638
+sleep
+download_data  603909
+2639
+sleep
+download_data  603718
+2640
+sleep
+download_data  002085
+2641
+sleep
+download_data  601933
+2642
+sleep
+download_data  603056
+2643
+sleep
+download_data  600303
+2644
+sleep
+download_data  600009
+2645
+sleep
+download_data  002925
+2646
+sleep
+download_data  002832
+2647
+sleep
+download_data  603320
+2648
+sleep
+download_data  600486
+2649
+sleep
+download_data  002811
+2650
+sleep
+download_data  603083
+2651
+sleep
+download_data  603658
+2652
+sleep
+download_data  601888
+2653
+sleep
+download_data  600828
+2654
+sleep
+download_data  000056
+2655
+sleep
+download_data  002679
+2656
+sleep
+download_data  600604
+2657
+sleep
+download_data  002752
+2658
+sleep
+download_data  002759
+2659
+sleep
+download_data  000823
+2660
+sleep
+download_data  603160
+2661
+sleep
+download_data  002907
+2662
+sleep
+download_data  600167
+2663
+sleep
+download_data  600681
+2664
+sleep
+download_data  603318
+2665
+sleep
+download_data  600373
+2666
+sleep
+download_data  002876
+2667
+sleep
+download_data  603603
+2668
+sleep
+download_data  603313
+2669
+sleep
+download_data  600265
+2670
+sleep
+download_data  603709
+2671
+sleep
+download_data  601069
+2672
+sleep
+download_data  600898
+2673
+sleep
+download_data  600882
+2674
+sleep
+download_data  600870
+2675
+sleep
+download_data  600807
+2676
+sleep
+download_data  600732
+2677
+sleep
+download_data  600674
+2678
+sleep
+download_data  600545
+2679
+sleep
+download_data  600485
+2680
+sleep
+download_data  600289
+2681
+sleep
+download_data  600270
+2682
+sleep
+download_data  600145
+2683
+sleep
+download_data  600030
+2684
+sleep
+002948  not download
+sleep
+download_data  002717
+2685
+sleep
+download_data  002701
+2686
+sleep
+download_data  002680
+2687
+sleep
+download_data  002575
+2688
+sleep
+download_data  002552
+2689
+sleep
+download_data  002542
+2690
+sleep
+download_data  002436
+2691
+sleep
+download_data  002434
+2692
+sleep
+download_data  002412
+2693
+sleep
+download_data  002323
+2694
+sleep
+download_data  002187
+2695
+sleep
+download_data  002023
+2696
+sleep
+download_data  000987
+2697
+sleep
+download_data  000656
+2698
+sleep
+download_data  000543
+2699
+sleep
+download_data  000539
+2700
+sleep
+download_data  000029
+2701
+sleep
+download_data  603096
+2702
+sleep
+download_data  603819
+2703
+sleep
+download_data  000998
+2704
+sleep
+download_data  601098
+2705
+sleep
+download_data  600903
+2706
+sleep
+download_data  600104
+2707
+sleep
+download_data  002511
+2708
+sleep
+download_data  000848
+2709
+sleep
+download_data  603825
+2710
+sleep
+download_data  600547
+2711
+sleep
+download_data  000028
+2712
+sleep
+download_data  600563
+2713
+sleep
+download_data  603969
+2714
+sleep
+download_data  600262
+2715
+sleep
+download_data  600766
+2716
+sleep
+download_data  603516
+2717
+sleep
+download_data  002862
+2718
+sleep
+download_data  601177
+2719
+sleep
+download_data  603377
+2720
+sleep
+download_data  603228
+2721
+sleep
+download_data  603030
+2722
+sleep
+download_data  600593
+2723
+sleep
+download_data  603601
+2724
+sleep
+download_data  600073
+2725
+sleep
+download_data  002938
+2726
+sleep
+download_data  002044
+2727
+sleep
+download_data  000813
+2728
+sleep
+download_data  601231
+2729
+sleep
+download_data  002155
+2730
+sleep
+download_data  601877
+2731
+sleep
+download_data  000820
+2732
+sleep
+download_data  603421
+2733
+sleep
+download_data  600556
+2734
+sleep
+download_data  603997
+2735
+sleep
+download_data  603042
+2736
+sleep
+download_data  002815
+2737
+sleep
+download_data  600319
+2738
+sleep
+download_data  002721
+2739
+sleep
+download_data  603328
+2740
+sleep
+download_data  000534
+2741
+sleep
+download_data  600385
+2742
+sleep
+download_data  000681
+2743
+sleep
+download_data  600489
+2744
+sleep
+download_data  002719
+2745
+sleep
+download_data  600183
+2746
+sleep
+download_data  600399
+2747
+sleep
+download_data  600236
+2748
+sleep
+download_data  603268
+2749
+sleep
+download_data  600897
+2750
+sleep
+download_data  600463
+2751
+sleep
+download_data  603609
+2752
+sleep
+download_data  000035
+2753
+sleep
+download_data  600891
+2754
+sleep
+download_data  600258
+2755
+sleep
+download_data  002355
+2756
+sleep
+download_data  600885
+2757
+sleep
+download_data  000999Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+
+2758
+sleep
+download_data  002912
+2759
+sleep
+download_data  002349
+2760
+sleep
+download_data  000633
+2761
+sleep
+download_data  002115
+2762
+sleep
+download_data  002256
+2763
+sleep
+download_data  603158
+2764
+sleep
+download_data  002120
+2765
+sleep
+download_data  002795
+2766
+sleep
+download_data  603186
+2767
+sleep
+download_data  002473
+2768
+sleep
+download_data  603861
+2769
+sleep
+download_data  600086
+2770
+sleep
+download_data  603908
+2771
+sleep
+download_data  603507
+2772
+sleep
+download_data  600612
+2773
+sleep
+download_data  000708
+2774
+sleep
+download_data  002231
+2775
+sleep
+download_data  000863
+2776
+sleep
+download_data  600311
+2777
+sleep
+download_data  002364
+2778
+sleep
+download_data  603196
+2779
+sleep
+download_data  002213
+2780
+sleep
+download_data  600900
+2781
+sleep
+download_data  603885
+2782
+sleep
+download_data  002560
+2783
+sleep
+download_data  603899
+2784
+sleep
+download_data  002659
+2785
+sleep
+download_data  002475
+2786
+sleep
+download_data  603050
+2787
+sleep
+download_data  002343
+2788
+sleep
+download_data  002270
+2789
+sleep
+download_data  603568
+2790
+sleep
+download_data  002547
+2791
+sleep
+download_data  600774
+2792
+sleep
+download_data  600724
+2793
+sleep
+download_data  002886
+2794
+sleep
+download_data  000995
+2795
+sleep
+download_data  601339
+2796
+sleep
+download_data  601799
+2797
+sleep
+download_data  000540
+2798
+sleep
+download_data  002243
+2799
+sleep
+download_data  002384
+2800
+sleep
+download_data  600518
+2801
+sleep
+download_data  600776
+2802
+sleep
+download_data  002446
+2803
+sleep
+download_data  600605
+2804
+sleep
+download_data  002427
+2805
+sleep
+download_data  600423
+2806
+sleep
+download_data  603322
+2807
+sleep
+download_data  002494
+2808
+sleep
+download_data  002290
+2809
+sleep
+download_data  000586
+2810
+sleep
+download_data  002927
+2811
+sleep
+download_data  002592
+2812
+sleep
+download_data  600699
+2813
+sleep
+download_data  002017
+2814
+sleep
+download_data  600775
+2815
+sleep
+002945  not download
+sleep
+download_data  002070
+2816
+sleep
+download_data  000693
+2817
+sleep
+603739  not download
+sleep
+603700  not download
+sleep
+603332  not download
+sleep
+603121  not download
+sleep
+download_data  601975
+2818
+sleep
+601615  not download
+sleep
+601298  not download
+sleep
+download_data  600680
+2819
+sleep
+download_data  600401
+2820
+sleep
+cat /home/davidyu/stock/data/liutong_owner/*.csv > all.csv

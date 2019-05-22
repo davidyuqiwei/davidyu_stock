@@ -1,0 +1,32 @@
+running
+  '/usr/lib64/R/bin/R --slave --no-restore --no-save --no-restore --file=download_SH_SZ_index.r'
+
+载入需要的程辑包：xts
+载入需要的程辑包：zoo
+
+载入程辑包：‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+载入需要的程辑包：TTR
+Version 0.4-0 included new data defaults. See ?getSymbols.
+‘getSymbols’ currently uses auto.assign=TRUE by default, but will
+use auto.assign=FALSE in 0.5-0. You will still be able to use
+‘loadSymbols’ to automatically load data. getOption("getSymbols.env")
+and getOption("getSymbols.auto.assign") will still be checked for
+alternate defaults.
+
+This message is shown once per session and may be disabled by setting 
+options("getSymbols.warning4.0"=FALSE). See ?getSymbols for details.
+
+
+WARNING: There have been significant changes to Yahoo Finance data.
+Please see the Warning section of ‘?getSymbols.yahoo’ for details.
+
+This message is shown once per session and may be disabled by setting
+options("getSymbols.yahoo.warning"=FALSE).
+Warning messages:
+1: 000001.sz contains missing values. Some functions will not work if objects contain missing values in the middle of the series. Consider using na.omit(), na.approx(), na.fill(), etc to remove or replace them. 
+2: 000001.ss contains missing values. Some functions will not work if objects contain missing values in the middle of the series. Consider using na.omit(), na.approx(), na.fill(), etc to remove or replace them. 

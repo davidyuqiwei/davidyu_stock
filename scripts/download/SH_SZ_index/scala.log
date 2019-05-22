@@ -1,0 +1,972 @@
+19/05/22 01:47:08 WARN Utils: Your hostname, VM_0_11_centos resolves to a loopback address: 127.0.0.1; using 172.16.0.11 instead (on interface eth0)
+19/05/22 01:47:08 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+19/05/22 01:47:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://172.16.0.11:4041
+Spark context available as 'sc' (master = local[*], app id = local-1558460838650).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
+      /_/
+         
+Using Scala version 2.11.12 (OpenJDK 64-Bit Server VM, Java 1.8.0_191)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> import org.apache.log4j.{Level, Log ger}
+import org.apache.log4j.{Level, Logger}
+
+scala> object SH_SZ_INDEX{
+     |     def main(){
+     |         sc.setLogLevel("WARN")
+     |         val log = Logger.getLogger( this.getClass)
+     |         log.warn("this is a warn")
+     |         log.warn("this is a warn")
+     |           System.out.println(System .getProperty("user.dir"))
+     |           var table_name = "stock_d ev.SH_index"
+     |           val work_dir = System.get Property("user.dir")
+     |           val data_file = "file://" +work_dir+"/shanghai_index_all.csv"
+     |           val sqlContext = new org. apache.spark.sql.hive.HiveContext(sc)
+     |           
+     |           val csv_data = spark.read .csv(data_file)
+     |           csv_data.show()
+     |           csv_data.createOrReplaceT empView("history_day")
+     |           val sql_v1 = s"""
+     |               truncate table $table _name
+     |           """
+     |         log.warn(sql_v1)
+     |           val sql_v2 = s"""
+     |               insert into table $ta ble_name
+     |               select * from history _day
+     |           """
+     |           log.warn(sql_v2)
+     |           //println(sql_v1)
+     |           sqlContext.sql(sql_v2)
+     |         log.warn("+++++++++++++++++ ++++++++++++++++++++++")
+     |         log.warn("the program is su cess")
+     |         log.warn("+++++++++++++++++ ++++++++++++++++++++++")
+     |     }
+     | }
+warning: there was one deprecation warning; re-run with -deprecation for details
+defined object SH_SZ_INDEX
+
+scala> SH_SZ_INDEX.main()
+19/05/22 01:47:23 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: this is a warn
+19/05/22 01:47:23 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: this is a warn
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_SZ_index
+[Stage 0:===========================================================(1 + 0) / 1]                                                                                +----------+-----------+-----------+-----------+-----------+---+-----------+
+|       _c0|        _c1|        _c2|        _c3|        _c4|_c5|        _c6|
++----------+-----------+-----------+-----------+-----------+---+-----------+
+|1998-01-01|1194.099976|1194.099976|1194.099976|1194.099976|  0|1194.099976|
+|1998-01-02|1194.099976|1194.099976|1194.099976|1194.099976|  0|1194.099976|
+|1998-01-05|1200.947998|1220.494995|1200.222046|1220.473022|  0|1220.473022|
+|1998-01-06| 1223.72998| 1233.63501|1215.409058|1233.619995|  0|1233.619995|
+|1998-01-07|1233.956055|1244.098022|1231.145996|1244.069946|  0|1244.069946|
+|1998-01-08|1243.120972|1250.005005| 1235.88501|1237.162964|  0|1237.162964|
+|1998-01-09| 1233.70105|1244.999023|1221.296997|1239.901001|  0|1239.901001|
+|1998-01-12|1242.209961|1246.651001|1226.396973|1226.965942|  0|1226.965942|
+|1998-01-13|1211.883057|1211.883057|1110.087036|1167.646973|  0|1167.646973|
+|1998-01-14|1170.345947|1203.246948|1170.322021|1202.214966|  0|1202.214966|
+|1998-01-15|1210.421021|1217.864014|1196.147949| 1215.43103|  0| 1215.43103|
+|1998-01-16|1215.819946|1220.973999|1207.918945|1213.962036|  0|1213.962036|
+|1998-01-19|1215.407959|1216.987061|1205.479004|1213.129028|  0|1213.129028|
+|1998-01-20|1211.276001|1215.569946|1195.381958|1203.714966|  0|1203.714966|
+|1998-01-21|1201.988037|1209.688965|1198.228027|1200.203003|  0|1200.203003|
+|1998-01-22|1200.520996| 1207.45105|1194.383057|1204.430054|  0|1204.430054|
+|1998-01-23|1206.494995|1224.121948|1206.453979|1222.912964|  0|1222.912964|
+|1998-01-26|1222.910034|1222.910034|1222.910034|1222.910034|  0|1222.910034|
+|1998-01-27|1222.910034|1222.910034|1222.910034|1222.910034|  0|1222.910034|
+|1998-01-28|1222.910034|1222.910034|1222.910034|1222.910034|  0|1222.910034|
++----------+-----------+-----------+-----------+-----------+---+-----------+
+only showing top 20 rows
+
+19/05/22 01:47:29 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: 
+		    truncate table stock_dev.SH_index
+		
+19/05/22 01:47:29 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: 
+		    insert into table stock_dev.SH_index
+		    select * from history_day
+		
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.broker.address.default does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.orc.time.counters does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.metrics.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.wm.default.pool.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.hs2.user.access does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.storage.storageDirectory does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.preempt.independent does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.output.format.arrow does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.am.liveness.connection.timeout.ms does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.threshold does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.llap.min.reducer.per.executor does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.arrow.root.allocator.limit does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.use.checked.expressions does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.auto.enforce.stats does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.client.consistent.splits does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.timedout.txn.reaper.start does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.management.acl does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.delegation.token.lifetime does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.ats.hook.queue.capacity does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.bigtable.minsize.semijoin.reduction does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.alloc.min does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.for.mapjoin does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orc.cache.use.soft.references does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.task.scale.memory.reserve.fraction.max does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.task.communicator.listener.thread-count does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.complex.types.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.wm.worker.threads does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.container.max.java.heap.fraction does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.partitions.dump.parallelism does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.am.liveness.heartbeat.interval.ms does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.decoding.metrics.percentiles.intervals does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.uri.selection does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.strict.checks.no.partition.filter does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.txn.store.impl does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.object.cache.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.parallel.ops.in.session does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.for.dpp.factor does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.stats.filter.in.min.ratio does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.client.cache.initial.capacity does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.local does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.service.metrics.file.location does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.stats.ndv.estimate.percent does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.methods does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.joinreducededuplication does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.num.file.cleaner.threads does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.client.cache.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.blobstore.use.blobstore.as.scratchdir does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.mmap.path does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.compactor.max.num.delta does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.stats.fetch.bitvector does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.disable.unsafe.external.table.operations does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.incremental does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.materializedviews.registry.impl does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.output.service.max.pending.writes does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.exec.orc.delta.streaming.optimizations.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.limittranspose does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.memory.mode does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.stats.ndv.algo does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.webui.use.spnego does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.job.max.tasks does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.service.metrics.file.frequency does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.hs2.coordinator.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.msck.repair.batch.max.retries does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.exec.orc.base.delta.ratio does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.fastpath does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.prewarm.spark.timeout does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.update.table.properties.from.serde.list does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.file.cleanup.delay.seconds does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.management.rpc.port does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.mapjoin.hybridgrace.bloomfilter does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.plugin.client.num.threads does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.compactor.history.retention.failed does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.test.bucketcodec.version does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.initial.metadata.count.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.reexecution.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.time.window does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.cache.batch.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.point.lookup.min does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.headers does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.service.refresh.interval.sec does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.auto.max.output.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.join.inner.residual does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.active.passive.ha.enable does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.remote.token.requires.signing does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.bucket.pruning does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.trace.always.dump does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.persist.scope does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.hash.table.inflation.factor does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.mm.allow.originals does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.auto.enforce.vectorized does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.writeset.reaper.interval does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.compactor.compact.insert.only does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.order.columnalignment does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.output.service.send.buffer.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.llap.concurrent.queries does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.auto.allow.uber does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.txn.xlock.iow does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.rsc.conf.list does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orc.splits.include.fileid does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.communicator.num.threads does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orderby.position.alias does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.task.communicator.connection.sleep.between.retries.ms does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.service.metrics.hadoop2.component does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.direct.sql.max.elements.in.clause does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.cache.defaultfs.only.native.fileid does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.optimize.shuffle.serde does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.indexer.segments.granularity does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.thrift.http.response.header.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.conf.internal.variable.list does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.testing.remove.logs does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.limittranspose.reductionpercentage does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.distcp.privileged.doAs does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.strict.checks.orderby.no.limit does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orc.splits.directory.batch.ms does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.client.cache.expiry.time does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.defrag.headroom does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.notification.event.consumers does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.zookeeper.publish.configs does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.auto.convert.join.hashtable.max.entries does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.tez.sessions.init.threads does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.authorization.storage.check.externaltable.drop does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.input.format.supports.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.execution.mode does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.client.cache.max.capacity does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.materializedview.rewriting does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.dumpdir.clean.freq does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.cbo.show.warnings does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.fshandler.threads does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.max.bloom.filter.entries does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.materializedview.serde does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.task.scheduler.wait.queue.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.nonvector.wrapper.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.cte.materialize.threshold does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.semijoin.conversion does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.port does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.use.ts.stats.for.mapjoin does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.metrics.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.dump.include.acid.tables does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.logger does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.webui.use.pam does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.reexecution.max.count does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.share.object.pools does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.update.table.properties.from.serde does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.service.metrics.codahale.reporter.classes does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.cli.tez.session.async does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.session.events.print.summary does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.vrb.queue.limit.base does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.mm.avoid.s3.globstatus does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.use.SSL does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.replica.functions.root.dir does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning.max.data.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.metadata.base does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.mmap does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.coordinator.address.default does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.conf.hidden.list does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.results.cache.max.entry.lifetime does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.user does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.use.row.serde.deserialize does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.timedout.txn.reaper.interval does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.thrift.http.compression.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.lrfu.lambda does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.metadata.db.type does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.execution.ptf.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.shared.work.extended does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.row.identifier.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.thrift.resultset.default.fetch.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.reexecution.always.collect.operator.stats does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.cm.retain does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.merge.cardinality.check does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.dumpdir.ttl does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.authentication.ldap.groupClassKey does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.compactor.history.retention.succeeded does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.use.fileid.path does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.local.time.zone does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.tez.wm.am.registry.timeout does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.active.passive.ha.registry.namespace does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.encode.slice.row.count does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.create.as.insert.only does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.am.use.fqdn does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.mv.files.thread does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.skip.compile.udf.check does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.mapjoin.memory.oversubscribe.factor does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.arrow.batch.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.notification.sequence.lock.retry.sleep.interval does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.cm.interval does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.sleep.interval.between.start.attempts does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.approx.max.load.tasks does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.yarn.container.mb does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.http.read.timeout does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.results.cache.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.orc.gap.cache does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.legacy.schema.for.all.serdes does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.dag.status.check.interval does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.encode.formats does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.task.scheduler.enable.preemption does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.num.executors does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.tez.sessions.custom.queue.allowed does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.bitmap.type does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning.map.join.only does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.thrift.client.password does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.num.schedulable.tasks.per.node does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.memory.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.strict.checks.type.safety does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.async.exec.async.compile does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.auto.max.input.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.memory.oversubscription.max.executors.per.query does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.blobstore.supported.schemes does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orc.splits.allow.synthetic.fileid does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.spark.use.op.stats does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.trace.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.tez.session.lifetime.jitter does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.web.port does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.strict.checks.cartesian.product does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.vcpus.per.instance does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.plugin.rpc.num.handlers does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.min.bloom.filter.entries does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.partition.columns.separate does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.wm.allow.any.pool.via.jdbc does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orc.cache.stripe.details.mem.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.locality.delay does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.repl.cmrootdir does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.node.disable.backoff.factor does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.vectorized.groupby.complex.types.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.am.liveness.connection.sleep.between.retries.ms does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.working.directory does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.results.cache.nontransactional.tables.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.memory.per.instance.mb does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.stats.correlated.multi.key.joins does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.db.type does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.task.scale.memory.reserve.fraction does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.merge.nway.joins does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.streaming.auto.flush.check.interval.size does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.encode.vector.serde.async.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.in.place.progress does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.zookeeper.connection.timeout does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.druid.indexer.memory.rownum.max does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.query.reexecution.strategies does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.xsrf.filter.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.alloc.max does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.client.capability.check does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.task.scale.memory.reserve-fraction.min does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.orc.splits.ms.footer.cache.ppd.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.user.ipaddress does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.metastore.event.message.factory does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.mapjoin.memory.monitor.check.interval does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.thrift.client.connect.retry.limit does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.daemon.xmx.headroom does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.direct does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.optimize.shared.work does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.stats.estimate does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.tez.session.lifetime does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.server2.authentication.ldap.guidKey does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.llap.io.allocator.discard.method does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.tez.cartesian-product.enabled does not exist
+19/05/22 01:47:29 WARN HiveConf: HiveConf of name hive.notification.sequence.lock.max.retries does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.heap.memory.monitor.usage.threshold does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.thrift.client.user does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.encode.alloc.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.wait.queue.comparator.class.name does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.output.service.port does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.privilege.synchronizer.interval does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.encode.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.adaptor.suppress.evaluate.exceptions does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.stats.column.autogather does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.groupby.position.alias does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.materializedview.rebuild.incremental does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.spark.use.groupby.shuffle does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.query.results.cache.max.entry.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.spark.stage.max.tasks does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.testing.short.logs does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.groupby.limit.extrastep does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.use.ssl does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.thrift.client.retry.delay.seconds does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.materializedview.fileformat does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.streaming.auto.flush.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.test.fail.compaction does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.service.metrics.class does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.spark.explain.user does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.download.permanent.fns does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.max.historic.queries does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.execution.reducesink.new.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.compactor.history.retention.attempted does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.port does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.compactor.initiator.failed.compacts.threshold does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.operation.log.cleanup.delay does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.execution.mode does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.enable.grace.join.in.llap does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.threadpool.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.select.threshold does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.scratchdir.lock does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.repl.dump.metadata.only does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.timeout.seconds does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.filter.stats.reduction does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.clear.dangling.scratchdir does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.test.fail.heartbeater does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.countdistinct does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.auto.enforce.tree does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.metastore.stats.ndv.tuner does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.direct.sql.max.query.length does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.close.session.on.disconnect does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.ppd.windowing does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.host does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.orc.splits.ms.footer.cache.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.metastore.hbase.file.metadata.threads does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.auto.convert.join.shuffle.max.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.driver.parallel.compilation does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.cache.allow.synthetic.fileid does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.plugin.acl does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.use.vector.serde.deserialize does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.exec.schema.evolution does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.direct.sql.max.elements.values.clause does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.indexer.partition.size.max does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.auto.auth does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.metastore.schema.info.class does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.yarn.shuffle.port does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.passiveWaitTimeMs does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.load.dynamic.partitions.thread does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.tez.queue.access.check does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.external.splits.temp.table.storage.format does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.row.wrapper.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.repl.cm.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.thrift.client.retry.limit does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.thrift.resultset.serialize.in.tasks does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.constraint.notnull.enforce does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.query.timeout.seconds does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.service.metrics.hadoop2.frequency does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.node.reenable.max.timeout.ms does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.max.open.txns does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.auto.convert.sortmerge.join.reduce.side does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.cli.print.escape.crlf does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.trigger.validation.interval does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.cbo.cnf.maxnodes does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.adaptor.usage.mode does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.authentication.ldap.groupMembershipKey does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.origins does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.ipaddress does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.external.splits.order.by.force.single.split does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.rpc.port does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.use.vectorized.input.format does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.metastore.client.cache.stats.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.notification.event.poll.interval does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.transactional.concatenate.noblock does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.repl.rootdir does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.strategy does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.metastore.limit.partition.request does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.async.log.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.allow.udf.load.on.demand does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.if.expr.mode does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.tez.bloom.filter.factor does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.am-reporter.max.threads does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.exim.test.mode does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.strict.checks.bucketing does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.query.results.cache.directory does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.tez.bucket.pruning.compat does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.spnego.principal does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.task.preemption.metrics.intervals does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.shuffle.dir.watcher.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.allocator.arena.count does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.task.communicator.connection.timeout.ms does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.transpose.aggr.join does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.maxTries does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.use.lrfu does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.thrift.resultset.max.fetch.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.query.results.cache.wait.for.pending.results does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.io.sarg.cache.max.weight.mb does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.clear.dangling.scratchdir.interval does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.sleep.time does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.compile.lock.timeout does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.remove.orderby.in.subquery does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.output.stream.timeout does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.transactional.events.mem does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.tez.bmj.use.subcache does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.point.lookup does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.allow.permanent.fns does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.web.ssl does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.vrb.queue.limit.min does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.txn.manager.dump.lock.state.on.acquire.timeout does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.wm.pool.metrics does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.repl.add.raw.reserved.namespace does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.resource.use.hdfs.location does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.stats.num.nulls.estimate.percent does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.mapjoin.optimized.hashtable.probe.percent does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.acid does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.node.reenable.min.timeout.ms does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.validate.acls does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.support.special.characters.tablename does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.zk.sm.session.timeout does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.encode.vector.serde.enabled does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.ptf.max.memory.buffering.batch.count does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.dynamic.partition.hashjoin does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.am.registry does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.exec.copyfile.maxnumfiles does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.overlord.address.default does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.remove.sq_count_check does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.druid.http.numConnection does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.enable.cors does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.vectorized.row.serde.inputformat.excludes does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.encode.slice.lrr does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.cache.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.thrift.http.request.header.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.server2.webui.max.threads does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.optimize.limittranspose.reductiontuples does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.test.rollbacktxn does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.acl does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.combine.equivalent.work.optimization does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.tez.enable.memory.manager does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.msck.repair.batch.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.stats.filter.in.factor does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.exec.input.listing.max.threads does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.lock.query.string.max.length does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.io.track.cache.usage does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.llap.daemon.rpc.num.handlers does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.count.open.txns.interval does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.use.orc.codec.pool does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.txn.heartbeat.threadpool.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.query.results.cache.max.size does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.spark.exec.inplace.progress does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.repl.bootstrap.dump.open.txn.timeout does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.msck.path.validation does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.compactor.history.reaper.interval does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.txn.strict.locking.mode does not exist
+19/05/22 01:47:30 WARN HiveConf: HiveConf of name hive.tez.input.generate.consistent.splits does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.broker.address.default does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.orc.time.counters does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.metrics.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.wm.default.pool.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.hs2.user.access does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.storage.storageDirectory does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.preempt.independent does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.output.format.arrow does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.am.liveness.connection.timeout.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.threshold does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.llap.min.reducer.per.executor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.arrow.root.allocator.limit does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.use.checked.expressions does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.enforce.stats does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.client.consistent.splits does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.timedout.txn.reaper.start does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.management.acl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.delegation.token.lifetime does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.ats.hook.queue.capacity does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.bigtable.minsize.semijoin.reduction does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.alloc.min does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.for.mapjoin does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.cache.use.soft.references does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.task.scale.memory.reserve.fraction.max does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.communicator.listener.thread-count does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.complex.types.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.wm.worker.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.container.max.java.heap.fraction does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.partitions.dump.parallelism does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.am.liveness.heartbeat.interval.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.decoding.metrics.percentiles.intervals does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.uri.selection does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.strict.checks.no.partition.filter does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.txn.store.impl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.object.cache.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.parallel.ops.in.session does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.for.dpp.factor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.filter.in.min.ratio does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.client.cache.initial.capacity does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.local does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.service.metrics.file.location does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.ndv.estimate.percent does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.methods does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.joinreducededuplication does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.num.file.cleaner.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.client.cache.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.blobstore.use.blobstore.as.scratchdir does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.mmap.path does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.max.num.delta does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.fetch.bitvector does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.disable.unsafe.external.table.operations does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.incremental does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.materializedviews.registry.impl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.output.service.max.pending.writes does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.exec.orc.delta.streaming.optimizations.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.limittranspose does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.memory.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.ndv.algo does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.use.spnego does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.job.max.tasks does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.service.metrics.file.frequency does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.hs2.coordinator.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.msck.repair.batch.max.retries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.exec.orc.base.delta.ratio does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.fastpath does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.prewarm.spark.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.update.table.properties.from.serde.list does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.file.cleanup.delay.seconds does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.management.rpc.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.mapjoin.hybridgrace.bloomfilter does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.plugin.client.num.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.history.retention.failed does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.test.bucketcodec.version does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.initial.metadata.count.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.time.window does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.cache.batch.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.point.lookup.min does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.headers does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.service.refresh.interval.sec does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.max.output.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.join.inner.residual does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.active.passive.ha.enable does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.remote.token.requires.signing does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.bucket.pruning does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.trace.always.dump does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.persist.scope does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.hash.table.inflation.factor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.mm.allow.originals does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.enforce.vectorized does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.writeset.reaper.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.compact.insert.only does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.order.columnalignment does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.output.service.send.buffer.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.llap.concurrent.queries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.allow.uber does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.txn.xlock.iow does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.rsc.conf.list does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.splits.include.fileid does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.communicator.num.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orderby.position.alias does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.communicator.connection.sleep.between.retries.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.service.metrics.hadoop2.component does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.direct.sql.max.elements.in.clause does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.cache.defaultfs.only.native.fileid does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.optimize.shuffle.serde does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.indexer.segments.granularity does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.http.response.header.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.conf.internal.variable.list does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.testing.remove.logs does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.limittranspose.reductionpercentage does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.distcp.privileged.doAs does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.strict.checks.orderby.no.limit does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.splits.directory.batch.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.client.cache.expiry.time does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.defrag.headroom does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.notification.event.consumers does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.zookeeper.publish.configs does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.auto.convert.join.hashtable.max.entries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.tez.sessions.init.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.authorization.storage.check.externaltable.drop does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.input.format.supports.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.execution.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.client.cache.max.capacity does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.rewriting does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.dumpdir.clean.freq does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.cbo.show.warnings does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.fshandler.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.max.bloom.filter.entries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.serde does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.task.scheduler.wait.queue.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.nonvector.wrapper.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.cte.materialize.threshold does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.semijoin.conversion does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.use.ts.stats.for.mapjoin does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.metrics.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.dump.include.acid.tables does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.logger does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.use.pam does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.max.count does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.share.object.pools does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.update.table.properties.from.serde does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.service.metrics.codahale.reporter.classes does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.cli.tez.session.async does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.session.events.print.summary does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.vrb.queue.limit.base does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.mm.avoid.s3.globstatus does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.use.SSL does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.replica.functions.root.dir does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning.max.data.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.metadata.base does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.mmap does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.coordinator.address.default does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.conf.hidden.list does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.max.entry.lifetime does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.user does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.use.row.serde.deserialize does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.timedout.txn.reaper.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.http.compression.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.lrfu.lambda does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.metadata.db.type does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.execution.ptf.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.shared.work.extended does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.row.identifier.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.resultset.default.fetch.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.always.collect.operator.stats does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.cm.retain does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.merge.cardinality.check does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.dumpdir.ttl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.authentication.ldap.groupClassKey does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.history.retention.succeeded does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.use.fileid.path does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.local.time.zone does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.tez.wm.am.registry.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.active.passive.ha.registry.namespace does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.slice.row.count does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.create.as.insert.only does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.am.use.fqdn does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.mv.files.thread does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.skip.compile.udf.check does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.mapjoin.memory.oversubscribe.factor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.arrow.batch.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.notification.sequence.lock.retry.sleep.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.cm.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.sleep.interval.between.start.attempts does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.approx.max.load.tasks does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.yarn.container.mb does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.http.read.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.orc.gap.cache does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.legacy.schema.for.all.serdes does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.dag.status.check.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.formats does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.task.scheduler.enable.preemption does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.num.executors does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.tez.sessions.custom.queue.allowed does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.bitmap.type does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning.map.join.only does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.client.password does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.num.schedulable.tasks.per.node does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.memory.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.strict.checks.type.safety does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.async.exec.async.compile does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.max.input.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.memory.oversubscription.max.executors.per.query does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.blobstore.supported.schemes does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.splits.allow.synthetic.fileid does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.use.op.stats does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.trace.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.tez.session.lifetime.jitter does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.web.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.strict.checks.cartesian.product does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.vcpus.per.instance does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.plugin.rpc.num.handlers does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.min.bloom.filter.entries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.partition.columns.separate does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.wm.allow.any.pool.via.jdbc does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.cache.stripe.details.mem.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.locality.delay does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.cmrootdir does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.node.disable.backoff.factor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.groupby.complex.types.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.am.liveness.connection.sleep.between.retries.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.working.directory does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.nontransactional.tables.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.memory.per.instance.mb does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.correlated.multi.key.joins does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.db.type does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.task.scale.memory.reserve.fraction does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.merge.nway.joins does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.streaming.auto.flush.check.interval.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.vector.serde.async.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.in.place.progress does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.zookeeper.connection.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.indexer.memory.rownum.max does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.strategies does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.xsrf.filter.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.alloc.max does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.client.capability.check does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.task.scale.memory.reserve-fraction.min does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.splits.ms.footer.cache.ppd.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.user.ipaddress does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.event.message.factory does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.mapjoin.memory.monitor.check.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.client.connect.retry.limit does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.xmx.headroom does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.direct does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.shared.work does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.estimate does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.tez.session.lifetime does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.authentication.ldap.guidKey does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.discard.method does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.cartesian-product.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.notification.sequence.lock.max.retries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.heap.memory.monitor.usage.threshold does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.client.user does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.alloc.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.wait.queue.comparator.class.name does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.output.service.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.privilege.synchronizer.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.adaptor.suppress.evaluate.exceptions does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.column.autogather does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.groupby.position.alias does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.rebuild.incremental does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.use.groupby.shuffle does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.max.entry.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.stage.max.tasks does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.testing.short.logs does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.groupby.limit.extrastep does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.use.ssl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.client.retry.delay.seconds does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.fileformat does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.streaming.auto.flush.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.test.fail.compaction does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.service.metrics.class does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.explain.user does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.download.permanent.fns does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.max.historic.queries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.execution.reducesink.new.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.history.retention.attempted does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.initiator.failed.compacts.threshold does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.operation.log.cleanup.delay does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.execution.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.enable.grace.join.in.llap does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.threadpool.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.select.threshold does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.scratchdir.lock does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.dump.metadata.only does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.timeout.seconds does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.filter.stats.reduction does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.clear.dangling.scratchdir does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.test.fail.heartbeater does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.countdistinct does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.enforce.tree does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.stats.ndv.tuner does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.direct.sql.max.query.length does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.close.session.on.disconnect does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.ppd.windowing does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.host does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.orc.splits.ms.footer.cache.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.hbase.file.metadata.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.auto.convert.join.shuffle.max.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.driver.parallel.compilation does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.cache.allow.synthetic.fileid does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.plugin.acl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.use.vector.serde.deserialize does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.exec.schema.evolution does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.direct.sql.max.elements.values.clause does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.indexer.partition.size.max does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.auto.auth does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.schema.info.class does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.yarn.shuffle.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.passiveWaitTimeMs does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.load.dynamic.partitions.thread does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.tez.queue.access.check does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.external.splits.temp.table.storage.format does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.row.wrapper.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.cm.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.client.retry.limit does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.resultset.serialize.in.tasks does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.constraint.notnull.enforce does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.timeout.seconds does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.service.metrics.hadoop2.frequency does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.node.reenable.max.timeout.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.max.open.txns does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.auto.convert.sortmerge.join.reduce.side does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.cli.print.escape.crlf does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.trigger.validation.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.cbo.cnf.maxnodes does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.adaptor.usage.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.authentication.ldap.groupMembershipKey does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.origins does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.ipaddress does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.external.splits.order.by.force.single.split does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.rpc.port does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.use.vectorized.input.format does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.client.cache.stats.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.notification.event.poll.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.transactional.concatenate.noblock does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.rootdir does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.strategy does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.metastore.limit.partition.request does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.async.log.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.allow.udf.load.on.demand does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.if.expr.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.bloom.filter.factor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.am-reporter.max.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.exim.test.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.strict.checks.bucketing does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.directory does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.bucket.pruning.compat does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.spnego.principal does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.task.preemption.metrics.intervals does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.shuffle.dir.watcher.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.allocator.arena.count does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.communicator.connection.timeout.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.transpose.aggr.join does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.maxTries does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.use.lrfu does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.resultset.max.fetch.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.wait.for.pending.results does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.io.sarg.cache.max.weight.mb does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.clear.dangling.scratchdir.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.sleep.time does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.compile.lock.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.remove.orderby.in.subquery does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.output.stream.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.transactional.events.mem does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.bmj.use.subcache does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.point.lookup does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.allow.permanent.fns does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.web.ssl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.vrb.queue.limit.min does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.txn.manager.dump.lock.state.on.acquire.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.wm.pool.metrics does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.add.raw.reserved.namespace does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.resource.use.hdfs.location does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.num.nulls.estimate.percent does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.mapjoin.optimized.hashtable.probe.percent does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.acid does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.node.reenable.min.timeout.ms does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.validate.acls does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.support.special.characters.tablename does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.zk.sm.session.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.vector.serde.enabled does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.ptf.max.memory.buffering.batch.count does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.dynamic.partition.hashjoin does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.am.registry does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.exec.copyfile.maxnumfiles does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.overlord.address.default does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.remove.sq_count_check does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.druid.http.numConnection does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.enable.cors does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.vectorized.row.serde.inputformat.excludes does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.encode.slice.lrr does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.cache.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.thrift.http.request.header.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.server2.webui.max.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.optimize.limittranspose.reductiontuples does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.test.rollbacktxn does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.acl does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.combine.equivalent.work.optimization does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.enable.memory.manager does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.msck.repair.batch.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.stats.filter.in.factor does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.exec.input.listing.max.threads does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.lock.query.string.max.length does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.io.track.cache.usage does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.llap.daemon.rpc.num.handlers does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.count.open.txns.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.use.orc.codec.pool does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.txn.heartbeat.threadpool.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.query.results.cache.max.size does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.spark.exec.inplace.progress does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.repl.bootstrap.dump.open.txn.timeout does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.msck.path.validation does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.compactor.history.reaper.interval does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.txn.strict.locking.mode does not exist
+19/05/22 01:47:31 WARN HiveConf: HiveConf of name hive.tez.input.generate.consistent.splits does not exist
+19/05/22 01:47:32 ERROR ObjectStore: Version information found in metastore differs 3.1.0 from expected schema version 1.2.0. Schema verififcation is disabled hive.metastore.schema.verification so setting version.
+19/05/22 01:47:32 WARN ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 1.2.0, comment = Set by MetaStore david@127.0.0.1
+19/05/22 01:47:32 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+[Stage 2:>                                                          (0 + 1) / 1]                                                                                19/05/22 01:47:34 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: +++++++++++++++++++++++++++++++++++++++
+19/05/22 01:47:34 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: the program is sucess
+19/05/22 01:47:34 WARN $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: +++++++++++++++++++++++++++++++++++++++
+
+scala> println("++++++++++++++++++++++++++ +++++++++++++")
++++++++++++++++++++++++++++++++++++++++
+
+scala> println("the program is sucess")
+the program is sucess
+
+scala> println("++++++++++++++++++++++++++ +++++++++++++")
++++++++++++++++++++++++++++++++++++++++
+
+scala> 
+
+scala> 
+
+scala> //csv_data.toDF().insertInto("day_h istory")
+
+scala> 
+
+scala> 
+
+scala> 
+
+scala> //select max(stock_date) as date fr om stock_dev.day_history;
+
+scala> :quit
