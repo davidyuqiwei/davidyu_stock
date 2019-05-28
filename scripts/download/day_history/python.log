@@ -1,6 +1,0 @@
-002948.sz
-002070.sz
-603332.sz
-601615.sz
-601298.sz
-cat /home/davidyu/stock/data/day_history_insert/*.csv > all.csv

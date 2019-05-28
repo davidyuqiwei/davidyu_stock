@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../..")
+from davidyu_cfg import *
 from functions.connect_url import url_opener
 
 
@@ -75,7 +75,7 @@ def process(stock_index,dir_liutong_owner):
     else:
         save_data(data2,dir_liutong_owner,stock_index)
 def main():
-    sys.path.append("../..")
+    #from davidyu_cfg import *
     from dir_control.data_dir_v1 import data_dict,stk_index_list
     import time
     dir_liutong_owner=data_dict.get("liutong_owner")

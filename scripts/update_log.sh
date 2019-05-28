@@ -71,3 +71,21 @@ update the fasttext classification
 # /home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/news_report
 2019/05/22
 need to check gits, and forbid to update large data files
+
+
+2019/05/23
+make outside_data dir to save the outside data like bert/ tecent
+set the david_ctg in /home/davidyu/software/Anaconda/lib/python3.7/site-packages for dir configuration
+
+
+2019/05/28
+update how to save the log file /home/davidyu/stock/scripts/davidyu_stock/scripts/online/download/SH_SZ_index
+
+-- write a shell function in $shell_function_dir
+
+
+
+
+
+
+

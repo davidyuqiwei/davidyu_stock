@@ -15,13 +15,10 @@ import time
 stock_news = { 
     'sina': "https://finance.sina.com.cn/stock/",
     "dfcf": "https://finance.sina.com.cn/stock/",
-<<<<<<< HEAD
     "ifeng": "http://finance.ifeng.com/",
     "ftchinese": "http://www.ftchinese.com/channel/economy.html",
-    "nature_researchAnalysis": "https://www.nature.com/research-analysis"
-=======
+    "nature_researchAnalysis": "https://www.nature.com/research-analysis",
     "ifeng": "http://finance.ifeng.com/"
->>>>>>> 1f748b377819d67350ada8ca8130fda7752e2a91
 }
 
 

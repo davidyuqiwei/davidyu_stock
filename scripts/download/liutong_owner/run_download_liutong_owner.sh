@@ -2,15 +2,15 @@
 cd `dirname $0`
 curr_dir=`pwd`
 sep="_____"
-programName=${0##*/}   ### filename without type e.g.  test.sh  test
+programName=${0##*/}   ### filename with extention type e.g.  test.sh
 #echo $programName
-file_name=${programName%.*} ## filename   'test.sh'
+file_name=${programName%.*} # file name without extention  'test.sh' -> test
 date_run=`date +"%Y-%m-%d" `
-`sh clean_dir.sh`
+#`sh clean_dir.sh`
 
 
 #nohup python download_liutong_owner.py
-python download_liutong_owner.py
+python download_liutong_owner.py > $file_name$".log" 2>&1
 
 if [ $? -ne 0 ];then
   echo "failed"$sep$curr_dir$sep$programName$sep"python"$date > $script_log_path/$file_name.log

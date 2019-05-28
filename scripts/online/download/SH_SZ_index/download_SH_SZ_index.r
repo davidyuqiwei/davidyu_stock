@@ -1,6 +1,6 @@
 library(quantmod)
 
-dateStart <- "1998-01-01"
+dateStart <- "1998-02-01"
 dateEnd <- Sys.Date()
 
 #dateEnd <-Sys.Date()
