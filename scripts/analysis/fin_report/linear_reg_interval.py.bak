@@ -29,15 +29,13 @@ sc.setLogLevel("ERROR")
 # x94                    stock index
 a2=spark.sql("select x1,x33,x94 from stock_dev.fin_report where x1 >= '2015-01-01' and x1 <= '2018-11-19' ")
 
-select x1,x33,x94 from stock_dev.fin_report where x1 >= '2015-01-01' and x1 <= '2018-11-19' and x94 = '603797'
-
 @pandas_udf("x1 string,x94 string, x33 double", PandasUDFType.GROUPED_MAP)
 def test1(a1):
     a1=a1.sort_values("x1")
     len1=len(a1[a1['x33']<0])
     if len1==0:
 	    X_in1=pd.DataFrame(a1,columns=["x33"])
-	    #X=pd.DataFrame(X_in1,columns=["x33"])
+	    X=pd.DataFrame(X_in1,columns=["x33"])
 	    # how many rows in the dataframe and make it as x
 	    rows=X_in1.shape[0]
 	    x=np.array(range(rows)).reshape(-1,1)
@@ -53,10 +51,9 @@ def test1(a1):
     ret_df=a1.assign(x33=fit1).iloc[0:1,:]  ## only get the first result
     return ret_df
 a4=a2.select("x1","x94","x33").groupby("x94").apply(test1)
-
 a4.sort("x33",ascending=False).show(50)
 
 a4.registerTempTable("table1")  
-#sql("create table stock_analysis.profit_table as  select * from table1")
+sql("create table stock_analysis.profit_table as  select * from table1")
 
 

@@ -1,0 +1,16 @@
+the script path is /home/davidyu/stock/scripts/davidyu_stock/scripts/online/download/all_news
+................................................................................
+..................................python_path...................................
+................................................................................
+/home/davidyu/stock/scripts/davidyu_stock/scripts/online/download/all_news
+/home/davidyu/software/Anaconda/lib/python37.zip
+/home/davidyu/software/Anaconda/lib/python3.7
+/home/davidyu/software/Anaconda/lib/python3.7/lib-dynload
+/usr/davidyu/.local/lib/python3.7/site-packages
+/home/davidyu/software/Anaconda/lib/python3.7/site-packages
+/home/davidyu/stock/scripts/davidyu_stock/scripts
+/home/davidyu/stock/data
+................................................................................
+................................................................................
+/home/davidyu/stock/data/all_news
+2019-06-04_11:15:57 finished /home/davidyu/stock/scripts/davidyu_stock/scripts/online/download/all_news/download_all_news.py

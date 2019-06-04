@@ -1,18 +1,19 @@
 from CxExtractor import CxExtractor
 import sys
 import os
-script_dir=os.path.split(os.path.realpath(__file__))[0]
+script_dir = os.path.split(os.path.realpath(__file__))[0]
 filename = os.path.basename(__file__)
 print("the script path is "+script_dir)
 ## change the work dir to the script dir
 os.chdir(script_dir)
-up_dir=os.path.abspath(os.path.join(os.getcwd(), "../"))
-print("the up dir is "+ up_dir)
+#up_dir=os.path.abspath(os.path.join(os.getcwd(), "../"))
+#print("the up dir is "+ up_dir)
 from davidyu_cfg import *
 from dir_control.data_dir_v1 import data_dict,stk_index_list
 import time
 
 
+### when update the news sources, be aware about the style of the json/ dict
 stock_news = { 
     'sina': "https://finance.sina.com.cn/stock/",
     "dfcf": "https://finance.sina.com.cn/stock/",
@@ -43,8 +44,10 @@ def get_text(key):
     files=os.path.join(dir_all_news,file_name)
     #print(files)
     f=open(files,'w+')
-    #print(s,file=f)
+    print(s,file=f)
+    f.close()
 for key in stock_news:
     get_text(key)
-
-print("finished "+os.path.join(script_dir,filename)
+import datetime
+nowTime=datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+print(nowTime+" finished "+os.path.join(script_dir,filename))

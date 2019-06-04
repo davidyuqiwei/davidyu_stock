@@ -9,7 +9,11 @@ programName=${0##*/} ### filename without type e.g.  test.sh  > test
 source $shell_function_dir"create_log.sh"
 
 
-#####  run Rfile
+
+
+
+
+###
 Rfile="download_SH_SZ_index.r"
 funWithParam $Rfile
 #################################
@@ -30,7 +34,7 @@ target_csv="shanghai_index_all.csv"
 run_scala="to_hive.scala"
 funWithParam $run_scala
 sed -r 's/all.csv/'$target_csv'/g' $scalaFile | sed -r 's/stock_dev.fin_report/'$target_table'/g' > $run_scala
-spark-shell < $run_scala > $Thelog 2>&1 
+nohup spark-shell < $run_scala > $Thelog 2>&1 &
 #`rm -rf *.csv`
 echo -e "\n\n sucess '$programName' in the path "$curr_dir >> $Thelog
 `mv -f *.log $log_dir`
@@ -39,8 +43,6 @@ echo -e "\n\n sucess '$programName' in the path "$curr_dir >> $Thelog
 if [ $? -ne 0  ];then
     echo "Something failed check the log"
 else
-    echo 'OK'
-    #sleep 1h
     `rm -rf *.csv *.scala`
 fi
 

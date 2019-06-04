@@ -48,13 +48,3 @@ SH_SZ_INDEX.main("all.csv","stock_dev.fin_report")
 println("+++++++++++++++++++++++++++++++++++++++")
 println("the program is sucess")
 println("+++++++++++++++++++++++++++++++++++++++")
-
-//  select * from stock_dev.SH_index where stock_date >='2019-05-21'
-
-
-
-//csv_data.toDF().insertInto("day_history")
-
-
-
-//select max(stock_date) as date from stock_dev.day_history;

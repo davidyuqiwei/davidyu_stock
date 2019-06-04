@@ -84,8 +84,19 @@ update how to save the log file /home/davidyu/stock/scripts/davidyu_stock/script
 -- write a shell function in $shell_function_dir
 
 
+update the to_hive file for the finicial report
+## need to re-write the to_hive.scala  --args
 
+2019/05/29
+davidyu_cfg.py  
+update the make project logic and also remove
 
+2019/06/03
+-update the "all news" to the online dir
 
+--need to check the exception define in the path
+/home/davidyu/test/exception
+
+-- read the source code of networkx
 
 

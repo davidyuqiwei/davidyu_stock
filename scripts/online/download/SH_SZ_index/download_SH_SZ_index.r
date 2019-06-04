@@ -15,7 +15,6 @@ for (i in 1:2){
 	file_name=file_name1[i]
 	write.table(data1,file_name,row.names=FALSE,col.names=FALSE,sep=",")
 }
-
 #result=getSymbols("000001.ss",from =dateStart,to = dateEnd,src = "yahoo",auto.assign=FALSE)
 
 
