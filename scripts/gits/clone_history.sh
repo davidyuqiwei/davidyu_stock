@@ -7,3 +7,5 @@ git clone https://github.com/ruanyangry/fastText-Study.git
 git clone https://github.com/tscheepers/word2vec.git
 git clone https://github.com/AimeeLee77/keyword_extraction
 https://github.com/zkwi/textSummary.git
+
+https://github.com/borisbanushev?tab=repositories  ##  stock AI, CNN LSTM 

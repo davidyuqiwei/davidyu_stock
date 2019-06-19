@@ -19,20 +19,20 @@ project_DIR=[data_path,download_path,analysis_path]
 
 
 #### add some path to the sys path to use the module
-def print_sys_path():
+def print_add_sys_path():
     path_add=[script_path,data_path]
     for dirs in path_add:
         sys.path.append(dirs)
     ## the python system path
-    print("{:.^80}".format(""))
-    print("{:.^80}".format("python_path"))
-    print("{:.^80}".format(""))
+    #print("{:.^80}".format(""))
+    #print("{:.^80}".format("python_path"))
+    #print("{:.^80}".format(""))
     #print(sys.path)
-    [ print(x) for x in sys.path ]
-    print("{:.^80}".format(""))
-    print("{:.^80}".format(""))
+    #[ print(x) for x in sys.path ]
+    #print("{:.^80}".format(""))
+    #print("{:.^80}".format(""))
 
-print_sys_path()
+print_add_sys_path()
 
 #sys.path.append(script_path)
 def make_project_dir(create_dir,project_DIR):

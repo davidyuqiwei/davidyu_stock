@@ -41,6 +41,7 @@ export stock_script=$main_dir"scripts/davidyu_stock/scripts/"
 export THE_functions=$stock_script"functions/"
 export stock_data=$main_dir"data"
 export log_dir=$main_dir"log"
+export result_data=$main_dir"data_result"
 export MAVEN_HOME=/home/davidyu/software/apache-maven-3.6.0
 alias removefirstline=/home/davidyu/stock/scripts/davidyu_stock/scripts/system_command/rm_1lines.sh
 ### pyspark driver

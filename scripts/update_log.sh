@@ -99,4 +99,9 @@ update the make project logic and also remove
 
 -- read the source code of networkx
 
+2019/06/11
+make the python-flask website for the scrap of zhiwu, and made in html
+first version is in the test folder
 
+--keras for lstm need to recheck
+-- in the test folder

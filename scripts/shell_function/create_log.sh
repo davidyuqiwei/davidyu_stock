@@ -1,4 +1,7 @@
 ## create log file
+# run script : to_hive
+# make the log : to_hive_20190610_094510_scala.log
+
 funWithParam(){
     #echo "The value of the first parameter is $1 !"
     string=$1

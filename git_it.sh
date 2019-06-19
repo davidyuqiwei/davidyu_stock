@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 ## use root to git
+## check if have large files , if has , stop
 folder_size=`du -s | awk '{ print $1  }'`
 foler_size_M=`du -sh`
 echo $folder_size_M
