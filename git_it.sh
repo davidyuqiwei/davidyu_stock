@@ -13,5 +13,5 @@ git config --global user.email "davidyuqiwei@outlook.com"
 git config --global user.name "davidyuqiwei"
 git config --global push.default simple
 git add --all
-git commit -m david
+git commit -m "david"
 git push

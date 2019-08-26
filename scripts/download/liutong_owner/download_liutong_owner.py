@@ -1,28 +1,37 @@
+'''
+this script download 
+all the owner  data 
+'''
 import sys
 from davidyu_cfg import *
 from functions.connect_url import url_opener
 
 
-def down(html1):
-    soup2=url_opener(html1)
-    soup_out=soup2.findAll('a',href=True)
+def download_html_to_df(html1):
+    '''
+    downloda html do DataFrame,
+    @input: a html url,
+    @output: a pandas DataFrame
+    '''
+    soup2 = url_opener(html1)
+    soup_out = soup2.findAll('a',href=True)
     ## get date, which '2018-10-30' start with #2
-    dates_in=[dates_str['href'][1:11] for dates_str in soup_out if dates_str['href'].startswith("#2")]
-    tr_str=soup2.findAll('tr')
+    dates_in = [dates_str['href'][1:11] for dates_str in soup_out if dates_str['href'].startswith("#2")]
+    tr_str = soup2.findAll('tr')
     #a1=t3[10]
     #------------------------------------------------------------#
     #--------- prase log to data ----------------------#
     data=[]
     for a1 in tr_str:
-        cols=a1.findAll('td')
-        cols=[ele.text.strip() for ele in cols]
-        if len(cols)==5:
+        cols = a1.findAll('td')
+        cols = [ele.text.strip() for ele in cols]
+        if len(cols) == 5:
             data.append([ele for ele in cols if ele])
         else:
             pass
     import pandas as pd
-    data1=pd.DataFrame(data)
-    data1.columns=['index_in','owner_name','amount','ratio','character']
+    data1 = pd.DataFrame(data)
+    data1.columns = ['index_in','owner_name','amount','ratio','character']
     #--------------------------------------------------------------------#
     #------- make date date align with data
     #data1.index_in.value_counts()
@@ -36,24 +45,24 @@ def down(html1):
         else:
             dates_in1=dates_in[k]
             date_all.append(dates_in1)
-    data1['date']=date_all
+    data1['date'] = date_all
     return data1
 #### transform to chinese
 def tr(x):
-    x1=x.encode('latin1',"ignore").decode('gb2312',"ignore")
+    x1 = x.encode('latin1',"ignore").decode('gb2312',"ignore")
     return x1
 def _transform_data(data_in):
     ## some data will be NA fill it
-    data_in['character']=data_in['character'].fillna('david')
-    data_in['owner_name']=data_in['owner_name'].fillna('david')
-    data_in['owner_name']=data_in['owner_name'].apply(tr)
-    data_in['character']=data_in['character'].apply(tr)
+    data_in['character'] = data_in['character'].fillna('david')
+    data_in['owner_name'] = data_in['owner_name'].fillna('david')
+    data_in['owner_name'] = data_in['owner_name'].apply(tr)
+    data_in['character'] = data_in['character'].apply(tr)
     data2=data_in
     return data2
 def save_data(data1,save_dir,stock_index):
     import os
-    file_name=stock_index+'.csv'
-    save_file_name=os.path.join(save_dir,file_name)
+    file_name = stock_index+'.csv'
+    save_file_name = os.path.join(save_dir,file_name)
     data1.to_csv(save_file_name,index=0,header=None)
 def check_data(df):
     ## check data if need to re-encode
@@ -64,12 +73,21 @@ def get_html(stock_index):
     html1='http://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CirculateStockHolder/stockid/%s/displaytype/3000.phtml' %stock_index
     return html1
 def process(stock_index,dir_liutong_owner):
-    html1=get_html(stock_index)
-    data1=down(html1)
-    data1['stock_index']=stock_index
+    html1 = get_html(stock_index)
+    data1 = download_html_to_df(html1)
+    data1['stock_index'] = stock_index
     data_raw=data1.copy(deep=True)
-    data2=_transform_data(data1)
-    check_tr_data=check_data(data2)
+    '''
+    -if na fill with 'david'
+    -if it is latin1 transform to gb2312
+    '''
+    data2 = _transform_data(data1)
+    check_tr_data = check_data(data2)
+    '''
+    if data need to re-encode, 
+    if yes save the re-encode data
+    else save the raw data
+    '''
     if check_tr_data>1:
         save_data(data_raw,dir_liutong_owner,stock_index)
     else:
@@ -78,11 +96,12 @@ def main():
     #from davidyu_cfg import *
     from dir_control.data_dir_v1 import data_dict,stk_index_list
     import time
-    dir_liutong_owner=data_dict.get("liutong_owner")
+    dir_liutong_owner = data_dict.get("liutong_owner")
+    dir_liutong_owner = data_dict.get("tmp")
     stk_index_list=[x for x in stk_index_list if str(x).zfill(6)[0]!='3']
     k=0
     #stk_index_list=['000011','000014']
-    for stk in stk_index_list:
+    for stk in stk_index_list[0:10]:
         stock_index=str(stk).zfill(6)
         try:
             process(stock_index,dir_liutong_owner)

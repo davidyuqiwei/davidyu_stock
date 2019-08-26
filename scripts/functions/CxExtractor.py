@@ -32,7 +32,13 @@ class CxExtractor:
         boolstart = False
         boolend = False
         if len(self.__indexDistribution) < 2:
-            return 'This page has no content to extract'
+            return content
+        '''
+        @@ comment by davidyu
+        if len(self.__indexDistribution) < 2:
+            return 'This page has no content to extract indexDistribution'
+
+        '''
         for i in range(len(self.__indexDistribution) - 3):
             if(self.__indexDistribution[i] > self.__threshold and (not boolstart)):
                 if (self.__indexDistribution[i + 1] != 0 or self.__indexDistribution[i + 2] != 0 or self.__indexDistribution[i + 3] != 0):
@@ -60,7 +66,7 @@ class CxExtractor:
                 boolstart = boolend = False
         result = "".join(list(self.__text))
         if result == '':
-            return 'This page has no content to extract'
+            return 'This page has no content to extract because result is null'
         else:
             return result
 

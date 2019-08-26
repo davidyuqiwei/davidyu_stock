@@ -5,8 +5,9 @@
   ############################
   ####### important ##########
   ############################
-  this script first clean the table
-  and put all the data into the database
+  this script first 
+  @clean the table
+  @ put all the data into the database
 */
 import org.apache.log4j.{Level, Logger}
 object SH_SZ_INDEX{

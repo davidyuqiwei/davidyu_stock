@@ -105,3 +105,10 @@ first version is in the test folder
 
 --keras for lstm need to recheck
 -- in the test folder
+
+2019/06/19
+update the logic of download day_history data and will move to the online module
+
+2019/07/01
+## check the online version of day_history 
+    # spark sometimes cannot start

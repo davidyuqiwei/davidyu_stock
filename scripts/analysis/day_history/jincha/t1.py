@@ -36,7 +36,7 @@ df2 = df['adj_close']
 
 ma_5 = df2.rolling(5).mean()
 ma_10 = df2.rolling(10).mean()
-ma_20=df2.rolling(20).mean()
+ma_20 = df2.rolling(20).mean()
 df4 = df['adj_close']
 buy_sign=[]
 for i in range(20,100):

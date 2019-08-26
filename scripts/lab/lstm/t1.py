@@ -1,4 +1,4 @@
-
+#https://blog.csdn.net/zwqjoy/article/details/80493341
 # Naive LSTM to learn three-char window to one-char mapping
 import numpy
 from keras.models import Sequential

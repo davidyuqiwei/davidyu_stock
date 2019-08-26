@@ -1,25 +1,12 @@
-funWithParam(){
-    #echo "The value of the first parameter is $1 !"
-    string=$1
-    script_raw_name=(${string//./ })  ## script raw name xx.py --> xx
-    #echo $script_raw_name"_"$DATE
-    script_extention="${string#*.}"
-    DATE=`date +%Y%m%d`
-    #echo $script_extention
-    if [ $script_extention == "py" ]; then 
-        Thelog=$script_raw_name"_"$DATE"_python.log"
-    elif [ $script_extention == "r" ]; then 
-        Thelog=$script_raw_name"_"$DATE"_Rout.log"
-    elif [ $script_extention == "scala"  ]; then
-        Thelog=$script_raw_name"_"$DATE"_scala.log"
-    fi
-    #echo $result
+function func1(){
+    count=$1
+    cccc=$1
+    for cont in {1..3}; do
+        count=`expr $count + 1`
+    done
+    # 函数中使用return返回时，返回值的数据类型必须是数字
+    #return $count
+    echo $cccc
+
+                  
 }
-
-
-
-#funWithParam "david"
-#echo $result
-#echo $filename
-#a1=$(funWithParam)
-#echo $a1

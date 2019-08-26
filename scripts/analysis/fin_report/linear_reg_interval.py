@@ -21,20 +21,20 @@ sc.setLogLevel("ERROR")
 from davidyu_cfg import *
 
 @pandas_udf("x1 string,x94 string, x33 double,counts double", PandasUDFType.GROUPED_MAP)
-def test1(a1):
+def test1(df):
     import sys
-    sys.path.append("/home/davidyu/stock/scripts/davidyu_stock/script")
+    sys.path.append("/home/davidyu/stock/scripts/davidyu_stock/scripts")
     from LinearReg import LinearReg
-    a1 = a1.sort_values("x1")
-    len1 = len(a1[a1['x33']<0])  ## any profit is less than 0
-    total_len = len(a1['x33'])  ## total rows of the dataframe
-    if len1==0:
-        df = pd.DataFrame(a1,columns=["x33"])
+    dfSort = df.sort_values("x1")  ## sort by date
+    len_below_zero = len(dfSort[dfSort['x33']<0])  ## any profit is less than 0
+    total_len = len(dfSort['x33'])  ## total rows of the dataframe
+    if len_below_zero==0:
+        dfForReg = pd.DataFrame(dfSort,columns=["x33"])
         linear_reg = LinearReg()
-        slope, inter = linear_reg.single_linear_reg(df,"x33")
+        slope, inter = linear_reg.single_linear_reg(dfForReg,"x33")
     else:
         slope = -9999
-    ret_df = a1.assign(x33=slope).assign(counts=total_len).iloc[0:1,:]  ## only get the first result
+    ret_df = dfSort.assign(x33=slope).assign(counts=total_len).iloc[0:1,:]  ## only get the first result
     return ret_df
 
 

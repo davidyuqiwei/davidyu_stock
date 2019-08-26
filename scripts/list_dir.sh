@@ -12,7 +12,7 @@ find ./ -regex ".*\.Rout\|.*\.csv"  # find some extension files
 #find ./ -regex ".*\.log" -exec rm -rf{} \
 find ./ -regex ".*\.log\|.*\.csv\|.*\.txt" | xargs rm -rf
 
-
-
+# before 150 min update, and count
+find ./  -cmin -150 |wc -l
 
 

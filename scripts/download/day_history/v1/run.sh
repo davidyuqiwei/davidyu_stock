@@ -29,9 +29,10 @@ file_in=$stock_data/basic_info/stock_basic_info.csv
 stk_count=`wc -l $file_in`
 ## how many rows in the file and assign to the parameter
 stk_index_count=`echo $stk_count | awk '{print $1}'`  
-#stk_index_count=10   # for test
-echo $stk_index_count
-for i in $(seq 0 $stk_index_count)
+stk_loop=$((stk_index_count-1))
+#stk_loop=2  # for test
+echo $stk_loop
+for i in $(seq 0 $stk_loop)
 do 
     #echo $i
     sed -r 's/TheInput/'$(echo $i)'/g' download_data_insert.py > to_download.py
@@ -40,6 +41,7 @@ do
 done
 #python download_data_insert.py >> $Thelog & echo $! > pidfile.log
 echo "finished the python script" >> $Thelog 
+echo "finish python loop"
 ## combine all the csv
 `cat $stock_data/day_history_insert/*.csv > $curr_dir/all.csv`
 `rm -rf to_download.py`
@@ -50,7 +52,7 @@ echo "finished the python script" >> $Thelog
 ###############################
 ###----- scala  script ----### 
 ###############################
-
+echo "start scala"
 ##-----------------------------------##
 ##------------- set it --------------##
 target_table="stock_dev.day_history_insert"
@@ -67,10 +69,8 @@ echo -e "\n\n sucess '$programName' in the path "$curr_dir >> $Thelog
 #####################################################################################
 #----------------- finish save to hive ------------------------------------#
 #####################################################################################
-## zip the data
-`zip -r $stock_data/zip_data/day_history_$(date "+%Y%m%d").zip $stock_data/day_history_insert/*.csv`
 
-#`mv -f *.log $log_dir`
+`mv -f *.log $log_dir`
 ## if sucess rm the csv and scala
 if [ $? -ne 0  ];then
     echo "Something failed check the log"
@@ -80,4 +80,6 @@ else
     `rm -rf *.csv *.scala`
 fi
 
+## zip the data
+`zip -r $stock_data/zip_data/day_history_$(date "+%Y%m%d").zip $stock_data/day_history_insert/*.csv`
 

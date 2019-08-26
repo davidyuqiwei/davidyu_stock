@@ -1,7 +1,8 @@
 #!/usr/bin/sh
-stk_index="603185"
+save_dir=$stock_data"/test/"
+stk_index="000917"
 file_name=$stk_index
-f1=${file_name}.csv
+f1=${save_dir}${file_name}.csv
 #final_file=${file_name}_f1.csv
 
 
@@ -19,4 +20,5 @@ order by x1
 ;
 " \
 | sed 's/[\t]/,/g' > $f1
+echo $f1
 #| sed 's/[\t]/\t/g' > $f1

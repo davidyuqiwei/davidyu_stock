@@ -9,3 +9,4 @@ git clone https://github.com/AimeeLee77/keyword_extraction
 https://github.com/zkwi/textSummary.git
 
 https://github.com/borisbanushev?tab=repositories  ##  stock AI, CNN LSTM 
+https://github.com/ddbourgin/numpy-ml.git   ## numpy for some ML

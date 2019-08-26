@@ -17,7 +17,7 @@ funWithParam(){
     elif [ $script_extention == "scala"  ]; then
         Thelog=$script_raw_name"_"$DATE"_scala.log"
     fi
-    #echo $result
+    echo $Thelog
 }
 
 

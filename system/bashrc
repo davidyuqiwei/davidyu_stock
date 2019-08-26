@@ -29,6 +29,8 @@ PATH=$PATH:/home/davidyu/software/apache-hive-3.1.1-bin/bin
 export SPARK_HOME=/home/davidyu/software/spark-2.4.0-bin-hadoop2.7
 export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH
 export PATH=$PATH:/home/davidyu/software/phantomjs-2.1.1-linux-x86_64/bin
+export PATH=$PATH:/usr/local/bin/geckodriver
+export PATH=$PATH:/home/davidyu/software/chrome
 export LANG="zh_CN.UTF-8"
 LANGUAGE=zh_CN.UTF-8
 #################################################
