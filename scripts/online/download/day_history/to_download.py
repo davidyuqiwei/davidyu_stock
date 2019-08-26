@@ -83,7 +83,7 @@ if __name__ =='__main__':
     from functions.ForDownload import generate_stock_index,stk_index_list_gen
     start_date = datetime.datetime(1990,1,1)
     end_date = datetime.date.today()
-    main(1254)
+    main(1257)
     #copy_data_to_current_folder()
 
 
