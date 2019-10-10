@@ -13,7 +13,8 @@ data_dir=["tmp",
         "test",
         "news_report",
         "liutong_owner",
-        "all_news"
+        "all_news",
+        "DADAN"
         ]
 main_data_dir="/home/davidyu/stock/data"
 def create_dir_if_not_exist(dir_name):

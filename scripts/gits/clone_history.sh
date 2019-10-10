@@ -10,3 +10,6 @@ https://github.com/zkwi/textSummary.git
 
 https://github.com/borisbanushev?tab=repositories  ##  stock AI, CNN LSTM 
 https://github.com/ddbourgin/numpy-ml.git   ## numpy for some ML
+
+https://github.com/lyf124/MachineLearning/tree/master/MachineLearning/NLP    # NLP PDF
+

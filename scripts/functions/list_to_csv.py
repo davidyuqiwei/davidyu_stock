@@ -8,7 +8,7 @@ def list_to_csv(key_list,save_name):
     import pandas as pd
     from collections import Counter
     import itertools
-    key_list_flat=list(itertools.chain(*key_list))
+    key_list_flat = list(itertools.chain(*key_list))
     result = Counter(key_list_flat)
     result_common = pd.DataFrame(result.most_common(1000))
     result_common.to_csv(save_name,index=0)

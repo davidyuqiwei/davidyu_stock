@@ -12,4 +12,3 @@ find -name $path/*2018* | xargs grep -r 氢能  > $basedir/qingneng.txt
 #touch $basedir/test_20190320.txt
 
 
-

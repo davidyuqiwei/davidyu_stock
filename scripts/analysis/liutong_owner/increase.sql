@@ -1,3 +1,5 @@
+-- diff_ratio       "the stock price change ratio"
+
 select ll.owner_name,a1.diff_ratio,a1.stock_index
 from stock_dev.liutong_owner  ll
 left join 
