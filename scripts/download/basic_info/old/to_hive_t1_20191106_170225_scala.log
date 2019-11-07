@@ -1,0 +1,153 @@
+19/11/06 17:02:26 WARN Utils: Your hostname, VM_0_11_centos resolves to a loopback address: 127.0.0.1; using 172.16.0.11 instead (on interface eth0)
+19/11/06 17:02:26 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+19/11/06 17:02:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "INFO".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+19/11/06 17:02:27 INFO SignalUtils: Registered signal handler for INT
+19/11/06 17:02:35 INFO SparkContext: Running Spark version 2.4.0
+19/11/06 17:02:35 INFO SparkContext: Submitted application: Spark shell
+19/11/06 17:02:35 INFO SecurityManager: Changing view acls to: david
+19/11/06 17:02:35 INFO SecurityManager: Changing modify acls to: david
+19/11/06 17:02:35 INFO SecurityManager: Changing view acls groups to: 
+19/11/06 17:02:35 INFO SecurityManager: Changing modify acls groups to: 
+19/11/06 17:02:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(david); groups with view permissions: Set(); users  with modify permissions: Set(david); groups with modify permissions: Set()
+19/11/06 17:02:35 INFO Utils: Successfully started service 'sparkDriver' on port 46696.
+19/11/06 17:02:35 INFO SparkEnv: Registering MapOutputTracker
+19/11/06 17:02:35 INFO SparkEnv: Registering BlockManagerMaster
+19/11/06 17:02:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/11/06 17:02:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/11/06 17:02:35 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-951d7ecc-7696-4e41-b253-fc083e0ab197
+19/11/06 17:02:35 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+19/11/06 17:02:35 INFO SparkEnv: Registering OutputCommitCoordinator
+19/11/06 17:02:35 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+19/11/06 17:02:35 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+19/11/06 17:02:35 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://172.16.0.11:4041
+19/11/06 17:02:36 INFO Executor: Starting executor ID driver on host localhost
+19/11/06 17:02:36 INFO Executor: Using REPL class URI: spark://172.16.0.11:46696/classes
+19/11/06 17:02:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45023.
+19/11/06 17:02:36 INFO NettyBlockTransferService: Server created on 172.16.0.11:45023
+19/11/06 17:02:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/11/06 17:02:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.16.0.11, 45023, None)
+19/11/06 17:02:36 INFO BlockManagerMasterEndpoint: Registering block manager 172.16.0.11:45023 with 366.3 MB RAM, BlockManagerId(driver, 172.16.0.11, 45023, None)
+19/11/06 17:02:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.16.0.11, 45023, None)
+19/11/06 17:02:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 172.16.0.11, 45023, None)
+19/11/06 17:02:36 INFO Main: Created Spark session with Hive support
+Spark context Web UI available at http://172.16.0.11:4041
+Spark context available as 'sc' (master = local[*], app id = local-1573030955989).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
+      /_/
+         
+Using Scala version 2.11.12 (OpenJDK 64-Bit Server VM, Java 1.8.0_232)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> // this script put the   
+
+scala> // target csv file         to the 
+
+scala> // target database.table
+
+scala> /*
+     |   ############################
+     |   ####### important ##########
+     |   ############################
+     |   this script first 
+     |   @clean the table
+     |   @ put all the data into the database
+     | */
+     | import org.apache.log4j.{Level, Logger}
+import org.apache.log4j.{Level, Logger}
+
+scala> object SH_SZ_INDEX{
+     |     def main(FileName:String, TableName:String){
+     |         // set the LOG level
+     |         sc.setLogLevel("ERROR")
+     |         val log = Logger.getLogger(this.getClass)
+     |         log.warn("this is a warn")
+     |         log.warn("this is a warn")
+     |           System.out.println(System.getProperty("user.dir"))
+     |           var table_name = TableName // set table name 
+     |           val work_dir = System.getProperty("user.dir") // the work dir is the  current dir
+     |           val data_file = "file://"+work_dir+"/"+FileName // the full name of d ata file we are put into database.table
+     |           //
+     |         val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
+     |           val csv_data = spark.read.csv(data_file)
+     |           csv_data.show()
+     |           csv_data.createOrReplaceTempView("history_day")
+     |           // clean the table
+     |         val sql_v1 = s"""
+     |               truncate table $table_name
+     |           """
+     |         log.error(sql_v1)
+     |         sqlContext.sql(sql_v1)
+     |         // put the new file into  database.table
+     |           val sql_v2 = s"""
+     |               insert into table $table_name
+     |               select * from history_day
+     |           """
+     |           log.error(sql_v2)
+     |           //println(sql_v1)
+     |           sqlContext.sql(sql_v2)
+     |         log.error("+++++++++++++++++++++++++++++++++++++++")
+     |         log.error("the program is sucess")
+     |         log.error("+++++++++++++++++++++++++++++++++++++++")
+     |     }
+     | }
+warning: there was one deprecation warning; re-run with -deprecation for details
+defined object SH_SZ_INDEX
+
+scala> SH_SZ_INDEX.main("all.csv","stock.base_test")
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/basic_info
++------+--------+--------+----+------+-----------+------+-----------+------------+-----------+--------+----------------+--------------------+-----+-----+------------+------+-------+------+-------+-----+-------+-------+
+|   _c0|     _c1|     _c2| _c3|   _c4|        _c5|   _c6|        _c7|         _c8|        _c9|    _c10|            _c11|                _c12| _c13| _c14|        _c15|  _c16|   _c17|  _c18|   _c19| _c20|   _c21|   _c22|
++------+--------+--------+----+------+-----------+------+-----------+------------+-----------+--------+----------------+--------------------+-----+-----+------------+------+-------+------+-------+-----+-------+-------+
+|  code|    name|industry|area|    pe|outstanding|totals|totalAssets|liquidAssets|fixedAssets|reserved|reservedPerShare|                 esp| bvps|   pb|timeToMarket|  undp|perundp|   rev| profit|  gpr|    npr|holders|
+|688389|   N普门|医疗保健|深圳| 94.04|       0.35|  4.22|       7.92|         5.1|        0.2|    1.87|            0.44|               0.157|  2.4| 8.16|    20191105|  0.98|   0.23|   0.0|    0.0| 60.9|  22.07|25638.0|
+|688202| N美迪西|医疗保健|上海|  70.7|       0.13|  0.62|       5.18|        2.77|        1.5|    1.92|             3.1|               0.753| 15.7| 4.52|    20191105|  1.42|   2.29|   0.0|    0.0|36.09|  14.91|14217.0|
+|688128| N中电研|专用机械|广东| 47.71|       0.45|  4.04|      26.09|       18.67|       3.19|     5.9|            1.46|               0.423| 4.99|  5.4|    20191105|   2.0|   0.49|   0.0|    0.0|31.61|   8.59|30132.0|
+|688023|   N安恒|软件服务|浙江|   0.0|       0.15|  0.74|       8.88|         5.7|       2.68|    3.09|            4.17|               -0.56|19.13| 4.13|    20191105|  0.86|   1.16|   0.0|    0.0|68.31|  -8.81|16241.0|
+|600468|百利电气|电气设备|天津| 76.38|      11.22| 11.22|      26.34|       17.82|        3.3|    4.43|            0.39|0.036000000000000004| 1.48| 2.49|    20010615|  2.64|   0.24| 11.69| -12.69|18.16|   3.51|22896.0|
+|600821|  津劝业|    百货|天津|   0.0|       4.16|  4.16|       12.2|        1.12|       5.84|    1.79|            0.43|              -0.327| 0.25|19.54|    19940128|  -5.9|  -1.42|-53.85| -25.75|24.51|-242.11|34051.0|
+|002707|众信旅游|旅游服务|北京| 31.51|       5.31|  8.79|      62.76|       37.56|       0.89|    4.37|             0.5|                0.13|  2.6| 2.11|    20140123|  9.25|   1.05|  1.67| -45.09| 10.0|    1.2|37914.0|
+|300313|天山生物|农业综合|新疆|   0.0|       1.84|  3.13|      13.18|        2.65|       3.19|   19.56|            6.25|-0.08800000000000001| 0.58|10.09|    20120425| -20.9|  -6.68|  15.6|  98.56|20.24| -34.66|14995.0|
+|000913|钱江摩托|  摩托车|浙江| 13.09|       4.54|  4.54|      47.27|       31.92|       7.91|   13.71|            3.02|                0.66| 6.16| 1.87|    19990514|  7.36|   1.62| 11.14| 307.16|23.51|  10.28|15332.0|
+|603825|华扬联众|  互联网|北京| 33.07|       0.95|  2.31|      71.29|       67.39|       0.31|     6.4|            2.77|               0.366|  6.7| 2.41|    20170802|  6.61|   2.86|  2.55|  19.84|10.81|    1.1|14365.0|
+|603801|志邦家居|家居用品|安徽| 15.79|       1.16|  2.23|      27.85|       15.94|       6.29|    8.77|            3.93|                1.06| 8.21| 2.67|    20170630|  7.93|   3.55| 12.92|  14.49|38.54|   11.9| 9741.0|
+|002808|恒久科技|  元器件|江苏|159.98|        1.6|  2.69|       6.97|        4.87|       0.93|    0.55|             0.2|0.055999999999999994| 2.13| 5.62|    20160812|  2.13|   0.79| -6.12| -35.94|20.91|   7.15|15768.0|
+|300219|鸿利智汇|  元器件|广东|   0.0|       6.06|  7.11|      37.37|       22.23|      10.44|   10.99|            1.55| -1.0170000000000001| 2.66| 2.27|    20110518|  0.29|   0.04| -8.66|-305.08|20.12| -26.95|22405.0|
+|300551|古鳌科技|专用机械|上海|161.69|       0.69|  1.13|       8.44|        7.05|       0.83|    2.14|             1.9| 0.12300000000000001| 4.88| 5.44|    20161018|  2.19|   1.94|103.13| 267.44| 47.1|   6.15|10343.0|
+|300799|左江科技|软件服务|北京|109.93|       0.17|  0.68|       3.14|        2.51|       0.56|    0.33|            0.48|                0.34|  8.2| 6.07|    20191029|  1.42|   2.09|   0.0|    0.0|77.83|   24.5|33997.0|
+|600812|华北制药|化学制药|河北|104.36|      16.31| 16.31|     184.59|       77.55|       79.2|   34.91|            2.14|0.055999999999999994| 3.37| 2.32|    19940114|   1.3|   0.08| 13.36|  18.98|41.04|   1.14|96021.0|
+|300782|  卓胜微|  元器件|江苏| 95.68|       0.25|   1.0|      17.46|        16.5|        0.6|     9.4|             9.4|                3.87|15.29|26.92|    20190618|  4.46|   4.46|   0.0|    0.0| 52.8|  32.76|15264.0|
+|300438|鹏辉能源|电气设备|广东| 17.35|       2.12|  2.81|      56.03|       33.96|      13.06|   10.71|            3.81|               0.961| 8.72| 2.55|    20150424| 11.13|   3.96| 40.94|   0.27|25.68|  10.83|21057.0|
+|000673|当代东方|影视音像|山西|   0.0|        7.9|  7.92|      20.94|       17.27|       0.66|   14.55|            1.84|              -0.024| 0.67|  5.7|    19970124|-17.37|  -2.19|-41.37|-132.53|32.58|  -5.21|46064.0|
++------+--------+--------+----+------+-----------+------+-----------+------------+-----------+--------+----------------+--------------------+-----+-----+------------+------+-------+------+-------+-----+-------+-------+
+only showing top 20 rows
+
+19/11/06 17:02:47 ERROR $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: 
+		    truncate table stock.base_test
+		
+19/11/06 17:02:50 ERROR ObjectStore: Version information found in metastore differs 3.1.0 from expected schema version 1.2.0. Schema verififcation is disabled hive.metastore.schema.verification so setting version.
+19/11/06 17:02:51 ERROR $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: 
+		    insert into table stock.base_test
+		    select * from history_day
+		
+19/11/06 17:02:53 ERROR $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: +++++++++++++++++++++++++++++++++++++++
+19/11/06 17:02:53 ERROR $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: the program is sucess
+19/11/06 17:02:53 ERROR $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: +++++++++++++++++++++++++++++++++++++++
+
+scala> println("+++++++++++++++++++++++++++++++++++++++")
++++++++++++++++++++++++++++++++++++++++
+
+scala> println("the program is sucess")
+the program is sucess
+
+scala> println("+++++++++++++++++++++++++++++++++++++++")
++++++++++++++++++++++++++++++++++++++++
+
+scala> :quit

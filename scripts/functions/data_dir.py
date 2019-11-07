@@ -4,6 +4,7 @@ this script make the data dir in the main path
 '''
 import os
 import pandas as pd
+from davidyu_cfg import *
 # main data dir
 data_dir=["tmp",
         "day_history",
@@ -14,7 +15,10 @@ data_dir=["tmp",
         "news_report",
         "liutong_owner",
         "all_news",
-        "DADAN"
+        "DADAN",
+        "YeJiYuQi",
+        "PDF",
+        "tonghuashun"
         ]
 main_data_dir="/home/davidyu/stock/data"
 def create_dir_if_not_exist(dir_name):
@@ -27,6 +31,10 @@ def dir_dict(data_dir):
         path1 = os.path.join(main_data_dir,i)
         create_dir_if_not_exist(path1)
         data_path.append(path1)
+        path2 = os.path.join(download_path,i)
+        path3 = os.path.join(analysis_path,i)
+        create_dir_if_not_exist(path2)
+        create_dir_if_not_exist(path3)
     return data_path
 data_all_path = dir_dict(data_dir)
 data_dict = dict(zip(data_dir,data_all_path))
@@ -35,8 +43,10 @@ data_dict = dict(zip(data_dir,data_all_path))
 dir_basic_info = data_dict.get("basic_info")
 basic_file_name="stock_basic_info.csv"
 basic_file_in=os.path.join(dir_basic_info,basic_file_name)
-stk_index_df=pd.read_csv(basic_file_in,header=None)
-stk_index_list=stk_index_df[0].tolist()
+stk_index_df = pd.read_csv(basic_file_in,header=None)
+stk_index_list = stk_index_df[0].tolist()
+stk_index_list = [str(x).zfill(6) for x in stk_index_list]
+
 
 #print(dict(zip(data_dir,data_all_path)))
 '''

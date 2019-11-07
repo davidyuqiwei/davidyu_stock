@@ -1,3 +1,3 @@
 source activate tensorflow
-#python l1.py
+python lstm_predict_one_day.py
 

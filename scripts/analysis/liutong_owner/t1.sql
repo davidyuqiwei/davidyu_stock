@@ -4,6 +4,33 @@ select * from stock_dev.liutong_owner limit 10;
 desc stock_dev.liutong_owner;
 
 
+select * from stock_test.quanguoshebao limit 10;
+select * from stock_test.zhongyanghuijin limit 10;
+select * from stock_test.hk_zhongyang limit 10;
+
+
+select a.stock_index,a.stock_name,
+a.ratio_change,a.start_date,a.end_date,a.onwer_name,
+ZYHJ.ratio_change,QGSB.ratio_change
+from stock_test.hk_zhongyang
+full join
+stock_test.zhongyanghuijin ZYHJ
+on a.stock_index=ZYHJ.stock_index and a.start_date=ZYHJ.start_date and a.end_date=ZYHJ.end_date
+full join stock_test.quanguoshebao QGSB
+on a.stock_index=QGSB.stock_index and a.start_date=ZYHJ.start_date and a.end_date=ZYHJ.end_date
+
+
+
+select * from stock_test.hk_dailiren
+where a_ratio is not null and b_ratio is not null
+order by ratio_change
+limit 20
+;
+
+
+
+
+
 --owner_sort  int NULL
 --owner_name  string  NULL
 --amount  int NULL

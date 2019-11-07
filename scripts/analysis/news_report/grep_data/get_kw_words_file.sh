@@ -14,7 +14,7 @@ echo $news_report_dir
 ## grep it
 #grep -r "氢能" $news_report_dir > $save_dir"/qingneng.txt"
 
-kw_list=("氢能,qingneng" "纤维素醚,xianweisumi" "白酒,白酒")
+kw_list=("氢能,qingneng" "纤维素醚,xianweisumi" "白酒,baijiu" "半导体,bandaoti" "刻蚀机,keshiji")
 k=-1
 for i in ${kw_list[*]};do
     k=$((k+1))

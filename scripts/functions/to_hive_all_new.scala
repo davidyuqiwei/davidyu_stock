@@ -41,11 +41,8 @@ object SH_SZ_INDEX{
 		//println(sql_v1)
 		sqlContext.sql(sql_v2)
         log.error("+++++++++++++++++++++++++++++++++++++++")
-        log.error("the program is sucess")
+        log.error("ALL"+"OK")
         log.error("+++++++++++++++++++++++++++++++++++++++")
     }
 }
 SH_SZ_INDEX.main("all.csv","stock_dev.fin_report")
-println("+++++++++++++++++++++++++++++++++++++++")
-println("the program is sucess")
-println("+++++++++++++++++++++++++++++++++++++++")

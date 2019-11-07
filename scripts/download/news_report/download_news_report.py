@@ -36,7 +36,7 @@ def content_get(soup2):
 
 def save_data(save_dir,file_name):
     import os
-    save_file_name=os.path.join(save_dir,file_name)
+    save_file_name = os.path.join(save_dir,file_name)
 
 
 def process(stk):
@@ -50,7 +50,7 @@ def process(stk):
         k=0
         for ss in content1:
             k += 1
-            con_url = ss.find('a').get('href')
+            con_url = 'http:'+ss.find('a').get('href')
             soup2 = url_opener(con_url)
             #conts.append(strs)
             date,textout = content_get(soup2)
@@ -64,14 +64,15 @@ def process(stk):
         os.system("mkdir -p %s" %(str(dir_v1)))
 def main():
     from dir_control.data_dir_v1 import data_dict,stk_index_list
+    from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
     import traceback
     dir_liutong_news_report = data_dict.get("news_report")
     dir_news_report = data_dict.get("news_report")
-    stk_index_list = [x for x in stk_index_list if str(x).zfill(6)[0]!='3']
-    stk_index_list.reverse()
+    #stk_index_list = [x for x in stk_index_list if str(x).zfill(6)[0]!='3']
+    #stk_index_list.reverse()
     for stk in stk_index_list:
         print(stk)
-        stock_index = str(stk).zfill(6)
+        stock_index = stk
         try:
             process(stock_index)
         except Exception:

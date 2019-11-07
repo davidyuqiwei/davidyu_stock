@@ -4,12 +4,15 @@ cd `dirname $0`
 curr_dir=`pwd`
 sep="_____"
 programName=${0##*/}   ### filename without type e.g.  test.sh  test
-source $shell_function_dir"create_log.sh"
+source $shell_function_dir"create_log_update.sh"
 
 #################################
 ####  start the run #############
 #################################
-
+PythonFile="download_fin_report_v2.py"
+Thelog=${CreateLogFile $PythonFile}
+`touch $Thelog`
+python $PythonFile >> $Thelog``
 #`sh clean_dir.sh`
 #python download_fin_report.py > $curr_dir/python.log
 

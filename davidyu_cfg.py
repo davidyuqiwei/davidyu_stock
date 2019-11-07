@@ -1,5 +1,6 @@
 import sys
 import os 
+import pandas as pd
 main_path = "/home/davidyu/stock/"
 
 ## the main script path, and load the modules

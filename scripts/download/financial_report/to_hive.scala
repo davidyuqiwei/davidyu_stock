@@ -5,8 +5,9 @@
   ############################
   ####### important ##########
   ############################
-  this script first clean the table
-  and put all the data into the database
+  this script first 
+  @clean the table
+  @ put all the data into the database
 */
 import org.apache.log4j.{Level, Logger}
 object SH_SZ_INDEX{
@@ -48,13 +49,3 @@ SH_SZ_INDEX.main("all.csv","stock_dev.fin_report")
 println("+++++++++++++++++++++++++++++++++++++++")
 println("the program is sucess")
 println("+++++++++++++++++++++++++++++++++++++++")
-
-//  select * from stock_dev.SH_index where stock_date >='2019-05-21'
-
-
-
-//csv_data.toDF().insertInto("day_history")
-
-
-
-//select max(stock_date) as date from stock_dev.day_history;

@@ -17,6 +17,7 @@ df2 = df1.drop_duplicates()
 df2 = df2[df2["status"] == "买盘"]
 df3 = df2.groupby(["stock_index","stock_name"]).count().sort_values("status",ascending=False)
 #print(df2.shape)
-#print(df3.head())
+print(df3.head(50))
+print(df3.tail(50))
 
 

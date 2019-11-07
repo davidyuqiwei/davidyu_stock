@@ -14,7 +14,7 @@ set hive.exec.dynamic.partition.mode=nonstrict;
 
 
 select * from stock_dev.SH_index
-where stock_date >= "2005-08-01"
+where stock_date >= "2002-01-01"
 ;
 " \
 | sed 's/[\t]/\t/g' > $f1

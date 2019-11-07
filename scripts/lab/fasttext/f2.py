@@ -11,7 +11,7 @@
 
 import codecs
 
-paths=r"/home/davidyu/gits/fastText-Study/"
+paths=r"/home/davidyu/gits/NLP/fastText-Study/"
 
 train_data_name="train.txt"
 test_data_name="test.txt"

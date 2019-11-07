@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 save_dir=$stock_data"/test/"
-stk_index="000917"
-file_name=$stk_index
+stk_index="002810"
+file_name=$stk_index"fin_report"
 f1=${save_dir}${file_name}.csv
 #final_file=${file_name}_f1.csv
 

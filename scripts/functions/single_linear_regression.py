@@ -4,8 +4,21 @@
 # input df: pandas Dataframe
 # column_in: the column name that we want to caluate the linear regression
 class LinearReg:
+    def common_linear_reg(self,x,y):
+        '''
+        @param: x,y numpy.ndarray
+        '''
+        from sklearn import linear_model
+        from sklearn.linear_model import LinearRegression
+        regr = linear_model.LinearRegression()
+        regr.fit(x,y)
+        slope = round(regr.coef_.item(),3)
+        inter = round(regr.intercept_.item(),2)
+        return slope,inter
     """
     for linear regression
+    @para : input  dataframe
+            the single column we want do linear regression
     """
     def single_linear_reg(self,df,column_in):
         import pandas as pd
@@ -15,14 +28,11 @@ class LinearReg:
         X_in1 = pd.DataFrame(df,columns=[column_in])
         X = pd.DataFrame(X_in1,columns=[column_in]).dropna()
         # how many rows in the dataframe and make it as x
-        rows=X.shape[0]
-        x=np.array(range(rows)).reshape(-1,1)
+        rows = X.shape[0]
+        x = np.array(range(rows)).reshape(-1,1)
         y = X.values
         # regression
-        regr = linear_model.LinearRegression()
-        regr.fit(x,y)
-        slope = round(regr.coef_.item(),3)
-        inter = round(regr.intercept_.item(),2)
+        slope,inter = self.common_linear_reg(x,y)
         return slope,inter
 if __name__=='__main__':
     import pandas as pd

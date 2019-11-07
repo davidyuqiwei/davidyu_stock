@@ -43,3 +43,43 @@ finish python loop
 download_data_insert_20190917_102942_python.log
 all the loop number of stock index is 2838
 finish python loop
+download_data_insert_20191015_093704_python.log
+all the loop number of stock index is 2838
+Traceback (most recent call last):
+  File "/home/davidyu/software/Anaconda/bin/conda", line 11, in <module>
+    sys.exit(main())
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/conda/cli/main.py", line 97, in main
+    from ..activate import main as activator_main
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/conda/activate.py", line 13, in <module>
+    from .base.context import ROOT_ENV_NAME, context, locate_prefix_by_name
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/conda/base/context.py", line 9, in <module>
+    from platform import machine
+  File "/home/davidyu/software/Anaconda/lib/python3.7/platform.py", line 116, in <module>
+    import sys, os, re, subprocess
+  File "/home/davidyu/software/Anaconda/lib/python3.7/subprocess.py", line 50, in <module>
+    import signal
+  File "/home/davidyu/software/Anaconda/lib/python3.7/signal.py", line 10, in <module>
+    lambda name:
+  File "/home/davidyu/software/Anaconda/lib/python3.7/enum.py", line 642, in _convert
+    cls = cls(name, members, module=module)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/enum.py", line 311, in __call__
+    return cls._create_(value, names, module=module, qualname=qualname, type=type, start=start)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/enum.py", line 423, in _create_
+    enum_class = metacls.__new__(metacls, class_name, bases, classdict)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/enum.py", line 241, in __new__
+    enum_class._member_map_[member_name] = enum_member
+KeyboardInterrupt
+download_data_insert_20191022_175641_python.log
+all the loop number of stock index is 2838
+download_data_insert_20191023_172049_python.log
+all the loop number of stock index is 2838
+download_data_insert_20191029_113657_python.log
+all the loop number of stock index is 2838
+finish python loop
+start scala
+finish python loop
+start scala
+OK
+run_scala.sh:行40: updating:: 未找到命令
+finish python loop
+start scala
