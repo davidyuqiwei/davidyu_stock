@@ -69,6 +69,7 @@ train_nums = 4000
 y_start = 2
 train_X,train_y,test_X,test_y,y_min,y_max = make_train_test_data(df1,train_nums,y_start)
 
+
 test_y_len = len(test_y)-1
 # fit network
 model = make_model()

@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 save_dir=$stock_data"/test/"
-stk_index="SH_index_test"
+stk_index="hk_dailiren"
 file_name=$stk_index
 f1=${save_dir}${file_name}.csv
 #final_file=${file_name}_f1.csv
@@ -13,8 +13,8 @@ set hive.exec.dynamic.partition=true;
 set hive.exec.dynamic.partition.mode=nonstrict;
 
 
-select * from stock_dev.SH_index
-where stock_date >= "2002-01-01"
+select * from stock_test.hk_dailiren
+limit 10
 ;
 " \
 | sed 's/[\t]/\t/g' > $f1

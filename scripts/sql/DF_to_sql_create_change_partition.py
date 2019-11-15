@@ -1,3 +1,8 @@
+'''
+give a sample DF, set table column name,
+automatically get the dataframe type for every columns and make the 
+create table script, be careful about the partition set
+'''
 import pandas as pd
 import numpy
 
@@ -23,7 +28,7 @@ create table  if not exists %s(
 %s
 )
 comment '%s' 
-PARTITIONED BY ( day string comment '日期' )
+PARTITIONED BY ( day string comment '日期',owner_name string comment 'owner_name' )
 row format delimited
 fields terminated by '\\001'
 stored as textfile;
@@ -54,12 +59,13 @@ if __name__=='__main__':
             "start_ratio",
             "end_ratio",
             "start_date",
-            "end_date","owner_name"]
+            "end_date"
+            ]
     types = get_df_column_type(df1)
     #print(types)
     comment = columns
-    table_name = "hk_dailiren_change"
-    table_comment = '香港代理人持股变化'
+    table_name = "important_owner_seasonal_change"
+    table_comment = '重要股东季节变化'
     column_str = make_column_str(columns,types,comment)
     #print(column_str)
     create_table(table_name,column_str,table_comment)

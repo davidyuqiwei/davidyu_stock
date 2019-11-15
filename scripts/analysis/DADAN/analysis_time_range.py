@@ -12,8 +12,6 @@ def print_buy_sale(df1):
 	print("买盘")
 	print(df3["trade_time"].head(20))
 	print(df3["trade_time"].tail(20))
-	
-	
 	df2 = df1.drop_duplicates()
 	df2 = df2[df2["status"] == "卖盘"]
 	df3 = df2.groupby(["stock_index","stock_name"]).count().sort_values("status",ascending=False)

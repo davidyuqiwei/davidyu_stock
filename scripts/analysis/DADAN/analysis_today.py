@@ -3,10 +3,12 @@ from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
 from functions.get_datetime import *
 from functions.run_combine_all_csv import *
 
-now_date,now_date_time = get_the_datetime()
-
+now_date,now_date_time = get_the_datetime()  ## the now_date is like "2019_11_08"
+#print(now_date)
+#now_date = "2019_11_08"
 dir_dadan = data_dict.get("DADAN")
 data_dir = os.path.join(dir_dadan,now_date)
+print(data_dir)
 df1 = combine_csv_in_folder(data_dir)
 df1.columns = ["stock_index","stock_name","trade_time",
 "price","trade_num","trade_shou","status",
