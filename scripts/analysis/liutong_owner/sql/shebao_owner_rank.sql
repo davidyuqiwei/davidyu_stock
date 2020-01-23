@@ -4,8 +4,7 @@ drop table if exists ${database}.${tgt_table};
 select 
 a.stock_index,
 count(1) as cnt,
-c.name,
-c.industry
+c.name
 from stock_dev.liutong_owner a
 left join
 stock.stock_index c

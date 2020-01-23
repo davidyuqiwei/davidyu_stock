@@ -20,6 +20,7 @@ def read_mv_avg_data_clean(data_dir,file_name):
     name_forward_string = df1.columns[0].split(".")[0]+"."
     df1.columns = [x.replace(name_forward_string,"") for x in df1.columns.tolist()]
     df1 = df1.sort_values("stock_date").reset_index()
+    #df1 = df1.drop(columns=['volume'])
     return df1
 
 
@@ -49,20 +50,25 @@ def normalize_DF(df):
     df_models_raw = df
     df_norm = (df_models_raw-df_models_raw.min())/(df_models_raw.max()-df_models_raw.min())
     return df_norm
-def make_train_test_data(df1,train_nums,start_index):
+
+
+def make_train_test_data(df1,start_from_num,train_nums,start_index,feature_start_index):
     '''
-    @para start_index : the start index put in the model
+    @oara start_from_num:   remove first XXX rows , such like 300 moving average,
+        first 300 days have no moving averages.  Remove 300 days
+    @para train_num :  how many data put in the train dataframe
+    @para start_index : the start index put in the model, for column  [y,x1,x2,x3]
     '''
     df_models_raw = df1.iloc[:,start_index:]  
     ## normalized the dataframe   
     df_models = normalize_DF(df_models_raw)
-    df_X = df_models.iloc[400:df_models.shape[0],[i for i in range(1,df_models.shape[1])]]
-    df_Y = df_models.iloc[400:df_models.shape[0],0]
+    df_X = df_models.iloc[start_from_num:df_models.shape[0],[i for i in range(feature_start_index,df_models.shape[1])]]
+    df_Y = df_models.iloc[start_from_num:df_models.shape[0],0]
     all_x_values = df_X.values
     all_y_values = df_Y.values
-    train_X = all_x_values[:train_nums, :]
+    train_X = all_x_values[:train_nums, :]  # e.g. train_nums = 1000 , train data is the first 1000 data
     train_y = all_y_values[:train_nums]
-    test_X = all_x_values[train_nums:, :]
+    test_X = all_x_values[train_nums:, :] # test data   after 1000 data
     test_y = all_y_values[train_nums:]
     train_X = train_X.reshape((train_X.shape[0], 1, train_X.shape[1]))
     test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))

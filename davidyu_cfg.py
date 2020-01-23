@@ -5,7 +5,6 @@ main_path = "/home/davidyu/stock/"
 
 ## the main script path, and load the modules
 script_path = os.path.join(main_path,"scripts/davidyu_stock/scripts") 
-#print(script_path)
 
 ## the main data path
 data_path = os.path.join(main_path,"data")
@@ -20,20 +19,19 @@ project_DIR=[data_path,download_path,analysis_path]
 
 
 #### add some path to the sys path to use the module
+## like function
 def print_add_sys_path():
     path_add=[script_path,data_path]
     for dirs in path_add:
         sys.path.append(dirs)
     ## the python system path
-    #print("{:.^80}".format(""))
     #print("{:.^80}".format("python_path"))
-    #print("{:.^80}".format(""))
-    #print(sys.path)
-    #[ print(x) for x in sys.path ]
-    #print("{:.^80}".format(""))
-    #print("{:.^80}".format(""))
 
 print_add_sys_path()
+
+
+
+
 
 #sys.path.append(script_path)
 def make_project_dir(create_dir,project_DIR):
@@ -73,12 +71,6 @@ def rm_a_project(project_name,project_DIR):
 
 
 
-'''
-# the python all lib dirs
-from distutils.sysconfig import get_python_lib
-print(get_python_lib())
-
-'''
 
 
 

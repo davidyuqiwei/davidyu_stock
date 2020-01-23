@@ -1,0 +1,8 @@
+20/01/19 17:08:34 WARN Utils: Your hostname, VM_0_11_centos resolves to a loopback address: 127.0.0.1; using 172.16.0.11 instead (on interface eth0)
+20/01/19 17:08:34 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/01/19 17:08:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+]0;IPython: day_history/v0.1[0;36m  File [0;32m"/home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/day_history/v0.1/get_data.py"[0;36m, line [0;32m58[0m
+[0;31m    df1.to_csv("test_data.csv",index=0)[0m
+[0m                                       ^[0m
+[0;31mIndentationError[0m[0;31m:[0m unindent does not match any outer indentation level
+

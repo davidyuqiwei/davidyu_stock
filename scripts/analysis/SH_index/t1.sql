@@ -1,6 +1,6 @@
-drop table if exists stock_analysis.SH_index_mv_avg;
-
-create table stock_analysis.SH_index_mv_avg as
+drop table if exists ${database}.${tgt_table};
+-- stock_analysis.SH_index_mv_avg
+create table ${database}.${tgt_table} as
 SELECT stock_date,adj_close,volume,
 round(avg(adj_close) OVER (ORDER BY stock_date ROWS BETWEEN 5 PRECEDING AND 1 PRECEDING),2) AS mv_avg5,
 round(avg(adj_close) OVER (ORDER BY stock_date ROWS BETWEEN 10 PRECEDING AND 1 PRECEDING),2) AS mv_avg10,

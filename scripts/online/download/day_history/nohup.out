@@ -83,3 +83,363 @@ OK
 run_scala.sh:行40: updating:: 未找到命令
 finish python loop
 start scala
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)
+Traceback (most recent call last):
+  File "to_download.py", line 79, in <module>
+    import tushare as ts
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/__init__.py", line 11, in <module>
+    from tushare.stock.trading import (get_hist_data, get_tick_data,
+  File "/home/davidyu/software/Anaconda/lib/python3.7/site-packages/tushare/stock/trading.py", line 20, in <module>
+    from pandas.compat import StringIO
+ImportError: cannot import name 'StringIO' from 'pandas.compat' (/home/davidyu/software/Anaconda/lib/python3.7/site-packages/pandas/compat/__init__.py)

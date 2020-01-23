@@ -14,5 +14,8 @@ find ./ -regex ".*\.log\|.*\.csv\|.*\.txt" | xargs rm -rf
 
 # before 150 min update, and count
 find ./  -cmin -150 |wc -l
+## before 60 min update
+find . -mmin -60 -type f
 
-
+# delete first line of file
+sed -i '1d' <file>

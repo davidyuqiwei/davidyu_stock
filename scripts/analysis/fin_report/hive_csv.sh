@@ -20,5 +20,5 @@ order by x1
 ;
 " \
 | sed 's/[\t]/,/g' > $f1
-echo $f1
+ $f1
 #| sed 's/[\t]/\t/g' > $f1

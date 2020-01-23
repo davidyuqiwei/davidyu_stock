@@ -17,6 +17,9 @@ def combine_csv_in_folder_raw(folder):
     return df1
 
 def combine_csv_in_folder(folder):
+    '''
+    combine all the csv file in the sub-folder
+    '''
     csv_list = []
     for dirname,dirs,files in walk(folder):
         for filename in files:
@@ -32,7 +35,16 @@ def combine_csv_in_folder(folder):
         df1 = pd.concat([df1,df2])
     return df1
 
-
+def list_all_files_in_folder(folder):
+    '''
+    combine all the csv file in the sub-folder
+    '''
+    csv_list = []
+    for dirname,dirs,files in walk(folder):
+        for filename in files:
+            filename = os.path.join(dirname,filename)
+            csv_list.append(filename)
+    return csv_list
 
 
 

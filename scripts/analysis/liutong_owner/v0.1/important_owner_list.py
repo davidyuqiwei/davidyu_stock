@@ -1,0 +1,20 @@
+important_owner_list = [
+        "香港",
+        "社保"
+        "中国证券金融股份有限公司",
+        "中央汇金",
+        "基金",
+        "UBS",
+        "株式",
+        "Black",
+        "Mitsubishi",
+        "JPMorgan",
+        "JP",
+        "摩根",
+        "organ",
+        "Goldman",
+        "man",
+        "德意志"
+        "Citigroup",
+        "加拿大"
+        ]

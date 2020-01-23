@@ -6,8 +6,13 @@ from functions.run_combine_all_csv import *
 now_date,now_date_time = get_the_datetime()
 
 dir_dadan = data_dict.get("DADAN")
-data_dir = os.path.join(dir_dadan,now_date)
-#data_dir = "/home/davidyu/stock/data/DADAN/"
+#data_dir = os.path.join(dir_dadan,now_date)
+data_dir = "/home/davidyu/stock/data/DADAN/"
+
+
+os.system("find %s | xargs cat  * > all.csv" %data_dir)
+os.system("sed -e '/0,1,2/d'  %sall.csv  > %sa.log" %(data_dir,data_dir))
+
 df1 = combine_csv_in_folder(data_dir)
 df1.columns = ["stock_index","stock_name","trade_time",
 "price","trade_num","trade_shou","status",

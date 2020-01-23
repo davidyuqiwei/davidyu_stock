@@ -47,10 +47,13 @@ def save_the_table(new_table,dir_dadan,now_date,now_date_time):
 if __name__=='__main__':
     dir_dadan = data_dict.get("DADAN")
     now_date,now_date_time = get_the_datetime()
-    html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php"
+    #html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php"
+    html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php?amount=200"
+    ## update to > 500w case, 
     table,new_table_index = get_html_table(html1)
     DF_columns = 10
     new_table = table_to_DF(table,new_table_index,DF_columns)
+    new_table['date'] = now_date 
     save_the_table(new_table,dir_dadan,now_date,now_date_time)
 
 

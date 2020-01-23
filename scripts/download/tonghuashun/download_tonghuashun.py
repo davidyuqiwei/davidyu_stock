@@ -32,7 +32,7 @@ if __name__=='__main__':
     
 
     html = 'http://data.10jqka.com.cn/rank/cxg/'
-    soup2 = driver_open(html,"gbk")
+    soup2 = driver_open(html,"gbk",10)
     t3 = soup2.findAll(attrs={'class':'page-table'})
     all_tr = t3[0].findAll('tr')
     df_table = data_to_DF(all_tr)

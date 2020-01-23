@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 save_dir=$stock_data"/test/"
-stk_index="hk_dailiren"
+stk_index="long_data"
 file_name=$stk_index
 f1=${save_dir}${file_name}.csv
 #final_file=${file_name}_f1.csv
@@ -13,8 +13,7 @@ set hive.exec.dynamic.partition=true;
 set hive.exec.dynamic.partition.mode=nonstrict;
 
 
-select * from stock_test.hk_dailiren
-limit 10
+select * from stock_dev.stock_longterm_data
 ;
 " \
 | sed 's/[\t]/\t/g' > $f1

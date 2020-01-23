@@ -8,6 +8,7 @@ class LinearReg:
     """
     for linear regression
     """
+    @classmethod
     def single_linear_reg(self,df,column_in):
         """
         linear regression for one column

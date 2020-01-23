@@ -1,0 +1,36 @@
+/home/davidyu/stock/data/DADAN_offline
+/home/davidyu/stock/data/DADAN_offline
+Traceback (most recent call last):
+  File "download_DADAN_100.py", line 53, in <module>
+    time.sleep(3)
+KeyboardInterrupt
+/home/davidyu/stock/data/DADAN_offline
+Traceback (most recent call last):
+  File "download_DADAN_100.py", line 55, in <module>
+    table,new_table_index = get_html_table(html1)
+  File "download_DADAN_100.py", line 24, in get_html_table
+    soup2 = url_opener(html1)
+  File "/home/davidyu/stock/scripts/davidyu_stock/scripts/functions/connect_url.py", line 13, in url_opener
+    response = urllib.request.urlopen(url)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/home/davidyu/software/Anaconda/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
+  File "download_DADAN_100.py", line 57
+    DF_columns = 10
+                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+  File "download_DADAN_100.py", line 57
+    DF_columns = 10
+                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+/home/davidyu/stock/data/DADAN_offline

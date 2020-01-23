@@ -13,8 +13,9 @@ def download_data(stock_id,start_date,end_date):
     output : - dataframe of the stock
              - stock index
     """
-    import pandas_datareader.data as web
-    df = web.DataReader(stock_id, "yahoo", start_date, end_date)
+    import pandas_datareader as web
+    df = web.get_data_yahoo(stock_id,start_date,end_date)
+    #df = web.DataReader(stock_id, "yahoo", start_date, end_date)
     df = df.round(2)
     #df=pro.daily(ts_code=stock_id,start=start_date, end=end_date)
     stock_name=stock_id
@@ -58,6 +59,7 @@ def main(input_index):
     f.write(input_index+'\n')
     '''
     stock_index = generate_stock_index(i)
+    #stock_index = i
     #print(k)
     try:
         run_download(stock_index,start_date,end_date,dir_day_history_insert)
@@ -76,7 +78,7 @@ def copy_data_to_current_folder():
     os.system(os_str)
     # save to hive
 if __name__ =='__main__':
-    import tushare as ts
+    #import tushare as ts
     import sys
     from davidyu_cfg import * #carefull about the seperator
     import datetime
@@ -85,6 +87,7 @@ if __name__ =='__main__':
     end_date = datetime.date.today()
     main(TheInput)
     #copy_data_to_current_folder()
+    #TheInput = 100
 
 
 

@@ -20,3 +20,7 @@ spark-sql \
     -d src_database=${src_database} \
     -d src_table=${src_table} \
     -S
+
+
+
+

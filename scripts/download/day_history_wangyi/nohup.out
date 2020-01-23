@@ -1,0 +1,10 @@
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/day_history_wangyi
+download_day_history_wangyi_20200110_132334_python.log
+  File "download_day_history_wangyi.py", line 36
+    season = [4]
+               ^
+IndentationError: unindent does not match any outer indentation level
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/day_history_wangyi
+download_day_history_wangyi_20200110_132416_python.log
+/home/davidyu/stock/scripts/davidyu_stock/scripts/download/day_history_wangyi
+download_day_history_wangyi_20200113_232515_python.log

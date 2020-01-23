@@ -8,6 +8,8 @@ def generate_stock_index(i):
         stock_index = str(i).zfill(6)+'.sz'
     elif str(i)[0] == '6':  ## download for ShangHai
         stock_index = str(i)+'.ss'
+    elif str(i)[0] == '0':
+        stock_index = str(i)+'.sz'
     return stock_index
 
 def stk_index_list_gen():

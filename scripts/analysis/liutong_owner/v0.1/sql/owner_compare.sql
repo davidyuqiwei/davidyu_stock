@@ -1,3 +1,15 @@
+-- ======================================================
+-- script name : owner_compare.sql
+--
+-- Souce Table : stock_dev.liutong_owner
+--
+-- Target Table : stock_test.important_owner_seasonal_change
+--
+-- Description: important owner seasonal change
+--
+-- ---------------- change log -------------------------
+-- 2020-01-19  davidyu   initial version
+
 --drop table if exists ${database}.${tgt_table};
 set hive.exec.dynamic.partition.mode=nonstrict;
 --create table ${database}.${tgt_table} as

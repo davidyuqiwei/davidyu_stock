@@ -15,14 +15,14 @@ def url_opener(url):
     soup_u1 = BS(response,"html.parser")
     return soup_u1
 
-def driver_open(url,the_encoding = "utf-8"):
+def driver_open(url,the_encoding = "utf-8",timeout=3):
     from selenium.webdriver import FirefoxOptions
     from selenium import webdriver
     import time
     opts = FirefoxOptions()
     opts.add_argument("--headless")
     driver = webdriver.Firefox(firefox_options=opts)
-    driver.set_page_load_timeout(3)
+    driver.set_page_load_timeout(timeout)
     #driver.set_script_timeout(3)
     try:
         res1 = driver.get(url)  ## may jumpout timeout error, the js has just finish load, reutrn the innerhtml

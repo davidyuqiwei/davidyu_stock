@@ -19,6 +19,7 @@ from stock_dev.liutong_owner
 where dt = '2019-06-30'
 group by owner_name
 order by cnt desc
+limit 30
 ;
 
 
