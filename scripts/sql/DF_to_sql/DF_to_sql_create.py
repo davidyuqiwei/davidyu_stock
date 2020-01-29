@@ -1,7 +1,12 @@
 import pandas as pd
 import numpy
+from davidyu_cfg import *
+from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
 
 def get_df_column_type(df1):
+    '''
+    get the column type of DataFrame
+    '''
     test_df_type = df1.iloc[0]
     types1 = [type(x) for x in test_df_type]
     types = []
@@ -47,15 +52,17 @@ def make_column_str(columns,types,comment):
 #print(column_str)
 
 if __name__=='__main__':
-    file_name = "/home/davidyu/stock/scripts/davidyu_stock/scripts/download/test/SH_50index.csv"
+    sample_dir = data_dict.get("tmp")
+    filename = "DADAN_sample.csv"
+    file_name = os.path.join(sample_dir,filename)
     df1 = pd.read_csv(file_name)
     columns = df1.columns.tolist()
     types = get_df_column_type(df1)
     #print(types)
     comment = columns
     database_name = "stock_test"
-    table_name = "SH_50index"
-    table_comment = 'SH_50index'
+    table_name = "DADAN_100"
+    table_comment = 'DADAN_100'
     column_str = make_column_str(columns,types,comment)
     #print(column_str)
     create_table(database_name,table_name,column_str,table_comment)

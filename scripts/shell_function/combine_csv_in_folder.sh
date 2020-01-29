@@ -4,6 +4,6 @@
 ##
 source ~/.bashrc
 out_dir=$data_tmp_dir
-out_file=$out_dir"/all.csv"
+out_file=$out_dir"/2020_01_23.csv"
 csv_folder=$1
 find $csv_folder | xargs cat  *.csv > $out_file 

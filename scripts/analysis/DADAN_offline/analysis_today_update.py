@@ -43,7 +43,7 @@ def DADAN_diff_stat(df_input):
 
 if __name__ =='__main__':
 	now_date,now_date_time = get_the_datetime()  ## the now_date is like "2019_11_08"
-	now_date = "2020_01_21"
+	now_date = "2020_01_23"
 	dir_dadan = data_dict.get("DADAN_offline")
 	data_dir = os.path.join(dir_dadan,now_date)
 	print(data_dir)

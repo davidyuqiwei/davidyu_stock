@@ -23,9 +23,12 @@ def combine_csv_in_folder(folder):
     csv_list = []
     for dirname,dirs,files in walk(folder):
         for filename in files:
-            filename = os.path.join(dirname,filename)
-            csv_list.append(filename)
-    print(len(csv_list))
+            if 'csv' in filename:
+                filename = os.path.join(dirname,filename)
+                csv_list.append(filename)
+            else:
+                pass
+    print("total csv files:"+  str(len(csv_list)))
     df1 = pd.read_csv(csv_list[0])
     #print(df1)
     for i in range(1,len(csv_list)):
