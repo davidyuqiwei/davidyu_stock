@@ -18,5 +18,6 @@ for (i in 1:2){
 #result=getSymbols("000001.ss",from =dateStart,to = dateEnd,src = "yahoo",auto.assign=FALSE)
 
 
-
+#a1=getSymbols("DJI",from="2020-02-01",to="2020-02-03",src = "yahoo",auto.assign=FALSE)
+#getSymbols("DJI", src = "yahoo", from ="2020-02-01", to="2020-02-05")
 

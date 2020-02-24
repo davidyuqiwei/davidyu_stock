@@ -16,10 +16,10 @@ drop table if exists stock_analysis.liutong_owner_owner_number_sort_list;
 create table stock_analysis.liutong_owner_owner_number_sort_list as
 select owner_name,count(owner_name) as cnt
 from stock_dev.liutong_owner
-where dt = '2019-06-30'
+where dt = '2019-09-30'
 group by owner_name
 order by cnt desc
-limit 30
+limit 100
 ;
 
 

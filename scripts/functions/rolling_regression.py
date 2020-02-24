@@ -4,6 +4,9 @@ from functions.LinearReg import LinearReg
 def rolling_regression(x,window,sort_col,reg_col):
     '''
     @param: x is a dataframe
+    @param: window: regression window
+    @param: sort_col: which column sort the DF: e.g. stock_date
+    @param: reg_col: which column need to do regression:  e.g. adj_close
     '''
     loop_len = x.shape[0]
     slope = []
@@ -22,3 +25,9 @@ def rolling_regression(x,window,sort_col,reg_col):
     x['slopes'] = slope
     x['slope_num_in'] = num_in
     return x
+'''
+how to use
+
+df3 = df2.groupby('stock_index').apply(rolling_regression, \
+    window=5,sort_col=sort_col,reg_col="adj_close")
+'''

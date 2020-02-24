@@ -1,7 +1,6 @@
 '''
 this script get the dadan data from web,
-a near realtime run 
-
+a near realtime run # every 1mint
 
 '''
 import sys
@@ -49,7 +48,7 @@ if __name__=='__main__':
     now_date,now_date_time = get_the_datetime()
     #html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php"
     html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php?amount=200"
-    ## update to > 500w case, 
+    ## update to > 200w case, 
     table,new_table_index = get_html_table(html1)
     DF_columns = 10
     new_table = table_to_DF(table,new_table_index,DF_columns)

@@ -131,3 +131,14 @@ class CxExtractor:
         s = re_space.sub(' ', s)
         s = self.replaceCharEntity(s)
         return s
+if __name__=='__main__':
+    from davidyu_cfg import *
+    cx = CxExtractor(threshold=86)
+    from functions.connect_url import driver_open_noBS
+    raw_html = "http://stock.10jqka.com.cn/"
+    #html = cx.getHtml(raw_html)
+    html = driver_open_noBS(raw_html)
+    content = cx.filter_tags(html)
+    s = cx.getText(content)
+    print(s)
+

@@ -7,6 +7,9 @@ import pandas as pd
 import os
 from os import walk
 def combine_csv_in_folder_raw(folder):
+    '''
+    combine data in folder
+    '''
     files = os.listdir(folder)
     data_file = os.path.join(folder,files[0])
     df1 = pd.read_csv(data_file)

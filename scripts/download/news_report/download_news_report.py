@@ -82,7 +82,7 @@ def get_all_news(stock_index,save_dir):
                     content_to_txt(saveFileTxt,text_out)
                     time.sleep(30)
         else:
-            break
+            break  ## if no content break
 
 def download_for_stock_index(stock_index):
     dir_news_report = data_dict.get("news_report")

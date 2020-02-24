@@ -16,6 +16,8 @@ CreateLogFile(){
         Thelog=$script_raw_name"_"$DATE"_Rout.log"
     elif [ $script_extention == "scala"  ]; then
         Thelog=$script_raw_name"_"$DATE"_scala.log"
+    elif [ $script_extention == "sh"  ]; then
+        Thelog=$script_raw_name"_"$DATE"_shell.log"
     fi
     echo $Thelog
 }

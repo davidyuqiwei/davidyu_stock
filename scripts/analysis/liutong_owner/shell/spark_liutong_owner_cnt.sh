@@ -6,7 +6,7 @@ base_dir=$(dirname "$PWD")
 
 database="stock_analysis"
 tgt_table="owner_cnt"
-datetimes="2019-06-30"
+datetimes="2019-09-30"
 
 sql_dir=$base_dir/sql
 sql_file=$sql_dir/"run_liutong_owner_cnt.sql"

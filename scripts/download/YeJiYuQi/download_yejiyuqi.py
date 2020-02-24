@@ -31,7 +31,7 @@ if __name__=='__main__':
     save_the_table(df_table,save_dir,now_date,now_date_time)
     
 
-    html = 'http://data.10jqka.com.cn/rank/cxg/'
+    #html = 'http://data.10jqka.com.cn/rank/cxg/'
 
 '''
 a2 = a1[1]

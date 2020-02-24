@@ -11,14 +11,6 @@ which cannot choose by date
 '''
 
 
-#print(df1.shape)
-def print_buy_sale(df1):
-    df2 = df1.drop_duplicates()
-    df2 = df2[df2["status"] == "买盘"]
-    df3 = df2.groupby(["stock_index","stock_name"]).count().sort_values("status",ascending=False)
-    df2 = df1.drop_duplicates()
-    df2 = df2[df2["status"] == "卖盘"]
-    df3 = df2.groupby(["stock_index","stock_name"]).count().sort_values("status",ascending=False)
 
 def status_sum(df2,status):
     df3 = df2[df2["status"] == status]
@@ -41,8 +33,8 @@ def DADAN_diff_stat(df_input):
     return df_merge1
 
 if __name__ =='__main__':
-    #now_date,now_date_time = get_the_datetime()  ## the now_date is like "2019_11_08"
-    now_date = "2020_01_17"
+    now_date,now_date_time = get_the_datetime()  ## the now_date is like "2019_11_08"
+    #now_date = "2020_01_23"
     dir_dadan = data_dict.get("DADAN")
     data_dir = os.path.join(dir_dadan,now_date)
     print(data_dir)
@@ -50,12 +42,13 @@ if __name__ =='__main__':
     df1.columns = ["stock_index","stock_name", \
             "trade_time","price","trade_num","trade_shou", \
             "status","price_change_rate","price_change_ratio","look","date"]
-    df1.to_csv("DADAN_sample.csv",index=0)
+    #df1.to_csv("DADAN_sample.csv",index=0)
     df_merge1 = DADAN_diff_stat(df1)
-    print(df_merge1.head(30))
+    print(df_merge1.head(50))
+    #df_merge1.to_csv("2020_01_23.csv",index=0,encoding="utf_8_sig")
     print(df_merge1.tail(30))
     df_merge2 = df_merge1[df_merge1.sale_num.isna()]   
     df_merge3 = df_merge2.sort_values("buy_num",ascending=False)  
-
+    
 
 

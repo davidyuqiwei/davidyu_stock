@@ -2,8 +2,8 @@ from davidyu_cfg import *
 from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
 from functions.get_datetime import *
 from functions.run_combine_all_csv import *
-from functions.pyspark_david.pyspark_functions import *
-from functions.pyspark_david.get_day_history_data import *
+#from functions.pyspark_david.pyspark_functions import *
+#from functions.pyspark_david.get_day_history_data import *
 
 
 dir_yjyq = data_dict.get("YeJiYuQi")

@@ -1,0 +1,26 @@
+#香港中央结算
+hk_central;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=100&jsObj=OnJVJVrO&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780637337%27)&rt=52746733
+#中央汇金
+zhongyanghuijin;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=hztLarFy&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780475097%27)&rt=52746895
+#社保128
+shebao128;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=UznuAajl&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770010118%27)&rt=52746920
+#社保103
+shebao103;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=xgxnTgIE&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770010103%27)&rt=52749268
+#工银瑞信基金-农业银行
+gsry;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=OLzgwisF&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770405816%27)&rt=52748311
+#领航投资澳洲有限公司
+lhtzaz;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=TzsRmyuR&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780424370%27)&rt=52748317
+#挪威中央银行
+nwzyyh;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=UDGQyKFb&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780087614%27)&rt=5274832
+#GIC PRIVATE LIMITED
+GIC;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=tWohNKKZ&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780067515%27)&rt=52748328
+#澳门金融管理局
+aomen_jinguan;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=lKwoCVdp&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780366297%27)&rt=5274834
+#基本养老802
+jbyl802;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=ibHagJyD&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770410356%27)&rt=52749303
+#基本养老1206
+jbyl1206;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=BQkfBKMB&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770412947%27)&rt=52749305
+#基本养老1003
+jbyl1003;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=nZWJiiJf&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770412807%27)&rt=52749309
+#基本养老805
+jbyl805;http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=EkKTQFhE&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770412941%27)&rt=52749313

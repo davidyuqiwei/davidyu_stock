@@ -53,7 +53,7 @@ def make_column_str(columns,types,comment):
 
 if __name__=='__main__':
     sample_dir = data_dict.get("tmp")
-    filename = "DADAN_sample.csv"
+    filename = "DADAN_sample2.csv"
     file_name = os.path.join(sample_dir,filename)
     df1 = pd.read_csv(file_name)
     columns = df1.columns.tolist()
@@ -61,8 +61,8 @@ if __name__=='__main__':
     #print(types)
     comment = columns
     database_name = "stock_test"
-    table_name = "DADAN_100"
-    table_comment = 'DADAN_100'
+    table_name = "DADAN_200"
+    table_comment = 'DADAN_200'
     column_str = make_column_str(columns,types,comment)
     #print(column_str)
     create_table(database_name,table_name,column_str,table_comment)

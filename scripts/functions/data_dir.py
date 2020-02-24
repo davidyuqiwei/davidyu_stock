@@ -22,7 +22,17 @@ data_dir=["tmp",
         "PDF",
         "tonghuashun",
         "SH_50index",
-        "fenhong"
+        "fenhong",
+        "bankuai",
+        "DFCF",
+        "future_index",
+        "pofa",
+        "jijin",
+        "dazongjiaoyi",
+        "gainian",
+        "owner",
+        "shijinglv",
+        "important_owner"
         ]
 main_data_dir="/home/davidyu/stock/data"
 def create_dir_if_not_exist(dir_name):

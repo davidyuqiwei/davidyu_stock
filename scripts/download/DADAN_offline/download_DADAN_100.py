@@ -20,7 +20,6 @@ def get_html_table(html1):
              new_table_index:  how many rows in the table
 
     '''
-#    html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php"
     soup2 = url_opener(html1)
     table = soup2.find_all('table')[0] # Grab the first table
     new_table_index = [x for x in range(0,len(table.find_all('tr')))]

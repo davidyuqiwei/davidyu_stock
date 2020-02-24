@@ -68,15 +68,6 @@ def main(input_index):
         print("the stock index cannot be download "+ str(stock_index))
         pass
     #f.close()
-def copy_data_to_current_folder():
-    from dir_control.data_dir_v1 import data_dict
-    dir_day_history_insert = data_dict.get("day_history_insert")
-    #dir_day_history_insert = "./csv"
-    ## combine all data
-    os_str = "cat %s/*.csv > all.csv"%(dir_day_history_insert)
-    print(os_str)
-    os.system(os_str)
-    # save to hive
 if __name__ =='__main__':
     #import tushare as ts
     import sys
@@ -88,6 +79,18 @@ if __name__ =='__main__':
     main(TheInput)
     #copy_data_to_current_folder()
     #TheInput = 100
+'''
+def copy_data_to_current_folder():
+    from dir_control.data_dir_v1 import data_dict
+    dir_day_history_insert = data_dict.get("day_history_insert")
+    #dir_day_history_insert = "./csv"
+    ## combine all data
+    os_str = "cat %s/*.csv > all.csv"%(dir_day_history_insert)
+    print(os_str)
+    os.system(os_str)
+    # save to hive
+
+'''
 
 
 

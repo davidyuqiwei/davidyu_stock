@@ -43,13 +43,12 @@ def driver_open_noBS(url):
     from selenium.webdriver import Firefox
     from selenium.webdriver.firefox.options import Options
     options = Options()
-    options.add_argument('-headless')
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
     driver = Firefox(executable_path='/usr/local/bin/geckodriver', options=options)
     driver.get(url)
     html1 = driver.page_source
     html2 = driver.execute_script("return document.documentElement.innerHTML;")
-    #soup1 = BS(html2)
     driver.close()
-    #os.system('pkill phantomjs')
     return html2
 

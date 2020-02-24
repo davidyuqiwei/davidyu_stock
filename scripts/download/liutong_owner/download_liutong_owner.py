@@ -66,11 +66,11 @@ def save_data(data1,save_dir,stock_index):
     data1.to_csv(save_file_name,index=0,header=None)
 def check_data(df):
     ## check data if need to re-encode
-    c1=sum(df["owner_name"]=="")
-    c2=sum(df["owner_name"]=="()")
+    c1 = sum(df["owner_name"]=="")
+    c2 = sum(df["owner_name"]=="()")
     return c1+c2
 def get_html(stock_index):
-    html1='http://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CirculateStockHolder/stockid/%s/displaytype/3000.phtml' %stock_index
+    html1 = 'http://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CirculateStockHolder/stockid/%s/displaytype/3000.phtml' %stock_index
     return html1
 def process(stock_index,dir_liutong_owner):
     html1 = get_html(stock_index)
@@ -92,35 +92,19 @@ def process(stock_index,dir_liutong_owner):
         save_data(data_raw,dir_liutong_owner,stock_index)
     else:
         save_data(data2,dir_liutong_owner,stock_index)
-def main():
-    #from davidyu_cfg import *
+def main(stock_index):
     from dir_control.data_dir_v1 import data_dict,stk_index_list
     import time
     dir_liutong_owner = data_dict.get("liutong_owner")
-    dir_liutong_owner = data_dict.get("tmp")
-    stk_index_list=[x for x in stk_index_list if str(x).zfill(6)[0]!='3']
-    k=0
-    #stk_index_list=['000011','000014']
-    for stk in stk_index_list[0:10]:
-        stock_index=str(stk).zfill(6)
-        try:
-            process(stock_index,dir_liutong_owner)
-            k+=1
-            print('download_data  '+str(stock_index).zfill(6))
-            print(k)
-        except:
-            print(stock_index+'  not download')
-            pass
-        time.sleep(2.5)
-        print('sleep')
-    import os
-    os_str="cat %s/*.csv > all.csv"%(dir_liutong_owner)
-    print(os_str)
-    os.system(os_str)
-
+    try:
+        process(stock_index,dir_liutong_owner)
+    except:
+        print(stock_index+'  not download')
+        pass
 
 if __name__ == '__main__':
-    main()
+    stock_index = sys.argv[1]
+    main(stock_index)
 
 '''
 #data1.iloc[1:]

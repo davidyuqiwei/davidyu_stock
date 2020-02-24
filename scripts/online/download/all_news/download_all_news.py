@@ -6,13 +6,13 @@ from functions.connect_url import driver_open_noBS
 script_dir = os.path.split(os.path.realpath(__file__))[0]
 filename = os.path.basename(__file__)
 print("the script path is "+script_dir)
-## change the work dir to the script dir
 os.chdir(script_dir)
-#up_dir=os.path.abspath(os.path.join(os.getcwd(), "../"))
-#print("the up dir is "+ up_dir)
 from dir_control.data_dir_v1 import data_dict,stk_index_list
 import time
 
+'''
+download news in the website
+'''
 
 ### when update the news sources, be aware about the style of the json/ dict
 stock_news = { 
@@ -23,15 +23,21 @@ stock_news = {
     "nature_researchAnalysis": "https://www.nature.com/research-analysis",
     "ifeng": "http://finance.ifeng.com/",
     "zdnet": "https://www.zdnet.com/",
-    "xueqiu": "https://xueqiu.com/"
+    "xueqiu": "https://xueqiu.com/",
+    "tonghuashun":"http://stock.10jqka.com.cn/",
+    "science":"https://www.sciencemag.org/#",
+    "usa_stock_news":"http://global.eastmoney.com/a/cmgsc.html"
 }
-BS_KEY = ["xueqiu"]
+
+'''
+stock_news = {
+    "usa_stock_news":"http://global.eastmoney.com/a/cmgsc.html"
+}
+'''
+## keys & website download use html driver
+BS_KEY = ["xueqiu","tonghuashun"]
 
 
-cx = CxExtractor(threshold=86)
-# html = cx.getHtml("http://www.bbc.com/news/world-europe-40885324")
-dir_all_news=data_dict.get("all_news")
-print(dir_all_news)
 
 def get_text(key):
     raw_html = stock_news.get(key)
@@ -52,16 +58,20 @@ def get_text(key):
     f = open(files,'w+')
     print(s,file=f)
     f.close()
-for key in stock_news:
-    try:
-        get_text(key)
-    except:
-        print(key)
-        pass
-import datetime
-nowTime=datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
-print(nowTime+" finished "+os.path.join(script_dir,filename))
-os_str = "rm -rf %s/*.log" %script_dir
-print(os_str)
-os.system(os_str)
-
+if __name__=='__main__':
+	cx = CxExtractor(threshold=86)
+	# html = cx.getHtml("http://www.bbc.com/news/world-europe-40885324")
+	dir_all_news=data_dict.get("all_news")
+	print(dir_all_news)
+	for key in stock_news:
+	    try:
+	        get_text(key)
+	    except:
+	        print(key)
+	        pass
+	import datetime
+	nowTime=datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+	print(nowTime+" finished "+os.path.join(script_dir,filename))
+	os_str = "rm -rf %s/geckodriver.log" %script_dir
+	print(os_str)
+	os.system(os_str)
