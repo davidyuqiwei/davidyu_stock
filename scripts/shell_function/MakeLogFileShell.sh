@@ -12,7 +12,7 @@ programName="${CurrentFile##*/}"  ### filename without type e.g.xxx.sh
 #echo $programName
 file_name=${programName%.*} ## filename   'xxx'
 #echo $file_name
-date_run=`date +"%Y-%m-%d" `
+date_run=`date +"%Y-%m-%d"`
 
 source $shell_function_dir"create_log_update.sh" #  get function  【CreateLogFile】
 ShellFile=$1
@@ -28,4 +28,17 @@ else
     echo "$ShellFile executed successfully" >> $Thelog
 fi
 echo "run time; `date '+%Y%m%d %H:%M:%S'`" >> $Thelog
-mv $Thelog $log_dir
+
+#mv $Thelog $log_dir
+moveLog=$2
+if [ ! -n "$moveLog" ];then
+    #echo "is null"
+    moveLog="test"
+fi
+if [ $moveLog == "keep" ];then
+    exit 0
+else
+    mv $Thelog $log_dir
+    exit 0 
+fi
+

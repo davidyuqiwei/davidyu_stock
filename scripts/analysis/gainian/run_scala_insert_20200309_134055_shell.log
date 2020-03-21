@@ -1,0 +1,108 @@
+current dir++++ /home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/gainian
+start scala
+copy the file ++++ /home/davidyu/stock/scripts/davidyu_stock/scripts/functions/to_hive_all_new.scala
+Spark context Web UI available at http://172.16.0.11:4041
+Spark context available as 'sc' (master = local[*], app id = local-1583732473288).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
+      /_/
+         
+Using Scala version 2.11.12 (OpenJDK 64-Bit Server VM, Java 1.8.0_232)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> // this script put the   
+
+scala> // target csv file         to the 
+
+scala> // target database.table
+
+scala> /*
+     |   ############################
+     |   ####### important ##########
+     |   ############################
+     |   this script first 
+     |   @clean the table
+     |   @ put all the data into the database
+     | */
+     | import org.apache.log4j.{Level, Logger}
+import org.apache.log4j.{Level, Logger}
+
+scala> object SH_SZ_INDEX{
+     |     def main(FileName:String, TableName:String){
+     |         // set the LOG level
+     |         sc.setLogLevel("ERROR")
+     |         val log = Logger.getLogger(this.getClass)
+     |         log.warn("this is a warn")
+     |         log.warn("this is a warn")
+     |           System.out.println(System.getProperty("user.dir"))
+     |           var table_name = TableName // set table name 
+     |           val work_dir = System.getProperty("user.dir") // the work dir is the current dir
+     |           val data_file = "file://"+work_dir+"/"+FileName // the full name of data file we are put into database.table
+     |           //
+     |         val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
+     |           val csv_data = spark.read.csv(data_file)
+     |           csv_data.show()
+     |           csv_data.createOrReplaceTempView("history_day")
+     |           // clean the table
+     |         val sql_v1 = s"""
+     |               truncate table $table_name
+     |           """
+     |         log.error(sql_v1)
+     |         sqlContext.sql(sql_v1)
+     |         sqlContext.sql("set  hive.exec.dynamic.partition.mode=nonstrict")
+     |         sqlContext.sql("set  hive.exec.dynamic.partition=true")
+     |         // put the new file into  database.table
+     |           val sql_v2 = s"""
+     |             insert into table $table_name
+     |               select * from history_day
+     |           """
+     |           log.error(sql_v2)
+     |           //println(sql_v1)
+     |           sqlContext.sql(sql_v2)
+     |         log.error("+++++++++++++++++++++++++++++++++++++++")
+     |         log.error("ALL"+"OK")
+     |         log.error("+++++++++++++++++++++++++++++++++++++++")
+     |     }
+     | }
+warning: there was one deprecation warning; re-run with -deprecation for details
+defined object SH_SZ_INDEX
+
+scala> SH_SZ_INDEX.main("all.csv","stock_dev.gainian_bankuai")
+/home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/gainian
++---+-----------+----------+--------+----------+
+|_c0|        _c1|       _c2|     _c3|       _c4|
++---+-----------+----------+--------+----------+
+| id|stock_index|stock_name| gainian|stock_date|
+|  2|     000810|  创维数字|2025规划|2020_02_21|
+|  1|     600583|  海油工程|2025规划|2020_02_21|
+|  2|     002594|    比亚迪|2025规划|2020_02_21|
+|  2|     000063|  中兴通讯|2025规划|2020_02_21|
+|  1|     600150|  中国船舶|2025规划|2020_02_21|
+|  1|     600458|  时代新材|2025规划|2020_02_21|
+|  1|     600320|  振华重工|2025规划|2020_02_21|
+|  2|     000039|  中集集团|2025规划|2020_02_21|
+|  1|     600198|  大唐电信|2025规划|2020_02_21|
+|  1|     600206|  有研新材|2025规划|2020_02_21|
+|  1|     600118|  中国卫星|2025规划|2020_02_21|
+|  1|     600516|  方大炭素|2025规划|2020_02_21|
+|  2|     000009|  中国宝安|2025规划|2020_02_21|
+|  1|     600699|  均胜电子|2025规划|2020_02_21|
+|  2|     000738|  航发控制|2025规划|2020_02_21|
+|  2|     300150|  世纪瑞尔|2025规划|2020_02_21|
+|  2|     000701|  厦门信达|2025规划|2020_02_21|
+|  1|     600143|  金发科技|2025规划|2020_02_21|
+|  1|     600495|  晋西车轴|2025规划|2020_02_21|
++---+-----------+----------+--------+----------+
+only showing top 20 rows
+
+
+scala> :quit
+OK
+##########################################################
+run_scala_insert.sh executed successfully
+run time; 20200309 13:41:30

@@ -6,7 +6,8 @@ source ~/.bashrc
 000917
 !
 file_in=$stock_data/basic_info/stock_basic_info.csv
-`awk -F "," '{print $1}' $file_in | sed '1d' > stock_list.txt`
+echo $stock_data
+`awk -F "," '{print $1}' $file_in | sed '1d' > $stock_data/tmp/stock_list.txt`
 
 
 

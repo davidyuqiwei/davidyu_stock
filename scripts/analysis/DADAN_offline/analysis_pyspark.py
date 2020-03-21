@@ -3,8 +3,9 @@ from functions.pyspark_functions import *
 from analysis_today_update import *
 
 sql1 = """
-select * from stock_test.dadan_200 
-where day>='2020-02-03'  
+select * from stock_test.dadan_100 
+where day>='2020-03-09' and
+stock_index=601288
 """
 df1 = spark.sql(sql1)
 # print the random data

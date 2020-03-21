@@ -1,3 +1,4 @@
+cat
 ## 
 ## use:  combine_csv_in_folder.sh /home/davidyu/stock/data/fenhong
 ## out:  data save in the $stockdata/tmp  directory

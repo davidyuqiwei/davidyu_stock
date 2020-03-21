@@ -42,6 +42,45 @@
 # data to hive
 00 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/DADAN_200_data_to_hive.sh
 
+
+## @description: fushi A50
+# @run time:
+# @download tools: wget
+# @type: realtime
+# 9-12 13-23,0-6
+
+*/1 * * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/fushi_a50/wget_fushi_a50.sh
+
+
+## @description: oumei future index
+# @run time:
+# @download tools: wget
+# @type: realtime
+# 9-12 13-23,0-6
+*/1 * * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/oumei_future_index/run_download_oumei_future_index.sh
+
+
+#*/1 9-12 * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/fushi_a50/wget_fushi_a50.sh
+
+## @description: SH index realtime
+# @run time:
+# @download tools: wget
+# @type: realtime
+# 9-12 13-23,0-6
+*/1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/wget_SH_index_RT.sh
+*/1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/wget_SH50_index_RT.sh
+*/1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/index_amount/wget_SH_index_amount_RT.sh
+#######################
+
+## @description: download DADAN DFCF
+# @run time:
+# @download tools: wget
+# @type: realtime
+# 9:30 - 9:59
+
+*/1 10-11,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/dadan/run_download_dadan_DFCF.sh
+
+
 #####################################
 #           16:00 -   real time   #
 #####################################
@@ -104,13 +143,21 @@
 #####################################
 #           22:30 - 23:00           #
 #####################################
-## @description: pofa
-# @run time: 50s
+## @description: pofa DFCF
+# @run time: 50s 
 # @download tools: wget
 # @type: daily new
 ##-------------pofa
 ############################
 30 20-23 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/pofa/run_download_pofa.sh
+
+## @description: import owner DFCF
+# @run time: 50s
+# @download tools: wget
+# @type: daily new
+##-------------important owner
+############################
+35 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/important_owner/run_download_important_owner.sh
 
 ########################################
 #               weekly                 #

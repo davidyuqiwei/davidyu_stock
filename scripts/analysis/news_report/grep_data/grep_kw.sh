@@ -4,8 +4,8 @@ basedir=`cd $(dirname $0); pwd -P`
 #echo $basedir
 out_dir="/home/davidyu/stock/data/news_report_out_data"
 data_path="/home/davidyu/stock/data/news_report"
-input_string="钨"
-out_file="jinshuwu.txt"
+input_string="医废处理"
+out_file="医废处理.txt"
 #find $data_path -name "*2018*" | xargs grep -r 用途广泛  > $basedir/yongtuguangfan.txt
 #find $data_path -name "*2019*" | xargs grep -r $input_string > $out_dir/$out_file
 find $data_path -name "*2019*" | xargs grep -r $input_string > $out_dir/$out_file
@@ -13,6 +13,8 @@ find $data_path -name "*2019*" | xargs grep -r $input_string > $out_dir/$out_fil
 sed -i 1i$input_string $out_dir/$out_file
 echo "finish"
 
+
+#grep -r UWB UWB.txt  | awk -F "/" '{print $7}' | sort | uniq -c
 
 # "/" 分隔符取第七个
 #  grep -r data/news_report chaoyingcailiao.txt | awk -F "\/" '{print $7}' | sort | uniq -c

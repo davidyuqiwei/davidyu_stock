@@ -27,7 +27,7 @@ if __name__ == "__main__":
     date_type = "day"
     file_in,save_dir = create_envr()
     save_dir = data_dict.get("pofa")
-    df1 = json_to_df_raw(file_in,columns,date_type,save_dir)
+    df1 = json_to_df_raw(file_in,columns,date_type)
     df2 = df1[["stock_index","stock_name"]]
     now_date = get_the_datetime()[0]
     df2['stock_date'] = now_date

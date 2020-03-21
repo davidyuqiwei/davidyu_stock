@@ -6,6 +6,17 @@ file1="data_"$download_date".txt"
 wget $url -O $file1
 sed -i 's/var PcBIadJC=//g' $file1
 
+
+file1="data_"$download_date".txt"
+wget $url -O $file1
+sed -i s/diff/Data\\n/g $file1
+sed -i '1d' $file1
+sed -i -e s/\\[/{/g  -e s/\\]//g -e s/\;//g -e s/.// -e s/.// -e s/.$// $file1
+
+
+
+
+
 #python shijinglv_json_to_df.py
 #rm -rf $file1
 #python download_dazongjiaoyi.py $file1

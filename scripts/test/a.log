@@ -1,0 +1,4 @@
+INFO:__main__:Start print log
+DEBUG:__main__:Do something
+WARNING:__main__:Something maybe fail.
+INFO:__main__:Finish

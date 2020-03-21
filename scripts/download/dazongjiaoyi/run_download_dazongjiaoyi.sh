@@ -11,7 +11,8 @@ file1="data_"$first".txt"
 wget $url -O $file1
 sed -i 's/var eYXsjQKi={pages:1,data:/{"pages":/g' $file1
 python download_dazongjiaoyi.py $file1
+sh run_scala_insert.sh
 #first=`date -d "$first +1 day"  +"%Y-%m-%d"`
-rm -rf $file1
+rm -rf $file1 *.csv
 echo "finish"
 

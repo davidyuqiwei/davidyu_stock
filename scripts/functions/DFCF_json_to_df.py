@@ -7,9 +7,9 @@ from functions.get_datetime import *
 import sys
 ## 东方财富数据中心 
 # json to DF
-def load_the_json(filename):
+def load_the_json(filename,encode_in="utf-8"):
     #f = open(filename,encoding="latin1")
-    f = open(filename)
+    f = open(filename,encoding=encode_in)
     a1 = f.read()
     raw_json = json.loads(a1)
     df_len = len(raw_json.keys())

@@ -1,0 +1,34 @@
+download_date=`date +%Y-%m-%d`
+# 香港中央结算
+url="http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=100&jsObj=OnJVJVrO&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780637337%27)&rt=52746733"
+# source url :   http://data.eastmoney.com/gdfx/
+# 中央汇金
+url="http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=hztLarFy&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2780475097%27)&rt=52746895"
+## 全国社保118
+url="http://data.eastmoney.com/DataCenter_V3/gdfx/data.ashx?SortType=RDATE,NDATE&SortRule=3&PageIndex=1&PageSize=50&jsObj=UznuAajl&type=NSHDDETAIL&cgbd=0&filter=(SHAREHDCODE=%2770010118%27)&rt=52746920"
+
+
+
+file1="data_"$download_date".txt"
+wget $url -O $file1
+
+rm_str="var _dataUrl = \"http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=NSHDDETAIL&token=70f12f2f4f091e459a279469fe49eca5&cmd=&st=RDATE,NDATE&sr=3&p=1&ps=100&filter=(SHAREHDCODE='80637337')&js={pages:(tp),data:(x)}\";"
+
+rm_str1=$rm_str"  var OnJVJVrO = "
+echo $rm_str1
+sed -i s/data/Data\\n/g $file1
+sed -i '1,3d' $file1
+sed -i -e s/\\[/{/g  -e s/\\]//g -e s/\;//g -e s/.// -e s/.// -e s/.$// $file1 
+
+python shijinglv_json_to_df.py qgSheBao118
+
+# s/.// rm first string
+
+#-e s/\\://g
+#sed -i s/://g $file1
+#sed -i s/[//g $file1
+#sed i /^([^\page]*)\page.*$/ $file1
+#python shijinglv_json_to_df.py
+#rm -rf $file1
+#python download_dazongjiaoyi.py $file1
+

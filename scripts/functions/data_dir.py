@@ -18,6 +18,7 @@ data_dir=["tmp",
         "all_news",
         "DADAN",
         "DADAN_offline",
+        "dadan_DFCF",
         "YeJiYuQi",
         "PDF",
         "tonghuashun",
@@ -32,7 +33,13 @@ data_dir=["tmp",
         "gainian",
         "owner",
         "shijinglv",
-        "important_owner"
+        "important_owner",
+        "JiGouDiaoYan",
+        "daily_report",
+        "fushi_a50",
+        "SH_index_RT",
+        "oumei_future_index",
+        "gainian_liuru"
         ]
 main_data_dir="/home/davidyu/stock/data"
 def create_dir_if_not_exist(dir_name):
@@ -48,8 +55,10 @@ def dir_dict(data_dir):
         data_path.append(path1)
         path2 = os.path.join(download_path,i)
         path3 = os.path.join(analysis_path,i)
+        path4 = os.path.join(function_path,i)
         create_dir_if_not_exist(path2)
         create_dir_if_not_exist(path3)
+        create_dir_if_not_exist(path4)
     return data_path
 data_all_path = dir_dict(data_dir)
 data_dict = dict(zip(data_dir,data_all_path))

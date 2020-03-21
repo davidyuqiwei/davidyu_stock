@@ -17,7 +17,7 @@ download news in the website
 ### when update the news sources, be aware about the style of the json/ dict
 stock_news = { 
     'sina': "https://finance.sina.com.cn/stock/",
-    "dfcf": "https://finance.sina.com.cn/stock/",
+    "dfcf": "http://finance.eastmoney.com/",
     "ifeng": "http://finance.ifeng.com/",
     "ftchinese": "http://www.ftchinese.com/channel/economy.html",
     "nature_researchAnalysis": "https://www.nature.com/research-analysis",
@@ -30,10 +30,12 @@ stock_news = {
 }
 
 '''
+
 stock_news = {
-    "usa_stock_news":"http://global.eastmoney.com/a/cmgsc.html"
+    "dfcf_news":"http://finance.eastmoney.com/"
 }
 '''
+
 ## keys & website download use html driver
 BS_KEY = ["xueqiu","tonghuashun"]
 

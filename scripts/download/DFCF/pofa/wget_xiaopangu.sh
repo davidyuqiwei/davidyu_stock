@@ -4,3 +4,4 @@ file1="pofa.txt"
 
 wget $url -O $file1
 sed -i 's/var QAhPgnED=//g' $file1
+#array=(${string//,/ })

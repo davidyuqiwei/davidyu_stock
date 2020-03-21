@@ -19,3 +19,9 @@ find . -mmin -60 -type f
 
 # delete first line of file
 sed -i '1d' <file>
+
+# every file number of rows and sort
+find . -name "*.csv" |xargs wc -l | sort -n
+
+# find and copy file
+find . -name "60*" | xargs -t -i cp -rf {} /home/davidyu/stock/data//day_history/

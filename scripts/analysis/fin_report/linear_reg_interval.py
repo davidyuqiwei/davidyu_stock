@@ -50,8 +50,8 @@ a2=spark.sql("""select x1,x33,x94
         """%(table,start_date,end_date))
 
 a4=a2.select("x1","x94","x33").groupby("x94").apply(test1)
-
 a4.sort("x33",ascending=False).show(300)
+
 #a4.show()
 #a4.registerTempTable("table1")  
 #sql("create table stock_analysis.profit_table as  select * from table1")

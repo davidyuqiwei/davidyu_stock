@@ -10,6 +10,6 @@ for file in `ls $folder`
 do
     if is_empty_dir $folder"/"$file
     then
-        echo $file >> $outfile
+        echo $file > $outfile
     fi
 done

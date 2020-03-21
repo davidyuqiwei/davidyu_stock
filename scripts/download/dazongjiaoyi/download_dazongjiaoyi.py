@@ -40,8 +40,7 @@ if __name__ == "__main__":
     save_name = "dazongjiaoyi_"+filedate+".csv"
     save_dir = data_dict.get("dazongjiaoyi")
     df1.to_csv(os.path.join(save_dir,save_name),index=0)
-
-
+    df1.to_csv("today.csv",index=0)
 
     #df_len,all_keys,raw_json = load_the_json("dazongjiaoyi.txt")
 

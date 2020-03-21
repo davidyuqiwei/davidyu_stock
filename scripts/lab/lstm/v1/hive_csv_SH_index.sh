@@ -1,5 +1,9 @@
 #!/usr/bin/sh
 save_dir=$stock_data"/test/for_lstm/"
+if [ ! -d $save_dir ];then
+    mkdir $save_dir
+fi
+
 stk_index="SH_index"
 file_name=$stk_index
 f1=${save_dir}${file_name}.csv

@@ -3,12 +3,9 @@
 @update time 2019.11.1
 '''
 import pandas as pd
-#from keras.models import Sequential
-#from keras.layers import Dense
-#from keras.layers import LSTM
-#from keras.utils import np_utils
 import os 
-
+from davidyu_cfg import *
+from functions.day_history.load_model_data import *
 
 def read_mv_avg_data_clean(data_dir,file_name):
     '''
@@ -76,6 +73,32 @@ def make_train_test_data(df1,start_from_num,train_nums,start_index,feature_start
     y_max = df_models_raw.max()[0]
     return train_X,train_y,test_X,test_y,y_min,y_max
 
+def tomorrow_change(df1):
+    df2 = df1.copy(deep=False)
+    df2['close_diff'] = df2['adj_close'].diff()
+    df_models_raw = df1.iloc[:,2:]
+    df_feature_columns = df_models_raw.columns[1:].tolist()   
+    df_feature_raw = df2[df_feature_columns]
+    
+    ij_combine_list = []
+    for i in range(0,len(df_feature_columns)):
+        for j in range(0,len(df_feature_columns)):
+            if i==j or df_feature_columns[i] == 'volume' or df_feature_columns[j]=='volume':
+                pass
+            else:
+                ij_combine = [i,j]
+                ij_combine.sort()
+                ij_str = ';'.join([df_feature_columns[i],df_feature_columns[j]])
+                if ij_str in ij_combine_list:
+                    pass
+                else:
+                    df_feature_raw[ij_str] = df_feature_raw[df_feature_columns[i]] - df_feature_raw[df_feature_columns[j]]
+                    ij_combine_list.append(ij_str)
+            #if i==j or df_feature_columns[i] == 'volume' or df_feature_columns[j]=='volume' or ij_str in ij_combine_list:
+            #    pass
+            #else:
+
+
 if __name__ == "__main__":
     data_dir = "/home/davidyu/stock/data/test/for_lstm"
     file_name = "SH_index.csv"
@@ -85,6 +108,5 @@ if __name__ == "__main__":
     train_nums = 4000
     y_start = 2 
     train_X,train_y,test_X,test_y,y_min,y_max = make_train_test_data(df1,train_nums,y_start)
-
 
 

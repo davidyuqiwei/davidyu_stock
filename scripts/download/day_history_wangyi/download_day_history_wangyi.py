@@ -27,6 +27,21 @@ def save_file_name(dir_name,stock_index,year,season):
     file_name1 = '_'.join([stock_index,year,season])
     file_name = os.path.join(dir_name,file_name1)+'.csv'
     return file_name
+def do_download(stock_index):
+    #print(stock_index)
+    dir_name1 = os.path.join(dir_day_history_wy,stock_index)
+    make_dir(dir_name1)
+    for year1 in year:
+        for season1 in season:
+            try:
+                df1 = download_data(stock_index,year1,season1)
+                if df1.shape[0]>1:
+                    file_name = save_file_name(dir_name1,stock_index,str(year1),str(season1))
+                    #print(file_name)
+                    df1.to_csv(file_name,index=0)
+            except:
+                print(stock_index+" not download")
+                pass
 if __name__ =='__main__':
     dir_day_history_wy = data_dict.get("day_history_wangyi")
     dir_name = dir_day_history_wy
@@ -34,23 +49,10 @@ if __name__ =='__main__':
     #stk_index_list = ['601398','000917']
     #year = [str(x) for x in range(1998,2020)]
     #season = [str(x) for x in [1,2,3,4]]
-    year = [2019]
-    season = [4]
-    for stock_index in stk_index_list:
-        print(stock_index)
-        dir_name1 = os.path.join(dir_day_history_wy,stock_index)
-        make_dir(dir_name1)
-        for year1 in year:
-            for season1 in season:
-                try:
-                    df1 = download_data(stock_index,year1,season1)
-                    if df1.shape[0]>1:
-                        file_name = save_file_name(dir_name1,stock_index,str(year1),str(season1))
-                        #print(file_name)
-                        df1.to_csv(file_name,index=0)
-                except:
-                    pass
-                time.sleep(5)    
+    year = [2020]
+    season = [1]
+    stock_index = sys.argv[1]
+    do_download(stock_index)
 '''
 stock_index = '601398'
 year = 1880

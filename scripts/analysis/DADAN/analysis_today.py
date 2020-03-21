@@ -45,7 +45,7 @@ def combine_with_stock_basic_info(df_input):
     return df1
 def main():
     now_date,now_date_time = get_the_datetime()  ## the now_date is like "2019_11_08"
-    #now_date = "2020_01_23"
+    #now_date = "2020_03_13"
     dir_dadan = data_dict.get("DADAN")
     data_dir = os.path.join(dir_dadan,now_date)
     df1 = combine_csv_in_folder(data_dir)
@@ -55,7 +55,7 @@ def main():
     df_merge1.to_csv("DADAN_sample.csv",index=0)
     print("="*50)
     print(df_merge1.head(50))
-    #print(df_merge1.tail(30))
+    print(df_merge1.tail(50))
     ## save data
     print("="*50)
     save_dir = os.path.join(data_path,"DADAN_daily_report")

@@ -19,7 +19,7 @@ def get_df_column_type(df1):
             types.append('decimal(38,2)')
     return types
 
-def create_table(database_name,table_name,column_str,table_comment):
+def create_table_partition(database_name,table_name,column_str,table_comment):
     a1 = """
 use %s;
 drop table if exists %s;
@@ -35,7 +35,28 @@ stored as textfile;
     """ %(database_name,table_name,table_name,column_str,table_comment)
     print(a1)
 
+def create_table(database_name,table_name,column_str,table_comment):
+    a1 = """
+use %s;
+drop table if exists %s;
+
+create table  if not exists %s(
+%s
+)
+comment '%s' 
+row format delimited
+fields terminated by ','
+stored as PARQUET;
+    """ %(database_name,table_name,table_name,column_str,table_comment)
+    print(a1)
+
 def make_column_str(columns,types,comment):
+    """
+    @columns, a list of columns name
+    @types column type
+    @comment: the comment of column
+    @return:  x1   string  COMMENT  '报告日期'
+    """
     column_str = ''
     for i in range(0,len(columns)):
         str_list = [columns[i],types[i],'comment','\''+comment[i]+'\'']
@@ -43,26 +64,23 @@ def make_column_str(columns,types,comment):
             str_in = '\t'.join(str_list)+','
         elif i != len(columns)-1:
             str_in = '\t'.join(str_list)+','
-            #column_str = column_str + str_in+'\n'+'\t'
-        #print('\t'.join(str_list))
         else:
             str_in = '\t'.join(str_list)
         column_str = column_str + '\t'+str_in+'\n'
     return column_str
-#print(column_str)
 
 if __name__=='__main__':
     sample_dir = data_dict.get("tmp")
-    filename = "DADAN_sample2.csv"
+    filename = "dazongjiaoyi_2020-03-05.csv"
     file_name = os.path.join(sample_dir,filename)
     df1 = pd.read_csv(file_name)
     columns = df1.columns.tolist()
     types = get_df_column_type(df1)
     #print(types)
     comment = columns
-    database_name = "stock_test"
-    table_name = "DADAN_200"
-    table_comment = 'DADAN_200'
+    database_name = "stock_dev"
+    table_name = "dazongjiaoyi"
+    table_comment = 'dazongjiaoyi'
     column_str = make_column_str(columns,types,comment)
     #print(column_str)
     create_table(database_name,table_name,column_str,table_comment)
