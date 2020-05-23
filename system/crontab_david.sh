@@ -49,16 +49,17 @@
 # @type: realtime
 # 9-12 13-23,0-6
 
-*/1 * * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/fushi_a50/wget_fushi_a50.sh
+*/1 * * * * sleep 38;MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/fushi_a50/wget_fushi_a50.sh
 
 
-## @description: oumei future index
+## @description: oumei future index, nsdaq index
 # @run time:
 # @download tools: wget
 # @type: realtime
 # 9-12 13-23,0-6
-*/1 * * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/oumei_future_index/run_download_oumei_future_index.sh
+*/1 * * * * sleep 18;MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/oumei_future_index/run_download_oumei_future_index.sh
 
+*/1 * * * * sleep 28;MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/nsdaq/run_download_nsdaq_RT.sh
 
 #*/1 9-12 * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/fushi_a50/wget_fushi_a50.sh
 
@@ -138,7 +139,12 @@
 #####################################
 #           21:00 - 21:30           #
 #####################################
-
+## @description: jigoudiaoyan
+# @run time: 5s 
+# @download tools: wget
+# @type: daily new
+##-------jigoudiaoyan
+40 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/JiGouDiaoYan/run_download_jigoudiaoyan.sh
 
 #####################################
 #           22:30 - 23:00           #
@@ -159,6 +165,16 @@
 ############################
 35 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/important_owner/run_download_important_owner.sh
 
+
+
+## @description: gainian  liuru
+# @run time: 50s
+# @download tools: wget
+# @type: daily new
+##----------- gainian liuru
+############################
+55 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/gainian_liuru/run_download_gainian_liuru.sh
+
 ########################################
 #               weekly                 #
 ########################################
@@ -174,6 +190,15 @@
 # @download tools: wget
 # @type: all
 30 6 * * 6 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/xiaopangu/run_download_xiaopangu.sh
+
+
+## daily report
+# @description: make daily report for davidyu
+# @run time : 30s
+# @tools: python
+# @type: all
+38 23 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/daily_report/run_daily_report.sh
+
 
 
 ##################### system ###########################

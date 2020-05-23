@@ -31,8 +31,9 @@ class LinearReg:
         rows = X.shape[0]
         x = np.array(range(rows)).reshape(-1,1)
         y = X.values
+        y_norm = np.round(y/y.max(axis=0),2)
         # regression
-        slope,inter = self.common_linear_reg(x,y)
+        slope,inter = self.common_linear_reg(x,y_norm)
         return slope,inter
 if __name__=='__main__':
     import pandas as pd

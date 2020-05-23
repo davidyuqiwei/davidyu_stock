@@ -3,13 +3,16 @@
 
 # input df: pandas Dataframe
 # column_in: the column name that we want to caluate the linear regression
-
+'''
+from functions.LinearReg import LinearReg
+SH_slope = LinearReg.single_linear_reg(SH_index_df1,'norm_col')[0]
+'''
 class LinearReg:
     """
     for linear regression
     """
     @classmethod
-    def single_linear_reg(self,df,column_in):
+    def single_linear_reg(self,df,column_in,if_normed=1):
         """
         linear regression for one column
         x: 0: length(y)
@@ -23,12 +26,16 @@ class LinearReg:
         X = pd.DataFrame(X_in1,columns=[column_in]).dropna()
         # how many rows in the dataframe and make it as x
         rows=X.shape[0]
-        x=np.array(range(rows)).reshape(-1,1)
-        y = X.values
+        x = np.array(range(rows)).reshape(-1,1)
+        if if_normed == 1:
+            y = X.values
+            y_normed = (y -y.min(axis=0))/(y.max(axis=0)-y.min(axis=0)+0.001)
+        else:
+            y_normed = X.values
         # regression
         regr = linear_model.LinearRegression()
-        regr.fit(x,y)
-        slope = round(regr.coef_.item(),3)
+        regr.fit(x,y_normed)
+        slope = round(regr.coef_.item(),5)
         inter = round(regr.intercept_.item(),2)
         return slope,inter
 if __name__=='__main__':

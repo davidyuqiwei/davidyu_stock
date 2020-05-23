@@ -11,3 +11,8 @@ from functions.pyspark_functions import *
 sc = spark.sparkContext
 sc.setLogLevel("ERROR")
 
+
+data_dir = data_dict.get("JiGouDiaoYan")
+tmp_data_dir = tmp_data_dict.get("JiGouDiaoYan")
+
+

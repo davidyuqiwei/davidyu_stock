@@ -14,6 +14,10 @@ num_change: 持股数量变动
 change_ratio: 持股变化比率
 """
 
+
+
+
+
 def get_all_date():
     cols = ["id","id2","owner_name","owner_type","stock_type","gudong_rank",
             "stock_index","stock_name","change_date","num","chigu_ratio",

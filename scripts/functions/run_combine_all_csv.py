@@ -14,9 +14,14 @@ def combine_csv_in_folder_raw(folder):
     data_file = os.path.join(folder,files[0])
     df1 = pd.read_csv(data_file)
     for i in range(1,len(files)):
-        data_file = os.path.join(folder,files[i])
-        df2 = pd.read_csv(data_file)
-        df1 = pd.concat([df1,df2])
+        try:
+            data_file = os.path.join(folder,files[i])
+            df2 = pd.read_csv(data_file)
+            df1 = pd.concat([df1,df2])
+        except:
+            print("error")
+            print(files[i])
+            pass
     return df1
 
 def combine_csv_in_folder(folder):

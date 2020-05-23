@@ -1,6 +1,7 @@
 import sys
 import os 
 import pandas as pd
+import numpy as np
 main_path = "/home/davidyu/stock/"
 
 ## the main script path, and load the modules
@@ -8,10 +9,15 @@ script_path = os.path.join(main_path,"scripts/davidyu_stock/scripts")
 
 ## the main data path
 data_path = os.path.join(main_path,"data")
+tmp_data_path = os.path.join(main_path,"data","tmp_data")
 ## donwload path
 download_path = os.path.join(script_path,'download')
 # analysis 
 analysis_path = os.path.join(script_path,'analysis')
+# function
+
+function_path = os.path.join(script_path,'functions')
+
 
 create_dir = ["test"]
 project_DIR=[data_path,download_path,analysis_path]

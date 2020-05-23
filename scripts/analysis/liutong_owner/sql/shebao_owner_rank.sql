@@ -32,6 +32,20 @@ order by cnt desc
 limit 10
 ;
 
+select 
+a.stock_index,
+count(1) as cnt,
+c.name,
+c.industry
+from stock_dev.liutong_owner a
+left join
+stock.stock_index c
+on c.code = a.stock_index
+where owner_name like '%新华人寿%' and dt = '2020-03-31'
+group by a.stock_index,c.name,c.industry
+order by cnt desc 
+limit 10
+;
 
 
 

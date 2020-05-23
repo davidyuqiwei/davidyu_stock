@@ -15,3 +15,13 @@ run_download_day_history_yahoo.sh: 行 9: 18158 已杀死               python d
 run_download_day_history_yahoo.sh: 行 9: 18440 已杀死               python download_day_history_yahoo.py $line
 run_download_day_history_yahoo.sh: 行 9:  6778 已杀死               python download_day_history_yahoo.py $line
 run_download_day_history_yahoo.sh: 行 9: 16455 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 21161 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 21909 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 29546 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 29129 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 32613 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9:  8324 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 12571 已终止               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9:  8969 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9: 26992 已杀死               python download_day_history_yahoo.py $line
+run_download_day_history_yahoo.sh: 行 9:  1961 已杀死               python download_day_history_yahoo.py $line

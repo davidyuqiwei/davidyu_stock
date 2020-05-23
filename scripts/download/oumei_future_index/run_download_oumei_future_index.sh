@@ -11,6 +11,7 @@ save_dir=$stock_data/oumei_future_index/$download_date
 if [ ! -d $save_dir ];then
     mkdir $save_dir
 fi
+## add date time in the end column
 sed -i "s/$/&,$download_time/g"  $file1
 datatime="data_time"
 sed -i "1s/$download_time/$datatime/g" $file1

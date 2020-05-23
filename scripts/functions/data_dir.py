@@ -39,29 +39,36 @@ data_dir=["tmp",
         "fushi_a50",
         "SH_index_RT",
         "oumei_future_index",
-        "gainian_liuru"
+        "gainian_liuru",
+        "nsdaq",
+        "stock_feature",
+        "jiejin"
         ]
-main_data_dir="/home/davidyu/stock/data"
 def create_dir_if_not_exist(dir_name):
 	if not os.path.isdir(dir_name):
 	    os.makedirs(dir_name)
 # set sub dir
 ## create the data dir and make it into dict
 def dir_dict(data_dir):
-    data_path=[]
+    data_path_list=[]
+    data_tmp_path_list = []
     for i in data_dir:
-        path1 = os.path.join(main_data_dir,i)
-        create_dir_if_not_exist(path1)
-        data_path.append(path1)
+        path1 = os.path.join(data_path,i)
         path2 = os.path.join(download_path,i)
         path3 = os.path.join(analysis_path,i)
         path4 = os.path.join(function_path,i)
+        path5 = os.path.join(tmp_data_path,i)
+        create_dir_if_not_exist(path1)
         create_dir_if_not_exist(path2)
         create_dir_if_not_exist(path3)
         create_dir_if_not_exist(path4)
-    return data_path
-data_all_path = dir_dict(data_dir)
+        create_dir_if_not_exist(path5)
+        data_path_list.append(path1)
+        data_tmp_path_list.append(path5)
+    return data_path_list,data_tmp_path_list
+data_all_path,data_tmp_path_list = dir_dict(data_dir)
 data_dict = dict(zip(data_dir,data_all_path))
+tmp_data_dict = dict(zip(data_dir,data_tmp_path_list))
 #print(data_dict.get("DADAN_offline"))
 def get_stock_index_all_list():
     dir_basic_info = data_dict.get("basic_info")

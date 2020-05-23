@@ -105,6 +105,7 @@ if __name__ == "__main__":
     df1 = read_mv_avg_data_clean(data_dir,file_name)
     history_days = 30
     df1 = make_history_price(df1,history_days)
+    df1 = make_history_vol(df1,history_days)
     train_nums = 4000
     y_start = 2 
     train_X,train_y,test_X,test_y,y_min,y_max = make_train_test_data(df1,train_nums,y_start)
