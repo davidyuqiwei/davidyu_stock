@@ -25,7 +25,7 @@ def DADAN_diff_stat(df_input):
     df_buy = status_sum(df2,"买盘")
     df_sell = status_sum(df2,"卖盘")
     ## 
-    df_merge = pd.merge(df_buy,df_sell,how='left',on = ["stock_index","stock_name"]) # merge join, on 'stock_index' and 'stock_name'
+    df_merge = pd.merge(df_buy,df_sell,how='outer',on = ["stock_index","stock_name"]) # merge join, on 'stock_index' and 'stock_name'
     df_merge = df_merge.fillna(0)
     df_merge["buy_sale_diff"] = df_merge["buy_num"]-df_merge["sale_num"]
     df_merge["buy_sale_diff_shou"] = df_merge["buy_shou"]-df_merge["sale_shou"]
@@ -41,7 +41,7 @@ def combine_with_stock_basic_info(df_input):
     return df1
 def main():
     now_date,now_date_time = get_the_datetime()  ## the now_date is like "2019_11_08"
-    now_date = "2020_05_22"
+    #now_date = "2020_05_22"
     dir_dadan = data_dict.get("DADAN")
     data_dir = os.path.join(dir_dadan,now_date)
     df1 = combine_csv_in_folder(data_dir)

@@ -4,10 +4,11 @@ import org.apache.spark.sql.DataFrame
 
 
 val table="stock_dev.day_history_insert"
-val start_date="2019-06-30"
-val end_date="2019-09-25"
+val start_date="2017-01-01"
+val end_date="2017-12-31"
 
 val df_ch_rat = CalChangeRate.get_change(start_date,end_date,table)
+df_ch_rat.write.mode("overwrite").saveAsTable("stock_test.stock_change_date_20170101_20171231")
 
 
 val start_date="2018-09-30"

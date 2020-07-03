@@ -40,6 +40,7 @@ class LinearReg:
         return slope,inter
 if __name__=='__main__':
     import pandas as pd
+    from functions.LinearReg import *
     d = {'col1': [1, 2,5], 'col2': [3, 4,2]}
     df = pd.DataFrame(data=d)
     t1 = LinearReg()

@@ -2,7 +2,7 @@
 # coding: utf-8
 import stockstats
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from davidyu_cfg import *
 from functions.LinearReg import *
 #https://blog.csdn.net/freewebsys/article/details/78578548
@@ -43,16 +43,25 @@ def stock_kdj(stock):
     return df_kdj
 
 
-def rolling_max_min(stock,r_window):
+def rollingFutureMaxMin(stock,r_window):
     '''
+    @ future max_min
     @param   r_window:  rolling window
     '''
     shift_num = (r_window-1)*-1
     #df2 = df1[(df1.date_time>start_date) &(df1.date_time<end_date)]   
     #df3 = df2.sort_index(ascending=False)
-    stock['close_max'] = stock['close'].rolling(window=r_window).max().shift(shift_num)
-    stock['close_min'] = stock['close'].rolling(window=r_window).min().shift(shift_num)
-    stock['close_diff_ratio'] = (stock['close_max'] - stock['close'])/stock['close']
+    close_max_name = 'close_max_'+'future_'+str(abs(shift_num))
+    close_min_name = 'close_min_'+'future_'+str(abs(shift_num))
+    close_diff_name = 'close_diffratio_'+'future_'+str(abs(shift_num))
+    high_max_name = 'high_max_'+'future_'+str(abs(shift_num))
+    high_min_name = 'high_min_'+'future_'+str(abs(shift_num))
+    low_max_name = 'low_max_'+'future_'+str(abs(shift_num))
+    low_min_name = 'low_min_'+'future_'+str(abs(shift_num))
+    stock[close_max_name]= stock['close'].rolling(window=r_window).max().shift(shift_num)
+    stock[close_min_name] = stock['close'].rolling(window=r_window).min().shift(shift_num)
+    stock[close_diff_name ] = (stock[close_max_name] - stock['close'])/stock['close']
+    stock[high_max_name] = stock['high'].rolling(window=r_window).max().shift(shift_num)
     df_f1 = stock[['close','close_max','close_min','close_diff_ratio']]
     return df_f1
 
@@ -68,29 +77,39 @@ def rolling_linear_reg(df_f1,col_name,window):
         sl = LinearReg.single_linear_reg(df_in,col_name)
         linear_slope.append(sl[0])
     return linear_slope
+if __name__ == "__main__":
+    from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
+    data_dir = data_dict.get("test")
+    file_name = "601398.csv"
+    file_in = os.path.join(data_dir,file_name)
+    df1 = pd.read_csv(file_in,sep="\t").iloc[300:,:]
+    df1.columns = [x.split(".")[1] for x in df1.columns.tolist()]
+    #df1['close'] = df1['adj_close']
+    stock = DF_to_StockDataFrame(df1)
+    start_date = '2019-01-01'
+    end_date = '2019-12-31'
+    stock = select_data(stock,start_date,end_date)
+    df_kdj = stock_kdj(stock)
+    df_kdj = df_kdj.reset_index()
+    df_kdj['stock_index'] = '601398'
+    df_kdj['stock_date'] = df_kdj['date']
+    #kdj_feature = setFeature(df_kdj,'tes',14,['kdjk','kdjj','kdjd'])
 
-from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
-data_dir = dir_dadan = data_dict.get("test")
-file_name = "601398.csv"
-file_in = os.path.join(data_dir,file_name)
-df1 = pd.read_csv(file_in,sep="\t").iloc[300:,:]
-df1.columns = [x.split(".")[1] for x in df1.columns.tolist()]
-stock = DF_to_StockDataFrame(df1)
-start_date = '2019-01-01'
-end_date = '2019-12-31'
-stock = select_data(stock,start_date,end_date)
-df_kdj = stock_kdj(stock)
-r_window = 5
-df_max_min = rolling_max_min(stock,r_window)
-#df_f2 = df_f1.merge(df_kdj, left_index=True, right_index=True)
-col_name = 'close'
-window = 5
-linear_slope = rolling_linear_reg(df_max_min,col_name,window)
 
-df_max_min['slope_5'] = linear_slope
-df_f2 = df_kdj.merge(df_max_min, left_index=True, right_index=True)
-df_f2['macd'] = stock['macd']
-df_f2.to_excel("test.xlsx",index=0)
+    r_window = 5
+    df_max_min = rollingFutureMaxMin(stock,r_window)
+    #df_f2 = df_f1.merge(df_kdj, left_index=True, right_index=True)
+    col_name = 'close'
+    window = 5
+    linear_slope = rolling_linear_reg(df_max_min,col_name,window)
+
+    df_max_min['slope_5'] = linear_slope
+    df_kdj['stock_date'] = df_kdj['stock_date'].astype(str)
+    df_kdj['macd'] = stock['macd']
+    df_max_min = df_max_min.reset_index().dropna()
+    df_max_min['stock_date'] = df_max_min.reset_index()['date'].astype(str)
+    df_f2 = pd.merge(df_kdj,df_max_min.reset_index(),on="date")
+    df_f2.to_excel("test.xlsx",index=0)
 
 '''
 df2['close_max'] = df3['close'].rolling(5).max().sort_index()

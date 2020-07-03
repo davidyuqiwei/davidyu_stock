@@ -20,7 +20,17 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test  = train_test_split(df_feature,df_y, 
             test_size=0.1, random_state=42)
 
-
+    '''
+    from sklearn.naive_bayes import GaussianNB
+    from sklearn.decomposition import PCA
+    pcamodel = PCA(n_components=30)
+    pca_data = pcamodel.fit_transform(X_train)
+    pca_test = pcamodel.fit_transform(X_test)
+    clf = GaussianNB().fit(X_train, y_train)
+    clf.score(X_test,y_test)
+    clf = GaussianNB().fit(pca_data, y_train)
+    clf.score(pca_test,y_test)
+    '''
     #data = np.random.rand(5, 10)  # 5 entities, each contains 10 features
     #label = np.random.randint(2, size=5)  # binary target
     modelLR = LogisticRegression()

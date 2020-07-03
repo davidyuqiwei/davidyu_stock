@@ -1,0 +1,31 @@
+import pandas as pd
+from davidyu_cfg import *
+from functions.LinearReg import LinearReg
+from functions.rolling_regression import *
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+import itertools
+
+from functions.stock_feature.mvAvg import mvAvg
+
+
+feature_dir = tmp_data_dict.get("stock_feature")
+save_dir = os.path.join(feature_dir,"mvAvg")
+create_dir_if_not_exist(save_dir)
+
+for i in range(0,20):
+i=0
+raw_data_name = "history_part%s.csv"%(str(i))
+raw_file = os.path.join(data_dir,"rawData",raw_data_name)
+df1 = pd.read_csv(raw_file)
+
+df2 = mvAvg(df1).addMvAvg().df
+mv_days = [5,10,20,30,60]
+feature_columns = mvAvg(df1,mv_days).addMvAvg().mvAvg_cols
+file_name = "mvAvg_"+raw_data_name
+df2.to_csv(os.path.join(save_dir,file_name))
+
+df2.to_csv()
+
+
+day_hist_df = pd.read_csv("/home/davidyu/stock/data/tmp_data/stock_feature/HistoryFeature/historyPrice_history_part0.csv")

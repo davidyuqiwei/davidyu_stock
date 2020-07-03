@@ -24,7 +24,7 @@ if __name__ =='__main__':
     df1['day'] = [x.replace("_","-") for x in df1.stock_date.tolist()]
     tmp_dir = data_dict.get("tmp")
     #save_data_name = "DADAN_"+now_date+".csv"
-    df1.to_csv("all.csv",index=0,header=None)
+    df1.drop_duplicates().to_csv("all.csv",index=0,header=None)
     os.system("echo %s > data_date.csv" %(now_date))
 
 

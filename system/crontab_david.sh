@@ -35,13 +35,19 @@
 # @download tools: url
 # @type: realtime
 # 9:30 - 9:59
-30-59/1 9 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/run_download_dadan_200.sh
+
+#30-59/1 9 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/run_download_dadan_200.sh
 #30-59/1 9 * * 1-5 sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/run.sh
 # 10:00 -15:00
-*/1 10-11,13-15 * * 1-5 sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/run.sh >> /usr/davidyu/crontest.log 2>&1
+#*/1 10-11,13-15 * * 1-5 sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/run.sh >> /usr/davidyu/crontest.log 2>&1
 # data to hive
-00 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/DADAN_200_data_to_hive.sh
+#00 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/DADAN_200_data_to_hive.sh
 
+## ----- test for sina
+*/1 10-11,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina/run_download_dadan_sina_realtime.sh
+
+##==== sina dadan offline
+40 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina_offline/run_download_dadan_sina_offline.sh
 
 ## @description: fushi A50
 # @run time:
@@ -79,7 +85,7 @@
 # @type: realtime
 # 9:30 - 9:59
 
-*/1 10-11,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/dadan/run_download_dadan_DFCF.sh
+38 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/dadan/run_download_dadan_DFCF.sh
 
 
 #####################################
@@ -91,11 +97,22 @@
 # @type: daily new
 #---------- download DADAN off line > 100
 ############################################################
-00 16  * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/run.sh
+
+#00 16  * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/run.sh
 ## data to hive
 
-35 19 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/DADAN_offline_data_to_hive.sh
+#35 19 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/DADAN_offline_data_to_hive.sh
 
+
+#####################################
+#           16:00 -   real time   #
+#####################################
+## @description: download wangyidata
+# @run time: 2.5 hours
+# @download tools: url
+# @type: daily new
+############################################################
+32 16 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/day_history_wangyi/run_download_day_history_wangyi_today.sh
 
 #####################################
 #           17:30 - 18:00           #

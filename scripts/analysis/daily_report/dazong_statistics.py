@@ -20,9 +20,10 @@ def sort_data(df3,columns_in):
     return df4
 
 
-def get_data():
-    now_date,now_date_time = get_the_datetime()
-    now_date = now_date.replace("_","-")
+def get_data(now_date=None):
+    if now_date == None:
+        now_date,now_date_time = get_the_datetime()
+        now_date = now_date.replace("_","-")
     #now_date = "2020-04-17"
     data_dir = data_dict.get("dazongjiaoyi")
     file_in = "dazongjiaoyi_%s.csv"%(now_date)
@@ -30,8 +31,9 @@ def get_data():
     return df1,now_date
 
 if __name__ == "__main__":
+    #now_date = '2020-05-25'
     df1,now_date = get_data()
-    dd = dazong(now_date,df1)
+    dd = dazong(now_date)
     save_dir = dd.save_to_daily_report()
     print("save data to "+save_dir)
     ## all data

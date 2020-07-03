@@ -50,7 +50,7 @@ if __name__ =='__main__':
     #year = [str(x) for x in range(1998,2020)]
     #season = [str(x) for x in [1,2,3,4]]
     year = [2020]
-    season = [1]
+    season = [2]
     stock_index = sys.argv[1]
     do_download(stock_index)
 '''

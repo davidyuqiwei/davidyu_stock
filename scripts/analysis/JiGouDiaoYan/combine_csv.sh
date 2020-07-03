@@ -1,5 +1,5 @@
 ## 
-## use:  combine_csv.sh /home/davidyu/stock/data/fenhong all_JiGouDiaoYan.csv
+## use:  combine_csv.sh /home/davidyu/stock/data/JiGouDiaoYan all_JiGouDiaoYan.csv
 ## out:  data save in the $stockdata/tmp  directory
 ##
 source ~/.bashrc

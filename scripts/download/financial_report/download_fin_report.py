@@ -1,9 +1,4 @@
 #from functions import *
-import os
-import time
-import os
-import sys
-import pandas as pd
 from davidyu_cfg import * 
 from functions.data_dir import data_dict,stk_index_list,create_dir_if_not_exist
 from functions.connect_url import url_opener
@@ -83,8 +78,8 @@ def loop_for_download_fin_report(stock_index,year_range):
         else:
             pass
 if __name__ =='__main__':
-    start_year = 2000
-    end_year = 2019
+    start_year = 2019
+    end_year = 2020
     year_range = range(start_year,end_year+1)
     stock_index = sys.argv[1]
     loop_for_download_fin_report(stock_index,year_range)

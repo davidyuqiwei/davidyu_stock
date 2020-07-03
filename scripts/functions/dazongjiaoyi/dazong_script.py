@@ -9,7 +9,15 @@ class dazong():
     logging.info("python script path "+os.getcwd())
     def __init__(self,now_date,DF=None):
         self.now_date = now_date
-        self.df = DF
+        self.df = self.loadDaZongData()
+    def loadDaZongData(self):
+        now_date = self.now_date
+        #now_date = "2020-04-17"
+        data_dir = data_dict.get("dazongjiaoyi")
+        file_in = "dazongjiaoyi_%s.csv"%(now_date)
+        df1 = pd.read_csv(os.path.join(data_dir,file_in))
+        return df1
+
     def add_date(self,df):
         '''
         dataframe add now dates
@@ -38,6 +46,9 @@ class dazong():
         make_dir(save_dir)
         return save_dir
     def do_dazong_stats(self,pos=0):
+        '''
+        只计算折益率大于0的大宗交易
+        '''
         df2 = self.df.copy(deep=True)
         df2['Zyl'] = df2['Zyl'] *100
         df_in = df2

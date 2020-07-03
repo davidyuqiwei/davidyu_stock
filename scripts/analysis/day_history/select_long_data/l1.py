@@ -3,7 +3,8 @@ from davidyu_cfg import *
 from functions.LinearReg import LinearReg
 from functions.rolling_regression import *
 
-file1 = "/home/davidyu/stock/data/test/long_data_mv_avg.csv"
+#file1 = "/home/davidyu/stock/data/test/long_data_mv_avg.csv"
+file1 = "/home/davidyu/stock/data/tmp_data/stock_feature/601398.csv"
 df1 = pd.read_csv(file1,sep="\t")
 df1.columns = [x.split(".")[1] for x in df1.columns.tolist()]
 df2 = df1.sort_values(["stock_index","stock_date"])

@@ -5,11 +5,13 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_score
 from sklearn import metrics
+import os
 
-pkl_file = open('train_data.pkl', 'rb')
+data_dir = "/home/davidyu/stock/data/lab/ML_test1"
+pkl_file = open(os.path.join(data_dir,'train_data.pkl'), 'rb')
 data_train = pickle.load(pkl_file)
 
-pkl_file_test = open("test_data.pkl",'rb')
+pkl_file_test = open(os.path.join(data_dir,"test_data.pkl"),'rb')
 data_test = pickle.load(pkl_file_test)
 
 

@@ -8,7 +8,7 @@ val start_date="2018-06-30"
 val end_date="2018-12-31"
 
 val df_ch_rat = CalChangeRate.get_change(start_date,end_date,table)
-
+df.write.mode("overwrite").saveAsTable("stock_change_date_2020")
 
 val start_date="2018-09-30"
 val end_date="2018-12-31"

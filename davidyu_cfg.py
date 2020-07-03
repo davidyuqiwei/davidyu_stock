@@ -2,6 +2,9 @@ import sys
 import os 
 import pandas as pd
 import numpy as np
+import time
+
+
 main_path = "/home/davidyu/stock/"
 
 ## the main script path, and load the modules
@@ -15,9 +18,7 @@ download_path = os.path.join(script_path,'download')
 # analysis 
 analysis_path = os.path.join(script_path,'analysis')
 # function
-
 function_path = os.path.join(script_path,'functions')
-
 
 create_dir = ["test"]
 project_DIR=[data_path,download_path,analysis_path]
@@ -33,8 +34,17 @@ def print_add_sys_path():
     ## the python system path
     #print("{:.^80}".format("python_path"))
 
+## add system path to python enviroment
+
 print_add_sys_path()
 
+
+from functions.logModule.log_set import *
+logging.info("load log module")
+from functions.data_dir import *
+logging.info("load data_dir module")
+from functions.make_dir import *
+logging.info("load make_dir module")
 
 
 

@@ -42,7 +42,9 @@ data_dir=["tmp",
         "gainian_liuru",
         "nsdaq",
         "stock_feature",
-        "jiejin"
+        "jiejin",
+        "dadan_sina",
+        "dadan_sina_offline"
         ]
 def create_dir_if_not_exist(dir_name):
 	if not os.path.isdir(dir_name):

@@ -1,0 +1,28 @@
+20/06/01 12:57:12 WARN Utils: Your hostname, VM_0_11_centos resolves to a loopback address: 127.0.0.1; using 172.16.0.11 instead (on interface eth0)
+20/06/01 12:57:12 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/06/01 12:57:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+]0;IPython: stock_feature/feature_center2020-06-01 12:57:14,271 - davidyu_cfg.py[line:43] - INFO: load log module
+2020-06-01 12:57:14,288 - davidyu_cfg.py[line:45] - INFO: load data_dir module
+2020-06-01 12:57:14,288 - davidyu_cfg.py[line:47] - INFO: load make_dir module
+2020-06-01 12:57:17,776 - featureConfig.py[line:20] - INFO: --------- make the feature save dir /home/davidyu/stock/data/tmp_data/stock_feature/dazongjiaoyi
+2020-06-01 12:57:17,819 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 0
+20/06/01 12:57:21 ERROR ObjectStore: Version information found in metastore differs 3.1.0 from expected schema version 1.2.0. Schema verififcation is disabled hive.metastore.schema.verification so setting version.
+2020-06-01 12:57:34,060 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 1
+2020-06-01 12:57:37,496 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 2
+2020-06-01 12:57:40,662 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 3
+2020-06-01 12:57:44,450 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 4
+2020-06-01 12:57:47,192 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 5
+2020-06-01 12:57:49,664 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 6
+2020-06-01 12:57:51,816 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 7
+2020-06-01 12:57:53,858 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 8
+2020-06-01 12:57:55,708 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 9
+2020-06-01 12:57:57,739 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 10
+2020-06-01 12:57:59,694 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 11
+2020-06-01 12:58:01,684 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 12
+2020-06-01 12:58:06,195 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 13
+2020-06-01 12:58:10,145 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 14
+2020-06-01 12:58:13,630 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 15
+2020-06-01 12:58:15,339 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 16
+2020-06-01 12:58:17,072 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 17
+2020-06-01 12:58:18,897 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 18
+2020-06-01 12:58:21,269 - saveDaZongJiaoYiFeature.py[line:25] - INFO: ----------loop 19

@@ -1,3 +1,4 @@
+#http://finance.sina.com.cn/stock/sl/#concept_1
 source ~/.bashrc
 cd `dirname $0`
 

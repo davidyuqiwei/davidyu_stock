@@ -2,7 +2,7 @@
 # coding: utf-8
 import stockstats
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from davidyu_cfg import *
 from functions.LinearReg import *
 #https://blog.csdn.net/freewebsys/article/details/78578548
@@ -57,7 +57,6 @@ def rolling_max_min(stock,r_window):
     return df_f1
 
 
-stock['macd']
 
 
 def rolling_linear_reg(df_f1,col_name,window):
@@ -68,6 +67,7 @@ def rolling_linear_reg(df_f1,col_name,window):
         sl = LinearReg.single_linear_reg(df_in,col_name)
         linear_slope.append(sl[0])
     return linear_slope
+
 
 df1 = pd.read_csv('SH_index_test.csv').iloc[300:,:]
 stock = DF_to_StockDataFrame(df1)

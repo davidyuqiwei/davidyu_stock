@@ -11,7 +11,8 @@ from functions.get_text_file import *
 
 
 def save_the_table(new_table,dir_dadan,now_date,now_date_time):
-    save_dir = os.path.join(dir_dadan,now_date)
+    #save_dir = os.path.join(dir_dadan,now_date)
+    save_dir = dir_dadan
     create_dir_if_not_exist(save_dir)
     save_file = os.path.join(save_dir,now_date_time+".csv")
     new_table.to_csv(save_file,index=0)
