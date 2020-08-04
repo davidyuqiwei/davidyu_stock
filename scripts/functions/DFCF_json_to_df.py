@@ -15,6 +15,8 @@ def load_the_json(filename,encode_in="utf-8"):
     df_len = len(raw_json.keys())
     all_keys = list(raw_json.keys())
     return df_len,all_keys,raw_json
+
+
 def json_to_df(file_in,cols,date_type,save_dir=None):
     df_len,all_keys,raw_json = load_the_json(file_in)
     json_string_raw = raw_json.get(all_keys[0])

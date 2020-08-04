@@ -1,49 +1,36 @@
 #!/usr/bin/sh
-#-----------------------------------------------------------------#
-#----------- system script---------------#
 source ~/.bashrc
 cd `dirname $0`
 curr_dir=`pwd`
-programName=${0##*/} ### filename without type e.g.  test.sh  > test
-source $shell_function_dir"create_log.sh"  ## source function to make the logs
+programName=$0   # program name  xx.sh
+echo "this file is "$programName
+file_name=${programName%.*} ### filename without type e.g.  test.sh > test
+source $shell_function_dir"create_log_update.sh"
 
-
-## cp all the data in folder to the current folder
-#`cat $stock_data/liutong_owner/*.csv > $curr_dir/all.csv`
-
-###############################
-###----- scala  script ----### 
-###############################
-echo "start scala"
-##-----------------------------------##
-##------------- set it --------------##
-target_table="stock.base_test"
-target_csv="all.csv"
-##-----------------------------------##
 scalaFile="to_hive_all_new.scala"
 `/bin/cp -f $THE_functions$scalaFile $curr_dir`
-run_scala="to_hive.scala" ## run this file
-Thelog=$(funWithParam $run_scala)  ## make the log
-## change the input file name
-## and the target table
+
+##-----------------------------------##
+##------------- set it --------------##
+target_table=$1
+target_csv=$2
+run_scala="to_hive_"$file_name".scala"
+Thelog=$(CreateLogFile $run_scala)
+`touch $Thelog`
+echo $Thelog
 sed -r 's/all.csv/'$target_csv'/g' $scalaFile | sed -r 's/stock_dev.fin_report/'$target_table'/g' > $run_scala
 spark-shell < $run_scala > $Thelog 2>&1
-echo -e "\n\n sucess '$programName' in the path "$curr_dir >> $Thelog
 
-#####################################################################################
-#----------------- finish save to hive ------------------------------------#
-#####################################################################################
 
-`mv -f *.log $log_dir`
+check_string="ALLOK"
 ## if sucess rm the csv and scala
-if [ $? -ne 0  ];then
-    echo "Something failed check the log"
-else
+if cat $Thelog | grep "$check_string";then
     echo 'OK'
-    #sleep 1h
+    sleep 2s
     `rm -rf *.csv *.scala`
+    `mv -f *.log $log_dir`
+else
+    echo "Something failed check the log"
 fi
 
-## zip the data
-#`zip -r $stock_data/zip_data/day_history_$(date "+%Y%m%d").zip $stock_data/day_history_insert/*.csv`
 

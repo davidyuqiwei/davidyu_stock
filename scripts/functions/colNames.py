@@ -39,4 +39,10 @@ class setColname:
         return ["stock_name","stock_index","detail","total_trade_vol", \
                 "total_trade_vol_ratio","total_trade_money","total_trade_money_ratio", \
                 "avg_price","zhuli_buy_vol","zhongxing_vol","zhuli_sale_vol"]
+    def dadan_DFCF(self):
+        return   ["new_price","today_increase_ratio","stock_index","stock_name","zhuli_liuru",
+	        "chaodadan_liuru","chaodadan_liuru_ratio","dadan_liuru","dadan_liuru_ratio",
+	        "zhongdan_liuru","zhongdan_liuru_ratio","xiaodan_liuru","xiaodan_liuru_ratio","test1",
+	        "zhuli_liuru_ratio","test2","test3",
+	        "test4","stock_date"]
 

@@ -12,9 +12,12 @@ spark = SparkSession \
     .getOrCreate()
 
 def getFinReportData(start_date,end_date):
+    """
+    select all the features from fin_report
+    """
     sql1 = """
         select 
-        x3,x5,x7,x8,x9,x10,x11,x14,x16,x17,x21,
+        x1,x3,x5,x7,x8,x9,x10,x11,x14,x16,x17,x21,
         x22,x23,x24,x26,x27,x31,x32,x36,x37,x38,
         x56,x59,x63,x64,x67,x68,x71,x72,x73,x79,x94
         from stock_dev.fin_report
@@ -23,6 +26,10 @@ def getFinReportData(start_date,end_date):
     my_dataframe = spark.sql(sql1)
     return my_dataframe
 def transformData(my_dataframe):
+    """
+    -stock_index as index,   
+    -date,finicial features as columns
+    """
     df1 = my_dataframe.toPandas()
     df2 = df1.fillna(-9999)
     #stock_index as index,   date,finicial features as columns

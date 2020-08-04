@@ -7,6 +7,7 @@ from functions.get_datetime import *
 from functions.DFCF_json_to_df import *
 import sys
 from functions.get_text_file import *
+from functions.colNames import *
 
 
 
@@ -15,6 +16,7 @@ def save_the_table(new_table,dir_dadan,now_date,now_date_time):
     save_dir = dir_dadan
     create_dir_if_not_exist(save_dir)
     save_file = os.path.join(save_dir,now_date_time+".csv")
+    new_table.columns = setColname().dadan_DFCF()
     new_table.to_csv(save_file,index=0)
 
 
@@ -46,7 +48,7 @@ if __name__=='__main__':
     now_date,now_date_time = get_the_datetime()
     new_table = text_to_df()
     new_table['date'] = now_date
-    save_the_table(new_table,dir_dadan,now_date,now_date_time)
+    save_the_table(new_table,dir_dadan,now_date,now_date)
 
 
 

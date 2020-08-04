@@ -70,8 +70,8 @@ def make_column_str(columns,types,comment):
     return column_str
 
 if __name__=='__main__':
-    sample_dir = data_dict.get("tmp")
-    filename = "dazongjiaoyi_2020-03-05.csv"
+    sample_dir = data_dict.get("dadan_DFCF")
+    filename = "2020_08_03.csv"
     file_name = os.path.join(sample_dir,filename)
     df1 = pd.read_csv(file_name)
     columns = df1.columns.tolist()
@@ -79,8 +79,8 @@ if __name__=='__main__':
     #print(types)
     comment = columns
     database_name = "stock_dev"
-    table_name = "dazongjiaoyi"
-    table_comment = 'dazongjiaoyi'
+    table_name = "dadan_DFCF"
+    table_comment = table_name
     column_str = make_column_str(columns,types,comment)
     #print(column_str)
     create_table(database_name,table_name,column_str,table_comment)

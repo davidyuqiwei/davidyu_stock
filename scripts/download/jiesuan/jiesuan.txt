@@ -1,0 +1,186 @@
+ 
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>统计月报</title>
+<link href="/cms-search/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/cms-search/css/index.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/cms-search/js/jquery-1.9.1.min.js"></script>
+
+<link href="/cms-search/script/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
+<script  src="/cms-search/script/My97DatePicker/WdatePicker.js" language="javascript" type="text/javascript"></script>
+
+<script language="javascript" type="text/javascript">
+
+    $(function(){
+    	//解决日历没有权限
+        var dateIframe = 'first';
+        if(dateIframe == "first"){
+            //query('');
+        }
+    });
+
+	function query(val){
+		var riqi = $('#riqi').val();
+		var yearNum = parseInt(riqi.substring(0,4),10);
+		var monthNum = parseInt(riqi.substring(5,7),10);
+		var dateStr = riqi;
+		if(val == 'prevMonth'){
+			//上一月
+			if(monthNum == 1){
+				dateStr = (yearNum-1)+"年12月";
+			}else{
+				if(monthNum <=10){
+					dateStr = yearNum +"年0"+(monthNum-1)+"月";
+                }else{
+                	dateStr = yearNum +"年"+(monthNum-1)+"月";
+                }
+			}
+		}else if(val == 'nextMonth'){
+			//下一月
+            if(monthNum == 12){
+            	dateStr = (yearNum+1)+"年01月";
+            }else{
+            	if(monthNum <=8){
+            		dateStr = yearNum +"年0"+(monthNum+1)+"月";
+            	}else{
+            		dateStr = yearNum +"年"+(monthNum+1)+"月";
+            	}
+            }
+		}
+	    $('#riqi').val(dateStr);
+		document.form1.submit();
+	}
+	
+	function getSubChannel(channelFidStr){
+		$.ajax( {
+	        url : "getSubChannel.action",
+	        type : "post",
+	        async : true,
+	        dataType : "json",
+	        data : {
+	            'channelFidStr' : channelFidStr
+	        },
+	        success:function(data) {
+	            //每一次点击的时候，清空下拉框数据，重新加载
+	            $("#channelIdStr").empty();
+	            var stroption = "";
+	            if (data == "") {
+	                stroption += "<option value='' selected='selected' disabled='disabled'>请选择</option>";
+	            }
+	            //遍历信息
+	            $.each(data, function(key, value) {
+	                stroption += "<option value='"+value.channelId+"' >";
+	                stroption += value.channelName;
+	                stroption += "</option>";
+	            });
+	            $("#channelIdStr").append(stroption);
+	        },
+	        error : function() {
+	            alert("数据加载异常！");
+	        }
+	    });
+	}
+	
+</script>
+</head>
+<body style="background:transparent;"> 
+      <form id="form1" name="form1" action="monthview.action?action=china" method="post">
+      <!-- 
+      <input type="hidden" name="channelFidStr" id="channelFidStr" value="e990411f19544e46be84333c25b63de6" />
+       -->
+       
+      <div class="dataSearch" style="height:70px;" >
+      		<table width="100%" cellpadding="2" cellspacing="2" border="0">
+      			<tr>
+      				<td style="width:80px;">
+      					<span class="name">选择日期：</span>
+      				</td>
+      				<td colspan="3" >
+      				    <input id="riqi" name="riqi" type="text" value="2020年4月" class="Wdate" 
+      				    onclick="WdatePicker({dateFmt: 'yyyy年MM月'})" readonly="readonly" style="width:100px;" />
+      				</td>
+      				<td rowspan="2" style="width:100px;" >&nbsp;&nbsp;<input type="button" class="btn" onclick="javascript:query('');" 
+      				value="查 询" />
+      				</td>
+      			</tr>
+      			
+      			<tr>
+      			    <td>
+                        <span class="name">选择主题：</span>
+                    </td>
+                    <td>
+                        <select name ="channelFidStr" id ="channelFidStr" class="select_input" style="width:180px;" onchange="getSubChannel(this.value);" >
+                             
+                                <option value = "e990411f19544e46be84333c25b63de6" selected>
+                                    主要指标概览
+                                </option>
+                             
+                                <option value = "4f8a220e5ca04a388ca4bae0d1226d0d" >
+                                    投资者统计
+                                </option>
+                             
+                                <option value = "e972cd209fb443d79b555209cd80f820" >
+                                    证券登记业务统计
+                                </option>
+                             
+                                <option value = "100cd6ef8e1b4efa8aed051df3ca830e" >
+                                    证券存管业务统计
+                                </option>
+                             
+                                <option value = "1b2a46f7b33f4a2b9aa23886601c7127" >
+                                    证券结算业务统计
+                                </option>
+                             
+                                <option value = "16272e2c384a4b3abb210e2070cd2f5d" >
+                                    全国股份转让系统业务统计
+                                </option>
+                             
+                                <option value = "9dcf743d5dfc43ccb16a75b332f19578" >
+                                    其他业务统计
+                                </option>
+                            
+                        </select>
+                    </td>
+                    <td style="width:80px;" >
+                        <span class="name">选择表格：</span>
+                    </td>
+                    <td >
+                        <select name ="channelIdStr" id ="channelIdStr" class="select_input" style="width:180px;">
+                             
+                                <option value = "bd095cc08f744c089b159a3bb744b9d0" selected>
+                                    主要指标概览表
+                                </option>
+                            
+                        </select>
+                    </td>
+                </tr>
+      		</table> 
+      </div>
+      <div class="SettlementTitle">
+            <h2 class="fl">主要指标概览（2020年04月）</h2>
+            <div class="fr">
+                <a href="javascript:query('prevMonth');" class="prev">
+                	
+                	上一月
+                </a>
+                  <div>|</div>
+                <a href="javascript:query('nextMonth');" class="next">
+                	
+                	下一月
+                </a>
+            </div>
+      </div>
+      <div class="Stock Stock2">
+            <div class="list" id="settlementList" style="word-wrap:break-word;word-break:normal;">
+            	<p><table align="center" style="width: 432pt; -ms-word-break: break-all; -ms-overflow-x: hidden;" border="0" cellspacing="0" cellpadding="0">  <tbody>    <tr>      <td>      <table width="770" style="border: currentColor; border-image: none; width: 597px; border-collapse: collapse;" border="1" cellspacing="0" cellpadding="0">        <tbody>          <tr style="height: 14.4pt;">            <td style="border-width: 1pt 1pt 1pt medium; border-style: solid solid solid none; border-color: windowtext windowtext windowtext currentColor; padding: 0cm 5.4pt; width: 197px; height: 14.4pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">月份</span></p>            </td>            <td style="border-width: 1pt 1pt 1pt medium; border-style: solid solid solid none; border-color: windowtext windowtext windowtext currentColor; padding: 0cm 5.4pt; width: 196px; height: 14.4pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">202004</span></p>            </td>            <td valign="top" style="border-width: 1pt medium; border-style: solid none; border-color: windowtext currentColor; padding: 0cm 5.4pt; width: 162px; height: 14.4pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">同比<span>%</span></span></span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 197px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">新增投资者数（万）</span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">164.04</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">7.14</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 197px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">期末投资者数（万）</span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">16,498.00</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">8.48</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 197px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">登记存管证券只数<span>(</span>只<span>)</span></span></span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">22,350</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">24.62</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 197px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">登记存管证券总面值<span>(</span>亿元<span>)</span></span></span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">203,894.33</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">18.61</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 197px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">登记存管证券总市值<span>(</span>亿元<span>)</span></span></span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">737,870.14</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">10.18</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">非限售市值<span>(</span>亿元<span>)</span></span></span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">645,757.61</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">10.34</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">过户总笔数（万笔）</span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">197,323.60</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">-3.04</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">过户总金额（亿元）</span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">1,117,504.29</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">4.00</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">结算总额（亿元）</span></p>            </td>            <td style="border-width: medium 1pt medium medium; border-style: none solid none none; border-color: currentColor windowtext currentColor currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">1,204,439.64</span></p>            </td>            <td valign="top" style="padding: 0cm 5.4pt; border: currentColor; border-image: none; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">3.06</span></p>            </td>          </tr>          <tr style="height: 15pt;">            <td style="border-width: medium 1pt 1pt medium; border-style: none solid solid none; border-color: currentColor windowtext windowtext currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="left" style='margin: 0cm 0cm 0pt; text-align: left; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">结算净额<span>(</span>亿元<span>)</span></span></span></p>            </td>            <td style="border-width: medium 1pt 1pt medium; border-style: none solid solid none; border-color: currentColor windowtext windowtext currentColor; padding: 0cm 5.4pt; width: 196px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">35,131.76</span></p>            </td>            <td valign="top" style="border-width: medium medium 1pt; border-style: none none solid; border-color: currentColor currentColor windowtext; padding: 0cm 5.4pt; width: 162px; height: 15pt;">            <p align="right" style='margin: 0cm 0cm 0pt; text-align: right; font-family: "Calibri","sans-serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">-14.72</span></p>            </td>          </tr>        </tbody>      </table>      <p style='margin: 0cm 0cm 0pt; text-align: justify; font-family: "Times New Roman","serif"; font-size: 10.5pt; -ms-text-justify: inter-ideograph;'><span style="color: rgb(66, 66, 66); font-family: 宋体;">注：</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">①</span><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">登记存管证券包括<span>A</span>股、<span>B</span>股、权证、国债、地方债、政策性金融债、企业债、公司债、可转债、分离式可转债、中小企业私募债、封闭式基金、<span>ETF</span>、<span>LOF</span>和资产证券化产品，不包括开放式基金和债券回购。</span></span><span style="color: rgb(66, 66, 66); font-family: 宋体;">②</span><span><span style="color: rgb(66, 66, 66); font-family: 宋体;">登记存管证券只数和总面值中，包括已在我公司办理发行登记但尚未在交易所上市的证券和已从交易所退市但尚未在我公司办理退市登记的证券；总面值和总市值计算中<span>,</span>纯<span>B</span>股上市公司的非流通股暂未纳入计算。</span></span><span style="color: rgb(66, 66, 66); font-family: 宋体;">③</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">非限售市值按期末收盘价计算。</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">④</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">过户笔数、金额包括所有登记证券的集中交易过户和非集中交易过户，都按双向计算。</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">⑤</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">B</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">股的市值、过户金额、结算总额、结算净额以国家外汇管理局上周五公布的汇率中间价换算成人民币。</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">⑥</span><span style="color: rgb(66, 66, 66); font-family: 宋体;">表中数据为沪深两市合计数。⑦登记存管证券只数不包括存管面值为零的证券。</span></p>      </td>    </tr>  </tbody></table><br><p></p>
+            </div>
+      </div>
+</body> 
+</html>

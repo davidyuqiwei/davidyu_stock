@@ -1,6 +1,9 @@
 import tushare as ts
 info = ts.get_stock_basics()
-info.to_csv("all.csv")
+info.to_csv("stock_basic_info_nohead.csv",header=None)
+info.to_csv("stock_basic_info.csv")
+
+
 
 '''
 code,代码

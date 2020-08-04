@@ -76,7 +76,7 @@ def makeDateInput():
 if __name__ =='__main__':
     #date_input = makeDateInput()
     save_dir = data_dict.get("fenhong")
-    date_input = ['2019-12-31']
+    date_input = ['2020-06-31']
     for date_input1 in date_input: 
         print(date_input1)
         get_data(date_input1,save_dir)

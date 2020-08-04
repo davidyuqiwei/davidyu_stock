@@ -6,7 +6,7 @@ class getDataFromSpark():
     def __init__(self,para):
         self.test = 'test'
         self.save_file_name = para.get("save_file_name")
-        self.cols = para.get('adj_close')
+        self.cols = para.get('columns')
         self.stock_tuple = para.get('stock_tuple')
         self.start_date = para.get('start_date')
         self.end_date = para.get('end_date')

@@ -14,8 +14,8 @@ from functions.day_history.dayHistoryFeature import dayHistoryFeature
 #成交量(手)  成交金额(万>元) 振幅(%)   换手率(%)
 
 def loadData(data_dir,stock_index):
-    df1 = pd.read_csv(os.path.join(data_dir,stock_index,stock_index+"_2020_1.csv"))
-    df2 = pd.read_csv(os.path.join(data_dir,stock_index,stock_index+"_2020_2.csv"))
+    df1 = pd.read_csv(os.path.join(data_dir,stock_index,stock_index+"_2020_2.csv"))
+    df2 = pd.read_csv(os.path.join(data_dir,stock_index,stock_index+"_2020_3.csv"))
     df1 = pd.concat([df1,df2])
     df1.columns = setColname().day_history_wangyi()
     return df1

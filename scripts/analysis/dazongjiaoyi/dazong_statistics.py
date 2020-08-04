@@ -36,7 +36,7 @@ def zyl_postive(df1,now_date):
 if __name__ == "__main__":
 	now_date,now_date_time = get_the_datetime()
 	now_date = now_date.replace("_","-")
-	#now_date = "2020-03-05"
+	now_date = "2020-08-03"
 	data_dir = data_dict.get("dazongjiaoyi")
 	file_in = "dazongjiaoyi_%s.csv"%(now_date)
 	df1 = pd.read_csv(os.path.join(data_dir,file_in))

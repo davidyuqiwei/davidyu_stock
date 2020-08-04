@@ -21,8 +21,8 @@ def allKdj(now_date):
             try:
                 wy_data_dir = data_dict.get("day_history_wangyi")
                 stock_index = i
-                df1 = pd.read_csv(os.path.join(wy_data_dir,stock_index,stock_index+"_2020_1.csv"))
-                df2 = pd.read_csv(os.path.join(wy_data_dir,stock_index,stock_index+"_2020_2.csv"))
+                df1 = pd.read_csv(os.path.join(wy_data_dir,stock_index,stock_index+"_2020_2.csv"))
+                df2 = pd.read_csv(os.path.join(wy_data_dir,stock_index,stock_index+"_2020_3.csv"))
                 df1 = pd.concat([df1,df2])
                 df1.columns = setColname().day_history_wangyi()
                 stock = DF_to_StockDataFrame(df1)
@@ -37,7 +37,7 @@ def allKdj(now_date):
     return stock_index_list,j_line,stock_date_list
 now_date,now_date_time = get_the_datetime()
 now_date = now_date.replace('_','-')
-now_date = '2020-06-19'
+#now_date = '2020-06-19'
 stock_index_list,j_line,stock_date_list = allKdj(now_date)
 df_kdj_out = pd.DataFrame([stock_date_list,stock_index_list,j_line]).T
 df_kdj_out.columns = ['stock_date','stock_index','kdjj']

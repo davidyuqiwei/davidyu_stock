@@ -47,7 +47,7 @@
 */1 10-11,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina/run_download_dadan_sina_realtime.sh
 
 ##==== sina dadan offline
-40 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina_offline/run_download_dadan_sina_offline.sh
+40 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina_offline/run_main_dadan_sina_offline.sh
 
 ## @description: fushi A50
 # @run time:
@@ -83,9 +83,9 @@
 # @run time:
 # @download tools: wget
 # @type: realtime
-# 9:30 - 9:59
+# 17:35-17:40
 
-38 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/dadan/run_download_dadan_DFCF.sh
+38 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/dadan/run_main_dadan_DFCF.sh
 
 
 #####################################

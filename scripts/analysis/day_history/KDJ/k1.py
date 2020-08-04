@@ -5,11 +5,17 @@ from functions.day_history.adjustStockPrice import adjustStockPrice
 
 
 tmp_data_path = os.path.join(data_path,"test")
-file_name = "601398.csv"
-df1 = pd.read_csv(os.path.join(tmp_data_path,file_name),sep="\t")
+file_name = "600.csv"
+
+file_name = "/home/davidyu/stock/data/tmp_data/stock_feature/rawData/history_part0.csv"
+#df1 = pd.read_csv(os.path.join(tmp_data_path,file_name),sep="\t")
+df1 = pd.read_csv(file_name)
+df1['close'] = df1['adj_close']
 
 df1.columns = [x.split(".")[1] for x in df1.columns.tolist()]
 df1 = adjustStockPrice.adj_stock_price(df1)
+
+
 stock = DF_to_StockDataFrame(df1)
 
 feature_list = ['kdjk','kdjd','kdjj','macdh',"rsi_6","close"]

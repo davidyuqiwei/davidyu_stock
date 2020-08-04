@@ -17,25 +17,25 @@ def loadData():
     data_dir = data_dict.get("JiGouDiaoYan")
     tmp_data_dir = tmp_data_dict.get("JiGouDiaoYan")
     cols = setColname().jigoudiaoyan()
-    df = pd.read_csv(os.path.join(tmp_data_dir,"all_JiGouDiaoYan.csv"), \
-            error_bad_lines=False,header=None)
+    data_file = os.path.join(tmp_data_dir,"all_JiGouDiaoYan.csv")
+    df = pd.read_csv(data_file, \
+            error_bad_lines=False,header=None,sep=",")
     df.columns = cols
+    df.to_csv(data_file,index=0)
     return df
-
-def getDiaoYanDF(start_date,end_date):
-    df = loadData()
+def getDiaoYanDF(df,start_date,end_date):
     df['stock_index'] = df['SCode'].apply(jgdy.jgdy.stockIndexCheck)
     df1 = df[df['stock_index'] != '-999999']
-    df_diaoyan = df1[(df1['StartDate']>=start_date)&(df1['StartDate']<=end_date)].groupby('stock_index').count()['date'].reset_index().sort_values('date',ascending=False)
+    df_diaoyan = df1[(df1['NoticeDate']>=start_date)&(df1['NoticeDate']<=end_date)].groupby('stock_index').count()['date'].reset_index().sort_values('date',ascending=False)
     return df_diaoyan
 
-def headDiaoYanStockList(head_n,start_date,end_date):
+def headDiaoYanStockList(df,head_n,start_date,end_date):
     ''' 
     head_n : head n diaoyan number of the stock
     start_date: start_date = "2019-08-01"
     end_date: end_date = "2019-12-15"
     '''
-    df_diaoyan = getDiaoYanDF(start_date,end_date)
+    df_diaoyan = getDiaoYanDF(df,start_date,end_date)
     df_diaoyan_head_n = df_diaoyan.head(head_n)
     stk_diaoyan_list = df_diaoyan_head_n['stock_index'].tolist()
     stk_diaoyan_tup = tuple(stk_diaoyan_list)
@@ -47,12 +47,15 @@ if __name__ == "__main__":
     from functions.day_history import kLines
     from functions.day_history.getDataFromSpark import *
     head_n = 100
-    dy_start_date = '2020-06-20'
-    stat_days = 10
-    pred_days = 40
+    dy_start_date = '2020-08-03'
+    stat_days = 20
+    pred_days = 1
     stat_end_date,pred_start_date,pred_end_date = kLines.klineDate(dy_start_date,stat_days,pred_days).make_date()
-    stat_dates_list = '_'.join([dy_start_date,stat_end_date,pred_start_date,pred_end_date])
-    stk_diaoyan_tup,df_diaoyan_head_n = headDiaoYanStockList(head_n,dy_start_date,stat_end_date)
+    df = loadData()
+    df1 = getDiaoYanDF(df,dy_start_date,stat_end_date)
+    #stat_end_date,pred_start_date,pred_end_date = kLines.klineDate(dy_start_date,stat_days,pred_days).make_date()
+    #stat_dates_list = '_'.join([dy_start_date,stat_end_date,pred_start_date,pred_end_date])
+    stk_diaoyan_tup,df_diaoyan_head_n = headDiaoYanStockList(df,head_n,dy_start_date,stat_end_date)
     print(df_diaoyan_head_n.head(10))
     '''
     para = {

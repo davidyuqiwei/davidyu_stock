@@ -44,8 +44,13 @@ data_dir=["tmp",
         "stock_feature",
         "jiejin",
         "dadan_sina",
-        "dadan_sina_offline"
+        "dadan_sina_offline",
+        "qianlong_day_history",
+        "jiesuan"
         ]
+{
+    "jiesuan": "中国证券登记结算有限公司   市场新增投资者数"
+}
 def create_dir_if_not_exist(dir_name):
 	if not os.path.isdir(dir_name):
 	    os.makedirs(dir_name)

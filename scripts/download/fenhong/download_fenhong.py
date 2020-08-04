@@ -14,8 +14,11 @@ import html_header
 
 #html1 = "http://data.10jqka.com.cn/ajax/sgpx/date/2019-12-31/ajax/2/free/1/"
 def get_pages(date_input):
+    '''
+    @param date_input:  a datetime string input  e.g.  '2019-03-31'
+    '''
     html1 = "http://data.10jqka.com.cn/ajax/sgpx/date/%s/board/ALL/order/asc/page/1/ajax/1/free/1/"%(date_input)
-    response=requests.get(html1, headers = headers) 
+    response = requests.get(html1, headers = headers) 
     #print(response.text)
     a1 = response.text
     soup = BeautifulSoup(a1)

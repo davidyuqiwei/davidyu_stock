@@ -1,29 +1,27 @@
 import sys
-import os 
+import os
 import pandas as pd
 import numpy as np
 import time
 
-
+## the main data path
 main_path = "/home/davidyu/stock/"
 
 ## the main script path, and load the modules
-script_path = os.path.join(main_path,"scripts/davidyu_stock/scripts") 
+script_path = os.path.join(main_path,"scripts/davidyu_stock/scripts")
 
-## the main data path
+# data_path
 data_path = os.path.join(main_path,"data")
+# tmp path
 tmp_data_path = os.path.join(main_path,"data","tmp_data")
 ## donwload path
 download_path = os.path.join(script_path,'download')
-# analysis 
+# analysis
 analysis_path = os.path.join(script_path,'analysis')
 # function
 function_path = os.path.join(script_path,'functions')
 
-create_dir = ["test"]
-project_DIR=[data_path,download_path,analysis_path]
-
-
+project_DIR = [data_path,download_path,analysis_path]
 
 #### add some path to the sys path to use the module
 ## like function
@@ -35,9 +33,7 @@ def print_add_sys_path():
     #print("{:.^80}".format("python_path"))
 
 ## add system path to python enviroment
-
 print_add_sys_path()
-
 
 from functions.logModule.log_set import *
 logging.info("load log module")
@@ -47,9 +43,6 @@ from functions.make_dir import *
 logging.info("load make_dir module")
 
 
-
-
-#sys.path.append(script_path)
 def make_project_dir(create_dir,project_DIR):
     '''
     update: 2019/05/29
@@ -66,7 +59,6 @@ def make_project_dir(create_dir,project_DIR):
                 print(the_path)
             else:
                 pass
-#make_project_dir(create_dir,project_DIR)
 
 def rm_a_project(project_name,project_DIR):
     '''
@@ -83,11 +75,4 @@ def rm_a_project(project_name,project_DIR):
         else:
             print("recheck the code,we do not want remove the folder")
             sys.exit(1)
-#rm_a_project("test",project_DIR)
-
-
-
-
-
-
 

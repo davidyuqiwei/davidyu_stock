@@ -45,6 +45,7 @@ export stock_script=$main_dir"scripts/davidyu_stock/scripts/"
 export THE_functions=$stock_script"functions/"
 export stock_data=$main_dir"data"
 export data_tmp_dir=$stock_data"/tmp"
+export tmp_data_dir=$stock_data"/tmp_data"
 export log_dir=$main_dir"log"
 export result_data=$main_dir"data_result"
 export MAVEN_HOME=/home/davidyu/software/apache-maven-3.6.0

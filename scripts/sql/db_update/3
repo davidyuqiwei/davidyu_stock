@@ -1,9 +1,0 @@
-#!/usr/bin/sh
-python_script=$1
-programName=${0##*/}
-sql_script=$python_script".sql"
-python create_important_owner_seasonal_change.py > create_important_owner_seasonal_change.sql
-
-
-
-
