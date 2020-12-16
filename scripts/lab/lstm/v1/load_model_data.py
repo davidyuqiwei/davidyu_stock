@@ -33,6 +33,15 @@ def make_history_price(df1,history_days):
         col_name = "close"+str(i)
         df1[col_name] = df1.adj_close.shift(i)
     return df1
+def make_future_price(df1,history_days):
+    '''
+    make shift days price 
+    @return close1,close2,close3   -->  1day before, 2day before, 3day before
+    '''
+    for i in range(1,history_days):
+        col_name = "future"+str(i)
+        df1[col_name] = df1.adj_close.shift(i*-1)
+    return df1
 
 def make_history_vol(df1,history_days):
     '''

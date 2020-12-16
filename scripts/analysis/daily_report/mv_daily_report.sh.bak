@@ -1,0 +1,14 @@
+source ~/.bashrc
+cd `dirname $0`
+today_date="`date +%Y-%m-%d`"
+dirname=$stock_data"/daily_report/"$today_date
+if [ ! -d $dirname  ];then
+  mkdir $dirname
+else
+  echo "dir exist"
+fi
+
+tmp_save_dir=$tmp_data_dir"/daily_report"
+
+mv $tmp_save_dir/*.csv $dirname
+

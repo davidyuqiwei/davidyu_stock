@@ -34,3 +34,29 @@ row format delimited
 fields terminated by ','
 stored as PARQUET;
     
+
+
+--tdate   string  TDATE
+--secucode    string  SECUCODE
+--sname   string  SNAME
+--price   decimal(38,2)   PRICE  "成交价"
+--tvol    decimal(38,2)   TVOL   "成交量"
+--tval    decimal(38,2)   TVAL   "成交额"
+--buyercode   string  BUYERCODE  "买方代码"
+--buyername   string  BUYERNAME  "买方名字"
+--salescode   string  SALESCODE  "卖方代码"
+--salesname   string  SALESNAME  "卖房名字"
+--stype   string  Stype
+--unit    string  Unit
+--rchange decimal(38,2)   RCHANGE  "涨跌幅"
+--cprice  decimal(38,2)   CPRICE   "收盘价"
+--yssltag decimal(38,2)   YSSLTAG
+--zyl decimal(38,2)   zyl          "折益率"
+--cjeltszb    decimal(38,2)   Cjeltszb
+--rchange1dc  string  RCHANGE1DC
+--rchange5dc  string  RCHANGE5DC
+--rchange10dc string  RCHANGE10DC
+--rchange20dc string  RCHANGE20DC
+--texch   string  TEXCH
+--stock_date  string  stock_date
+

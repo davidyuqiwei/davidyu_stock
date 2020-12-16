@@ -11,6 +11,7 @@ find ./ -regex ".*\.Rout\|.*\.csv"  # find some extension files
 
 #find ./ -regex ".*\.log" -exec rm -rf{} \
 find ./ -regex ".*\.log\|.*\.csv\|.*\.txt" | xargs rm -rf
+find ./ -regex ".*\.log\|.*\.csv" | xargs rm -rf
 
 # before 150 min update, and count
 find ./  -cmin -150 |wc -l
@@ -25,3 +26,11 @@ find . -name "*.csv" |xargs wc -l | sort -n
 
 # find and copy file
 find . -name "60*" | xargs -t -i cp -rf {} /home/davidyu/stock/data//day_history/
+
+# find modified before n days
+find ./  -mtime +100
+find ./  -mtime +100 |  cut -d "." -f2 | sed -e 's/\///'   
+
+# find folder and rm
+find ./  -maxdepth 1 -type d  -exec rm -rf {} \;
+

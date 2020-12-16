@@ -15,3 +15,10 @@ git config --global push.default simple
 git add --all
 git commit -m "david"
 git push
+
+
+
+
+
+
+

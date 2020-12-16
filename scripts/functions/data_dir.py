@@ -46,10 +46,16 @@ data_dir=["tmp",
         "dadan_sina",
         "dadan_sina_offline",
         "qianlong_day_history",
-        "jiesuan"
+        "jiesuan",
+        "baostock",
+        "SH_index",
+        "feature_center",
+        "volume_price_distr",
+        "rongzirongquan",
+        "dadan_real_time_ifeng"
         ]
 {
-    "jiesuan": "中国证券登记结算有限公司   市场新增投资者数"
+    "jiesuan": "中国证券登记结算有限公司市场新增投资者数"
 }
 def create_dir_if_not_exist(dir_name):
 	if not os.path.isdir(dir_name):
@@ -65,11 +71,13 @@ def dir_dict(data_dir):
         path3 = os.path.join(analysis_path,i)
         path4 = os.path.join(function_path,i)
         path5 = os.path.join(tmp_data_path,i)
+        path6 = os.path.join(sql_path,i)
         create_dir_if_not_exist(path1)
         create_dir_if_not_exist(path2)
         create_dir_if_not_exist(path3)
         create_dir_if_not_exist(path4)
         create_dir_if_not_exist(path5)
+        create_dir_if_not_exist(path6)
         data_path_list.append(path1)
         data_tmp_path_list.append(path5)
     return data_path_list,data_tmp_path_list

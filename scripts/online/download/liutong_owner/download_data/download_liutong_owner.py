@@ -25,13 +25,20 @@ def download_html_to_df(html1):
     for a1 in tr_str:
         cols = a1.findAll('td')
         cols = [ele.text.strip() for ele in cols]
-        if len(cols) == 5:
-            data.append([ele for ele in cols if ele])
+        publish_date = '2099-01-01'
+        if len(cols)==2:
+            if cols[0] == '公告日期':
+                publish_date = cols[1]
         else:
             pass
+        if len(cols) == 5:
+            data.append([ele for ele in cols if ele] + [publish_date])
+        else:
+            pass
+    #print(data)
     import pandas as pd
     data1 = pd.DataFrame(data)
-    data1.columns = ['index_in','owner_name','amount','ratio','character']
+    data1.columns = ['index_in','owner_name','amount','ratio','character','publish_date']
     #--------------------------------------------------------------------#
     #------- make date date align with data
     #data1.index_in.value_counts()
@@ -98,12 +105,18 @@ def main(stock_index):
     #dir_liutong_owner = data_dict.get("tmp")
     k=0
     #stk_index_list=['000011','000014']
-    process(stock_index,dir_liutong_owner)
-
+    try:
+        process(stock_index,dir_liutong_owner)
+    except:
+        print(stock_index)
+        pass
 
 if __name__ == '__main__':
     stock_index = sys.argv[1]
     main(stock_index)
+
+
+
 
 '''
 #data1.iloc[1:]

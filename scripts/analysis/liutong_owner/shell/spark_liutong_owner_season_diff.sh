@@ -7,8 +7,8 @@ base_dir=$(dirname "$PWD")
 database="stock_test"
 tgt_table="hk_zhongyang"
 owner_name="香港中央结算有限公司"
-start_date="2019-06-30"
-end_date="2019-09-30"
+start_date="2020-06-30"
+end_date="2020-09-30"
 
 
 sql_dir=$base_dir/sql

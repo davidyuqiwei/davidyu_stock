@@ -1,0 +1,1 @@
+ALTER TABLE stock_dw.dadan_dfcf_today_dadan_weekly_dadan_cnt CHANGE cnt weekly_dadan_cnt int;

@@ -8,7 +8,7 @@ def get_df_column_type(df1):
     get the column type of DataFrame
     '''
     test_df_type = df1.iloc[0]
-    types1 = [type(x) for x in test_df_type]
+    types1 = [type(x) for x in test_df_type ]
     types = []
     for i in types1:
         if i == numpy.int64:
@@ -17,6 +17,10 @@ def get_df_column_type(df1):
             types.append('string')
         elif i == numpy.float64:
             types.append('decimal(38,2)')
+        elif i == float:
+            types.append('decimal(38,2)')
+        else:
+            print(i)
     return types
 
 def create_table_partition(database_name,table_name,column_str,table_comment):
@@ -70,16 +74,21 @@ def make_column_str(columns,types,comment):
     return column_str
 
 if __name__=='__main__':
-    sample_dir = data_dict.get("dadan_DFCF")
-    filename = "2020_08_03.csv"
+    '''
+    sample_dir = tmp_data_dict.get("YeJiYuQi")
+    #sample_dir = data_dict.get("baostock")
+    filename = "YeJiYuQi.csv"
     file_name = os.path.join(sample_dir,filename)
-    df1 = pd.read_csv(file_name)
+    df1 = pd.read_csv(file_name,error_bad_lines=False)
     columns = df1.columns.tolist()
     types = get_df_column_type(df1)
     #print(types)
+    '''
+    columns = ["stock_index","start_date","end_date","pred_days","slope"]
+    types = ["string","string","string","int","float"]
     comment = columns
-    database_name = "stock_dev"
-    table_name = "dadan_DFCF"
+    database_name = "stock_test"
+    table_name = "stock_slope"
     table_comment = table_name
     column_str = make_column_str(columns,types,comment)
     #print(column_str)

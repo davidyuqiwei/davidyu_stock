@@ -56,8 +56,8 @@ if __name__ =='__main__':
     dir_name = dir_day_history_wy
     stk_index_list = stk_index_list_gen()
     now_date,_ = get_the_datetime()
-    year = int(now_date.split("_")[0])
-    month = int(now_date.split("_")[1])
+    year = int(now_date.split("-")[0])
+    month = int(now_date.split("-")[1])
     season = make_season(month)
     #stock_index ='000917'
     stock_index = sys.argv[1]

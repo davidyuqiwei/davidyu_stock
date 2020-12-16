@@ -9,8 +9,14 @@ from tensorflow.keras import layers
 import numpy as np
 import matplotlib.pyplot as plt
 from load_model_data import *
+from davidyu_cfg import *
 import sys
 print(tf.__version__)
+from functions.models.davidCluster import *
+from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
+from sklearn import metrics
+from sklearn.metrics import explained_variance_score
 
 def load_the_data():
     data_dir = "/home/davidyu/stock/data/test/for_lstm"
@@ -20,25 +26,35 @@ def load_the_data():
     df1 = make_history_price(df1,history_days)  
     ## add historical price as a new columns //  a new feature
     df1 = make_history_vol(df1,history_days)
-    train_nums = 4000
-    y_start = 2
-    feature_start_index = 2
-    train_X,train_y,test_X,test_y,y_min,y_max = make_train_test_data(df1,train_nums,
-            y_start,
-            feature_start_index)
+    df2 = df1.dropna()[2300:]
+    df2['y'] = df2['adj_close'].shift(-1)
+    df3 = df2.dropna()
+    feature_list = df3.columns[3:86].tolist()
+    Y = df3.y.values
+    X = df3[feature_list].values
+    
+    min_max_scaler = preprocessing.MinMaxScaler()
+    x_minmax = min_max_scaler.fit_transform(X)
+    y_minmax = min_max_scaler.fit_transform(Y.reshape(-1,1))
+    
+    x_train, x_test, y_train, y_test = train_test_split(x_minmax, y_minmax, test_size=.3)
+    x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+    x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+    model = load_model(x_train,y_train):
+    y_predict = model.predict(x_test)
+    y_test1 = [np.float(x[0]) for x in y_test]   
+    y_predict1 = [np.float(x[0]) for x in y_predict]
+
+    df1 = pd.DataFrame([y_test1, y_predict1]).T
     return  train_X,train_y,test_X,test_y,y_min,y_max
 
 
-def load_model(input_shape1):
-    model = tf.keras.Sequential()
-    model.add(tf.keras.layers.LSTM(8,input_shape=(None, input_shape1),return_sequences=True))
-    model.add(tf.keras.layers.Dropout(0.2))
-    model.add(tf.keras.layers.LSTM(32))
-    #model.add(tf.keras.layers.LSTM(100, return_sequences=False))
-    model.add(layers.Dense(1, activation='sigmoid'))
-    model.compile(optimizer='adam',
-         loss='mae',
-         metrics=['accuracy'])
+def load_model(x_train,y_train):
+    model = Sequential()
+    model.add(LSTM(4, input_shape=(x_train.shape[1], x_train.shape[2])))
+    model.add(Dense(1))
+    model.compile(loss='mean_squared_error', optimizer='adam')
+    model.fit(x_train, y_train, epochs=10, batch_size=500, verbose=2)
     return model
 
 

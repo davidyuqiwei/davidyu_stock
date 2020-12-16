@@ -13,8 +13,7 @@ do
         python download_liutong_owner.py $line
         sleep 4.5s
     fi
-done < stock_list.txt
+done < $stock_list_data
 
-rm -rf stock_list.txt
 
 

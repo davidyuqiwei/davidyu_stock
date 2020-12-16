@@ -7,7 +7,7 @@ project_name="${project_path##*/}"
 echo $project_name
 
 sh ./download_data/run_download_JiGouDiaoYan.sh
-#sh ./clean_data/run_clean_combine_data.sh 
-#sh ./to_hive/run_to_hive_JiGouDiaoYan.sh
+sh ./clean_data/run_clean_combine_data.sh 
+sh ./to_hive/run_to_hive_JiGouDiaoYan.sh
 
 

@@ -6,5 +6,5 @@ do
         python wy_regression.py $line
         sleep 0.5s
     fi
-done < $1
+done < stock_list.txt
 

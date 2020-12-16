@@ -25,6 +25,8 @@ spark-sql \
     -d end_date=${end_date} \
     -S
 
+#  sh owner_seasonal_diff.sh stock_test important_owner_seasonal_change UBS ubs 2019-12-31 2020-03-31
+
 
 #database="stock_test"
 #tgt_table="important_owner_seasonal_change"

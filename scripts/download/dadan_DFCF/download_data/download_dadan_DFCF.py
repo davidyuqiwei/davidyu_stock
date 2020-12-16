@@ -11,11 +11,11 @@ from functions.colNames import *
 
 
 
-def save_the_table(new_table,dir_dadan,now_date,now_date_time):
+def save_the_table(new_table,dir_dadan,now_date,file_name):
     #save_dir = os.path.join(dir_dadan,now_date)
     save_dir = dir_dadan
     create_dir_if_not_exist(save_dir)
-    save_file = os.path.join(save_dir,now_date_time+".csv")
+    save_file = os.path.join(save_dir,file_name)
     new_table.columns = setColname().dadan_DFCF()
     new_table.to_csv(save_file,index=0)
 
@@ -45,15 +45,17 @@ def text_to_df():
     return df1
 if __name__=='__main__':
     from functions.update.cleanData import cleanData
-    dir_dadan = data_dict.get("dadan_DFCF")
+    
+    #dir_dadan = data_dict.get("dadan_DFCF")
+    dir_dadan = "./"
     now_date,now_date_time = get_the_datetime()
     new_table = text_to_df()
     new_table['date'] = now_date
     new_table = cleanData.columnToFloat(new_table,["new_price","today_increase_ratio","zhuli_liuru",
             'chaodadan_liuru', 'chaodadan_liuru_ratio','dadan_liuru', 'dadan_liuru_ratio', 'zhongdan_liuru',
                 'zhongdan_liuru_ratio', 'xiaodan_liuru', 'xiaodan_liuru_ratio','zhuli_liuru_ratio'])
-
-    save_the_table(new_table,dir_dadan,now_date,now_date)
+    file_name = sys.argv[1]
+    save_the_table(new_table,dir_dadan,now_date,file_name)
 
 
 

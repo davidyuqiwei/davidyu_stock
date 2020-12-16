@@ -1,5 +1,5 @@
-use dt;
-set hivevar:start_day=2010-01-01;
+use stock_dt;
+set hivevar:start_day=2000-01-01;
 set hivevar:end_day=2050-12-31;
 set hivevar:timeDimTable=default.timeDim;
 
@@ -7,7 +7,7 @@ drop table if exists datetime_table;
  
 -- create datetime table
 create table if not exists datetime_table(
-    dt                      string      comment     '日期',
+    stock_date                      string      comment     '日期',
     year                    int         comment     '年',
     month                   int         comment     '月',
     day                     int         comment     '日',

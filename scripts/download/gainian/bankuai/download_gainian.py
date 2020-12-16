@@ -26,6 +26,9 @@ if __name__ == "__main__":
     columns = ["id","stock_index","stock_name","gainian"]
     date_type = "day"
     file_in,save_dir = create_envr()
+    print(file_in)
+    print(save_dir)
+    '''
     save_dir = data_dict.get("gainian")
     df1 = json_to_df_raw(file_in,columns,date_type,save_dir)
     df2 = df1
@@ -36,6 +39,8 @@ if __name__ == "__main__":
     df2.to_csv(os.path.join(save_dir,save_name),index=0)
     #save_data(file_in,df2,date_type,save_dir)
     print("python run finish")
+
+    '''
 
 
 #a1 = json_string_raw[0]

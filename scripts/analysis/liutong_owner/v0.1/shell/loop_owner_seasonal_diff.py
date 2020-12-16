@@ -10,8 +10,8 @@ owner_dict = {
 database="stock_test"
 tgt_table="important_owner_seasonal_change"
 #owner_name="香港中央"
-start_date = "2019-03-31"
-end_date = "2019-06-30"
+start_date = "2020-03-31"
+end_date = "2020-06-30"
 for i in owner_dict.keys():
     #tgt_table = owner_dict[i]
     owner_name = i

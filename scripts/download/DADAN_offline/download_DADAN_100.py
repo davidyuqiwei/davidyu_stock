@@ -50,27 +50,19 @@ if __name__=='__main__':
     #now_date = '2020_06_19'
     import time
     import random
-    import bs4
     #html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php"
-    for i in range(1,3000):
-        print("------------------------------------")
-        print(i)
-        try:
-            html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php?page=%s&by=hq_time&order=desc&amount=100"%(str(i))
-            #input2 = "wget %s  -O  dadan_offline.html"%(html1)
-            #os.system(input2)
-            #os.system("mv -f %s %s"%("all_stock_bill.php?page="+str(i),'dadan_offline.html'))
-            #f = open('dadan_offline.html')
-            #html1 = bs4.BeautifulSoup(f.read(),'html5lib')
-            table,new_table_index = get_html_table(html1)
-            time.sleep(30+random.uniform(0, 1))
-            DF_columns = 10
-            new_table = table_to_DF(table,new_table_index,DF_columns)
-            new_table['date'] = now_date 
-            save_the_table(new_table,dir_dadan,now_date,str(i))
-        except Exception as e:
-            print(e.message)
-            pass
+    DF_columns = 10
+    i = sys.argv[1]
+    try:
+        html1 = "http://app.finance.ifeng.com/hq/all_stock_bill.php?page=%s&by=hq_time&order=desc&amount=100"%(str(i))
+        table,new_table_index = get_html_table(html1)
+        time.sleep(3+random.uniform(0, 1))
+        new_table = table_to_DF(table,new_table_index,DF_columns)
+        new_table['date'] = now_date 
+        save_the_table(new_table,dir_dadan,now_date,str(i))
+    except Exception as e:
+        print(e.message)
+        pass
 
 
 

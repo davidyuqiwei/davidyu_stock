@@ -20,6 +20,8 @@ download_path = os.path.join(script_path,'download')
 analysis_path = os.path.join(script_path,'analysis')
 # function
 function_path = os.path.join(script_path,'functions')
+#sql
+sql_path = os.path.join(script_path,"sql",'db')
 
 project_DIR = [data_path,download_path,analysis_path]
 

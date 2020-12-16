@@ -10,5 +10,5 @@ do
         echo $line 
         sleep 3s  
     fi
-done < stock_list.txt
+done < $stock_list_data
 

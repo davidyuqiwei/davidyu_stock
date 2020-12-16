@@ -20,6 +20,7 @@ import numpy as np
 def CNN_model(x_train, y_train,n_features):
     model = Sequential()
     model.add(Conv1D(filters=100, kernel_size=1,activation='relu',input_shape=( n_features,1 )))
+    model.add(Dropout(0.1))
     model.add(Conv1D(filters=100, kernel_size=1, activation='relu'))
     model.add(Dropout(0.1))
     model.add(MaxPooling1D(pool_size=2))

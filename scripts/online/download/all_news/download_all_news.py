@@ -26,7 +26,8 @@ stock_news = {
     "xueqiu": "https://xueqiu.com/",
     "tonghuashun":"http://stock.10jqka.com.cn/",
     "science":"https://www.sciencemag.org/#",
-    "usa_stock_news":"http://global.eastmoney.com/a/cmgsc.html"
+    "usa_stock_news":"http://global.eastmoney.com/a/cmgsc.html",
+    "sina_usa_stock":"https://finance.sina.com.cn/stock/usstock/"
 }
 
 '''

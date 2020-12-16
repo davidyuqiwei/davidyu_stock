@@ -18,8 +18,42 @@ and stock_index ='000756'
 order by dt
 ;
 " \
-| sed 's/[\t]/\t/g' > $f1
+| sed 's/[\t]/,/g' > $f1
 echo $f1
 #| sed 's/[\t]/\t/g' > $f1
 
 python ./functions/trans_csv_to_xlsx.py -f $f1
+
+
+
+
+file_out="data.out"
+spark-sql -f hk_increase_list.sql > $file_out
+sed -i 's/[\t]/,/g' $file_out
+
+
+
+## spark-sql conf
+
+spark.yarn.executor.memoryOverhead=4096
+soark.yarn.max.executor.failures=10
+spark.yarn.max.executor.failuser=10
+spark.driver.maxResultSize=2G
+spark.default.parallelism=1000
+spark.sql.shuffle.partitions=1000
+spark.shuffle.file.buffer=64K
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.memory.useLegacyMode=true
+spark.shuffle.memoryFraction=0.6
+spark.storage.memoryFraction=0.2
+spark.task.maxFailures=2
+spark.shuffle.compress=true
+spark.shuffle.spill.compress=true
+spark.io.compression.codec=snappy
+spark.shuffle.manager=sort
+spark.shuffle.consolidateFiles=true
+spark.port.maxRetries=500
+
+
+
+

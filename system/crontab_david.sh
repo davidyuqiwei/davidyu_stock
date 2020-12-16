@@ -1,6 +1,15 @@
 #source ~/.bashrc
 #20 09 * * *  /home/davidyu/software/Anaconda/bin/python /download_all_news.py > /usr/davidyu/crontest.log 2>&1
 
+#####################################
+#           1:00-3:30               #
+#####################################
+# @description:   download volume price distribution of every stock
+# @run time :about 6 hours
+# @download tool:  url
+# @type: daily new
+# @source: sina,   https://vip.stock.finance.sina.com.cn/quotes_service/view/cn_price.php?symbol=sh601398
+10 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/volume_price_distr/run_main_volume_price_distr.sh
 
 #####################################
 #           6:00-6:30               #
@@ -44,10 +53,10 @@
 #00 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN/DADAN_200_data_to_hive.sh
 
 ## ----- test for sina
-*/1 10-11,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina/run_download_dadan_sina_realtime.sh
+#*/1 10-11,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina/run_download_dadan_sina_realtime.sh
 
 ##==== sina dadan offline
-40 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina_offline/run_main_dadan_sina_offline.sh
+#40 15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_sina_offline/run_main_dadan_sina_offline.sh
 
 ## @description: fushi A50
 # @run time:
@@ -74,7 +83,7 @@
 # @download tools: wget
 # @type: realtime
 # 9-12 13-23,0-6
-*/1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/wget_SH_index_RT.sh
+#*/1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/wget_SH_index_RT.sh
 */1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/wget_SH50_index_RT.sh
 */1 9-12,13-15 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/SH_index_RT/index_amount/wget_SH_index_amount_RT.sh
 #######################
@@ -85,7 +94,7 @@
 # @type: realtime
 # 17:35-17:40
 
-38 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DFCF/dadan/run_main_dadan_DFCF.sh
+38 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_DFCF/run_main_dadan_DFCF.sh
 
 
 #####################################
@@ -98,7 +107,7 @@
 #---------- download DADAN off line > 100
 ############################################################
 
-#00 16  * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/run.sh
+47 20  * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/run_dadan_offline.sh
 ## data to hive
 
 #35 19 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/DADAN_offline_data_to_hive.sh
@@ -112,7 +121,7 @@
 # @download tools: url
 # @type: daily new
 ############################################################
-32 16 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/day_history_wangyi/run_download_day_history_wangyi_today.sh
+32 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/day_history_wangyi/run_main_day_history_wangyi.sh
 
 #####################################
 #           17:30 - 18:00           #
@@ -122,7 +131,7 @@
 # @download tools: wget
 # @type: daily new
 ## Bankuai
-30 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/bankuai/run_download_bankuai.sh
+30 17 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/bankuai/run_main_bankuai.sh
 
 
 #####################################
@@ -132,7 +141,7 @@
 # @run time: 20s
 # @download tools: firefox driver
 # @type: daily new
-00 12,18 * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/YeJiYuQi/run_download_yejiyuqi.sh
+00 21,22,23 * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/YeJiYuQi/run_main_YeJiYuQi.sh
 
 
 
@@ -151,7 +160,7 @@
 # @download tools: wget 
 # @type: daily new
 
-40 20 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dazongjiaoyi/run_download_dazongjiaoyi.sh
+40 19 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dazongjiaoyi/run_main_dazongjiaoyi.sh
 
 #####################################
 #           21:00 - 21:30           #
@@ -161,7 +170,7 @@
 # @download tools: wget
 # @type: daily new
 ##-------jigoudiaoyan
-40 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/JiGouDiaoYan/run_download_jigoudiaoyan.sh
+00 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/JiGouDiaoYan/run_main_JiGouDiaoYan.sh
 
 #####################################
 #           22:30 - 23:00           #
@@ -172,7 +181,7 @@
 # @type: daily new
 ##-------------pofa
 ############################
-30 20-23 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/pofa/run_download_pofa.sh
+30 22 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/pofa/run_download_pofa.sh
 
 ## @description: import owner DFCF
 # @run time: 50s
@@ -180,7 +189,7 @@
 # @type: daily new
 ##-------------important owner
 ############################
-35 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/important_owner/run_download_important_owner.sh
+35 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/important_owner/run_main_important_owner.sh
 
 
 
@@ -200,7 +209,7 @@
 # @download tools: url
 # @type: all
 
-30 7 * * 6 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/online/download/day_history/run.sh
+#30 7 * * 6 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/online/download/day_history/run.sh
 
 # @description: download xiaopangu 小盘股 from dongfangcaifu
 # @run time : 10s
@@ -217,15 +226,16 @@
 38 23 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/daily_report/run_daily_report.sh
 
 
-
 ##################### system ###########################
 #######################################################
 # copy import dir
 45 12,23 * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/copy_import_dir.sh
 
 ## kill firefox
-45 12,18-22 * * * sh /home/davidyu/stock/scripts/davidyu_stock/scripts/kill_webcontent/kill_webcontent.sh
+45 10,11,17,23 * * * sh /home/davidyu/stock/scripts/davidyu_stock/scripts/kill_webcontent/kill_webcontent.sh
 
 ##- process all logs
 57 23 * * * MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/shell_function/process_all_logs.sh
 ###################################################################
+## combine log
+* * * * * /usr/bin/sh /home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/checkData/combine_log/combineLog.sh

@@ -18,6 +18,8 @@ stock_index = [str(x) for x in df1.stock_index.values.tolist()]
 FG = nx.Graph()
 for i in range(0,df1.shape[0]):
     FG.add_weighted_edges_from([(owner_list[i],stock_index[i].zfill(6),0.124)])
+
+
 '''
 for n,nbrs in FG.adjacency():
     for nbr,eattr in nbrs.items():

@@ -6,8 +6,8 @@ project_name="${project_path##*/}"
 
 echo $project_name
 
-sh ./download_data/run_main_liutong_owner.sh
-sh ./clean_data/run_clean_combine_data.sh 
-sh ./to_hive/run_to_hive_liutong_owner.sh
+sh ./download_data/run_download_liutong_owner.sh
+#sh ./clean_data/run_clean_combine_data.sh 
+#sh ./to_hive/run_to_hive_liutong_owner.sh
 
 

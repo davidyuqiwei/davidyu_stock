@@ -14,7 +14,7 @@ object SH_SZ_INDEX{
     def data_to_hive(theFile:String,theTable:String,theType:String){
         val log = Logger.getLogger(this.getClass)
         val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
-		val csv_data = spark.read.option("header", "true").csv(theFile)
+		val csv_data = spark.read.option("header", "false").csv(theFile).dropDuplicates()
         var tableName = theTable
 		csv_data.show()
 		csv_data.createOrReplaceTempView("TMPTABLE")

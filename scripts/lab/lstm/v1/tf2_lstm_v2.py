@@ -14,15 +14,14 @@ print(tf.__version__)
 
 def load_the_data():
     data_dir = "/home/davidyu/stock/data/test/for_lstm"
-    file_name = "SH_index.csv"
+    file_name = "SH_index_price_mv_avg.csv"
     df1 = read_mv_avg_data_clean(data_dir,file_name)
     history_days = 30
     df1 = make_history_price(df1,history_days)
-    df1 = make_history_vol(df1,history_days)
-    df1 = df1.drop(columns=['volume'])
+    #df1 = make_history_vol(df1,history_days)
+    #df1 = df1.drop(columns=['volume'])
     #df1['adj_close_raw'] = df1['adj_close']
     df1['adj_close'] = df1['adj_close'].shift(-1)
-    start_from_num = 400
     ## remove first xx rows,like 300 rows, becuase moving average, it doesnt have data
     train_nums = 4000
     start_index = 2

@@ -22,6 +22,10 @@ if __name__ == "__main__":
     yeji_status = df1['yeji_predict'].unique().tolist()
     df2 = df1[(df1["yeji_predict"]=='业绩大幅上升')]
     print(df2.head())
+
+
+
+
 '''
 df2 = df1[(df1["yeji_predict"]=='业绩大幅上升')&(df1["date"]=="2020-01-04")]
 stk_index_list = ['\''+str(x).zfill(6)+'\'' for x in df2.stock_index.tolist()]

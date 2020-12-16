@@ -1,0 +1,7 @@
+wget_fushi_a50
+wget_SH50_index_RT
+run_download_dadan_sina_realtime
+run_download_nsdaq_RT
+wget_SH_index_RT
+run_download_oumei
+wget_SH_index_amount_RT

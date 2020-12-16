@@ -67,7 +67,7 @@ def content_to_txt(save_file,textout):
     print(textout, file = f)
     f.close()
 
-def get_all_news(stock_index,save_dir):
+def get_all_news(stock_index,save_dir,end_year):
     #stk = '000917'
     make_dir(save_dir)
     for i in range(1,100):
@@ -78,6 +78,8 @@ def get_all_news(stock_index,save_dir):
                 k += 1
                 with eventlet.Timeout(2.5,False):
                     date,text_out = news_in_html_url(url)
+                    if date[0:4] == str(end_year):
+                        sys.exit(0)
                     saveFileTxt = saveFile(stock_index=stock_index,save_dir=save_dir,k=k,date=date).news_report_save_dir()
                     content_to_txt(saveFileTxt,text_out)
                     time.sleep(30)
@@ -88,7 +90,7 @@ def download_for_stock_index(stock_index):
     dir_news_report = data_dict.get("news_report")
     stk = stock_index
     try:
-        get_all_news(stock_index,os.path.join(dir_news_report,stk))
+        get_all_news(stock_index,os.path.join(dir_news_report,stk),2018)
     except Exception:
         print(stock_index+'not download')
         traceback.print_exc()

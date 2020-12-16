@@ -41,8 +41,27 @@ class setColname:
                 "avg_price","zhuli_buy_vol","zhongxing_vol","zhuli_sale_vol"]
     def dadan_DFCF(self):
         return   ["new_price","today_increase_ratio","stock_index","stock_name","zhuli_liuru",
-	        "chaodadan_liuru","chaodadan_liuru_ratio","dadan_liuru","dadan_liuru_ratio",
-	        "zhongdan_liuru","zhongdan_liuru_ratio","xiaodan_liuru","xiaodan_liuru_ratio","test1",
-	        "zhuli_liuru_ratio","test2","test3",
-	        "test4","stock_date"]
+            "chaodadan_liuru","chaodadan_liuru_ratio","dadan_liuru","dadan_liuru_ratio",
+            "zhongdan_liuru","zhongdan_liuru_ratio","xiaodan_liuru","xiaodan_liuru_ratio","test1",
+            "zhuli_liuru_ratio","test2","test3",
+            "test4","stock_date"]
+    def bankuai(self):
+    	return ['bk_en',
+    	 'bankuai',
+    	 'company_no',
+    	 'avg_price',
+    	 'zhangdiee',
+    	 'zhangdiefu',
+    	 'total_vol',
+    	 'total_money',
+    	 'stock_index1',
+    	 'zhangdiefu_top',
+    	 'curr_price',
+    	 'zhangdiee_top',
+    	 'top_stock_name',
+    	 'top_stock_index',
+    	 'day',
+    	 'stock_date']
+    def yejiyuqi(self):
+        return ["index","stock_index","stock_name","yeji_predict","yeji_abstract","profit_change_ratio","profit_change","stock_date"]
 

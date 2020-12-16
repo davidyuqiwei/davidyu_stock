@@ -13,3 +13,131 @@ KeyboardInterrupt
 19/01/28 19:07:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Setting default log level to "ERROR".
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+liutong_owner
+sh: ./download_data/run_main_liutong_owner.sh: 没有那个文件或目录
+cat: *.csv: 没有那个文件或目录
+cat: /home/davidyu/stock/data/liutong_owner: 是一个目录
+cat: *.csv: 没有那个文件或目录
+the data is in /home/davidyu/stock/data/tmp
+20/11/08 23:03:45 WARN Utils: Your hostname, VM_0_11_centos resolves to a loopback address: 127.0.0.1; using 172.16.0.11 instead (on interface eth0)
+20/11/08 23:03:45 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/11/08 23:03:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://172.16.0.11:4041
+Spark context available as 'sc' (master = local[*], app id = local-1604847855807).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
+      /_/
+         
+Using Scala version 2.11.12 (OpenJDK 64-Bit Server VM, Java 1.8.0_232)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> // this script put the   
+
+scala> // target csv file         to the 
+
+scala> // target database.table
+
+scala> /*
+     |   ############################
+     |   ####### important ##########
+     |   ############################
+     |   this script first 
+     |   @clean the table
+     |   @ put all the data into the database
+     | */
+     | import org.apache.log4j.{Level, Logger}
+import org.apache.log4j.{Level, Logger}
+
+scala> object SH_SZ_INDEX{
+     |     def data_to_hive(theFile:String,theTable:String,theType:String){
+     |         val log = Logger.getLogger(this.getClass)
+     |         val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
+     |           val csv_data = spark.read.option("header", "true").csv(theFile).dropDuplicates()
+     |         var tableName = theTable
+     |           csv_data.show()
+     |           csv_data.createOrReplaceTempView("TMPTABLE")
+     |           // clean the table
+     |         if (theType == "whole"){
+     |           val sql_v1 = s"""
+     |                       truncate table $tableName
+     |                   """
+     |           sqlContext.sql(sql_v1)
+     |         }
+     |         sqlContext.sql("set  hive.exec.dynamic.partition.mode=nonstrict")
+     |         sqlContext.sql("set  hive.exec.dynamic.partition=true")
+     |         // put the new file into  database.table
+     |           val sql_v2 = s"""
+     |             insert into table $tableName
+     |               select * from TMPTABLE
+     |           """
+     |         sqlContext.sql(sql_v2)
+     |         log.error("finish table create")
+     |     }
+     |     //def main(FileName:String, TableName:String){
+     |     def main(){
+     |         // set the LOG level
+     |         sc.setLogLevel("ERROR")
+     |         val log = Logger.getLogger(this.getClass)
+     |         log.warn("this is a warn")
+     |           //val work_dir = System.getProperty("user.dir") // the work dir is the current dir
+     |           val work_dir = "/home/davidyu/stock/scripts/davidyu_stock/scripts/cfg"
+     |           val data_file = "file://"+work_dir+"/liutong_owner.cfg" // the full name of data fi le we are put into database.table
+     |         val csvData = spark.read.csv(data_file)
+     |         var thePara = csvData.rdd.map(x=>(x.mkString.split("=")(0),x.mkString.split("=")(1))) .collect().toMap
+     |         var theFile = thePara.get("target_csv").get
+     |         var theTable = thePara.get("dev_table").get
+     |         try{
+     |             var theType = thePara.get("type").get
+     |         }catch{
+     |             case e:Exception => println(e.getMessage)
+     |             var theType = "whole"
+     |         }
+     |         var theType = thePara.get("type").get
+     |         println("===========================================")
+     |         var inputPara = "file: %s, table:%s, type:%s".format(theFile,theTable,theType)
+     |         println(inputPara)
+     |         //csvData.show() 
+     |         data_to_hive(theFile,theTable,theType)
+     |     }
+     | }
+warning: there was one deprecation warning; re-run with -deprecation for details
+defined object SH_SZ_INDEX
+
+scala> SH_SZ_INDEX.main()
+===========================================
+file: file:///home/davidyu/stock/data/tmp_data/liutong_owner/liutong_owner.csv, table:stock_dev.liutong_owner, type:whole
+[Stage 3:>                                                          (0 + 2) / 2][Stage 3:=============================>                             (1 + 1) / 2]                                                                                +---+-------------------------------------+---------+------+----------+----------+------+
+|  1|             中国航天科工集团有限公司|106160000|25.199|    国有股|2020-03-31|600501|
++---+-------------------------------------+---------+------+----------+----------+------+
+|  6|中国建设银行股份有限公司－鹏华中证...|  6558295| 1.612|境内法人股|2018-03-31|600501|
+|  6| 中国农业银行股份有限公司-博时裕隆...|  1856110| 0.477|境内法人股|2014-12-31|600501|
+|  2|上海浦东发展银行－天治财富增长证券...|  1499926| 0.873|境内法人股|2009-06-30|600501|
+| 10|                               廖伟俭|   565500| 0.525|  自然人股|2019-03-31|300246|
+|  4|                               何玉梅|  2459684| 3.957|  自然人股|2013-09-30|300246|
+|  1|                               张益胜| 32337133|13.955|  自然人股|2019-12-31|002566|
+|  8|                               李铁军|  1320864| 0.570|  自然人股|2019-12-31|002566|
+|  1|                                 王斌|  9633871| 8.691|  自然人股|2013-09-30|002566|
+|  4|               全国社保基金四一八组合|  1680000| 1.516|境内法人股|2013-06-30|002566|
+|  7|                 万联证券有限责任公司|   690000| 1.244|    国有股|2012-03-31|002566|
+|  2|  中国银行股份有限公司－华夏中证5G...| 31648068| 3.635|境内法人股|2020-03-31|000851|
+|  5|               福建智恒达实业有限公司| 44318184| 3.566|境内法人股|2016-09-30|000732|
+|  8|                                 李宁|   430100| 0.287|  自然人股|2011-03-31|000732|
+|  1|                               黄华涛|   584650| 0.507|  自然人股|2005-06-30|000732|
+|  6|中国工商银行股份有限公司－嘉实新机...|  6777100| 0.734|境内法人股|2016-12-31|000997|
+|  7|         北京基典兴业科技发展有限公司|  1332083| 0.296|境内法人股|2011-03-31|000997|
+|  8|               全国社保基金一零九组合|  3421564| 3.099|境内法人股|2005-12-31|000997|
+|  9|                                 邓良|    62400| 0.247|  自然人股|2017-09-30|300660|
+|  3|                               陈向军|  5980500| 4.797|  自然人股|2015-03-31|300085|
+|  5|             中国证券金融股份有限公司| 50434786| 1.640|    国有股|2015-09-30|600017|
++---+-------------------------------------+---------+------+----------+----------+------+
+only showing top 20 rows
+
+20/11/08 23:04:38 ERROR ObjectStore: Version information found in metastore differs 3.1.0 from expected schema version 1.2.0. Schema verififcation is disabled hive.metastore.schema.verification so setting version.
+[Stage 5:>                                                          (0 + 2) / 2][Stage 5:=============================>                             (1 + 1) / 2][Stage 6:>                                                        (0 + 2) / 200][Stage 6:>                                                        (2 + 2) / 200][Stage 6:=>                                                       (5 + 2) / 200][Stage 6:=>                                                       (7 + 2) / 200][Stage 6:==>                                                      (8 + 2) / 200][Stage 6:==>                                                      (9 + 2) / 200][Stage 6:===>                                                    (11 + 2) / 200][Stage 6:===>                                                    (12 + 2) / 200][Stage 6:===>                                                    (14 + 2) / 200][Stage 6:====>                                                   (16 + 2) / 200][Stage 6:=====>                                                  (19 + 2) / 200][Stage 6:=====>                                                  (20 + 2) / 200][Stage 6:======>                                                 (23 + 2) / 200][Stage 6:=======>                                                (25 + 3) / 200][Stage 6:========>                                               (29 + 2) / 200][Stage 6:========>                                               (32 + 2) / 200][Stage 6:=========>                                              (34 + 2) / 200][Stage 6:==========>                                             (37 + 2) / 200][Stage 6:===========>                                            (41 + 2) / 200][Stage 6:============>                                           (45 + 2) / 200][Stage 6:=============>                                          (48 + 2) / 200][Stage 6:==============>                                         (52 + 2) / 200][Stage 6:===============>                                        (56 + 2) / 200][Stage 6:================>                                       (60 + 2) / 200][Stage 6:=================>                                      (64 + 2) / 200][Stage 6:===================>                                    (69 + 3) / 200][Stage 6:====================>                                   (73 + 2) / 200][Stage 6:=====================>                                  (77 + 2) / 200][Stage 6:======================>                                 (81 + 2) / 200][Stage 6:=======================>                                (85 + 2) / 200][Stage 6:=========================>                              (90 + 2) / 200][Stage 6:==========================>                             (93 + 2) / 200][Stage 6:===========================>                            (97 + 2) / 200][Stage 6:===========================>                           (101 + 2) / 200][Stage 6:=============================>                         (106 + 2) / 200][Stage 6:==============================>                        (110 + 2) / 200][Stage 6:===============================>                       (115 + 2) / 200][Stage 6:================================>                      (119 + 2) / 200][Stage 6:==================================>                    (124 + 2) / 200][Stage 6:===================================>                   (128 + 2) / 200][Stage 6:====================================>                  (134 + 2) / 200][Stage 6:=====================================>                 (138 + 2) / 200][Stage 6:=======================================>               (142 + 2) / 200][Stage 6:========================================>              (147 + 2) / 200][Stage 6:=========================================>             (151 + 3) / 200][Stage 6:==========================================>            (155 + 2) / 200][Stage 6:============================================>          (161 + 2) / 200][Stage 6:=============================================>         (164 + 2) / 200][Stage 6:===============================================>       (171 + 2) / 200][Stage 6:================================================>      (176 + 2) / 200][Stage 6:==================================================>    (182 + 2) / 200][Stage 6:===================================================>   (186 + 2) / 200][Stage 6:====================================================>  (192 + 2) / 200][Stage 6:======================================================>(198 + 2) / 200]                                                                                20/11/08 23:04:58 ERROR $read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$SH_SZ_INDEX$: finish table create
+
+scala> :quit

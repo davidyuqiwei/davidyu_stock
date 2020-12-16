@@ -13,30 +13,34 @@ class LinearReg:
     """
     @classmethod
     def single_linear_reg(self,df,column_in,if_normed=1):
-        """
-        linear regression for one column
-        x: 0: length(y)
-        y: y 
-        """
-        import pandas as pd
-        from sklearn.linear_model import LinearRegression
-        from sklearn import linear_model
-        import numpy as np
-        X_in1 = pd.DataFrame(df,columns=[column_in])
-        X = pd.DataFrame(X_in1,columns=[column_in]).dropna()
-        # how many rows in the dataframe and make it as x
-        rows=X.shape[0]
-        x = np.array(range(rows)).reshape(-1,1)
-        if if_normed == 1:
-            y = X.values
-            y_normed = (y -y.min(axis=0))/(y.max(axis=0)-y.min(axis=0)+0.001)
-        else:
-            y_normed = X.values
-        # regression
-        regr = linear_model.LinearRegression()
-        regr.fit(x,y_normed)
-        slope = round(regr.coef_.item(),5)
-        inter = round(regr.intercept_.item(),2)
+        try:
+	        """
+	        linear regression for one column
+	        x: 0: length(y)
+	        y: y 
+	        """
+	        import pandas as pd
+	        from sklearn.linear_model import LinearRegression
+	        from sklearn import linear_model
+	        import numpy as np
+	        X_in1 = pd.DataFrame(df,columns=[column_in])
+	        X = pd.DataFrame(X_in1,columns=[column_in]).dropna()
+	        # how many rows in the dataframe and make it as x
+	        rows=X.shape[0]
+	        x = np.array(range(rows)).reshape(-1,1)
+	        if if_normed == 1:
+	            y = X.values
+	            y_normed = (y -y.min(axis=0))/(y.max(axis=0)-y.min(axis=0)+0.001)
+	        else:
+	            y_normed = X.values
+	        # regression
+	        regr = linear_model.LinearRegression()
+	        regr.fit(x,y_normed)
+	        slope = round(regr.coef_.item(),5)
+	        inter = round(regr.intercept_.item(),2)
+        except:
+            slope = -999
+            inter = -999
         return slope,inter
 if __name__=='__main__':
     import pandas as pd

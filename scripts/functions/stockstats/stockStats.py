@@ -24,13 +24,17 @@ def select_data(stock,start_date,end_date):
     stock1 = stock[date_select]
     return stock1
 
-def stock_kdj(stock):
-    df_kdj = stock[['kdjk','kdjd','kdjj']].reset_index()
+def stock_kdj(stock,feature_list=None):
+    if feature_list is None:
+        feature_list = ["macdh","cci","rsi_6","rsi_12","rsi_24","kdjk","kdjj","kdjj","macdh"]
+    #df_kdj = stock[['kdjk','kdjd','kdjj']].reset_index()
+    df_kdj = stock.reset_index()
     df_kdj['stock_index'] = stock['stock_index'].tolist()
     df_kdj['stock_date'] = df_kdj['date']
     df_kdj['stock_date'] = df_kdj['stock_date'].astype(str)
-    df_kdj['macdh'] = stock['macdh'].reset_index()['macdh']
-    return df_kdj
+    for k in feature_list:
+        df_kdj[k] = stock[k].reset_index()[k]
+    return df_kdj,feature_list
 
 def stock_feature(stock,feature_list):
     df_kdj = stock[feature_list].reset_index()

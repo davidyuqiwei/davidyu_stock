@@ -1,5 +1,4 @@
-source ~/.bashrc
 cd `dirname $0`
-sh combine_data.sh
-#python clean_data.py
+sh combine_csv.sh /home/davidyu/stock/data/JiGouDiaoYan jigoudiaoyan.csv
+python clean_data.py
 

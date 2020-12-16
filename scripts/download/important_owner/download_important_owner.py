@@ -30,7 +30,7 @@ for i in s1:
     try:
         i1 = i[2:]
         s2 = i1.split(",")
-        s3 = [x.split(":")[1] for x in s2]
+        s3 = [ x.split(":")[1] if len(x.split(":"))==2 else '' for x in s2 ]
         s3 = [x.replace("\"","") for x in s3]
         for j in [2,3,4,7,13]:
             s3[j] = s3[j].encode("latin1").decode("gb2312")

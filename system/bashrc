@@ -57,5 +57,9 @@ export python_libs="/home/davidyu/software/Anaconda/lib/python3.7/site-packages"
 ### the dir to save log
 ## shell function dir
 export shell_function_dir="/home/davidyu/stock/scripts/davidyu_stock/scripts/shell_function/"
+export raw_data_dir=$stock_data"/raw_data"
 
+# set common data
+export stock_list_data=$stock_data"/tmp/stock_list.txt"
+export stock_list_test_data=$stock_data"/tmp/stock_list_test.txt"
 

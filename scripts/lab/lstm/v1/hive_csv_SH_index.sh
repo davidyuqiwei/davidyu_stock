@@ -4,7 +4,7 @@ if [ ! -d $save_dir ];then
     mkdir $save_dir
 fi
 
-stk_index="SH_index"
+stk_index="SH_index_price_mv_avg"
 file_name=$stk_index
 f1=${save_dir}${file_name}.csv
 #final_file=${file_name}_f1.csv
@@ -16,7 +16,7 @@ set hive.exec.compress.output=false;
 set hive.exec.dynamic.partition=true;
 set hive.exec.dynamic.partition.mode=nonstrict;
 
-select * from stock_analysis.SH_index_mv_avg;
+select * from stock_analysis.sh_index_price_mv_avg;
 ;
 " \
 | sed 's/[\t]/,/g' > $f1
