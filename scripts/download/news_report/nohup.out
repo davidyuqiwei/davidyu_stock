@@ -1210,3 +1210,6 @@
 2021-01-15 09:32:24,754 - davidyu_cfg.py[line:41] - INFO: load log module
 2021-01-15 09:32:24,773 - davidyu_cfg.py[line:43] - INFO: load data_dir module
 2021-01-15 09:32:24,773 - davidyu_cfg.py[line:45] - INFO: load make_dir module
+2021-01-15 09:54:43,114 - davidyu_cfg.py[line:41] - INFO: load log module
+2021-01-15 09:54:43,133 - davidyu_cfg.py[line:43] - INFO: load data_dir module
+2021-01-15 09:54:43,133 - davidyu_cfg.py[line:45] - INFO: load make_dir module
