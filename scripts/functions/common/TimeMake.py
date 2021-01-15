@@ -36,7 +36,15 @@ class timeFunc():
         now_date_time = now_time.strftime('%Y-%m-%d-%H%M%S')
         now_month = datetime.datetime(now_time.year, now_time.month,1).strftime('%Y-%m-%d')
         return now_date, now_date_time
-    
+
+    @staticmethod
+    def daysAgo(start_date='2099-01-01',days=1):
+        print("the start date is: "+start_date)
+        start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d")
+        # 先获得时间数组格式的日期
+        threeDayAgo = (start_date - datetime.timedelta(days=int(days)))
+        date_out = threeDayAgo.strftime("%Y-%m-%d")
+        return date_out
     @classmethod
     def getTheDatetime():
         now_time = datetime.datetime.now()

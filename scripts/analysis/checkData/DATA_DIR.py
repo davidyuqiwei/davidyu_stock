@@ -1,19 +1,17 @@
 # day history wangyi 
 /home/davidyu/stock/data/day_history_wangyi/601398
 # dadan sina
-/home/davidyu/stock/data/dadan_sina_offline
+/home/davidyu/stock/data/dadan_real_time_ifeng
 # import liutong owner
-/home/davidyu/stock/data/important_owner
+/home/davidyu/stock/data/history_data/important_owner
 # bankuai data
-/home/davidyu/stock/data/bankuai
+/home/davidyu/stock/data/history_data/bankuai
 # yejiyuqi
 /home/davidyu/stock/data/YeJiYuQi
 # dadan dongfangcaifu
-/home/davidyu/stock/data/dadan_DFCF
+/home/davidyu/stock/data/history_data/dadan_DFCF
 # jigoudianyan
 /home/davidyu/stock/data/JiGouDiaoYan
-# important owner
-/home/davidyu/stock/data/important_owner
 # dazongjiaoyi
 /home/davidyu/stock/data/dazongjiaoyi
 # gainianliuru

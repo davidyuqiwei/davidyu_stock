@@ -1,0 +1,341 @@
+(407227, 1)
+(133923, 12)
+run xgboost
+[0]	train-auc:0.606682
+[1]	train-auc:0.622
+[2]	train-auc:0.630363
+[3]	train-auc:0.632819
+[4]	train-auc:0.638437
+[5]	train-auc:0.644901
+[6]	train-auc:0.646055
+[7]	train-auc:0.648233
+[8]	train-auc:0.653168
+[9]	train-auc:0.656247
+[10]	train-auc:0.661239
+[11]	train-auc:0.661487
+[12]	train-auc:0.665559
+[13]	train-auc:0.667161
+[14]	train-auc:0.669662
+[15]	train-auc:0.671872
+[16]	train-auc:0.674524
+[17]	train-auc:0.676939
+[18]	train-auc:0.681073
+[19]	train-auc:0.681608
+[20]	train-auc:0.682379
+[21]	train-auc:0.683769
+[22]	train-auc:0.686321
+[23]	train-auc:0.68796
+[24]	train-auc:0.689306
+[25]	train-auc:0.690743
+[26]	train-auc:0.692174
+[27]	train-auc:0.693321
+[28]	train-auc:0.69539
+[29]	train-auc:0.696337
+[30]	train-auc:0.698388
+[31]	train-auc:0.701628
+[32]	train-auc:0.704052
+[33]	train-auc:0.705207
+[34]	train-auc:0.708128
+[35]	train-auc:0.709936
+[36]	train-auc:0.710059
+[37]	train-auc:0.711325
+[38]	train-auc:0.713466
+[39]	train-auc:0.715941
+[40]	train-auc:0.716441
+[41]	train-auc:0.717055
+[42]	train-auc:0.718246
+[43]	train-auc:0.718633
+[44]	train-auc:0.71914
+[45]	train-auc:0.720574
+[46]	train-auc:0.723047
+[47]	train-auc:0.725398
+[48]	train-auc:0.726119
+[49]	train-auc:0.727063
+[50]	train-auc:0.730318
+[51]	train-auc:0.731535
+[52]	train-auc:0.732051
+[53]	train-auc:0.733653
+[54]	train-auc:0.734871
+[55]	train-auc:0.736172
+[56]	train-auc:0.736441
+[57]	train-auc:0.737364
+[58]	train-auc:0.739049
+[59]	train-auc:0.740099
+[60]	train-auc:0.740548
+[61]	train-auc:0.740859
+[62]	train-auc:0.74226
+[63]	train-auc:0.744335
+[64]	train-auc:0.747326
+[65]	train-auc:0.747785
+[66]	train-auc:0.749327
+[67]	train-auc:0.750302
+[68]	train-auc:0.751132
+[69]	train-auc:0.752078
+[70]	train-auc:0.753613
+[71]	train-auc:0.754604
+[72]	train-auc:0.755133
+[73]	train-auc:0.75684
+[74]	train-auc:0.75748
+[75]	train-auc:0.75839
+[76]	train-auc:0.75897
+[77]	train-auc:0.760118
+[78]	train-auc:0.761753
+[79]	train-auc:0.762179
+[80]	train-auc:0.76399
+[81]	train-auc:0.765152
+[82]	train-auc:0.765695
+[83]	train-auc:0.766486
+[84]	train-auc:0.767727
+[85]	train-auc:0.768448
+[86]	train-auc:0.769266
+[87]	train-auc:0.769999
+[88]	train-auc:0.770624
+[89]	train-auc:0.771123
+[90]	train-auc:0.771479
+[91]	train-auc:0.772297
+[92]	train-auc:0.772528
+[93]	train-auc:0.772865
+[94]	train-auc:0.773834
+[95]	train-auc:0.774511
+[96]	train-auc:0.775233
+[97]	train-auc:0.77588
+[98]	train-auc:0.776127
+[99]	train-auc:0.776702
+[100]	train-auc:0.778107
+[101]	train-auc:0.778467
+[102]	train-auc:0.77939
+[103]	train-auc:0.779735
+[104]	train-auc:0.780141
+[105]	train-auc:0.781298
+[106]	train-auc:0.783011
+[107]	train-auc:0.784178
+[108]	train-auc:0.786235
+[109]	train-auc:0.787209
+[110]	train-auc:0.788151
+[111]	train-auc:0.789127
+[112]	train-auc:0.790517
+[113]	train-auc:0.791085
+[114]	train-auc:0.791571
+[115]	train-auc:0.792426
+[116]	train-auc:0.794178
+[117]	train-auc:0.794974
+[118]	train-auc:0.796078
+[119]	train-auc:0.797287
+[120]	train-auc:0.798017
+[121]	train-auc:0.798916
+[122]	train-auc:0.800126
+[123]	train-auc:0.801489
+[124]	train-auc:0.8019
+[125]	train-auc:0.802371
+[126]	train-auc:0.803326
+[127]	train-auc:0.804098
+[128]	train-auc:0.804333
+[129]	train-auc:0.804712
+[130]	train-auc:0.804844
+[131]	train-auc:0.805199
+[132]	train-auc:0.806297
+[133]	train-auc:0.806719
+[134]	train-auc:0.807327
+[135]	train-auc:0.808011
+[136]	train-auc:0.80896
+[137]	train-auc:0.809995
+[138]	train-auc:0.810623
+[139]	train-auc:0.811482
+[140]	train-auc:0.812452
+[141]	train-auc:0.8129
+[142]	train-auc:0.813711
+[143]	train-auc:0.814814
+[144]	train-auc:0.815241
+[145]	train-auc:0.815404
+[146]	train-auc:0.816394
+[147]	train-auc:0.817058
+[148]	train-auc:0.817818
+[149]	train-auc:0.818845
+[150]	train-auc:0.819378
+[151]	train-auc:0.820166
+[152]	train-auc:0.820852
+[153]	train-auc:0.821948
+[154]	train-auc:0.822479
+[155]	train-auc:0.823166
+[156]	train-auc:0.823511
+[157]	train-auc:0.824147
+[158]	train-auc:0.82423
+[159]	train-auc:0.824763
+[160]	train-auc:0.825245
+[161]	train-auc:0.825741
+[162]	train-auc:0.826199
+[163]	train-auc:0.826978
+[164]	train-auc:0.827562
+[165]	train-auc:0.828645
+[166]	train-auc:0.829034
+[167]	train-auc:0.829528
+[168]	train-auc:0.830361
+[169]	train-auc:0.83117
+[170]	train-auc:0.831798
+[171]	train-auc:0.832085
+[172]	train-auc:0.832707
+[173]	train-auc:0.832991
+[174]	train-auc:0.833842
+[175]	train-auc:0.833999
+[176]	train-auc:0.834567
+[177]	train-auc:0.834761
+[178]	train-auc:0.835555
+[179]	train-auc:0.836133
+[180]	train-auc:0.83639
+[181]	train-auc:0.836473
+[182]	train-auc:0.836807
+[183]	train-auc:0.83737
+[184]	train-auc:0.837566
+[185]	train-auc:0.838132
+[186]	train-auc:0.838466
+[187]	train-auc:0.839246
+[188]	train-auc:0.839966
+[189]	train-auc:0.841565
+[190]	train-auc:0.842052
+[191]	train-auc:0.842572
+[192]	train-auc:0.842899
+[193]	train-auc:0.843699
+[194]	train-auc:0.844084
+[195]	train-auc:0.84438
+[196]	train-auc:0.844562
+[197]	train-auc:0.845833
+[198]	train-auc:0.84643
+[199]	train-auc:0.84722
+[200]	train-auc:0.847844
+[201]	train-auc:0.84835
+[202]	train-auc:0.849218
+[203]	train-auc:0.850068
+[204]	train-auc:0.850559
+[205]	train-auc:0.851006
+[206]	train-auc:0.851826
+[207]	train-auc:0.85235
+[208]	train-auc:0.85282
+[209]	train-auc:0.853353
+[210]	train-auc:0.854071
+[211]	train-auc:0.855424
+[212]	train-auc:0.856119
+[213]	train-auc:0.856357
+[214]	train-auc:0.857268
+[215]	train-auc:0.857765
+[216]	train-auc:0.858639
+[217]	train-auc:0.859005
+[218]	train-auc:0.859486
+[219]	train-auc:0.860239
+[220]	train-auc:0.860564
+[221]	train-auc:0.861007
+[222]	train-auc:0.861772
+[223]	train-auc:0.862062
+[224]	train-auc:0.862829
+[225]	train-auc:0.863986
+[226]	train-auc:0.864306
+[227]	train-auc:0.865066
+[228]	train-auc:0.865722
+[229]	train-auc:0.866349
+[230]	train-auc:0.866531
+[231]	train-auc:0.867225
+[232]	train-auc:0.867757
+[233]	train-auc:0.868365
+[234]	train-auc:0.868657
+[235]	train-auc:0.869307
+[236]	train-auc:0.869576
+[237]	train-auc:0.870016
+[238]	train-auc:0.870237
+[239]	train-auc:0.870376
+[240]	train-auc:0.87056
+[241]	train-auc:0.870829
+[242]	train-auc:0.871134
+[243]	train-auc:0.871638
+[244]	train-auc:0.872269
+[245]	train-auc:0.87288
+[246]	train-auc:0.873093
+[247]	train-auc:0.873602
+[248]	train-auc:0.874238
+[249]	train-auc:0.874899
+[250]	train-auc:0.875262
+[251]	train-auc:0.876106
+[252]	train-auc:0.876483
+[253]	train-auc:0.877197
+[254]	train-auc:0.87729
+[255]	train-auc:0.877636
+[256]	train-auc:0.878201
+[257]	train-auc:0.878426
+[258]	train-auc:0.878821
+[259]	train-auc:0.879523
+[260]	train-auc:0.879987
+[261]	train-auc:0.880603
+[262]	train-auc:0.881067
+[263]	train-auc:0.88147
+[264]	train-auc:0.881987
+[265]	train-auc:0.882505
+[266]	train-auc:0.882894
+[267]	train-auc:0.883242
+[268]	train-auc:0.883363
+[269]	train-auc:0.883935
+[270]	train-auc:0.884273
+[271]	train-auc:0.884648
+[272]	train-auc:0.884905
+[273]	train-auc:0.885416
+[274]	train-auc:0.885641
+[275]	train-auc:0.885947
+[276]	train-auc:0.886551
+[277]	train-auc:0.886773
+[278]	train-auc:0.887164
+[279]	train-auc:0.88784
+[280]	train-auc:0.888324
+[281]	train-auc:0.888579
+[282]	train-auc:0.889058
+[283]	train-auc:0.889148
+[284]	train-auc:0.889499
+[285]	train-auc:0.89025
+[286]	train-auc:0.890465
+[287]	train-auc:0.89095
+[288]	train-auc:0.891241
+[289]	train-auc:0.891468
+[290]	train-auc:0.891787
+[291]	train-auc:0.892376
+[292]	train-auc:0.892887
+[293]	train-auc:0.893379
+[294]	train-auc:0.893664
+[295]	train-auc:0.894025
+[296]	train-auc:0.894623
+[297]	train-auc:0.895216
+[298]	train-auc:0.895754
+[299]	train-auc:0.896125
+num_boost_round: 300
+feature importance
+   feature_name  score
+4          kdjd   9698
+7    boll_ratio   9666
+10  mv_avg_3_13   9628
+5          kdjj   9322
+3          kdjk   9248
+2        rsi_24   9156
+1        rsi_12   8963
+11   mv_avg_5_8   8728
+0         rsi_6   3031
+9    mv_avg_3_8   2598
+6         macdh   2298
+8    mv_avg_3_5   2048
+group prediction score
+            groups  slope_cls  count  pos_ratio
+0     (0.0, 0.321]        158  10716   0.014744
+1   (0.321, 0.372]        789  10781   0.073184
+2   (0.372, 0.411]       1767  10922   0.161784
+3   (0.411, 0.447]       2910  10625   0.273882
+4   (0.447, 0.484]       4371  10692   0.408810
+5   (0.484, 0.523]       6074  10786   0.563137
+6   (0.523, 0.567]       7619  10667   0.714259
+7   (0.567, 0.621]       9001  10637   0.846197
+8   (0.621, 0.692]       9954  10683   0.931761
+9   (0.692, 0.748]       5170   5297   0.976024
+10  (0.748, 0.808]       3175   3209   0.989405
+11  (0.808, 0.851]       1053   1058   0.995274
+12    (0.851, 1.0]       1064   1065   0.999061
+threshold: 0.808
+pred postive ratio: 0.83
+pred postive ratio: 0.718
+pred postive ratio: 0.75
+pred postive ratio: 0.818
+pred postive ratio: 0.847
+pred postive ratio: 0.818
+pred postive ratio: 0.818

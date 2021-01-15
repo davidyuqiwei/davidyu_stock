@@ -9,7 +9,7 @@ def date_trans(x):
     return x1
 
 def DF_to_StockDataFrame(df1):
-    df1 = df1.sort_values('stock_date')
+    df1 = df1.sort_values('stock_date').drop_duplicates()
     df1.rename(columns={'stock_date':'date'},inplace=True)
     df1.date = df1.date.apply(date_trans)
     #print(df1.head())
@@ -26,7 +26,7 @@ def select_data(stock,start_date,end_date):
 
 def stock_kdj(stock,feature_list=None):
     if feature_list is None:
-        feature_list = ["macdh","cci","rsi_6","rsi_12","rsi_24","kdjk","kdjj","kdjj","macdh"]
+        feature_list = ["macdh","cci","rsi_6","rsi_12","rsi_24","kdjk","kdjd","kdjj","boll_ub","boll_lb","macd","macds"]
     #df_kdj = stock[['kdjk','kdjd','kdjj']].reset_index()
     df_kdj = stock.reset_index()
     df_kdj['stock_index'] = stock['stock_index'].tolist()

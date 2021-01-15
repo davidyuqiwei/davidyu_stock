@@ -4,6 +4,26 @@
 #####################################
 #           1:00-3:30               #
 #####################################
+
+# @description:   download zhulikongpan data
+# @run time :about 6 hours
+# @download tool:  wget
+# @type: daily new
+# @source: DFCF,   http://data.eastmoney.com/stockcomment/002594.html
+10 23 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/zhulikongpan/run_main_zhulikongpan.sh
+
+# dfcf_fuquan
+10 22 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dfcf_fuquan/run_main_dfcf_fuquan.sh
+#stock shizhi
+10 08 * * 6 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/stock_shizhi/run_main_stock_shizhi.sh
+
+# @description:   download baostock data
+# @run time :about >5 hours
+# @download tool:  python api
+# @type: daily new
+# @source: DFCF, baostock
+10 23 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/baostock/run_main_baostock.sh
+
 # @description:   download volume price distribution of every stock
 # @run time :about 6 hours
 # @download tool:  url
@@ -100,14 +120,16 @@
 #####################################
 #           16:00 -   real time   #
 #####################################
-## @description: download DADAN > 100
-# @run time: 2 hours
-# @download tools: url
-# @type: daily new
+
+# @description:     download DADAN > 100
+# @run time:        2 hours
+# @download tools:  url - python
+# @type:            daily new
+# @source:          ifeng, 
 #---------- download DADAN off line > 100
 ############################################################
 
-47 20  * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/run_dadan_offline.sh
+32 15  * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/dadan_real_time_ifeng/run_main_dadan_real_time_ifeng.sh
 ## data to hive
 
 #35 19 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/DADAN_offline/DADAN_offline_data_to_hive.sh
@@ -200,6 +222,14 @@
 ##----------- gainian liuru
 ############################
 55 21 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/gainian_liuru/run_download_gainian_liuru.sh
+
+## @description: gainian,bankuai sina
+# @run time: 50s
+# @download tools: wget
+# @type: daily new
+##----------- gainian liuru
+############################
+55 20 * * 1-5 MakeLogFileShell.sh /home/davidyu/stock/scripts/davidyu_stock/scripts/download/bankuai_sina/run_main_bankuai_sina.sh
 
 ########################################
 #               weekly                 #

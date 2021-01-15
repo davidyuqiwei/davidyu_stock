@@ -74,21 +74,20 @@ def make_column_str(columns,types,comment):
     return column_str
 
 if __name__=='__main__':
-    '''
-    sample_dir = tmp_data_dict.get("YeJiYuQi")
-    #sample_dir = data_dict.get("baostock")
-    filename = "YeJiYuQi.csv"
+    #sample_dir = tmp_data_dict.get("YeJiYuQi")
+    sample_dir = data_dict.get("baostock")
+    filename = "601398.csv"
     file_name = os.path.join(sample_dir,filename)
+    file_name = "/home/davidyu/stock/data/tmp_data/stock_shizhi/stock_shizhi_2021-01-11.csv"
     df1 = pd.read_csv(file_name,error_bad_lines=False)
     columns = df1.columns.tolist()
     types = get_df_column_type(df1)
     #print(types)
-    '''
-    columns = ["stock_index","start_date","end_date","pred_days","slope"]
-    types = ["string","string","string","int","float"]
+    #columns = ["stock_index","start_date","end_date","pred_days","slope"]
+    #types = ["string","string","string","int","float"]
     comment = columns
-    database_name = "stock_test"
-    table_name = "stock_slope"
+    database_name = "stock_dt"
+    table_name = "stock_liutong_shizhi"
     table_comment = table_name
     column_str = make_column_str(columns,types,comment)
     #print(column_str)

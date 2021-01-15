@@ -25,32 +25,37 @@ def allKdj(now_date,stock_index):
     j_line = []
     stock_date_list = []
     rsi_6 = []
+    boll_ratio = []
     try:
         wy_data_dir = data_dict.get("day_history_wangyi")
         df1 = loadData(wy_data_dir,stock_index).sort_values("stock_date")
         stock = DF_to_StockDataFrame(df1)
-        df_stock = stock_kdj(stock)
+        df_stock,_ = stock_kdj(stock)
+        df_stock["boll_ratio"] = df_stock["boll_ub"]/df_stock["boll_lb"]
         kdj_j_today = np.round(df_stock['kdjj'][df_stock['date']==now_date].values[0],3)
         rsi_today = np.round(df_stock['rsi_6'][df_stock['date']==now_date].values[0],3)
+        boll_ratio_today = np.round(df_stock['boll_ratio'][df_stock['date']==now_date].values[0],3)
         stock_index_list.append(stock_index)
         j_line.append(kdj_j_today)
         rsi_6.append(rsi_today)
+        boll_ratio.append(boll_ratio_today)
         stock_date_list.append(now_date)
     except:
         pass
-    return stock_index_list,j_line,stock_date_list,rsi_6
+    return stock_index_list,j_line,stock_date_list,rsi_6,boll_ratio
 if __name__ == "__main__":
     now_date,now_date_time = get_the_datetime()
     now_date = now_date.replace('_','-')
     stock_index = sys.argv[1]
     now_date = sys.argv[2]
     #stock_index = '601398'
-    #now_date = '2020-11-24'
-    stock_index_list,j_line,stock_date_list,rsi_6 = allKdj(now_date,stock_index)
-    df_kdj_out = pd.DataFrame([stock_date_list,stock_index_list,j_line,rsi_6]).T
-    df_kdj_out.columns = ['stock_date','stock_index','kdjj','rsi_6']
+    now_date = '2020-12-28'
+    stock_index_list,j_line,stock_date_list,rsi_6,boll_ratio = allKdj(now_date,stock_index)
+    df_kdj_out = pd.DataFrame([stock_date_list,stock_index_list,j_line,rsi_6,boll_ratio]).T
+    df_kdj_out.columns = ['stock_date','stock_index','kdjj','rsi_6','boll_ratio']
     #print(df_kdj_out)
     df_kdj_out.sort_values('kdjj').to_csv('wy_kdj.csv',index=0,mode='a')
+    df_kdj_out.sort_values('boll_ratio').to_csv('wy_boll_ratio.csv',index=0,mode='a')
 
 
 

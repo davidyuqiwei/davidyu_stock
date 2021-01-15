@@ -66,7 +66,3 @@ if __name__=='__main__':
 
 
 
-#print(new_table)
-
-
-#airline.table = readHTMLTable(html1, header=T, which=1,stringsAsFactors=F)

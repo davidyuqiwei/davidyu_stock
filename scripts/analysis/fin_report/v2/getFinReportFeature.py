@@ -44,7 +44,7 @@ def transformData(my_dataframe):
 if __name__ == "__main__":
     from davidyu_cfg import *
     start_date = "2016-01-01"
-    end_date = "2016-12-31"
+    end_date = "2020-12-31"
     my_dataframe = getFinReportData(start_date,end_date)
     df5 = transformData(my_dataframe)
     df5['stock_index'] = df5.index.tolist()

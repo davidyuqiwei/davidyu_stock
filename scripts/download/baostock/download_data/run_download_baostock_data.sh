@@ -8,9 +8,9 @@ do
     if [[ $line != "code" ]];then
         python download_baostock_data.py $line
         #echo $line 
-        sleep 10s
+        sleep 2s
     fi
-done < $stock_list_data
+done <$stock_list_data
 
 
 

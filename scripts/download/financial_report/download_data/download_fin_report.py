@@ -82,7 +82,7 @@ def loop_for_download_fin_report(stock_index,year_range,if_check_name=1):
             do_download(stock_index,year,save_dir,file_name,if_file_exists)
             time.sleep(20)
 if __name__ =='__main__':
-    start_year = 2020
+    start_year = 2019
     end_year = 2020
     year_range = range(start_year,end_year+1)
     stock_index = sys.argv[1]

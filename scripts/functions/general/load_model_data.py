@@ -50,7 +50,7 @@ class normalizeDf():
 	    ## normalize the dataframe
 	    #  (x-min_x)/(max_x-min_x)
 	    df_models_raw = self.df
-	    df_norm = (df_models_raw-df_models_raw.min())/(df_models_raw.max()-df_models_raw.min())
+	    df_norm = (df_models_raw-df_models_raw.min())/(df_models_raw.max()-df_models_raw.min()+0.0001)
 	    return df_norm
     def normDfCol(self,cols):
         df1['norm_col'] = (df1[cols]-df1[cols].min())/(df1[cols].max()-df1[cols].min())

@@ -28,7 +28,7 @@ stock_dev.jijin t1
 left join
 stock.stock_index t2
 on t1.stock_index = t2.code
-where stock_date = '2020-09-30' and jijin_name like '%指数增强%'
+where stock_date = '2020-09-30' and jijin_name like '%金%'
 group by jijin_name
 limit 100
 ;
@@ -40,7 +40,7 @@ stock_dev.jijin t1
 left join
 stock.stock_index t2
 on t1.stock_index = t2.code
-where stock_date = '2020-09-30' and jijin_name like '%指数增强%'
+where stock_date = '2020-09-30' and jijin_name like '%金%'
 group by t2.name,t2.code
 order by count(distinct jijin_name) desc
 limit 50

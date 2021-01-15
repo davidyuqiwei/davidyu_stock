@@ -52,7 +52,11 @@ data_dir=["tmp",
         "feature_center",
         "volume_price_distr",
         "rongzirongquan",
-        "dadan_real_time_ifeng"
+        "dadan_real_time_ifeng",
+        "zhulikongpan",
+        "dfcf_fuquan",
+        "bankuai_sina",
+        "stock_shizhi"
         ]
 {
     "jiesuan": "中国证券登记结算有限公司市场新增投资者数"

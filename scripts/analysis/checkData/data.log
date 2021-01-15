@@ -1,0 +1,56 @@
+==============================================
+==============================================
+=========== start pirnt data status ==========
+==============================================
+==============================================
+++++      /home/davidyu/stock/data/day_history_wangyi/601398
+-rw-r--r-- 1 david davidyu 4463 12月 24 19:04 601398_2020_4.csv
+==============================================
+++++      /home/davidyu/stock/data/dadan_real_time_ifeng
+drwxr-xr-x 2 david davidyu 69632 12月 24 21:31 2020-12-24
+==============================================
+++++      /home/davidyu/stock/data/history_data/important_owner
+-rw-r--r-- 1 david davidyu  9133 12月 24 21:38 zhongguozhengquanjinrong_2020-12-24.csv
+==============================================
+++++      /home/davidyu/stock/data/history_data/bankuai
+-rw-r--r-- 1 david davidyu 23938 12月 24 17:30 bankuai_2020-12-24.csv
+==============================================
+++++      /home/davidyu/stock/data/YeJiYuQi
+drwxr-xr-x 2 david davidyu 4096 12月 24 23:01 2020-12-24
+==============================================
+++++      /home/davidyu/stock/data/history_data/dadan_DFCF
+-rw-r--r-- 1 david davidyu 581350 12月 24 17:38 2020-12-24.csv
+==============================================
+++++      /home/davidyu/stock/data/JiGouDiaoYan
+-rw-r--r-- 1 david davidyu 12857 12月 24 21:00 2020-12-24-210024.csv
+==============================================
+++++      /home/davidyu/stock/data/dazongjiaoyi
+-rw-r--r-- 1 david davidyu 44182 12月 24 19:40 dazongjiaoyi_2020-12-24.csv
+==============================================
+++++      /home/davidyu/stock/data/gainian_liuru
+drwxr-xr-x 2 david davidyu 4096 12月 24 21:55 2020-12-24
+==============================================
+++++      /home/davidyu/stock/data/daily_report
+drwxr-xr-x 2 david davidyu 4096 12月 25 08:49 2020-12-24
+==============================================
+++++      /home/davidyu/stock/data/all_news
+-rw-r--r-- 1 david davidyu   712 12月 25 07:35 sina_usa_stock_2020-12-25.txt
+==============================================
+ =========== check dazongjiaoyi =================
+2020-12-24
+2020-12-24
+ =========== check dadan_DFCF =================
+date
+2020_08_12
+ =========== check day_history_wangyi =================
+2020-12-24
+2020-12-24
+ =========== check jigoudiaoyan =================
+2020-12-24
+2020-12-24
+ =========== check yejiyuqi =================
+2020-12-24
+2020-12-23
+ =========== check important owner =================
+2020-12-24
+2020-12-24
