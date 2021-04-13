@@ -43,6 +43,7 @@ if __name__ == "__main__":
     #now_date,now_date_time = get_the_datetime()
     now_date,now_date_time = timeFunc.get_the_datetime()
     start_date = timeFunc.daysAgo(now_date,1)
+    start_date='2021-01-01'
     end_date = now_date
     #print(start_date)
     #start_date = now_date[0:8]+"01"

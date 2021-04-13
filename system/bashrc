@@ -62,6 +62,9 @@ export history_data_dir=$stock_data"/history_data"
 # set common data
 export stock_list_data=$stock_data"/common/stock_list.txt"
 export stock_list_data_test=$stock_data"/common/stock_list_test.txt"
+export hk_index_list=$stock_data"/common/hk_index_list.txt"
+export hs_300_list_data=$stock_data"/common/index_300_raw.txt"
+export sh_sz_index=$stock_data"/common/sh_sz_index.txt"
 #go
 export GOPROXY=https://goproxy.io
 export GO111MODULE=on

@@ -1,0 +1,9 @@
+tt=function(a){
+    print(a)
+    tt2=function(a){
+        print(a)
+        print("tt2")
+    }
+    tt2(a)
+    return(a)
+}

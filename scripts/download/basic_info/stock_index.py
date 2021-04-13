@@ -1,4 +1,10 @@
 import tushare as ts
+pro = ts.pro_api('85c3e04d2d6861c6036fe74b68a644b0ef7d5f5cfd6ad28a453e26d8')
+
+
+data = pro.stock_basic(exchange='', list_status='L', fields='ts_code,symbol,name,area,industry,list_date')
+
+
 info = ts.get_stock_basics()
 info.to_csv("stock_basic_info_nohead.csv",header=None)
 info.to_csv("stock_basic_info.csv")

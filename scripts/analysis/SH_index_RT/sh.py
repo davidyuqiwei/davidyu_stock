@@ -5,13 +5,21 @@ df1 = pd.read_csv(file_name,header=None)
 df1.columns = ["price","cum_amount","stock_date_time"]
 df1 = df1.drop_duplicates()
 df1["stock_date"] = [x[0:10] for x in df1["stock_date_time"].values.tolist()]
+df1["hr"] = [x[11:13] for x in df1["stock_date_time"].values.tolist()]
+df1["time"] = [x[11:16] for x in df1["stock_date_time"].values.tolist()]
 def clean_rt_data(df1):
+    #df1 = df1.sort_values("time")
+	#df1["amount"] = df1["cum_amount"].diff(1)
+	#df1["time"] = [x[11:16] for x in df1["stock_date_time"].values.tolist()]
+	#df1["hr"] = [x[11:13] for x in df1["stock_date_time"].values.tolist()]
+    df1 = df1.sort_values("time")
 	df1["amount"] = df1["cum_amount"].diff(1)
-	df1["time"] = [x[11:16] for x in df1["stock_date_time"].values.tolist()]
 	df2 = df1[(df1["time"]>="09:30")&(df1["time"]<="15:00")]
-    return df2
+	df3 = df2[(df2["time"]<="11:30")|(df2["time"]>="13:00")]
+    return df3
 
 df2 = df1.groupby("stock_date").apply(clean_rt_data)
+df3 = df2.reset_index(drop=True)
 
 
 def price_vol(df2):

@@ -45,12 +45,18 @@ class timeFunc():
         threeDayAgo = (start_date - datetime.timedelta(days=int(days)))
         date_out = threeDayAgo.strftime("%Y-%m-%d")
         return date_out
-    @classmethod
+    @staticmethod
     def getTheDatetime():
         now_time = datetime.datetime.now()
         now_date = now_time.strftime('%Y-%m-%d')
         now_date_time = now_time.strftime('%Y-%m-%d-%H%M%S')
         now_month = datetime.datetime(now_time.year, now_time.month,1).strftime('%Y-%m-%d')
+        return_val = {
+                "now_date":now_date,
+                "now_date_time":now_date_time,
+                "now_month":now_month
+                }
+        return return_val
 
     @staticmethod
     def getEveryDay(begin_date='2019-06-01', end_date='2019-12-31'):

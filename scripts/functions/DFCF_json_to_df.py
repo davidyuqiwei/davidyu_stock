@@ -38,6 +38,8 @@ def json_to_df(file_in,cols,date_type,save_dir=None):
         df2.to_csv(os.path.join('./',file_name),index=0)
     else:
         df2.to_csv(os.path.join(save_dir,file_name),index=0)
+
+
 def json_to_df_raw(file_in,cols,date_type):
     df_len,all_keys,raw_json = load_the_json(file_in)
     json_string_raw = raw_json.get(all_keys[0])

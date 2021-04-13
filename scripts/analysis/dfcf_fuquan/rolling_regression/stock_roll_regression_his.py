@@ -8,10 +8,12 @@ if __name__ == '__main__':
     import sys
 
     input_file = sys.argv[1]
-    input_dir = "/home/davidyu/stock/data/dfcf_fuquan/parse_data"
+    input_dir = "/home/davidyu/stock/data/history_data/dfcf_fuquan/stock_index"
     out_file = sys.argv[2]
-    out_dir = "/home/davidyu/stock/data/feature_center/rolling_regression/stock_index"
+    #out_dir = "/home/davidyu/stock/data/feature_center/rolling_regression/stock_index"
+    #out_dir = sys.argv[4]
     window = sys.argv[3]
+    out_dir = sys.argv[4]
     df = pd.read_csv(os.path.join(input_dir,input_file))
     t1 = Regressions()
     df_roll_regression =  t1.rolling_regression(df, int(window), "dt", "close")

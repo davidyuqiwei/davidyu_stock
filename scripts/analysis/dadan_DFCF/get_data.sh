@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 save_dir=$stock_data"/test/"
-stk_index="dadan_601668"
+stk_index="dadan_603698"
 file_name=$stk_index
 f1=${save_dir}${file_name}.csv
 #final_file=${file_name}_f1.csv
@@ -12,7 +12,7 @@ spark-sql  --hiveconf hive.cli.print.header=true \
 select *,REPLACE(stock_date,'_','-') as dt
 from stock_dev.dadan_dfcf
 where 
-stock_index = '601668'
+stock_index = '603698'
 order by REPLACE(stock_date,'_','-')
 ;
 " \

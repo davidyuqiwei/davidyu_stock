@@ -4,6 +4,7 @@ def parse_url_list(input_in):
     try:
         name = input_in.split(";")[0]
         url = input_in.split(";")[1]
+        #print(url)
         #print("name++++"+name)
         #print("url+++++"+url)
         cmd_out = "sh wget_important_owner_to_df.sh '%s' '%s' "%(url,name)

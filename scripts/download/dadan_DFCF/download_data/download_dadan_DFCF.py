@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 from davidyu_cfg import *
-from functions.check_dataframe_to_hive import *
+#from functions.check_dataframe_to_hive import *
 from functions.data_dir import *
 from functions.get_datetime import *
 from functions.DFCF_json_to_df import *
@@ -45,15 +45,21 @@ def text_to_df():
     return df1
 if __name__=='__main__':
     from functions.update.cleanData import cleanData
-    
+    from functions.common.errorLog import if_error_DF
     #dir_dadan = data_dict.get("dadan_DFCF")
     dir_dadan = "./"
     now_date,now_date_time = get_the_datetime()
     new_table = text_to_df()
     new_table['date'] = now_date
+    new_table.columns = setColname().dadan_DFCF()
     new_table = cleanData.columnToFloat(new_table,["new_price","today_increase_ratio","zhuli_liuru",
             'chaodadan_liuru', 'chaodadan_liuru_ratio','dadan_liuru', 'dadan_liuru_ratio', 'zhongdan_liuru',
                 'zhongdan_liuru_ratio', 'xiaodan_liuru', 'xiaodan_liuru_ratio','zhuli_liuru_ratio'])
+    ################
+    # check error  #
+    ################
+    dir_in = os.path.realpath(__file__)
+    if_error_DF(new_table,dir_in)
     file_name = sys.argv[1]
     save_the_table(new_table,dir_dadan,now_date,file_name)
 

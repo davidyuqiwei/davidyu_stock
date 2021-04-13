@@ -43,7 +43,7 @@ def do_download(stock_index,year1,season1):
 def make_season(month):
     month = int(month)
     if month in [1,2,3]:
-        seaon =1
+        season =1
     elif month in [4,5,6]:
         season = 2
     elif month in [7,8,9]:
@@ -54,7 +54,7 @@ def make_season(month):
 if __name__ =='__main__':
     dir_day_history_wy = data_dict.get("day_history_wangyi")
     dir_name = dir_day_history_wy
-    stk_index_list = stk_index_list_gen()
+    #stk_index_list = stk_index_list_gen()
     now_date,_ = get_the_datetime()
     year = int(now_date.split("-")[0])
     month = int(now_date.split("-")[1])

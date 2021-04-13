@@ -14,6 +14,7 @@ set hive.exec.dynamic.partition.mode=nonstrict;
 
 
 select * from stock_dev.SH_index
+where stock_date<=to_date(date_sub(current_date(),1))
 ;
 " \
 | sed 's/[\t]/,/g' > $f1

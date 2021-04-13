@@ -78,7 +78,7 @@ if __name__=='__main__':
     sample_dir = data_dict.get("baostock")
     filename = "601398.csv"
     file_name = os.path.join(sample_dir,filename)
-    file_name = "/home/davidyu/stock/data/tmp_data/stock_shizhi/stock_shizhi_2021-01-11.csv"
+    file_name = "/home/davidyu/stock/data/tmp_data/all_owner/all_owner.csv"
     df1 = pd.read_csv(file_name,error_bad_lines=False)
     columns = df1.columns.tolist()
     types = get_df_column_type(df1)
@@ -86,9 +86,9 @@ if __name__=='__main__':
     #columns = ["stock_index","start_date","end_date","pred_days","slope"]
     #types = ["string","string","string","int","float"]
     comment = columns
-    database_name = "stock_dt"
-    table_name = "stock_liutong_shizhi"
-    table_comment = table_name
+    database_name = "stock_dev"
+    table_name = "all_owner_dfcf"
+    table_comment = "all_owner_dfcf"
     column_str = make_column_str(columns,types,comment)
     #print(column_str)
     create_table(database_name,table_name,column_str,table_comment)

@@ -8,12 +8,12 @@ import requests
 from bs4 import BeautifulSoup
 #html1 = "http://data.10jqka.com.cn/ajax/sgpx/date/2019-06-30/ajax/1/free/1/"
 import time
-import html_header
+from html_header import *
 
 
 
 #html1 = "http://data.10jqka.com.cn/ajax/sgpx/date/2019-12-31/ajax/2/free/1/"
-def get_pages(date_input):
+def get_pages(date_input,headers):
     '''
     @param date_input:  a datetime string input  e.g.  '2019-03-31'
     '''
@@ -29,7 +29,7 @@ def get_pages(date_input):
     except:
         pass
     return pages_num
-def html_text(html1):
+def html_text(html1,headers):
     response=requests.get(html1, headers = headers)
     a1 = response.text
     soup = BeautifulSoup(a1)
@@ -48,12 +48,12 @@ def soup_to_DF(soup,stock_name):
     df_out = pd.DataFrame(df_list)
     return df_out
 
-def get_data(date_input,save_dir):
+def get_data(date_input,save_dir,headers):
     html1 = "http://data.10jqka.com.cn/ajax/sgpx/date/%s/board/ALL/order/asc/page/1/ajax/1/free/1/"%(date_input)
-    page_num = get_pages(date_input)
+    page_num = get_pages(date_input,headers)
     for i in range(1,page_num+1):
         html1 = "http://data.10jqka.com.cn/ajax/sgpx/date/%s/board/ALL/order/asc/page/%s/ajax/1/free/1/"%(date_input,i)
-        soup = html_text(html1)
+        soup = html_text(html1,headers)
         #print(soup)
         stock_name = [x.get_text() for x in soup.find_all("a",attrs={'class','J_showCanvas'})]
         if len(stock_name)>0:
@@ -67,22 +67,22 @@ def get_data(date_input,save_dir):
             pass
         time.sleep(60)
 def makeDateInput():
-	season = ['03-31','06-30','09-30','12-31']
-	year = [str(x)+'-' for x in range(2003,2020)]
-	year.reverse()
-	date_input = []
-	for year1 in year:
-	    for season1 in season:
-	        date_input.append(year1+season1)
+    season = ['03-31','06-30','09-30','12-31']
+    year = [str(x)+'-' for x in range(2020,2021)]
+    year.reverse()
+    date_input = []
+    for year1 in year:
+        for season1 in season:
+            date_input.append(year1+season1)
     return date_input
 
 if __name__ =='__main__':
-    #date_input = makeDateInput()
+    date_input = makeDateInput()
     save_dir = data_dict.get("fenhong")
-    date_input = ['2019-12-31']
+    #date_input = ['2019-12-31']
     for date_input1 in date_input: 
         print(date_input1)
-        get_data(date_input1,save_dir)
+        get_data(date_input1,save_dir,headers)
         time.sleep(60)
         #get_data("2019-06-30")
 

@@ -15,5 +15,6 @@ volume,
 adj_close
 from 
 stock_dev.sh_index
+where stock_date <> 'stock_date'
 ) t1
 ;

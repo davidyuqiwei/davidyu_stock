@@ -1,0 +1,1 @@
+stock_dws.dadan_realtime_daily_minute_sum

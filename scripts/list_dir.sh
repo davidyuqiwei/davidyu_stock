@@ -42,3 +42,16 @@ find ./  -maxdepth 1 -type d  -exec rm -rf {} \;
 # add permission to david for the foler
 chown -R david elasticsearch-7.6.2/
 
+
+# split 
+:<<!
+while read -r line
+do
+    array=(${line//,/ })
+
+    date1=${array[1]}
+    date2=${array[2]}
+    echo $date1
+    echo $date2
+done<aa.txt
+!

@@ -11,9 +11,11 @@ do
         file1=$stock_index"_zhulikongpan_"$download_date".txt"
         url1="http://dcfm.eastmoney.com/em_mutisvcexpandinterface/api/js/get?type=QGQP_LB&CMD=$stock_index&token=70f12f2f4f091e459a279469fe49eca5&callback=jQuery1123048223496594506776_1609067355341&_=1609067355343"
         wget $url1 -O $file1
-        sleep 4s
-        python download_zhulikongpan.py
-        mv $file1 $stock_data"/zhulikongpan"
+        sleep 3.156s
+        #python download_zhulikongpan.py
+        mv $file1 $stock_data"/zhulikongpan/raw_data"
     fi
-done <$stock_list_data
+#done<stock.sh
+done<$stock_list_data
+#done <$stock_list_data
 

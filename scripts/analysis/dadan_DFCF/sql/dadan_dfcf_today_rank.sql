@@ -20,7 +20,11 @@ chaodadan_liuru_ratio,
 dadan_liuru,
 dadan_liuru_ratio,
 zhuli_liuru,
-zhuli_liuru_ratio
+zhuli_liuru_ratio,
+zhongdan_liuru,
+zhongdan_liuru_ratio,
+xiaodan_liuru,
+xiaodan_liuru_ratio
 from
 stock_dev.dadan_dfcf
 where stock_date='${today_date}'

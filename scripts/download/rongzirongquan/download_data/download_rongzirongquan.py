@@ -17,19 +17,28 @@ def get_page_num(html1):
     a2 = re.findall(wordreg,a1)
     page_num = a2[0][2]
     return page_num
+
 def get_html(page,date1):
     html1 = "http://datacenter.eastmoney.com/api/data/get?callback=datatable3319302&type=RPTA_WEB_RZRQ_GGMX&sty=ALL&source=WEB&p="+page+"&ps=5000&st=RZJME&sr=-1&filter=(date%3D%27"+date1+"%27)&pageNo=1&_=1607562655494" 
     return html1
-days = timeFunc.getEveryDay('2010-04-01','2020-12-09')
-days.reverse()
-for dd in days:
-    html1 = get_html('1',dd)
-    try:
-        page_num = get_page_num(html1)
-        time.sleep(2)
-        for p1 in range(1,int(page_num)+1):
-            os.system("sh run_download_rongzirongquan.sh %s %s"%(dd,str(p1)))
-            time.sleep(2)
-    except Exception as e:
-        logging.error(e)
-        pass
+
+def download_it(days):
+	for dd in days:
+	    html1 = get_html('1',dd)
+	    try:
+	        page_num = get_page_num(html1)
+	        time.sleep(2)
+	        for p1 in range(1,int(page_num)+1):
+	            os.system("sh run_download_rongzirongquan.sh %s %s"%(dd,str(p1)))
+	            time.sleep(2)
+	    except Exception as e:
+	        logging.error(e)
+	        pass
+
+if __name__ == '__main__':
+    days = timeFunc.getEveryDay('2020-12-10','2021-01-09')
+    days.reverse()
+    download_it(days)
+
+
+

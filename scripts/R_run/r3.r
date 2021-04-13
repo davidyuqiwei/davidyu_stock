@@ -1,5 +1,18 @@
 library(dplyr)
+library(rpart)
+library(rpart.plot)
 df1 = read.csv("/home/davidyu/stock/data/test/dfcf_fuquan_kdj.csv")
+
+
+
+df1 = read.csv("/home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/dfcf_fuquan/macd/data_out.csv")
+
+m<-rpart(slope_dir~rsi_6+rsi_12+kdjj+kdjk+kdjj+macdh+low_boll_low_down_dir+low_boll_low_down,data=df1,method='class',cp=0.01)
+m<-rpart(slope_dir~macdh+low_boll_low_down_dir+low_boll_low_down,data=df1,method='class',cp=0.01)
+
+
+rpart.plot(m)
+
 colnames(df1) = 
 
 splitColName = function(x){

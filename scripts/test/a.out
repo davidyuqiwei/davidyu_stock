@@ -1,0 +1,15 @@
+== Physical Plan ==
+*(6) Project [stock_index#4, stock_name#5, dt#6, status#7, daily_max_money#0L, avg_trade_price#18, 2021-04-09 14:52:41 AS update_time#1]
++- *(6) SortMergeJoin [stock_index#4, stock_name#5, dt#6, daily_max_money#0L, status#7], [stock_index#12, stock_name#13, dt#14, money_sum#17L, status#15], Inner
+   :- *(3) Sort [stock_index#4 ASC NULLS FIRST, stock_name#5 ASC NULLS FIRST, dt#6 ASC NULLS FIRST, daily_max_money#0L ASC NULLS FIRST, status#7 ASC NULLS FIRST], false, 0
+   :  +- Exchange hashpartitioning(stock_index#4, stock_name#5, dt#6, daily_max_money#0L, status#7, 200)
+   :     +- *(2) Filter isnotnull(daily_max_money#0L)
+   :        +- *(2) HashAggregate(keys=[stock_index#4, stock_name#5, dt#6, status#7], functions=[max(money_sum#9L)])
+   :           +- Exchange hashpartitioning(stock_index#4, stock_name#5, dt#6, status#7, 200)
+   :              +- *(1) HashAggregate(keys=[stock_index#4, stock_name#5, dt#6, status#7], functions=[partial_max(money_sum#9L)])
+   :                 +- *(1) Filter (((isnotnull(status#7) && isnotnull(dt#6)) && isnotnull(stock_name#5)) && isnotnull(stock_index#4))
+   :                    +- Scan hive stock_dws.dadan_realtime_daily_minute_sum [stock_index#4, stock_name#5, dt#6, status#7, money_sum#9L], HiveTableRelation `stock_dws`.`dadan_realtime_daily_minute_sum`, org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe, [stock_index#4, stock_name#5, dt#6, status#7, trade_time#8, money_sum#9L, avg_trade_price#10, update_time#11]
+   +- *(5) Sort [stock_index#12 ASC NULLS FIRST, stock_name#13 ASC NULLS FIRST, dt#14 ASC NULLS FIRST, money_sum#17L ASC NULLS FIRST, status#15 ASC NULLS FIRST], false, 0
+      +- Exchange hashpartitioning(stock_index#12, stock_name#13, dt#14, money_sum#17L, status#15, 200)
+         +- *(4) Filter ((((isnotnull(dt#14) && isnotnull(stock_name#13)) && isnotnull(money_sum#17L)) && isnotnull(stock_index#12)) && isnotnull(status#15))
+            +- Scan hive stock_dws.dadan_realtime_daily_minute_sum [stock_index#12, stock_name#13, dt#14, avg_trade_price#18, money_sum#17L, status#15], HiveTableRelation `stock_dws`.`dadan_realtime_daily_minute_sum`, org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe, [stock_index#12, stock_name#13, dt#14, status#15, trade_time#16, money_sum#17L, avg_trade_price#18, update_time#19]

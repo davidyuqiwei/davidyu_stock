@@ -8,6 +8,6 @@ echo $project_name
 
 sh ./download_data/run_download_dadan_real_time_ifeng.sh
 sh ./clean_data/run_clean_combine_data.sh 
-#sh ./to_hive/run_to_hive_dadan_real_time_ifeng.sh
+sh ./to_hive/run_to_hive_dadan_real_time_ifeng.sh
 
 

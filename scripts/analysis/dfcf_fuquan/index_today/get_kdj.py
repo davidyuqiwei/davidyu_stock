@@ -2,6 +2,7 @@ from davidyu_cfg import *
 #from functions.pyspark_functions import *
 from functions.baostock.stock_return import *
 from functions.common.loadModule.load_module_kdj import *
+from functions.common.macd_kdj.get_kdj import *
 import pickle
 from m_features import *
 #data_dir = os.path.join(data_dict.get("dfcf_fuquan"),"parse_data")
@@ -63,7 +64,7 @@ def make_test_data(df3,feature_columns):
     df4 = df3.reset_index(drop=True)
     df4 = df4.dropna().round(3).drop_duplicates()
     #df5 = df4.groupby("stock_index").apply(lambda x: last_row(x,"dt"))
-    df5 = df4.groupby("stock_index").apply(lambda x: select_day(x,"2021-01-06"))
+    df5 = df4.groupby("stock_index").apply(lambda x: select_day(x,"2021-01-25"))
     df6 = df5.reset_index(drop=True)
     feature_name = feature_columns
     df7 = df6[["stock_index","dt"]+feature_name]
@@ -74,7 +75,7 @@ def make_test_data(df3,feature_columns):
 
 
 def load_index_300():
-    df_300 = pd.read_csv("/home/davidyu/stock/data/common/index_300.txt",header=None)
+    df_300 = pd.read_csv("/home/davidyu/stock/data/common/index_300_raw.txt",header=None)
     index_300 = [str(x[0]).zfill(6) for x in df_300.values.tolist()]
     return index_300
 
@@ -99,7 +100,7 @@ if run_today_data==1:
     df5.to_csv("today_kdj_all.csv",index=0)
 
 df5 = pd.read_csv("today_kdj_all.csv")
-df6 = df5[df5["stock_date"]=="2021-01-14"]
+df6 = df5[df5["stock_date"]=="2021-01-25"]
 df7 = df6[["stock_index","stock_date","rsi_6","macdh","macdh_mvavg5","macd","macds"]]
 df7.sort_values("rsi_6").to_csv("rsi6_sort_today.csv",index=0)
 df7["macdh_abs"] = df7["macdh"].abs()

@@ -1,0 +1,250 @@
+# Define server logic required to draw a histogram ----
+library("plotly")
+library(dplyr)
+#import_owner = read.csv("/home/davidyu/stock/data/daily_report/2021-02-02/important_owner_today_report_2021-02-02.csv")
+#names(import_owner)=c("stock_index","stock_name","owner_name","type","date","volume")
+
+
+dzjy = read.csv("/home/davidyu/stock/data/daily_report/2021-02-02/dazongjiaoyi_report_pos_2021-02-02.csv")
+bankuai = read.csv("/home/davidyu/stock/scripts/davidyu_stock/scripts/analysis/bankuai/bankuai_zde.csv")
+server <- function(input, output,session) {
+
+  # Histogram of the Old Faithful Geyser Data ----
+  # with requested number of bins
+  # This expression that generates a histogram is wrapped in a call
+  # to renderPlot to indicate that:
+  #
+  # 1. It is "reactive" and therefore should be automatically
+  #    re-executed when inputs (input$bins) change
+  # 2. Its output type is a plot
+  #output$distPlot <- renderPlot({
+    #diamonds = read.csv("/home/davidyu/stock/data/daily_report/2021-02-02/important_owner_today_report_2021-02-02.csv")
+    #names(diamonds)=c("stock_index","stock_name","owner_name","type","date","volume")
+    #diamonds2 = diamonds[sample(nrow(diamonds), 3), ]
+    
+
+    #-------------------------------------------------------------------------------------------#
+    #------------------------------------------重要股东变化-------------------------------------#
+    output$mytable1 <- DT::renderDataTable({
+        import_owner = read.csv("/home/davidyu/stock/data/shiny_data/data/important_owner.csv")
+        import_owner$num_change = as.numeric(as.character(import_owner$num_change))
+        import_owner$liutong_ratio = as.numeric(as.character(import_owner$liutong_ratio))
+        import_owner$stock_index = formatC(import_owner$stock_index,width=6,flag='0')
+        DT::datatable(import_owner[order(import_owner$report_date,decreasing=TRUE), input$show_vars, drop = FALSE])
+    })
+
+    #-------------------------------------------------------------------------------------------#
+    #--------------------------------------  大宗交易 --------------------------------#
+    #-------------------------------------------------------------------------------------------#
+    output$mytable2 <- DT::renderDataTable({
+        DT::datatable(dzjy, options = list(orderClasses = TRUE))
+    })
+
+
+  # customize the length drop-down menu; display 5 rows per page by default
+    output$mytable5 <- DT::renderDataTable({
+        stock_index = input$stock_index
+        data_file = paste0("/home/davidyu/stock/data/history_data/dfcf_fuquan/stock_index/",stock_index,"_fuquan.csv")
+        data = read.csv(data_file)
+        DT::datatable(data, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
+    })
+
+    #------------------------------------------------------------------------------------------#
+    #----------------------------------------- trend -----------------------------------------#
+    output$pl_trend <- renderPlotly({
+        # default data
+        stock_index = "601398"
+        data_file = paste0("/home/davidyu/stock/data/history_data/dfcf_fuquan/stock_index/",stock_index,"_fuquan.csv")
+        data1 = read.csv(data_file)
+        #
+        tryCatch({
+            stock_index = input$stock_index
+            start_date = input$tr_start_date
+            end_date = input$tr_end_date
+            data_file = paste0("/home/davidyu/stock/data/history_data/dfcf_fuquan/stock_index/",stock_index,"_fuquan.csv")
+            data1 = read.csv(data_file)
+            data1$dt = as.character(data1$dt)
+            print(end_date)
+            data2=filter(data1,dt>=start_date,dt<=end_date)
+            print(data2)
+        },error = function(e){
+            print("error stock index input")
+        },finally={
+            print("finally")
+        })
+        p = plot_ly(data=data2,x=data2$dt,y=data2$close,type="scatter",mode="markers+lines",name="close")
+        p1 = plot_ly(data=data2,x=data2$dt,y=data2$open,type="scatter",mode="markers+lines")
+        #p = add_trace(p,p1)
+        #p %>% add_trace(data=data2,x=data2$dt,y=data2$open)
+        p %>% add_trace(y=~data2$open,name="open") 
+            #%>% 
+            #add_trace(y=~data2$high,name="high") %>% 
+            #add_trace(y=~data2$low,name="low")
+    })
+    
+    #------------------------------------------------------------------------------------------#
+    #----------------------------------------- 板块
+        
+    outVar = reactive({
+        df1 = df_out()
+        area = unique(df1$bankuai_name)
+        area
+    })
+    
+
+
+    observe({
+        updateSelectInput(session,"bankuai1",
+            choices = outVar())
+    })
+
+    output$mytable3 <- DT::renderDataTable({
+        df1 = df_out()
+        date1 = as.character(input$date[1])
+        df2 = filter(df1,dt=="2021-02-04")
+        print(date1)
+        df2 = filter(df1,dt==date1)
+        df2 = select(df2,dt,bankuai_name,change_ratio) 
+        DT::datatable(df2, options = list(orderClasses = TRUE))
+    })
+
+
+    df_out = reactive({
+        if(input$bankuai_tab=="地域"){
+	        data_file = "/home/davidyu/stock/data/tmp_data/dfcf_bankuai/dfcf_diyu.csv"
+        }else if(input$bankuai_tab=="板块"){
+            data_file = "/home/davidyu/stock/data/tmp_data/dfcf_bankuai/dfcf_bankuai.csv"
+        }else if(input$bankuai_tab=="行业"){
+            data_file = "/home/davidyu/stock/data/tmp_data/dfcf_bankuai/dfcf_hangye.csv"
+        }
+	    data1 = read.csv(data_file)
+        data1
+    })
+    
+    output$pl_bankuai <- renderPlotly({
+	    data1 = df_out()
+        print(input$bankuai1)
+	    data2 = filter(data1,bankuai_name== input$bankuai1)
+	        #print(input$bankuai1)
+        data2 = data2[order(data2$dt),]
+        p = plot_ly(data=data2,x=data2$dt,y=data2$change_ratio,type="scatter",mode="markers+lines")
+        #p = plot_ly(data=data1,x=data2$dt,y=data2$stock_date,type="scatter",mode="markers+lines")
+        p
+        #p1 = plot_ly(data=data2,x=data2$dt,y=data2$stock_date,type="scatter",mode="markers+lines")
+        #subplot(p,p1,nrows=2,margin=0.07) %>% layout(title="test",height=800)
+        #subplot(p,nrows=2,margin=0.07) %>% layout(title="test",height=800)
+        p
+    
+    })
+
+    #-------------------------------------------------------------------------------------------------#
+    #--------------------------------------------大单---------------------------------------------------#
+    
+    v <- reactiveValues(data = NULL)
+    observeEvent(input$button2, {
+        print("click the button")
+        v$data=1
+        print(v$data)
+    })
+
+    output$pl_dadan <- renderPlotly({
+        #print(randomVals())
+        #if_plot = randomVals()
+        #print(len(input$button2))
+        if(v$data == 1){
+	        stock_index_in = input$stock_index_dadan
+	        start_date = input$start_date_dadan
+	        end_date = input$end_date_dadan
+	        #y_col = input$y
+	        #data_file = paste0("/home/davidyu/stock/data/test/dadan_",stock_index,".csv")
+	        data_file = "/home/davidyu/stock/data/shiny_data/data/dadan_dfcf.csv"
+	        data2 = read.csv(data_file)
+            data2$dt = as.character(data2$dt)
+	        data2$stock_index = as.character(data2$stock_index)
+            data1 = filter(data2,dt>=start_date,dt<=end_date,stock_index==stock_index_in)
+            data1 = data1[order(data1$dt),]
+            #y = data1[,y_col]
+	        p = plot_ly(data=data1,x=data1$dt,y=data1$dadan_liuru,type="scatter",mode="markers+lines")
+	        p1 = plot_ly(data=data1,x=data1$dt,y=data1$zhongdan_liuru,type="scatter",mode="markers+lines")
+	        p2 = plot_ly(data=data1,x=data1$dt,y=data1$xiaodan_liuru,type="scatter",mode="markers+lines")
+            subplot(p,p1,p2,nrows=3,margin=0.07) %>% layout(title="test",height=800)
+
+            #v$data=0 
+
+        }
+    })
+
+
+    #-------------------------------------------------------------------------------------------------------#
+    #---------------------------------------------量价分布--------------------------------------------------#
+
+    pv_data=function(input){
+	    stock_index = input$pv_stock_index
+        start_date = input$pv_start_date
+        end_date = input$pv_end_date
+        #stock_index="601398"
+        start_date="2021-01-25"
+	    dates = as.character(seq(from=as.Date(start_date), by=1, length.out=30))
+        print(dates)
+        #y_col = input$y
+	    data_file = paste0("/home/davidyu/stock/data/tmp_data/volume_price_distr/pv_dist_",stock_index,".csv")
+	    data1 = read.csv(data_file)
+        print(head(data1))
+        data1$dt = as.character(data1$dt)
+        data1$price = as.numeric(as.character(data1$price))
+        data1$vol = as.numeric(as.character(data1$vol))
+        return(list(data=data1,dates=dates))
+    }
+
+    output$pl_pv_distribution <- renderPlotly({
+        x_min = input$pv_x_min
+        x_max = input$pv_x_max
+        y_min = input$pv_y_min
+        y_max = input$pv_y_max
+        dick=(as.numeric(y_max)-as.numeric(y_min))/5
+            return_val=pv_data(input)
+            dates=return_val$dates
+            data1=return_val$data
+            k=-1
+            substr_raw="subplot("
+            for(dts in dates[1:20]){
+                k=k+1
+                loop_date=as.character(dts)
+                print(loop_date)
+                data2 = filter(data1,dt==loop_date,price>0,vol>0)
+                if(nrow(data2)>0){
+		            print(data2)
+	                #x = data2[,"vol"]
+	                #y =  data2[,"price"]
+	                x_assign = paste0("x",k,"=data2[,'vol']")
+	                y_assign = paste0("y",k,"=data2[,'price']")
+	                eval(parse(text=x_assign))
+	                eval(parse(text=y_assign))
+                    pString<-sprintf("plot_ly(data=data1,x=~x%d,y=y%d,type='bar',orientation='h',name='%s')",k,k,dts) 
+                    layOut = sprintf("layout(xaxis=list(title='%s',tickvals =0,range=c(%s,%s)),
+                                     yaxis=list(range=c(%s,%s),dtick=%s,autorange = FALSE))",dts,x_min,x_max,y_min,y_max,dick)
+                    layOut=gsub('[\r\n]','',layOut)
+                    pString = paste0(pString,"%>%",layOut)
+                    print(pString)
+                    substr_raw = paste0(substr_raw,pString,",")
+
+                }
+            }
+            substr_raw = paste0(substr_raw,"nrows=3,margin=0.06,shareX=F,shareY=F,titleX=T,titleY=T)%>% layout(height=800,showlegend=F)")
+            #substr_raw = paste0(substr_raw,"nrows=3,margin=0.06)")
+            print(substr_raw)
+            eval(parse(text=substr_raw))
+            #print(substr_raw)
+    })
+
+    # -------------------------------------------------------------------------------------------------------#
+    #-----------------------------------------------  fin report
+    output$pl_fin_report <- renderPlotly({
+	    source("service_fin_report.r")
+        p = fin_report_plot(input)
+        p
+    
+    })
+
+
+}

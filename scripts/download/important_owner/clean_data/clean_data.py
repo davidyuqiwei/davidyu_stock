@@ -13,11 +13,13 @@ data1 = f.read()
 data2 = data1.split("\n")
 data_in = []
 for i in data2:
-    if len(i)>0:
-        i1 = i.split(",")
-        if i1[17] != "17":
-            data_in.append(i.split(",")[0:18])
-
+    try:
+	    if len(i)>0:
+	        i1 = i.split(",")
+	        if i1[17] != "17":
+	            data_in.append(i.split(",")[0:18])
+    except:
+        pass
 cols = ["id","id2","owner_name","owner_type","stock_type","gudong_rank",
             "stock_index","stock_name","change_date","num","chigu_ratio",
             "liutong_ratio","report_date","change_type",

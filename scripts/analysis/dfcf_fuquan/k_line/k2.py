@@ -31,14 +31,14 @@ def get_model(X,k):
                     }
     return return_data
 df2 = df1[["open_norm","close_norm","high_norm","low_norm"]]
-r_data = get_model(df2.values,10)
-model = r_data.get("model")
-label_data = r_data.get("label_data")
+#r_data = get_model(df2.values,10)
+#model = r_data.get("model")
+#label_data = r_data.get("label_data")
 X = df2.values
 S = []
-for k in range(2,22,4):
+for k in range(2,20,4):
     print(k)
-    r_data = get_model(X,10)
+    r_data = get_model(X,k)
     model = r_data.get("model")
     label_data = r_data.get("label_data")
     S.append(metrics.silhouette_score(X, label_data, metric='euclidean'))

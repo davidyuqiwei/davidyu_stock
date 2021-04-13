@@ -26,7 +26,8 @@ def select_data(stock,start_date,end_date):
 
 def stock_kdj(stock,feature_list=None):
     if feature_list is None:
-        feature_list = ["macdh","cci","rsi_6","rsi_12","rsi_24","kdjk","kdjd","kdjj","boll_ub","boll_lb","macd","macds"]
+        feature_list = ["macdh","cci","rsi_6","rsi_12","rsi_24","kdjk","kdjd","kdjj","boll_ub","boll_lb","macd","macds",
+                "wr_6","wr_10"]
     #df_kdj = stock[['kdjk','kdjd','kdjj']].reset_index()
     df_kdj = stock.reset_index()
     df_kdj['stock_index'] = stock['stock_index'].tolist()
