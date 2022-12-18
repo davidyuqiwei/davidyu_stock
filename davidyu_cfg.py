@@ -77,4 +77,3 @@ def rm_a_project(project_name,project_DIR):
         else:
             print("recheck the code,we do not want remove the folder")
             sys.exit(1)
-
