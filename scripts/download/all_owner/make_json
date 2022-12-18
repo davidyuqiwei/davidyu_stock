@@ -1,0 +1,5 @@
+def make_it_json(input_str):
+    if input_str[0] != "{":
+        out_str = "{"+input_str
+    if input_str[-1] != "}":
+
